@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validador de Prompt PCTFL · Mallory PDL 2026</title>
+<meta name="description" content="Cole seu prompt e receba diagnóstico das 5 camadas do PCTFL — Papel, Contexto, Tarefa, Formato, Limitações — com pontos fortes e o que ajustar antes de rodar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-dark: #262A35;
+    --bg-light: #353A45;
+    --bg-card: rgba(255,255,255,.045);
+    --bg-card-hover: rgba(255,255,255,.08);
+    --text: #E8ECF3;
+    --text-muted: #A0A8B8;
+    --text-dim: #6B7385;
+    --accent: #7B9EFF;
+    --accent-warm: #FF9E7B;
+    --accent-purple: #B394FF;
+    --success: #6EE7B7;
+    --warning: #FBBF24;
+    --danger: #F87171;
+    --border: rgba(255,255,255,.08);
+    --border-strong: rgba(255,255,255,.16);
+    --radius-sm: 6px;
+    --radius: 10px;
+    --radius-lg: 14px;
+    --shadow-md: 0 4px 12px rgba(0,0,0,.28);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,.4);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before, body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: .06;
+    background-repeat: no-repeat;
+    animation: blob 28s ease-in-out infinite;
+  }
+  body::before { background: radial-gradient(circle 400px at 15% 20%, var(--accent), transparent 60%); }
+  body::after { background: radial-gradient(circle 500px at 85% 80%, var(--accent-purple), transparent 60%); animation-delay: -14s; animation-duration: 32s; }
+  @keyframes blob { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(20px,-30px) scale(1.05);} }
+  @media (prefers-reduced-motion: reduce) { body::before, body::after { animation: none; } }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 48px 20px 96px; }
+
+  header { text-align: center; margin-bottom: 40px; }
+  .kicker {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(123,158,255,.1);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 5vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    margin-bottom: 14px;
+  }
+  header p { color: var(--text-muted); font-size: 17px; max-width: 620px; margin: 0 auto; }
+
+  .layout { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  @media (min-width: 900px) { .layout { grid-template-columns: 1fr 1fr; } }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+  }
+  .card h2 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .card-sub { color: var(--text-muted); font-size: 14px; margin-bottom: 18px; }
+
+  .textarea-wrap { position: relative; }
+  textarea {
+    width: 100%;
+    min-height: 360px;
+    max-height: 60vh;
+    background: var(--bg-dark);
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    padding: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.55;
+    resize: vertical;
+  }
+  textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+  .btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    border: none;
+    background: var(--accent);
+    color: var(--bg-dark);
+    cursor: pointer;
+    transition: opacity .15s ease;
+  }
+  .btn:hover { opacity: .92; }
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    color: var(--text);
+  }
+  .btn-secondary:hover { background: var(--bg-card-hover); border-color: var(--accent); }
+
+  .score {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .score-num {
+    font-family: 'Archivo', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.02em;
+  }
+  .score-num.good { color: var(--success); }
+  .score-num.mid { color: var(--warning); }
+  .score-num.bad { color: var(--danger); }
+  .score-out { color: var(--text-muted); font-size: 15px; }
+  .score-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-left: auto;
+  }
+
+  .check-list { display: flex; flex-direction: column; gap: 10px; }
+  .check-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 10px 12px;
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 14px;
+  }
+  .check-item.pass { border-left: 3px solid var(--success); }
+  .check-item.warn { border-left: 3px solid var(--warning); }
+  .check-item.fail { border-left: 3px solid var(--danger); }
+  .check-icon { flex-shrink: 0; font-size: 16px; line-height: 1.4; }
+  .check-icon.pass { color: var(--success); }
+  .check-icon.warn { color: var(--warning); }
+  .check-icon.fail { color: var(--danger); }
+  .check-body strong {
+    display: block;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px;
+    font-size: 14px;
+  }
+  .check-body span {
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+
+  #verdict {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    display: none;
+  }
+  #verdict.good { display: block; background: rgba(110,231,183,.08); border-left: 3px solid var(--success); }
+  #verdict.mid { display: block; background: rgba(251,191,36,.06); border-left: 3px solid var(--warning); }
+  #verdict.bad { display: block; background: rgba(248,113,113,.06); border-left: 3px solid var(--danger); }
+  #verdict strong { display: block; font-size: 15px; margin-bottom: 6px; color: var(--text); }
+  #verdict span { color: var(--text-muted); }
+
+  .placeholder-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-dim);
+    font-size: 14px;
+  }
+
+  footer { margin-top: 64px; text-align: center; color: var(--text-dim); font-size: 13px; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media print {
+    body { background: white; color: black; }
+    body::before, body::after { display: none; }
+    .container { padding: 20px; max-width: 100%; }
+    .actions { display: none; }
+    .card { background: white; border: 1px solid #ddd; }
+    textarea { background: white; color: black; border: 1px solid #ccc; }
+    .check-item { background: #f7f8fa; }
+    .check-body strong, h1, h2, .score-num { color: black; }
+    .check-body span, .card-sub, header p { color: #444; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+  <span class="kicker">Artefato · M2 · Validador</span>
+  <h1>Seu prompt está no padrão PCTFL?</h1>
+  <p>Cole o prompt no bloco à esquerda. Do lado direito, você recebe o diagnóstico das 5 camadas (Papel, Contexto, Tarefa, Formato, Limitações) — o que passou, o que está fraco, o que falta.</p>
+</header>
+
+<div class="layout">
+
+  <div class="card">
+    <h2>1. Cole seu prompt</h2>
+    <p class="card-sub">Formato ideal: com marcadores <code style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);"># PAPEL</code>, <code style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);"># CONTEXTO</code>, etc. O validador aceita variações.</p>
+    <div class="textarea-wrap">
+      <textarea id="prompt" placeholder="# PAPEL&#10;Você é um técnico de segurança do trabalho experiente...&#10;&#10;# CONTEXTO&#10;Vou conduzir o DDS de segunda-feira na área de montagem...&#10;&#10;# TAREFA&#10;Escreva o roteiro do DDS de no máximo 5 minutos de fala...&#10;&#10;# FORMATO&#10;3 blocos: Abertura, Mensagem central, Fechamento. Máximo 20 linhas.&#10;&#10;# LIMITAÇÕES&#10;Se faltar informação, pergunte. Não invente.&#10;Não cite norma ou número de NR." aria-label="Cole seu prompt aqui"></textarea>
+    </div>
+    <div class="actions">
+      <button class="btn" id="validateBtn" type="button">Validar prompt</button>
+      <button class="btn btn-secondary" id="clearBtn" type="button">Limpar</button>
+      <button class="btn btn-secondary" id="exampleBtn" type="button">Carregar exemplo</button>
+    </div>
+  </div>
+
+  <div class="card" id="resultCard">
+    <h2>2. Diagnóstico</h2>
+    <p class="card-sub">Escala de 0 a 10 — média ponderada das 5 camadas do PCTFL + regra de ouro anti-alucinação.</p>
+    <div id="resultBody">
+      <div class="placeholder-state">Cole um prompt à esquerda e clique em <strong style="color:var(--text);">Validar prompt</strong> para receber o diagnóstico.</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>Validador PCTFL · PDL 2026 Mallory · <a href="https://www.instagram.com/iacomrafael/" target="_blank" rel="noopener">@iacomrafael</a></p>
+  <p style="margin-top:6px;"><a href="../m2/">← Voltar ao M2</a> · <a href="../banco-de-prompts/">Banco de Prompts</a> · <a href="../">Hub do treinamento</a></p>
+</footer>
+
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  const EXAMPLE = `# PAPEL
+Você é um técnico de segurança do trabalho experiente em fábrica de eletroportáteis.
+
+# CONTEXTO
+Vou conduzir o DDS (Diálogo Diário de Segurança) de segunda-feira na área de montagem.
+Tema: uso correto de EPI — luvas e óculos. Motivo: na semana passada houve 2 registros
+de operadores sem óculos na bancada de rebarbação. Equipe: 14 pessoas, turno da manhã.
+Já falamos deste tema no mês passado — não pode ficar repetitivo.
+
+# TAREFA
+Escreva o roteiro do DDS de no máximo 5 minutos de fala, com uma pergunta para
+abrir conversa com o time e um fechamento que peça compromisso prático.
+
+# FORMATO
+3 blocos: Abertura (com a pergunta) · Mensagem central (com exemplo concreto) ·
+Fechamento (com o compromisso). Máximo 20 linhas. Linguagem falada, direta.
+
+# LIMITAÇÕES
+Se faltar informação, pergunte. Não invente.
+Não cite norma ou número de NR — se precisar, eu confirmo na fonte e acrescento.`;
+
+  const textarea = document.getElementById('prompt');
+  const validateBtn = document.getElementById('validateBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  const exampleBtn = document.getElementById('exampleBtn');
+  const resultBody = document.getElementById('resultBody');
+
+  // Regex helpers para detectar seções
+  const RE = {
+    papel: /(^|\n)\s*#\s*PAPEL\b|(^|\n)\s*(Papel|PAPEL)\s*:/i,
+    contexto: /(^|\n)\s*#\s*CONTEXTO\b|(^|\n)\s*(Contexto|CONTEXTO)\s*:/i,
+    tarefa: /(^|\n)\s*#\s*TAREFA\b|(^|\n)\s*(Tarefa|TAREFA)\s*:/i,
+    formato: /(^|\n)\s*#\s*FORMATO\b|(^|\n)\s*(Formato|FORMATO)\s*:/i,
+    limitacoes: /(^|\n)\s*#\s*LIMITA[ÇC][ÕO]ES\b|(^|\n)\s*(Limita[çc][õo]es|LIMITA[ÇC][ÕO]ES)\s*:/i,
+    regraOuro: /se\s+faltar\s+informa[çc][ãa]o|n[ãa]o\s+invent[ea]|pergunte\s+antes/i,
+    verboForte: /\b(escreva|redija|resuma|analise|classifique|compare|monte|organize|liste|identifique|proponha|crie|transforme|estrutur[ea]|calcul[ea]|extrai|extraia|traduz[ea]|revise)\b/i,
+    placeholder: /\[[^\]]{2,}\]/,
+    antiInvencao: /n[ãa]o\s+invent[ea]|n[ãa]o\s+complet[ea]|n[ãa]o\s+cite\s+[a-zA-Z]+\s+que\s+n[ãa]o|use\s+apenas/i,
+    critSucesso: /(^|\n)\s*#\s*CRIT[ÉE]RIO\s+DE\s+SUCESSO/i,
+    critNegativo: /(^|\n)\s*#\s*CRIT[ÉE]RIO\s+NEGATIVO/i
+  };
+
+  function extractSection(text, sectionName) {
+    // Retorna o conteúdo até o próximo # ou EOF
+    const patterns = [
+      new RegExp('#\\s*' + sectionName + '\\b([\\s\\S]*?)(?=\\n\\s*#\\s*|$)', 'i'),
+      new RegExp('(?:^|\\n)\\s*' + sectionName + '\\s*:([\\s\\S]*?)(?=\\n\\s*[A-Z][A-Za-z]+\\s*:|$)', 'i')
+    ];
+    for (const re of patterns) {
+      const m = text.match(re);
+      if (m && m[1]) return m[1].trim();
+    }
+    return null;
+  }
+
+  function validate(text) {
+    const t = (text || '').trim();
+    if (!t) return null;
+
+    const checks = [];
+
+    // 1. Papel
+    if (RE.papel.test(t)) {
+      const section = extractSection(t, 'PAPEL');
+      if (section && section.length > 20) {
+        checks.push({ status: 'pass', title: 'Papel definido', detail: 'Seção PAPEL presente e com substância.' });
+      } else {
+        checks.push({ status: 'warn', title: 'Papel presente mas raso', detail: 'Detalhe mais quem a IA deve ser — experiência, área, tom.' });
+      }
+    } else {
+      checks.push({ status: 'fail', title: 'Papel ausente', detail: 'Adicione uma seção "# PAPEL" definindo quem a IA deve ser.' });
+    }
+
+    // 2. Contexto
+    if (RE.contexto.test(t)) {
+      const section = extractSection(t, 'CONTEXTO');
+      if (section && section.length > 40) {
+        checks.push({ status: 'pass', title: 'Contexto rico', detail: 'Situação clara — a IA sabe onde você trabalha e o que está em jogo.' });
+      } else {
+        checks.push({ status: 'warn', title: 'Contexto curto demais', detail: 'Adicione detalhes reais: sua função, o que aconteceu, o que precisa. Sem eles, resposta genérica.' });
+      }
+    } else {
+      checks.push({ status: 'fail', title: 'Contexto ausente', detail: 'Adicione "# CONTEXTO" com a situação real — é o que separa resposta útil de resposta genérica.' });
+    }
+
+    // 3. Tarefa
+    if (RE.tarefa.test(t)) {
+      const section = extractSection(t, 'TAREFA');
+      if (section && RE.verboForte.test(section)) {
+        checks.push({ status: 'pass', title: 'Tarefa com verbo claro', detail: 'Ação nomeada com verbo forte — a IA sabe exatamente o que fazer.' });
+      } else if (section) {
+        checks.push({ status: 'warn', title: 'Tarefa sem verbo forte', detail: 'Troque "me ajude com" por verbo direto: escreva, resuma, analise, classifique, monte, liste.' });
+      } else {
+        checks.push({ status: 'fail', title: 'Tarefa vazia', detail: 'A seção TAREFA existe mas está sem conteúdo.' });
+      }
+    } else {
+      checks.push({ status: 'fail', title: 'Tarefa ausente', detail: 'Adicione "# TAREFA" com verbo claro do que a IA deve fazer.' });
+    }
+
+    // 4. Formato
+    if (RE.formato.test(t)) {
+      const section = extractSection(t, 'FORMATO');
+      if (section && section.length > 15) {
+        checks.push({ status: 'pass', title: 'Formato especificado', detail: 'Estrutura de saída definida — sem loteria de formato.' });
+      } else {
+        checks.push({ status: 'warn', title: 'Formato genérico', detail: 'Diga como quer receber: tabela, bullets, texto de X linhas, blocos nomeados.' });
+      }
+    } else {
+      checks.push({ status: 'fail', title: 'Formato ausente', detail: 'Sem "# FORMATO", a IA escolhe sozinha — quase sempre errado.' });
+    }
+
+    // 5. Limitações
+    let temLimitacoes = false;
+    if (RE.limitacoes.test(t)) {
+      temLimitacoes = true;
+      const section = extractSection(t, 'LIMITAÇÕES') || extractSection(t, 'LIMITACOES');
+      if (section && section.length > 10) {
+        checks.push({ status: 'pass', title: 'Limitações presentes', detail: 'Fronteiras do que a IA não deve fazer — anti-alucinação começa aqui.' });
+      } else {
+        checks.push({ status: 'warn', title: 'Limitações vagas', detail: 'Explicite: não invente, não complete lacunas, não use dados fora do contexto.' });
+      }
+    } else {
+      checks.push({ status: 'fail', title: 'Limitações ausentes', detail: 'Sem "# LIMITAÇÕES", a IA preenche buracos com invenção. Sempre inclua.' });
+    }
+
+    // 6. Regra de ouro anti-alucinação
+    if (RE.regraOuro.test(t)) {
+      checks.push({ status: 'pass', title: 'Regra de ouro presente', detail: '"Se faltar informação, pergunte. Não invente." — o hábito de segurança mais barato que existe.' });
+    } else if (temLimitacoes) {
+      checks.push({ status: 'warn', title: 'Falta a regra de ouro', detail: 'Nas Limitações, adicione: "Se faltar informação, pergunte. Não invente."' });
+    } else {
+      checks.push({ status: 'fail', title: 'Sem regra anti-alucinação', detail: 'Adicione "Se faltar informação, pergunte. Não invente." — regra de ouro do treinamento.' });
+    }
+
+    // Bônus qualitativo (não conta pra 5 core, aparecem só como dica)
+    const bonus = [];
+    if (RE.placeholder.test(t)) {
+      bonus.push({ status: 'pass', title: 'Reutilizável', detail: 'Placeholders entre [colchetes] — o prompt vira ativo, não peça descartável.' });
+    }
+    if (RE.critSucesso.test(t)) {
+      bonus.push({ status: 'pass', title: 'PCTFL avançado: Critério de Sucesso', detail: 'Você especificou como saber se a resposta cumpriu — nível T2.' });
+    }
+    if (RE.critNegativo.test(t)) {
+      bonus.push({ status: 'pass', title: 'PCTFL avançado: Critério Negativo', detail: 'Você bloqueou o que a resposta NÃO pode ser — nível T2.' });
+    }
+    if (RE.antiInvencao.test(t) && !RE.regraOuro.test(t)) {
+      bonus.push({ status: 'pass', title: 'Anti-invenção presente', detail: 'Você restringe a IA de completar com dado inventado.' });
+    }
+
+    // Score: 5 checks core + regra de ouro = 6. Pesos:
+    // Papel/Contexto/Tarefa: peso 2 cada (=6)
+    // Formato/Limitações/Regra de ouro: peso 1 cada (=3). Não, deixa igual.
+    // Simplificando: 10 pontos totais. Papel=2, Contexto=2, Tarefa=2, Formato=1.5, Limit=1.5, RegraOuro=1
+    const pesos = [2, 2, 2, 1.5, 1.5, 1];
+    let score = 0;
+    checks.slice(0, 6).forEach((c, i) => {
+      if (c.status === 'pass') score += pesos[i];
+      else if (c.status === 'warn') score += pesos[i] * 0.5;
+    });
+    // arredonda pra 1 decimal
+    score = Math.round(score * 10) / 10;
+
+    return { checks, bonus, score };
+  }
+
+  function render(result) {
+    if (!result) {
+      resultBody.innerHTML = '<div class="placeholder-state">Cole um prompt à esquerda e clique em <strong style="color:var(--text);">Validar prompt</strong> para receber o diagnóstico.</div>';
+      return;
+    }
+    const { checks, bonus, score } = result;
+    let scoreClass = 'bad';
+    let verdictClass = 'bad';
+    let verdictTitle = 'Reescreva antes de rodar';
+    let verdictText = 'Faltam camadas essenciais. Com esse prompt, a resposta vai vir genérica ou inventada. Adicione as camadas marcadas em vermelho antes de enviar.';
+    if (score >= 8) {
+      scoreClass = 'good'; verdictClass = 'good';
+      verdictTitle = 'Prompt sólido — pode rodar';
+      verdictText = 'Todas as camadas essenciais estão presentes. Rode no Claude e aplique a validação de 30 segundos na resposta (fonte / coerência / seu conhecimento).';
+    } else if (score >= 5) {
+      scoreClass = 'mid'; verdictClass = 'mid';
+      verdictTitle = 'Bom, mas pode reforçar antes';
+      verdictText = 'A estrutura existe, mas algumas camadas estão fracas. Ajuste os pontos amarelos e você reduz muito o risco de resposta rasa.';
+    }
+
+    let html = '';
+    html += '<div class="score">';
+    html += '  <span class="score-num ' + scoreClass + '">' + score + '</span>';
+    html += '  <span class="score-out">/ 10</span>';
+    html += '  <span class="score-label">Score PCTFL</span>';
+    html += '</div>';
+
+    html += '<div class="check-list">';
+    checks.forEach(c => {
+      const icon = c.status === 'pass' ? '✓' : c.status === 'warn' ? '⚠' : '✗';
+      html += '<div class="check-item ' + c.status + '">';
+      html += '  <span class="check-icon ' + c.status + '">' + icon + '</span>';
+      html += '  <div class="check-body"><strong>' + escapeHtml(c.title) + '</strong><span>' + escapeHtml(c.detail) + '</span></div>';
+      html += '</div>';
+    });
+    html += '</div>';
+
+    if (bonus.length) {
+      html += '<h3 style="font-family:Archivo,sans-serif;font-size:13px;color:var(--text);text-transform:uppercase;letter-spacing:.06em;margin:24px 0 10px;">Ganchos avançados detectados</h3>';
+      html += '<div class="check-list">';
+      bonus.forEach(c => {
+        html += '<div class="check-item pass">';
+        html += '  <span class="check-icon pass">★</span>';
+        html += '  <div class="check-body"><strong>' + escapeHtml(c.title) + '</strong><span>' + escapeHtml(c.detail) + '</span></div>';
+        html += '</div>';
+      });
+      html += '</div>';
+    }
+
+    html += '<div id="verdict" class="' + verdictClass + '"><strong>' + escapeHtml(verdictTitle) + '</strong><span>' + escapeHtml(verdictText) + '</span></div>';
+
+    resultBody.innerHTML = html;
+    // Trigger verdict visibility
+    const v = document.getElementById('verdict');
+    if (v) v.classList.add(verdictClass);
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  validateBtn.addEventListener('click', () => {
+    const result = validate(textarea.value);
+    render(result);
+  });
+
+  clearBtn.addEventListener('click', () => {
+    textarea.value = '';
+    render(null);
+    textarea.focus();
+  });
+
+  exampleBtn.addEventListener('click', () => {
+    textarea.value = EXAMPLE;
+    render(validate(EXAMPLE));
+  });
+
+  // Ctrl/Cmd+Enter para validar
+  textarea.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+      validateBtn.click();
+    }
+  });
+
+})();
+</script>
+
+</body>
+</html>

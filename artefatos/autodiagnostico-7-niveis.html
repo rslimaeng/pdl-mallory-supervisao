@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autodiagnóstico dos 7 Níveis de IA · Mallory PDL 2026</title>
+<meta name="description" content="Descubra em que nível você está usando IA hoje — dos 7 níveis do treinamento Mallory — e o próximo passo prático para avançar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-dark: #262A35;
+    --bg-light: #353A45;
+    --bg-card: rgba(255,255,255,.045);
+    --bg-card-hover: rgba(255,255,255,.08);
+    --text: #E8ECF3;
+    --text-muted: #A0A8B8;
+    --text-dim: #6B7385;
+    --accent: #7B9EFF;
+    --accent-warm: #FF9E7B;
+    --accent-purple: #B394FF;
+    --success: #6EE7B7;
+    --warning: #FBBF24;
+    --border: rgba(255,255,255,.08);
+    --border-strong: rgba(255,255,255,.16);
+    --radius-sm: 6px;
+    --radius: 10px;
+    --radius-lg: 14px;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.2);
+    --shadow-md: 0 4px 12px rgba(0,0,0,.28);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,.4);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Ambient blobs (mesmo padrão do M1) */
+  body::before, body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: .06;
+    background-repeat: no-repeat;
+    animation: blob 28s ease-in-out infinite;
+  }
+  body::before {
+    background: radial-gradient(circle 400px at 15% 20%, var(--accent), transparent 60%);
+  }
+  body::after {
+    background: radial-gradient(circle 500px at 85% 80%, var(--accent-purple), transparent 60%);
+    animation-delay: -14s;
+    animation-duration: 32s;
+  }
+  @keyframes blob {
+    0%, 100% { transform: translate(0,0) scale(1); }
+    50% { transform: translate(20px, -30px) scale(1.05); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body::before, body::after { animation: none; }
+  }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 48px 20px 96px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .kicker {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(123, 158, 255, .1);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 5vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    margin-bottom: 14px;
+  }
+  header p {
+    color: var(--text-muted);
+    font-size: 17px;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  /* Progress */
+  .progress {
+    display: flex;
+    gap: 6px;
+    margin: 32px auto 40px;
+    max-width: 560px;
+  }
+  .progress-step {
+    flex: 1;
+    height: 6px;
+    background: var(--bg-card);
+    border-radius: 999px;
+    transition: background .3s ease;
+  }
+  .progress-step.done {
+    background: var(--accent);
+  }
+
+  /* Perguntas */
+  .questions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .question {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    transition: border-color .2s ease, background .2s ease;
+  }
+  .question.answered {
+    border-color: var(--border-strong);
+  }
+  .question.answered-yes {
+    background: linear-gradient(135deg, rgba(110,231,183,.05), transparent);
+    border-left: 3px solid var(--success);
+  }
+  .question.answered-no {
+    background: linear-gradient(135deg, rgba(251,191,36,.03), transparent);
+    border-left: 3px solid var(--warning);
+  }
+  .question-header {
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    margin-bottom: 10px;
+  }
+  .question-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--text-dim);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .question-text {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.35;
+    color: var(--text);
+  }
+  .question-hint {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 8px 0 16px 28px;
+  }
+  .question-actions {
+    display: flex;
+    gap: 10px;
+    margin-left: 28px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-strong);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    transition: all .15s ease;
+  }
+  .btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent);
+  }
+  .btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .btn.selected-yes {
+    background: rgba(110,231,183,.15);
+    border-color: var(--success);
+    color: var(--success);
+    font-weight: 600;
+  }
+  .btn.selected-no {
+    background: rgba(251,191,36,.1);
+    border-color: var(--warning);
+    color: var(--warning);
+    font-weight: 600;
+  }
+
+  /* Resultado */
+  #result {
+    margin-top: 48px;
+    background: linear-gradient(135deg, rgba(123,158,255,.08), rgba(179,148,255,.06));
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    box-shadow: var(--shadow-lg);
+    display: none;
+  }
+  #result.visible {
+    display: block;
+    animation: fadeIn .4s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .result-level {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: .1em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .result-name {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 5vw, 36px);
+    letter-spacing: -.02em;
+    margin-bottom: 18px;
+  }
+  .result-desc {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+  .result-section {
+    margin-bottom: 28px;
+  }
+  .result-section h3 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+  .result-section p, .result-section li {
+    color: var(--text-muted);
+    font-size: 15px;
+  }
+  .result-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .result-section ul li {
+    padding: 8px 0 8px 24px;
+    position: relative;
+  }
+  .result-section ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .prompt-box {
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text);
+    white-space: pre-wrap;
+    overflow-x: auto;
+    margin-top: 12px;
+  }
+  .copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 8px 14px;
+    background: var(--accent);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: opacity .15s ease;
+  }
+  .copy-btn:hover { opacity: .9; }
+  .copy-btn.copied {
+    background: var(--success);
+  }
+
+  .result-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  .btn-secondary {
+    padding: 12px 20px;
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .15s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-secondary:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--accent);
+  }
+
+  footer {
+    margin-top: 64px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  footer a:hover { text-decoration: underline; }
+
+  /* Print */
+  @media print {
+    body { background: white; color: black; }
+    body::before, body::after { display: none; }
+    .container { padding: 20px; max-width: 100%; }
+    .question-actions, .copy-btn, .result-actions { display: none; }
+    .btn.selected-yes::after { content: ' ✓'; color: green; }
+    .btn.selected-no::after { content: ' ✗'; color: orange; }
+    #result { background: #f7f8fa; border: 1px solid #ccc; }
+    .prompt-box { background: #f0f0f0; color: black; border: 1px solid #ccc; }
+    .question { background: white; border: 1px solid #ddd; }
+    .question-text, .result-name { color: black; }
+    .result-desc, .question-hint { color: #444; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+  <span class="kicker">Artefato · M1 · Autodiagnóstico</span>
+  <h1>Onde você está nos 7 níveis de uso da IA?</h1>
+  <p>Responda 7 perguntas honestas sobre como você usa IA hoje. No fim, você recebe seu nível atual + o próximo passo prático para avançar. Sem cadastro, sem pontuação — só um mapa.</p>
+</header>
+
+<div class="progress" aria-label="Progresso">
+  <div class="progress-step" data-step="1"></div>
+  <div class="progress-step" data-step="2"></div>
+  <div class="progress-step" data-step="3"></div>
+  <div class="progress-step" data-step="4"></div>
+  <div class="progress-step" data-step="5"></div>
+  <div class="progress-step" data-step="6"></div>
+  <div class="progress-step" data-step="7"></div>
+</div>
+
+<main class="questions" id="questions">
+
+  <div class="question" data-q="1">
+    <div class="question-header">
+      <span class="question-num">01</span>
+      <span class="question-text">Você usa alguma IA (Claude, ChatGPT, Gemini) pelo menos uma vez por semana no trabalho?</span>
+    </div>
+    <p class="question-hint">Aqui vale qualquer uso — mesmo colar uma pergunta rápida no chat.</p>
+    <div class="question-actions">
+      <button class="btn" data-q="1" data-a="yes">Sim, uso</button>
+      <button class="btn" data-q="1" data-a="no">Ainda não</button>
+    </div>
+  </div>
+
+  <div class="question" data-q="2">
+    <div class="question-header">
+      <span class="question-num">02</span>
+      <span class="question-text">Antes de perguntar, você pensa na estrutura do pedido — quem a IA deve ser, qual o contexto, o que quer receber?</span>
+    </div>
+    <p class="question-hint">Método PCTFL (Papel + Contexto + Tarefa + Formato + Limitações) ou algo parecido, de forma consistente.</p>
+    <div class="question-actions">
+      <button class="btn" data-q="2" data-a="yes">Sim, estruturo</button>
+      <button class="btn" data-q="2" data-a="no">Ainda não</button>
+    </div>
+  </div>
+
+  <div class="question" data-q="3">
+    <div class="question-header">
+      <span class="question-num">03</span>
+      <span class="question-text">Você tem seu contexto salvo — sua função, tom de voz, coisas que sempre/nunca fazer — para a IA não te tratar como estranho a cada conversa?</span>
+    </div>
+    <p class="question-hint">Um perfil, memórias no chat, ou um CLAUDE.md/instrução customizada configurada.</p>
+    <div class="question-actions">
+      <button class="btn" data-q="3" data-a="yes">Sim, tenho</button>
+      <button class="btn" data-q="3" data-a="no">Ainda não</button>
+    </div>
+  </div>
+
+  <div class="question" data-q="4">
+    <div class="question-header">
+      <span class="question-num">04</span>
+      <span class="question-text">Você usa 3 ou mais ferramentas de IA e sabe qual delas usar para cada tipo de tarefa?</span>
+    </div>
+    <p class="question-hint">Ex.: Claude para redação, ChatGPT para brainstorm, Copilot para código, Gemini para pesquisa — ou similar.</p>
+    <div class="question-actions">
+      <button class="btn" data-q="4" data-a="yes">Sim, oriento pelo caso</button>
+      <button class="btn" data-q="4" data-a="no">Ainda não</button>
+    </div>
+  </div>
+
+  <div class="question" data-q="5">
+    <div class="question-header">
+      <span class="question-num">05</span>
+      <span class="question-text">Você já construiu pelo menos 1 automação ou skill de IA que roda sem sua intervenção passo a passo?</span>
+    </div>
+    <p class="question-hint">Uma skill do Claude, um workflow no n8n/Zapier com IA, uma workstation Cowork, ou similar.</p>
+    <div class="question-actions">
+      <button class="btn" data-q="5" data-a="yes">Sim, construí</button>
+      <button class="btn" data-q="5" data-a="no">Ainda não</button>
+    </div>
+  </div>
+
+  <div class="question" data-q="6">
+    <div class="question-header">
+      <span class="question-num">06</span>
+      <span class="question-text">Você trabalha com IA no terminal, opera arquivos localmente e constrói pequenos sistemas com o Claude?</span>
+    </div>
+    <p class="question-hint">Claude Code, Cowork em nível avançado, scripts que ela mesma edita — território de builder.</p>
+    <div class="question-actions">
+      <button class="btn" data-q="6" data-a="yes">Sim, construo</button>
+      <button class="btn" data-q="6" data-a="no">Ainda não</button>
+    </div>
+  </div>
+
+  <div class="question" data-q="7">
+    <div class="question-header">
+      <span class="question-num">07</span>
+      <span class="question-text">Você tem múltiplos agentes de IA rodando em paralelo, cada um cuidando de uma parte do seu trabalho?</span>
+    </div>
+    <p class="question-hint">Fronteira absoluta. Menos de 0,1% das pessoas chegaram aqui em 2026.</p>
+    <div class="question-actions">
+      <button class="btn" data-q="7" data-a="yes">Sim, tenho</button>
+      <button class="btn" data-q="7" data-a="no">Ainda não</button>
+    </div>
+  </div>
+
+</main>
+
+<section id="result" aria-live="polite">
+  <div class="result-level" id="resultLevel">Nível N—</div>
+  <div class="result-name" id="resultName">—</div>
+  <p class="result-desc" id="resultDesc">—</p>
+
+  <div class="result-section">
+    <h3>O que caracteriza esse nível</h3>
+    <p id="resultChar">—</p>
+  </div>
+
+  <div class="result-section">
+    <h3>Seu próximo passo prático</h3>
+    <ul id="resultNextSteps"></ul>
+  </div>
+
+  <div class="result-section">
+    <h3>Prompt sugerido para praticar esta semana</h3>
+    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 12px;">Copie no Claude ou ChatGPT, troque o que está entre colchetes pelos seus dados desidentificados, rode:</p>
+    <div class="prompt-box" id="resultPrompt">—</div>
+    <button class="copy-btn" id="copyPromptBtn" type="button">
+      <span>📋</span>
+      <span id="copyBtnText">Copiar prompt</span>
+    </button>
+  </div>
+
+  <div class="result-actions">
+    <a href="../m1/" class="btn-secondary">← Voltar ao M1</a>
+    <a href="../" class="btn-secondary">Ir ao hub do treinamento</a>
+    <button class="btn-secondary" id="resetBtn" type="button">Refazer diagnóstico</button>
+  </div>
+</section>
+
+<footer>
+  <p>Autodiagnóstico dos 7 Níveis · PDL 2026 Mallory · <a href="https://www.instagram.com/iacomrafael/" target="_blank" rel="noopener">@iacomrafael</a></p>
+  <p style="margin-top: 6px;">Framework versão Mallory. Meta do treinamento: sair de N1 rumo a N2/N3.</p>
+</footer>
+
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  const LEVELS = {
+    1: {
+      code: 'N1',
+      name: 'Curioso',
+      desc: 'Você ouviu falar de IA, talvez tenha aberto uma ou duas vezes — mas ainda não faz parte da sua semana. Ponto de partida honesto. Todo mundo já esteve aqui.',
+      characterizes: 'Abre a IA de vez em quando, quando lembra. Resposta genérica, fecha, esquece. Sem hábito instalado, sem método.',
+      nextSteps: [
+        'Abra claude.ai no celular. Sem cadastro complicado — login pelo Google resolve.',
+        'Copie o prompt-âncora do M1 e cole com 5 tarefas suas da semana. Só rode e leia.',
+        'Meta desta semana: 3 conversas com resultado que você usaria de verdade.'
+      ],
+      prompt: `# PAPEL
+Você é um consultor prático que me ajuda a começar a usar IA no trabalho.
+
+# CONTEXTO
+Trabalho em uma fabricante de eletroportáteis (linha branca).
+Nunca usei IA de forma estruturada — quero dar meu primeiro passo esta semana.
+Minha função: [descreva o que você faz — supervisão, gestão, análise, etc]
+Uma tarefa concreta minha que quero testar: [ex.: escrever comunicado
+sobre mudança de linha, resumir uma reunião, fazer o DDS de segunda]
+
+# TAREFA
+Me ajude a executar essa tarefa. Me pergunte o que precisar antes,
+depois entregue o resultado.
+
+# LIMITAÇÕES
+Se faltar informação, pergunte. Não invente números, nomes ou datas.`
+    },
+    2: {
+      code: 'N2',
+      name: 'Prompter consciente',
+      desc: 'Você já usa IA no trabalho e percebeu: o jeito de pedir muda a resposta. Está usando método. Meta da Trilha 1 do treinamento — e ponto de partida da Trilha 2.',
+      characterizes: 'Pensa antes de perguntar. Sabe que dar contexto muda o resultado. Aplica PCTFL ou algo parecido de forma consistente. Guarda os prompts que funcionam.',
+      nextSteps: [
+        'Escolha 3 tarefas suas recorrentes e transforme cada uma em prompt-âncora PCTFL.',
+        'Guarde os 3 em um documento seu (Google Docs, Notion, papel). Isso é sua biblioteca inicial.',
+        'Para subir para N3: comece a montar seu contexto salvo — quem você é, tom, o que sempre/nunca fazer.'
+      ],
+      prompt: `# PAPEL
+Você é um analista sênior da minha área — [ex.: supervisão de produção, gestão financeira, RH].
+
+# CONTEXTO
+Trabalho em uma fabricante de eletroportáteis com certificação ISO 9001,
+ERP Datasul e processos documentados.
+Minha função: [descreva].
+Tenho 3 tarefas recorrentes que quero transformar em prompt reusável:
+1. [ex.: relatório de passagem de turno]
+2. [ex.: comunicado de mudança de sequência da linha]
+3. [ex.: consolidação semanal dos apontamentos]
+
+# TAREFA
+Para cada uma das 3 tarefas, monte um prompt PCTFL completo que eu possa
+reusar toda semana. Estrutura: PAPEL, CONTEXTO com placeholders [entre colchetes],
+TAREFA com verbo claro, FORMATO específico, LIMITAÇÕES com a regra de ouro.
+
+# FORMATO
+3 blocos, um por tarefa. Cada prompt em bloco de código markdown.
+Ao final, 1 parágrafo com dica de como me organizar para reusá-los.
+
+# LIMITAÇÕES
+Se faltar informação sobre alguma tarefa, pergunte antes de escrever o prompt.
+Não invente detalhes que eu não citei.`
+    },
+    3: {
+      code: 'N3',
+      name: 'Operador com contexto',
+      desc: 'Você tem seu contexto salvo. A IA já sabe quem você é — não precisa se apresentar toda vez. Meta da Trilha 2 do treinamento. É onde a IA começa a virar produtiva de verdade.',
+      characterizes: 'Perfil configurado, biblioteca de prompts ativa, memória do chat calibrada, respostas já saem no seu tom. A IA parou de ser estranha; virou colega treinada.',
+      nextSteps: [
+        'Faça um levantamento das ferramentas que você usa. Se está usando só 1, teste outras 2 esta semana.',
+        'Para cada tarefa importante, se pergunte: qual ferramenta rende mais aqui? Registre.',
+        'Para subir para N4: você precisa saber orquestrar — escolher a ferramenta certa para o problema.'
+      ],
+      prompt: `# PAPEL
+Você é um consultor de produtividade especializado em orquestrar ferramentas de IA
+para profissionais de negócios.
+
+# CONTEXTO
+Já uso IA regularmente com prompts estruturados (PCTFL) e tenho meu perfil salvo.
+Hoje uso: [liste — ex.: Claude no navegador; ChatGPT no celular; nada mais].
+Trabalho em [sua função] numa fabricante de eletroportáteis.
+Meus 5 casos de uso semanais mais comuns:
+[liste — ex.: redação de comunicados; análise de indicadores; resumo de reuniões;
+pesquisa jurídica rápida; brainstorming de melhorias]
+
+# TAREFA
+Analise cada caso de uso e recomende:
+1. Qual ferramenta é a melhor escolha e por quê.
+2. Se vale a pena eu adotar 1 nova ferramenta que ainda não tenho.
+3. Como organizar minha rotina para não misturar "ferramenta certa para caso errado".
+
+# FORMATO
+Tabela: Caso de uso | Ferramenta recomendada | Por quê | Alternativa.
+Depois, 1 parágrafo com plano dos próximos 30 dias.
+
+# LIMITAÇÕES
+Não recomende ferramenta paga sem justificar o retorno.
+Se faltar informação, pergunte.`
+    },
+    4: {
+      code: 'N4',
+      name: 'Orquestrador de ferramentas',
+      desc: 'Você conhece o ecossistema. Usa Claude, ChatGPT, Gemini, Copilot — cada um pro caso certo. Território de gestor sênior maduro em IA e de profissional adiantado.',
+      characterizes: 'Sabe qual ferramenta usar para qual tarefa. Não gasta tempo escolhendo — decide rápido. Tem preferências fundamentadas em uso real, não em benchmark.',
+      nextSteps: [
+        'Escolha 1 processo recorrente que consome sua semana. Transforme em automação: skill do Claude, workstation Cowork, ou workflow no n8n.',
+        'Meta pequena e concreta: em 2 semanas, esse processo roda com 50% menos toque seu.',
+        'Para subir para N5: você precisa ter algo que roda sem você. Uma automação viva.'
+      ],
+      prompt: `# PAPEL
+Você é um engenheiro de processos com foco em automação leve com IA
+para profissionais de negócios não-técnicos.
+
+# CONTEXTO
+Já uso múltiplas ferramentas de IA com fluência (Claude, ChatGPT e outras).
+Quero empacotar 1 processo meu em automação real — algo que rode sem eu tocar
+passo a passo toda vez.
+Processo candidato: [descreva um processo recorrente seu — ex.: consolidação
+mensal de indicadores; triagem inicial de e-mails; geração do briefing de fechamento]
+Ferramentas que tenho acesso: [Claude Pro? Cowork? n8n? Zapier? Make?]
+
+# TAREFA
+1. Mapeie o processo em etapas atômicas.
+2. Aponte quais etapas cabem em automação hoje e quais precisam do meu julgamento.
+3. Sugira a arquitetura mínima: qual ferramenta, quais passos, como conectar.
+4. Estime o esforço de setup e o ganho semanal em horas.
+
+# FORMATO
+Diagrama textual do processo. Depois: tabela Etapa | Automatizável? | Ferramenta | Nota.
+Depois: passo a passo de implementação para as próximas 2 semanas.
+
+# LIMITAÇÕES
+Não proponha nada que dependa de comprar sistema novo ou contratar consultor.
+Se faltar informação sobre o processo, pergunte antes de arquitetar.`
+    },
+    5: {
+      code: 'N5',
+      name: 'Construtor de processos',
+      desc: 'Você tem coisas rodando. Skills, workstations, workflows — pelo menos 1 automação viva na sua área. Você economiza horas por semana com processos que você mesmo montou.',
+      characterizes: 'Não usa IA — constrói com IA. Sua produtividade não é linear no tempo que você investe. Você é o modelo que outros na empresa começam a perguntar como fez.',
+      nextSteps: [
+        'Explore o terminal. Instale Claude Code ou similar. Comece por tarefas simples: renomear arquivos, resumir documentos locais em lote.',
+        'Meta em 30 dias: 1 tarefa que hoje você faz clicando, feita via terminal com Claude.',
+        'Para subir para N6: você precisa parar de ter medo do terminal. Ele é seu novo aliado.'
+      ],
+      prompt: `# PAPEL
+Você é um mentor técnico especializado em introduzir profissionais de negócios
+ao trabalho com IA no terminal (Claude Code, CLI, arquivos locais).
+
+# CONTEXTO
+Já construí pelo menos 1 automação com IA e sinto que atingi um teto no navegador.
+Sistema operacional: [macOS, Windows ou Linux].
+Experiência com terminal: [nunca abri; sei o básico; uso ocasionalmente].
+1 tarefa concreta que eu gostaria de resolver com Claude Code:
+[ex.: analisar 40 PDFs de contratos e gerar planilha de cláusulas de risco;
+renomear e organizar 500 arquivos de fotos de linha de produção;
+gerar relatório mensal a partir de 5 arquivos Excel espalhados]
+
+# TAREFA
+1. Explique, sem jargão, o que é Claude Code e por que ele resolve o teto do chat.
+2. Me guie passo a passo pelo primeiro setup — do zero à primeira execução real.
+3. Aplique à minha tarefa concreta acima: como faríamos, o que preciso preparar.
+
+# FORMATO
+3 seções numeradas. Comandos em blocos de código, com comentário do que cada um faz.
+
+# LIMITAÇÕES
+Assuma que sou não-técnico e que dou trabalho para leitores da comunidade sênior.
+Se um passo depender de instalação de coisas, avise antes de continuar.
+Se faltar informação, pergunte.`
+    },
+    6: {
+      code: 'N6',
+      name: 'Builder',
+      desc: 'Você é builder. Trabalha com IA no terminal, opera arquivos locais, constrói sistemas. Na Mallory hoje, você é praticamente único no seu nível.',
+      characterizes: 'Claude Code, Cowork em nível avançado, scripts que a IA edita e você revisa. Você entrega em horas o que times inteiros levam semanas.',
+      nextSteps: [
+        'Explore agentes múltiplos: um agente para pesquisa, outro para redação, outro para validação, orquestrados juntos.',
+        'Meta 60 dias: uma workforce de 3 agentes cobrindo uma cadeia inteira da sua rotina.',
+        'Para chegar em N7: o desafio é design de sistema multi-agente, não capacidade técnica.'
+      ],
+      prompt: `# PAPEL
+Você é um arquiteto de sistemas multi-agente especializado em orquestrar
+Claude em pipelines de trabalho para profissionais avançados.
+
+# CONTEXTO
+Já opero no terminal com Claude Code, entrego automações não-triviais e
+domino o padrão CLAUDE.md + memory.md.
+1 rotina complexa da minha semana que hoje eu ainda faço quase inteira sozinho:
+[descreva — ex.: preparar comitê executivo com dados de 4 áreas, cruzar
+5 fontes de dado, escrever briefing e antecipar objeções]
+
+# TAREFA
+1. Desenhe uma arquitetura multi-agente para essa rotina: quantos agentes,
+   o que cada um faz, como se comunicam.
+2. Aponte onde entra revisão humana (a minha) e onde os agentes conversam entre si.
+3. Descreva o primeiro protótipo mínimo — o menos ambicioso que já entrega valor.
+
+# FORMATO
+Diagrama textual da arquitetura. Depois: descrição de cada agente com seu CLAUDE.md.
+Depois: plano de bring-up em 3 semanas.
+
+# LIMITAÇÕES
+Realismo importa: nada de "orquestre 10 agentes em paralelo" no protótipo.
+Se faltar informação sobre a rotina, pergunte.`
+    },
+    7: {
+      code: 'N7',
+      name: 'Workforce de agentes',
+      desc: 'Você tem uma força de trabalho de agentes. Múltiplos LLMs, cada um com seu papel, seu contexto, sua responsabilidade — rodando em paralelo enquanto você orquestra. Fronteira absoluta.',
+      characterizes: 'Menos de 0,1% dos profissionais em 2026 estão aqui. Você não usa IA — você emprega IA. Sua força é decidir quem faz o quê, revisar o que sai e ajustar o sistema.',
+      nextSteps: [
+        'Você chegou onde ninguém chegou. Documente o que você faz — vai virar referência para os próximos.',
+        'Considere compartilhar sua arquitetura com o time da Mallory: o que aprendeu pode acelerar a empresa toda.',
+        'Continue evoluindo: o campo muda rápido, e você está na linha de frente.'
+      ],
+      prompt: `# PAPEL
+Você é um pesquisador de sistemas multi-agente e futurólogo prático em IA.
+
+# CONTEXTO
+Opero uma workforce de agentes em produção. Estou na fronteira.
+Meu sistema atual: [descreva em alto nível — quantos agentes, quais papéis,
+como orquestra].
+
+# TAREFA
+1. Aponte 3 gaps prováveis no meu design que aparecem com escala.
+2. Sugira 2 experimentos para os próximos 90 dias.
+3. Aponte 1 risco de médio prazo que eu talvez não esteja vendo.
+
+# FORMATO
+Análise crítica, sem elogios. Cada gap/experimento/risco em bloco próprio.
+
+# LIMITAÇÕES
+Não repita o que já é óbvio para quem está neste nível.
+Se faltar contexto sobre o sistema, pergunte com precisão.`
+    }
+  };
+
+  const STORAGE_KEY = 'mallory-7niveis-diagnostico';
+  const state = { answers: {}, level: null };
+
+  // Restaurar estado
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    if (saved && saved.answers) {
+      state.answers = saved.answers;
+      Object.keys(saved.answers).forEach(q => applyAnswer(parseInt(q), saved.answers[q], false));
+      if (Object.keys(state.answers).length === 7) {
+        computeAndShow(false);
+      }
+    }
+  } catch (e) { /* ignore */ }
+
+  // Bind buttons
+  document.querySelectorAll('.btn[data-q]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const q = parseInt(this.dataset.q);
+      const a = this.dataset.a;
+      state.answers[q] = a;
+      applyAnswer(q, a, true);
+      save();
+      if (Object.keys(state.answers).length === 7) {
+        computeAndShow(true);
+      }
+    });
+  });
+
+  function applyAnswer(q, a, scroll) {
+    const questionEl = document.querySelector(`.question[data-q="${q}"]`);
+    if (!questionEl) return;
+    questionEl.classList.remove('answered-yes', 'answered-no');
+    questionEl.classList.add('answered');
+    questionEl.classList.add(a === 'yes' ? 'answered-yes' : 'answered-no');
+    questionEl.querySelectorAll('.btn').forEach(b => b.classList.remove('selected-yes', 'selected-no'));
+    const selBtn = questionEl.querySelector(`.btn[data-a="${a}"]`);
+    if (selBtn) selBtn.classList.add(a === 'yes' ? 'selected-yes' : 'selected-no');
+    // progress
+    const step = document.querySelector(`.progress-step[data-step="${q}"]`);
+    if (step) step.classList.add('done');
+    // scroll para próxima
+    if (scroll) {
+      const nextQ = document.querySelector(`.question[data-q="${q+1}"]`);
+      if (nextQ && !state.answers[q+1]) {
+        setTimeout(() => nextQ.scrollIntoView({ behavior: 'smooth', block: 'center' }), 200);
+      }
+    }
+  }
+
+  function computeLevel() {
+    // Nível é a última pergunta contínua com "sim" antes do primeiro "não"
+    let level = 1;
+    for (let i = 1; i <= 7; i++) {
+      if (state.answers[i] === 'yes') {
+        level = i + 1;
+      } else {
+        break;
+      }
+    }
+    // Clamp
+    if (level > 7) level = 7;
+    if (level < 1) level = 1;
+    return level;
+  }
+
+  function computeAndShow(scroll) {
+    const level = computeLevel();
+    state.level = level;
+    const info = LEVELS[level];
+    document.getElementById('resultLevel').textContent = 'Nível ' + info.code;
+    document.getElementById('resultName').textContent = info.name;
+    document.getElementById('resultDesc').textContent = info.desc;
+    document.getElementById('resultChar').textContent = info.characterizes;
+    const stepsEl = document.getElementById('resultNextSteps');
+    stepsEl.innerHTML = '';
+    info.nextSteps.forEach(s => {
+      const li = document.createElement('li');
+      li.textContent = s;
+      stepsEl.appendChild(li);
+    });
+    document.getElementById('resultPrompt').textContent = info.prompt;
+    const resultEl = document.getElementById('result');
+    resultEl.classList.add('visible');
+    if (scroll) {
+      setTimeout(() => resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
+    }
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ answers: state.answers }));
+    } catch (e) { /* ignore */ }
+  }
+
+  // Copiar prompt
+  document.getElementById('copyPromptBtn').addEventListener('click', function() {
+    const text = document.getElementById('resultPrompt').textContent;
+    const btnText = document.getElementById('copyBtnText');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        this.classList.add('copied');
+        btnText.textContent = 'Copiado!';
+        setTimeout(() => {
+          this.classList.remove('copied');
+          btnText.textContent = 'Copiar prompt';
+        }, 2200);
+      });
+    } else {
+      // fallback antigo
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch(e) {}
+      document.body.removeChild(ta);
+      btnText.textContent = 'Copiado!';
+      setTimeout(() => btnText.textContent = 'Copiar prompt', 2200);
+    }
+  });
+
+  // Reset
+  document.getElementById('resetBtn').addEventListener('click', function() {
+    if (!confirm('Refazer o diagnóstico? Suas respostas atuais serão apagadas.')) return;
+    state.answers = {};
+    state.level = null;
+    try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+    document.querySelectorAll('.question').forEach(q => {
+      q.classList.remove('answered', 'answered-yes', 'answered-no');
+      q.querySelectorAll('.btn').forEach(b => b.classList.remove('selected-yes', 'selected-no'));
+    });
+    document.querySelectorAll('.progress-step').forEach(s => s.classList.remove('done'));
+    document.getElementById('result').classList.remove('visible');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validador de Resposta da IA · 30 Segundos · Mallory PDL 2026</title>
+<meta name="description" content="Validação em 30 segundos antes de usar qualquer resposta da IA: Fonte, Coerência e Seu Conhecimento — mais 5 alertas de conteúdo sensível do M4.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-dark: #262A35;
+    --bg-light: #353A45;
+    --bg-card: rgba(255,255,255,.045);
+    --bg-card-hover: rgba(255,255,255,.08);
+    --text: #E8ECF3;
+    --text-muted: #A0A8B8;
+    --text-dim: #6B7385;
+    --accent: #7B9EFF;
+    --accent-purple: #B394FF;
+    --success: #6EE7B7;
+    --warning: #FBBF24;
+    --danger: #F87171;
+    --border: rgba(255,255,255,.08);
+    --border-strong: rgba(255,255,255,.16);
+    --radius-sm: 6px;
+    --radius: 10px;
+    --radius-lg: 14px;
+    --shadow-md: 0 4px 12px rgba(0,0,0,.28);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,.4);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before, body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: .06;
+    background-repeat: no-repeat;
+    animation: blob 28s ease-in-out infinite;
+  }
+  body::before { background: radial-gradient(circle 400px at 15% 20%, var(--accent), transparent 60%); }
+  body::after { background: radial-gradient(circle 500px at 85% 80%, var(--danger), transparent 60%); animation-delay: -14s; animation-duration: 32s; opacity: .04; }
+  @keyframes blob { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(20px,-30px) scale(1.05);} }
+  @media (prefers-reduced-motion: reduce) { body::before, body::after { animation: none; } }
+
+  .container { max-width: 820px; margin: 0 auto; padding: 48px 20px 96px; }
+
+  header { text-align: center; margin-bottom: 40px; }
+  .kicker {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(123,158,255,.1);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 5vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    margin-bottom: 14px;
+  }
+  header p { color: var(--text-muted); font-size: 17px; max-width: 620px; margin: 0 auto; }
+
+  .steps { display: flex; flex-direction: column; gap: 20px; }
+
+  .step {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    transition: border-color .2s ease;
+  }
+  .step.answered { border-color: var(--border-strong); }
+  .step-header {
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    margin-bottom: 12px;
+  }
+  .step-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--text-dim);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .step-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+  .step-question {
+    color: var(--text);
+    font-size: 15px;
+    margin: 4px 0 12px 28px;
+  }
+  .step-hint {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin: 0 0 16px 28px;
+    font-style: italic;
+  }
+  .step-actions {
+    display: flex;
+    gap: 8px;
+    margin-left: 28px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-strong);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    transition: all .15s ease;
+  }
+  .btn:hover { background: var(--bg-card-hover); border-color: var(--accent); }
+  .btn.sel-yes {
+    background: rgba(110,231,183,.15);
+    border-color: var(--success);
+    color: var(--success);
+    font-weight: 600;
+  }
+  .btn.sel-mid {
+    background: rgba(251,191,36,.12);
+    border-color: var(--warning);
+    color: var(--warning);
+    font-weight: 600;
+  }
+  .btn.sel-no {
+    background: rgba(248,113,113,.12);
+    border-color: var(--danger);
+    color: var(--danger);
+    font-weight: 600;
+  }
+
+  /* Red flags checklist */
+  .flags-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-left: 28px;
+  }
+  @media (min-width: 600px) { .flags-grid { grid-template-columns: 1fr 1fr; } }
+  .flag {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all .15s ease;
+  }
+  .flag:hover { border-color: var(--border-strong); }
+  .flag.checked { border-color: var(--danger); background: rgba(248,113,113,.06); }
+  .flag input {
+    margin-top: 3px;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--danger);
+    cursor: pointer;
+  }
+  .flag-text { font-size: 13px; }
+  .flag-text strong { display: block; color: var(--text); font-weight: 600; margin-bottom: 2px; }
+  .flag-text span { color: var(--text-muted); }
+
+  /* Verdict */
+  #verdict {
+    margin-top: 32px;
+    padding: 32px 28px;
+    border-radius: var(--radius-lg);
+    display: none;
+    box-shadow: var(--shadow-lg);
+  }
+  #verdict.visible { display: block; animation: fadeIn .4s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(12px);} to { opacity: 1; transform: translateY(0);} }
+  #verdict.green { background: linear-gradient(135deg, rgba(110,231,183,.1), rgba(110,231,183,.02)); border: 1px solid rgba(110,231,183,.3); }
+  #verdict.yellow { background: linear-gradient(135deg, rgba(251,191,36,.08), rgba(251,191,36,.02)); border: 1px solid rgba(251,191,36,.3); }
+  #verdict.red { background: linear-gradient(135deg, rgba(248,113,113,.08), rgba(248,113,113,.02)); border: 1px solid rgba(248,113,113,.3); }
+  .verdict-icon { font-size: 40px; line-height: 1; margin-bottom: 12px; }
+  .verdict-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: clamp(22px, 4vw, 28px);
+    letter-spacing: -.01em;
+    margin-bottom: 10px;
+  }
+  #verdict.green .verdict-title { color: var(--success); }
+  #verdict.yellow .verdict-title { color: var(--warning); }
+  #verdict.red .verdict-title { color: var(--danger); }
+  .verdict-desc { color: var(--text-muted); font-size: 15px; margin-bottom: 20px; }
+  .verdict-actions { margin-top: 20px; }
+  .verdict-actions h3 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+  .verdict-actions ul { list-style: none; padding: 0; }
+  .verdict-actions li {
+    padding: 6px 0 6px 24px;
+    position: relative;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  .verdict-actions li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .reset-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .btn-secondary {
+    padding: 12px 20px;
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .15s ease;
+  }
+  .btn-secondary:hover { background: var(--bg-card-hover); border-color: var(--accent); }
+
+  .mata-callout {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: rgba(251,191,36,.05);
+    border-left: 3px solid var(--warning);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .mata-callout strong { color: var(--text); }
+
+  footer { margin-top: 64px; text-align: center; color: var(--text-dim); font-size: 13px; }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media print {
+    body { background: white; color: black; }
+    body::before, body::after { display: none; }
+    .container { padding: 20px; max-width: 100%; }
+    .step-actions, .reset-actions { display: none; }
+    .step { background: white; border: 1px solid #ddd; }
+    .flag { background: #f7f8fa; }
+    #verdict.green, #verdict.yellow, #verdict.red { background: #f7f8fa; border: 1px solid #ccc; }
+    .step-title, .verdict-title, h1, .flag-text strong { color: black; }
+    .step-question, .verdict-desc, .flag-text span, header p, .verdict-actions li { color: #444; }
+    .btn.sel-yes::after { content: ' ✓'; color: green; }
+    .btn.sel-mid::after { content: ' ~'; color: orange; }
+    .btn.sel-no::after { content: ' ✗'; color: red; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+  <span class="kicker">Artefato · M4 · Validador</span>
+  <h1>Pode usar essa resposta da IA?</h1>
+  <p>Antes de colar, enviar ou assinar qualquer resposta da IA, gasta 30 segundos aqui. 3 filtros do M2 + 5 alertas do M4. No fim, você sabe se pode usar, se precisa revisar, ou se não deve usar de jeito nenhum.</p>
+</header>
+
+<main class="steps" id="steps">
+
+  <div class="step" data-step="fonte">
+    <div class="step-header">
+      <span class="step-num">01 · FONTE</span>
+      <span class="step-title">Todo fato veio do que você enviou?</span>
+    </div>
+    <p class="step-question">Leia a resposta procurando fatos, números, nomes, datas — cada um deles apareceu na sua mensagem ou na conversa, ou surgiu do nada?</p>
+    <p class="step-hint">Regra: IA não busca. Se apareceu algo que você não colocou, ela inventou.</p>
+    <div class="step-actions">
+      <button class="btn" data-step="fonte" data-a="yes">Sim, tudo do que enviei</button>
+      <button class="btn" data-step="fonte" data-a="mid">Parcial — 1 ou 2 fatos novos</button>
+      <button class="btn" data-step="fonte" data-a="no">Não — vários fatos do nada</button>
+    </div>
+  </div>
+
+  <div class="step" data-step="coerencia">
+    <div class="step-header">
+      <span class="step-num">02 · COERÊNCIA</span>
+      <span class="step-title">Nenhum número, nome ou norma surgiu sem origem?</span>
+    </div>
+    <p class="step-question">Percorra a resposta caçando: números específicos (percentuais, prazos, valores), citação de norma (NR-X, ISO Y), nomes próprios, artigos de lei. Cada um: você sabe de onde vem?</p>
+    <p class="step-hint">A IA é ótima em soar precisa mesmo inventando. Precisão sem fonte é alerta vermelho.</p>
+    <div class="step-actions">
+      <button class="btn" data-step="coerencia" data-a="yes">Sim, tudo rastreável</button>
+      <button class="btn" data-step="coerencia" data-a="mid">Alguma dúvida em 1 ponto</button>
+      <button class="btn" data-step="coerencia" data-a="no">Não — vários pontos suspeitos</button>
+    </div>
+  </div>
+
+  <div class="step" data-step="conhecimento">
+    <div class="step-header">
+      <span class="step-num">03 · SEU CONHECIMENTO</span>
+      <span class="step-title">Bate com o que você sabe do seu setor?</span>
+    </div>
+    <p class="step-question">Você tem experiência real da área. A resposta parece coerente com o que você conhece de rotina, prática, jeito da Mallory operar? Ou tem algo que soa estranho?</p>
+    <p class="step-hint">Estranhamento é radar. Se algo pareceu "quase certo, mas não seria assim", provavelmente ela inventou aquele detalhe.</p>
+    <div class="step-actions">
+      <button class="btn" data-step="conhecimento" data-a="yes">Sim, faz total sentido</button>
+      <button class="btn" data-step="conhecimento" data-a="mid">Faz sentido, mas 1 ponto estranho</button>
+      <button class="btn" data-step="conhecimento" data-a="no">Não — soa fora do meu setor</button>
+    </div>
+  </div>
+
+  <div class="step" data-step="flags">
+    <div class="step-header">
+      <span class="step-num">04 · CONTEÚDO SENSÍVEL</span>
+      <span class="step-title">A resposta contém algo das 5 categorias do M4?</span>
+    </div>
+    <p class="step-question">Marque tudo que aparece na resposta. Cada categoria marcada muda o veredicto — dado sensível não sai da empresa sem processo.</p>
+    <p class="step-hint">Se você não colocaria num grupo aberto de WhatsApp, não repassa da IA.</p>
+    <div class="flags-grid">
+      <label class="flag" data-flag="gente">
+        <input type="checkbox" data-flag="gente">
+        <span class="flag-text"><strong>👤 Gente</strong><span>Nome, CPF, salário, atestado, avaliação — de colega ou candidato.</span></span>
+      </label>
+      <label class="flag" data-flag="produto">
+        <input type="checkbox" data-flag="produto">
+        <span class="flag-text"><strong>🔧 Produto</strong><span>Especificação de molde, parâmetro de processo, desenho técnico, fórmula.</span></span>
+      </label>
+      <label class="flag" data-flag="contrato">
+        <input type="checkbox" data-flag="contrato">
+        <span class="flag-text"><strong>📄 Contrato</strong><span>Preço, condição comercial, contrato de fornecedor ou cliente.</span></span>
+      </label>
+      <label class="flag" data-flag="diretoria">
+        <input type="checkbox" data-flag="diretoria">
+        <span class="flag-text"><strong>🏛️ Diretoria</strong><span>Resultado não divulgado, plano estratégico, decisão em discussão.</span></span>
+      </label>
+      <label class="flag" data-flag="concorrencia">
+        <input type="checkbox" data-flag="concorrencia">
+        <span class="flag-text"><strong>🎯 Concorrência</strong><span>Informação de negociação ou inteligência competitiva.</span></span>
+      </label>
+      <label class="flag" data-flag="none">
+        <input type="checkbox" data-flag="none">
+        <span class="flag-text"><strong>✓ Nenhuma</strong><span>A resposta não toca nenhuma categoria sensível.</span></span>
+      </label>
+    </div>
+  </div>
+
+</main>
+
+<section id="verdict" aria-live="polite">
+  <div class="verdict-icon" id="verdictIcon">—</div>
+  <h2 class="verdict-title" id="verdictTitle">—</h2>
+  <p class="verdict-desc" id="verdictDesc">—</p>
+  <div class="verdict-actions">
+    <h3 id="verdictNextTitle">Próximos passos</h3>
+    <ul id="verdictNext"></ul>
+  </div>
+
+  <div class="mata-callout">
+    <strong>Caso-âncora: Mata v. Avianca (2023)</strong> — advogados enviaram à Justiça uma petição com 6 decisões judiciais que o ChatGPT inventou. Plausíveis, confiantes, falsas. Sanção pública e dano de reputação. O erro não foi usar IA — foi <strong>não verificar</strong>. É por isso que existe esse validador.
+  </div>
+
+  <div class="reset-actions">
+    <a href="../m4/" class="btn-secondary">← Voltar ao M4</a>
+    <a href="../" class="btn-secondary">Hub do treinamento</a>
+    <button class="btn-secondary" id="resetBtn" type="button">Nova validação</button>
+  </div>
+</section>
+
+<footer>
+  <p>Validador de Resposta 30s · PDL 2026 Mallory · <a href="https://www.instagram.com/iacomrafael/" target="_blank" rel="noopener">@iacomrafael</a></p>
+</footer>
+
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  const STORAGE_KEY = 'mallory-validador-resposta';
+  const state = {
+    fonte: null,
+    coerencia: null,
+    conhecimento: null,
+    flags: { gente: false, produto: false, contrato: false, diretoria: false, concorrencia: false, none: false }
+  };
+
+  // Restaurar estado
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+    if (saved) {
+      Object.assign(state, saved);
+      if (state.fonte) applyFilter('fonte', state.fonte);
+      if (state.coerencia) applyFilter('coerencia', state.coerencia);
+      if (state.conhecimento) applyFilter('conhecimento', state.conhecimento);
+      Object.keys(state.flags).forEach(f => {
+        if (state.flags[f]) {
+          const cb = document.querySelector(`input[data-flag="${f}"]`);
+          const el = document.querySelector(`label.flag[data-flag="${f}"]`);
+          if (cb) cb.checked = true;
+          if (el) el.classList.add('checked');
+        }
+      });
+      compute(false);
+    }
+  } catch (e) { /* ignore */ }
+
+  // Filter buttons (fonte/coerência/conhecimento)
+  document.querySelectorAll('.btn[data-step]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const step = this.dataset.step;
+      const a = this.dataset.a;
+      state[step] = a;
+      applyFilter(step, a);
+      save();
+      compute(true);
+    });
+  });
+
+  // Flag checkboxes
+  document.querySelectorAll('input[data-flag]').forEach(cb => {
+    cb.addEventListener('change', function() {
+      const f = this.dataset.flag;
+      const label = this.closest('label.flag');
+      // "Nenhuma" é exclusivo
+      if (f === 'none' && this.checked) {
+        // desmarca outros
+        Object.keys(state.flags).forEach(k => {
+          if (k !== 'none') {
+            state.flags[k] = false;
+            const otherCb = document.querySelector(`input[data-flag="${k}"]`);
+            const otherLabel = document.querySelector(`label.flag[data-flag="${k}"]`);
+            if (otherCb) otherCb.checked = false;
+            if (otherLabel) otherLabel.classList.remove('checked');
+          }
+        });
+        state.flags.none = true;
+        label.classList.add('checked');
+      } else if (f !== 'none' && this.checked) {
+        // desmarca "none"
+        state.flags.none = false;
+        const noneCb = document.querySelector(`input[data-flag="none"]`);
+        const noneLabel = document.querySelector(`label.flag[data-flag="none"]`);
+        if (noneCb) noneCb.checked = false;
+        if (noneLabel) noneLabel.classList.remove('checked');
+        state.flags[f] = true;
+        label.classList.add('checked');
+      } else {
+        state.flags[f] = false;
+        label.classList.remove('checked');
+      }
+      save();
+      compute(true);
+    });
+  });
+
+  function applyFilter(step, a) {
+    const stepEl = document.querySelector(`.step[data-step="${step}"]`);
+    if (!stepEl) return;
+    stepEl.classList.add('answered');
+    stepEl.querySelectorAll('.btn').forEach(b => b.classList.remove('sel-yes', 'sel-mid', 'sel-no'));
+    const sel = stepEl.querySelector(`.btn[data-a="${a}"]`);
+    if (sel) sel.classList.add(a === 'yes' ? 'sel-yes' : a === 'mid' ? 'sel-mid' : 'sel-no');
+  }
+
+  function compute(scroll) {
+    // Precisa ter os 3 filtros respondidos + alguma flag decidida
+    const flagsChosen = Object.values(state.flags).some(v => v);
+    if (!state.fonte || !state.coerencia || !state.conhecimento || !flagsChosen) {
+      return;
+    }
+    const yesCount = ['fonte','coerencia','conhecimento'].filter(k => state[k] === 'yes').length;
+    const noCount = ['fonte','coerencia','conhecimento'].filter(k => state[k] === 'no').length;
+    const midCount = 3 - yesCount - noCount;
+    const dangerFlags = ['gente','produto','contrato','diretoria','concorrencia'].filter(f => state.flags[f]).length;
+
+    let color, icon, title, desc, next;
+
+    if (noCount === 0 && midCount === 0 && dangerFlags === 0) {
+      color = 'green';
+      icon = '✅';
+      title = 'Pode usar — com as revisões finais de sempre';
+      desc = 'A resposta passou nos 3 filtros e não toca conteúdo sensível. Você pode usar — mas nunca sai crua: aplique sua última leitura crítica antes de assinar.';
+      next = [
+        'Leia mais uma vez antes de enviar/registrar — no seu tom, procurando o que ajustar.',
+        'Se for documento assinado, revise números e nomes uma última vez.',
+        'Salve o prompt no seu banco pessoal — ele funcionou.'
+      ];
+    } else if (dangerFlags >= 1) {
+      color = 'red';
+      icon = '🚫';
+      title = 'Não use — pare e revise antes';
+      desc = 'A resposta toca ' + dangerFlags + ' categoria(s) do M4 (gente, produto, contrato, diretoria, concorrência). Isso não pode circular sem processo — mesmo se a resposta parecer correta.';
+      next = [
+        'Desidentifique: troque nomes reais por [NOME], números específicos por [VALOR], etc.',
+        'Refaça o prompt com dado fictício ou anonimizado. Rode de novo com esse contexto.',
+        'Se o dado é essencial para a decisão, essa tarefa provavelmente é Manual — não Autopiloto ou Colaboração.',
+        'Consulte a diretriz da sua área (M4) sobre uso de dado sensível.'
+      ];
+    } else if (noCount >= 1) {
+      color = 'red';
+      icon = '🚫';
+      title = 'Não use sem verificar cada ponto';
+      desc = 'Você marcou pelo menos 1 filtro como "Não" — isso é sinal de alucinação. A IA inventou algo que passaria por fato. Não repassa.';
+      next = [
+        'Identifique exatamente onde a IA saiu do trilho: fato inventado, número inventado, ou informação estranha ao seu setor.',
+        'Refaça o prompt: mais contexto na entrada, restrição explícita nas Limitações ("não invente número/nome/data").',
+        'Se precisar do fato específico (norma, prazo legal, dado de mercado), busque na fonte original — a IA não é fonte primária.',
+        'Caso Mata v. Avianca abaixo é exatamente esse cenário. Não caia.'
+      ];
+    } else {
+      // midCount >= 1, sem noCount, sem dangerFlags
+      color = 'yellow';
+      icon = '⚠️';
+      title = 'Reveja antes de usar';
+      desc = 'A resposta tem pontos parciais em 1 ou mais filtros. Não é uso proibido — mas exige seu ajuste antes de sair.';
+      next = [
+        'Volte aos pontos amarelos: identifique o fato duvidoso e valide na fonte primária.',
+        'Se o problema é coerência, peça à IA na mesma conversa para citar de onde tirou aquele dado.',
+        'Se o problema é seu conhecimento estranhando, confie no seu radar — 20 anos de área valem mais que 1 resposta.',
+        'Ajustou? Marque tudo como Sim e valide de novo.'
+      ];
+    }
+
+    const v = document.getElementById('verdict');
+    v.classList.remove('green', 'yellow', 'red');
+    v.classList.add(color);
+    v.classList.add('visible');
+    document.getElementById('verdictIcon').textContent = icon;
+    document.getElementById('verdictTitle').textContent = title;
+    document.getElementById('verdictDesc').textContent = desc;
+    const ul = document.getElementById('verdictNext');
+    ul.innerHTML = '';
+    next.forEach(n => {
+      const li = document.createElement('li');
+      li.textContent = n;
+      ul.appendChild(li);
+    });
+    if (scroll) {
+      setTimeout(() => v.scrollIntoView({ behavior: 'smooth', block: 'start' }), 250);
+    }
+  }
+
+  function save() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {}
+  }
+
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    if (!confirm('Iniciar nova validação? As respostas atuais serão apagadas.')) return;
+    state.fonte = null; state.coerencia = null; state.conhecimento = null;
+    Object.keys(state.flags).forEach(k => state.flags[k] = false);
+    try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('answered'));
+    document.querySelectorAll('.btn[data-step]').forEach(b => b.classList.remove('sel-yes','sel-mid','sel-no'));
+    document.querySelectorAll('input[data-flag]').forEach(cb => cb.checked = false);
+    document.querySelectorAll('label.flag').forEach(l => l.classList.remove('checked'));
+    document.getElementById('verdict').classList.remove('visible');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+})();
+</script>
+
+</body>
+</html>
