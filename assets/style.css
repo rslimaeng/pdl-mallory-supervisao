@@ -468,8 +468,36 @@ main {
 }
 
 .card-modulo .promessa {
-  margin-bottom: 0;
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Lista "O que você aprende" — cresce para alinhar os botões entre cards */
+.card-modulo > ul {
   flex-grow: 1;
+  margin-bottom: 4px;
+}
+
+.card-modulo .btn-primary {
+  align-self: flex-start;
+}
+
+/* Rodapé de autoria do card (design-system: crédito @iacomrafael) */
+.card-modulo .card-footer-author {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin: 12px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+}
+.card-modulo .card-footer-author a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+.card-modulo .card-footer-author a:hover {
+  text-decoration: underline;
 }
 
 /* Cores por grupo narrativo (ver goal-4a-report, decisão de mapeamento) */
