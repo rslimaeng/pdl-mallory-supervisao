@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco de Prompts · Trilha 1 — Supervisão · Mallory PDL 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="site-brand">
+      <div class="site-logos">
+        <img src="../assets/logos/iel-ceara.png" alt="IEL Ceará">
+        <img src="../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+      </div>
+      <div class="site-brand-text">
+        <a href="../">IA na Prática · Mallory — Trilha 1 · Supervisão</a>
+        <span class="site-meta">PDL 2026 · 13 de julho de 2026</span>
+      </div>
+    </div>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="../">Início</a></li>
+        <li><a href="./" aria-current="page">Banco de Prompts</a></li>
+        <li><a href="../artefatos/">Artefatos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="hero">
+      <h1>Banco de Prompts · Trilha 1 — Supervisão</h1>
+      <p class="lead"><strong>O kit de segunda-feira.</strong> Copie o prompt da sua área, cole no Claude, troque o que está <code>[entre colchetes]</code> pelos seus dados desidentificados — e revise antes de usar. Não é catálogo para ler inteiro: é prateleira para pegar o que precisa.</p>
+    </section>
+
+    <nav class="toc" aria-label="Nesta página">
+      <span class="eyebrow">Nesta página</span>
+      <ul>
+        <li><a href="#como-usar">Como usar</a></li>
+        <li><a href="#prompts-modulos">Os 6 prompts dos módulos</a></li>
+        <li><a href="#area-injetoras">Injetoras / Fábrica</a></li>
+        <li><a href="#area-montagem">Montagem</a></li>
+        <li><a href="#area-ferramentaria">Ferramentaria</a></li>
+        <li><a href="#area-manutencao">Manutenção</a></li>
+        <li><a href="#area-pcp">PCP</a></li>
+        <li><a href="#area-qualidade">Qualidade</a></li>
+        <li><a href="#area-seguranca">Segurança do Trabalho</a></li>
+        <li><a href="#area-almoxarifado">Almoxarifado / Remanufatura</a></li>
+        <li><a href="#area-pos-vendas">Pós-Vendas</a></li>
+        <li><a href="#area-trade">Trade Marketing</a></li>
+      </ul>
+    </nav>
+
+    <section class="section" id="como-usar">
+      <h2>Como usar este banco</h2>
+
+      <ol>
+        <li>Ache o prompt da sua situação — pelos módulos (os 6 primeiros) ou pela sua área (os demais).</li>
+        <li>Copie, cole no Claude (<a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>) e troque o conteúdo <code>[entre colchetes]</code> pelos seus dados <strong>desidentificados</strong> — nome real, número real e código real ficam de fora; aproximação e nome trocado entram.</li>
+        <li>Rode, valide, ajuste. O prompt que funcionou vira patrimônio: salve no seu banco pessoal.</li>
+      </ol>
+
+      <div class="guia-bloco">
+        <p><strong>PCTFL em 30 segundos:</strong></p>
+        <ul>
+          <li><strong>P</strong>apel — quem a IA deve ser (define vocabulário e nível)</li>
+          <li><strong>C</strong>ontexto — a situação real; sem ele, a resposta serve para qualquer fábrica</li>
+          <li><strong>T</strong>arefa — o que fazer, com verbo claro: escreva, resuma, liste, compare</li>
+          <li><strong>F</strong>ormato — como entregar: tabela, blocos, máximo de linhas</li>
+          <li><strong>L</strong>imitações — o que não fazer, começando pela regra de ouro: <em>"Se faltar informação, pergunte. Não invente."</em></li>
+        </ul>
+      </div>
+
+      <div class="guia-bloco">
+        <p><strong>Validação em 30 segundos (antes de usar qualquer resposta):</strong></p>
+        <ol>
+          <li><strong>Fonte</strong> — cada fato veio do que você enviou, ou apareceu do nada?</li>
+          <li><strong>Coerência</strong> — algum número, nome ou norma surgiu sem origem? Confere na fonte.</li>
+          <li><strong>Seu conhecimento</strong> — bate com o que você sabe do seu setor? Estranhou, checou.</li>
+        </ol>
+      </div>
+
+      <div class="callout callout-alucinacao">
+        <p class="callout-title">⚠️ O que nunca entra no prompt (os 3 "nunca" do M4)</p>
+        <ul>
+          <li><strong>Gente</strong> — nome, CPF, salário, atestado, avaliação, escala com nomes</li>
+          <li><strong>Produto</strong> — parâmetro de molde e injetora, especificação, desenho técnico</li>
+          <li><strong>Contrato</strong> — fornecedor, preço, condição comercial</li>
+        </ul>
+        <p>Na dúvida: se você não postaria num grupo aberto de WhatsApp, não cola na IA.</p>
+      </div>
+    </section>
+
+    <section class="section" id="prompts-modulos">
+      <h2>Os 6 prompts dos módulos</h2>
+      <p>Os mesmos prompts que você rodou em sala — na íntegra, para reusar.</p>
+
+      <article class="card-prompt">
+        <h3>M1 · Mapa das minhas tarefas</h3>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>todas — é o ponto de partida</dd>
+          <dt>Para quando:</dt><dd>você quer saber onde a IA entra na sua semana antes de gastar tempo testando.</dd>
+          <dt>Você leva:</dt><dd>uma tabela com cada tarefa classificada em copiloto, automação ou "fica comigo".</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um consultor prático de produtividade industrial.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Sou supervisor em uma fábrica de eletroportáteis. Minhas tarefas mais repetitivas da semana:
+[cole aqui suas 5 tarefas — ex.: relatório de turno, comunicado de mudança de linha, registro de parada]
+
+<span class="prompt-marker"># TAREFA</span>
+Para cada tarefa, diga se a IA pode ajudar como copiloto, como automação, ou se deve ficar comigo — e por quê, em 1 linha.
+
+<span class="prompt-marker"># FORMATO</span>
+Tabela: Tarefa | Modo (copiloto / automação / fica comigo) | Por quê.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> você consegue explicar por que concorda ou discorda de cada linha da tabela? Então o mapa é seu, não da IA.</p>
+      </article>
+
+      <article class="card-prompt">
+        <h3>M2 · DDS de segurança</h3>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Segurança do Trabalho — e qualquer um que conduz DDS</dd>
+          <dt>Para quando:</dt><dd>o DDS de segunda precisa sair e não pode repetir o do mês passado.</dd>
+          <dt>Você leva:</dt><dd>roteiro de fala de 5 minutos com abertura, mensagem central e compromisso.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um técnico de segurança do trabalho experiente em fábrica de eletroportáteis.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Vou conduzir o DDS (Diálogo Diário de Segurança) de segunda-feira na área de montagem.
+Tema: uso correto de EPI — luvas e óculos. Motivo: na semana passada houve 2 registros
+de operadores sem óculos na bancada de rebarbação. Equipe: 14 pessoas, turno da manhã.
+Já falamos deste tema no mês passado — não pode ficar repetitivo.
+
+<span class="prompt-marker"># TAREFA</span>
+Escreva o roteiro do DDS de no máximo 5 minutos de fala, com uma pergunta para
+abrir conversa com o time e um fechamento que peça compromisso prático.
+
+<span class="prompt-marker"># FORMATO</span>
+3 blocos: Abertura (com a pergunta) · Mensagem central (com exemplo concreto) ·
+Fechamento (com o compromisso). Máximo 20 linhas. Linguagem falada, direta.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não cite norma ou número de NR — se precisar, eu confirmo na fonte e acrescento.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> dá para falar em 5 minutos, no seu jeito, sem soar decorado? Troque o CONTEXTO pelo tema da sua semana e o resto se mantém.</p>
+      </article>
+
+      <article class="card-prompt">
+        <h3>M3 · Relatório de passagem de turno (injetoras)</h3>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Produção / Injetoras</dd>
+          <dt>Para quando:</dt><dd>fechar o turno com as anotações bagunçadas do dia e entregar limpo para quem assume.</dd>
+          <dt>Você leva:</dt><dd>relatório em 4 blocos, no máximo 15 linhas, direto ao ponto.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um líder de produção experiente em fábrica de eletroportáteis.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Estou fechando o turno da manhã na área de injetoras. Minhas anotações brutas:
+- linha 2 parou 35 min, molde da air fryer travou, ferramentaria atuou, liberado 10h40
+- produção: 4.200 peças (meta 4.500)
+- 1 operador remanejado da linha 4 para cobrir falta
+- pendência: molde da linha 2 precisa de revisão preventiva, ferramentaria avisada
+- turno da tarde precisa priorizar reposição das 300 peças
+
+<span class="prompt-marker"># TAREFA</span>
+Organize essas anotações no relatório de passagem de turno para o supervisor da tarde.
+
+<span class="prompt-marker"># FORMATO</span>
+4 blocos: Paradas (com horário e causa) · Produção (realizado × meta) ·
+Pessoal · Pendências para o próximo turno. Máximo 15 linhas, direto ao ponto.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Use apenas os números das minhas anotações — não complete lacunas com estimativa.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> o supervisor da tarde entende as pendências sem te ligar? Passou. No uso real, troque as anotações fictícias pelas suas.</p>
+      </article>
+
+      <article class="card-prompt">
+        <h3>M4 · Registro de não-conformidade</h3>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Qualidade</dd>
+          <dt>Para quando:</dt><dd>registrar NC com clareza de auditoria ISO 9001 — sem deixar a IA inventar causa.</dd>
+          <dt>Você leva:</dt><dd>descrição factual pronta para o sistema de qualidade, assinada por você.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um inspetor de qualidade experiente em fábrica certificada ISO 9001.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Preciso registrar uma não-conformidade. Dados FICTÍCIOS para este treino:
+- Produto: lote 4812-B de liquidificadores, 240 unidades
+- Detecção: inspeção final, 14/07, turno da manhã
+- Problema: 18 unidades com folga na trava do copo, fora do padrão de montagem
+- Ação imediata: lote segregado, linha avisada, reinspeção de 100% do lote
+
+<span class="prompt-marker"># TAREFA</span>
+Escreva a descrição da não-conformidade para o registro do sistema de qualidade:
+o que foi detectado, onde, extensão e ação de contenção tomada.
+
+<span class="prompt-marker"># FORMATO</span>
+Texto corrido de até 10 linhas, objetivo, sem opinião — descrição factual
+no padrão de registro de auditoria.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+NÃO escreva causa-raiz nem ação corretiva — isso sai da análise do time, não do registro inicial.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> cada frase do registro existe nos seus dados? Nenhuma causa apareceu do nada? Então está no padrão de auditoria.</p>
+      </article>
+
+      <article class="card-prompt">
+        <h3>M5 · Relatório de passagem de turno (montagem)</h3>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Produção / Montagem — o esqueleto serve para ata, comunicado e ocorrência</dd>
+          <dt>Para quando:</dt><dd>o mesmo fechamento de turno, agora na montagem — e como modelo para qualquer documento com material bruto seu.</dd>
+          <dt>Você leva:</dt><dd>o esqueleto que resolve relatório, ata e registro: bruto seu + formato claro.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um líder de produção experiente em fábrica de eletroportáteis.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Fechamento do turno da manhã, área de montagem. Anotações brutas de hoje (FICTÍCIAS):
+- linha 1 ok, 2.100 unidades (meta 2.000)
+- linha 3 parou 25 min às 8h15, falta de componente (trava do copo), almoxarifado repôs
+- 2 operadores em treinamento na linha 1, rendimento ainda abaixo
+- pendência: conferir estoque da trava do copo para amanhã — quase zerou
+- qualidade apontou 6 unidades para retrabalho na linha 3
+
+<span class="prompt-marker"># TAREFA</span>
+Organize as anotações no relatório de passagem para o supervisor do turno da tarde.
+
+<span class="prompt-marker"># FORMATO</span>
+4 blocos: Produção (realizado × meta por linha) · Paradas (horário, causa, solução) ·
+Pessoal · Pendências priorizadas. Máximo 15 linhas.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não crie causa nem estimativa que não estejam nas anotações.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> cada linha do relatório existe nas suas anotações? Para virar ata ou comunicado, troque CONTEXTO, TAREFA e FORMATO — o esqueleto fica.</p>
+      </article>
+
+      <article class="card-prompt">
+        <h3>M6 · Priorização de oportunidades (Canvas)</h3>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>todas — fecha o Canvas do grupo</dd>
+          <dt>Para quando:</dt><dd>o grupo mapeou oportunidades e precisa de desempate com critério.</dd>
+          <dt>Você leva:</dt><dd>notas de impacto e facilidade sugeridas com justificativa — o grupo bate o martelo.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um consultor prático de melhoria contínua em fábrica de eletroportáteis.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Meu grupo mapeou estas oportunidades de uso de IA na nossa área:
+[cole as oportunidades do grupo — ex.: "relatório de turno (hoje: 30 min/dia)",
+"comunicado de mudança de linha (hoje: 20 min, 3x/semana)", "resumo de procedimento novo"]
+
+<span class="prompt-marker"># TAREFA</span>
+Para cada oportunidade, estime impacto (1-5) e facilidade (1-5) com justificativa
+de 1 linha cada, e aponte qual é o melhor quick win — a de melhor combinação.
+
+<span class="prompt-marker"># FORMATO</span>
+Tabela: Oportunidade | Impacto | Facilidade | Justificativa | e 1 linha final
+com o quick win recomendado.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+As notas são sugestão para discussão — o grupo decide as finais.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> onde a nota da IA divergiu da sua, você sabe dizer quem tem razão e por quê? A priorização está viva.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>Prompts por área da Mallory</h2>
+      <p>Novos prompts, um por situação real. Todos com dados fictícios ou campos para preencher — a regra dos 3 "nunca" vale em cada um.</p>
+
+      <h3 class="eyebrow" id="area-injetoras">Injetoras / Gestão de Fábrica</h3>
+
+      <article class="card-prompt">
+        <h4>Comunicado de mudança de sequência da linha</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Injetoras / Gestão de Fábrica</dd>
+          <dt>Para quando:</dt><dd>a sequência da linha vai mudar por gargalo de molde e todo mundo precisa saber antes do turno, não durante.</dd>
+          <dt>Você leva:</dt><dd>comunicado de 10 linhas que a supervisão lê em 1 minuto e ninguém interpreta errado.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um programador de produção experiente em fábrica de eletroportáteis.
+
+<span class="prompt-marker"># CONTEXTO</span>
+A sequência da linha de injetoras vai mudar. Fatos (troque pelos seus, sem parâmetro de molde):
+- Motivo: [ex.: gargalo no molde do produto X, capacidade reduzida até quinta]
+- O que muda: [ex.: produto Y adiantado para linha 2, produto X reduzido para 1 turno]
+- A partir de quando: [data e turno]
+- Quem precisa agir: [ex.: supervisores das linhas 1 e 2, almoxarifado ajusta abastecimento]
+
+<span class="prompt-marker"># TAREFA</span>
+Escreva o comunicado da mudança de sequência para a supervisão e as áreas de apoio.
+
+<span class="prompt-marker"># FORMATO</span>
+Máximo 10 linhas: o que muda · por quê · desde quando · o que cada área faz.
+Sem introdução, sem "conforme alinhado" — direto ao fato.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não inclua parâmetro técnico de molde ou máquina — se a supervisão precisar, trato por outro canal.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> quem lê sabe o que fazer no turno dele sem te procurar? Se alguém "ia perguntar a partir de quando", o campo ficou vago.</p>
+      </article>
+
+      <article class="card-prompt">
+        <h4>Análise de padrão de rejeição</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Injetoras / Gestão de Fábrica</dd>
+          <dt>Para quando:</dt><dd>a rejeição subiu e você tem os apontamentos da semana — mas ninguém teve tempo de olhar o padrão.</dd>
+          <dt>Você leva:</dt><dd>o padrão por linha, turno e tipo de defeito, com as 2 perguntas a investigar primeiro.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um analista de processo experiente em injeção plástica.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Fábrica de eletroportáteis. Apontamentos de rejeição da semana (FICTÍCIOS — troque pelos seus,
+sem parâmetro de máquina):
+- seg: linha 2, 38 peças, rebarba · linha 3, 12 peças, mancha
+- ter: linha 2, 41 peças, rebarba · linha 2, 9 peças, peça incompleta
+- qua: linha 2, 35 peças, rebarba (após troca de turno) · linha 3, 14 peças, mancha
+- qui: linha 2, 8 peças, rebarba (após intervenção da ferramentaria)
+- sex: linha 3, 16 peças, mancha
+
+<span class="prompt-marker"># TAREFA</span>
+Identifique padrões: qual linha, qual defeito, concentra onde (dia, turno, evento) —
+e liste as 2 perguntas que eu deveria investigar primeiro, com justificativa.
+
+<span class="prompt-marker"># FORMATO</span>
+Bloco 1: padrão em até 5 linhas. Bloco 2: tabela Defeito | Onde concentra | Pergunta a investigar.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não proponha causa técnica definitiva — aponte o padrão e a pergunta; a causa sai da investigação na máquina.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> o padrão apontado existe mesmo nos seus números (confira!) e as perguntas fazem sentido para quem conhece a linha? A investigação continua sua.</p>
+      </article>
+
+      <h3 class="eyebrow" id="area-montagem">Montagem</h3>
+
+      <article class="card-prompt">
+        <h4>Checklist de montagem para posto novo</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Montagem</dd>
+          <dt>Para quando:</dt><dd>chegou gente nova no posto e a instrução de trabalho tem 12 páginas que ninguém lê em pé.</dd>
+          <dt>Você leva:</dt><dd>checklist de 1 página que o operador novo segue no posto, validado por você contra a IT oficial.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um supervisor de montagem experiente em fábrica de eletroportáteis.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Vou treinar um operador novo no posto de [ex.: montagem da base do liquidificador].
+Etapas da operação, nas minhas palavras (sem especificação técnica de produto):
+[liste as etapas como você explica de boca — ex.: "1. pegar a base e conferir se não tem rebarba,
+2. encaixar o motor na posição da guia, 3. apertar os 4 parafusos em cruz, 4. teste de giro manual,
+5. colocar na esteira com a etiqueta para cima"]
+Erros mais comuns de quem está começando: [ex.: aperto fora de ordem, esquecer o teste de giro]
+
+<span class="prompt-marker"># TAREFA</span>
+Transforme em um checklist de posto para operador novo: passo a passo numerado,
+com os pontos de atenção destacados nos passos onde os erros comuns acontecem.
+
+<span class="prompt-marker"># FORMATO</span>
+1 página: título do posto · passos numerados (1 linha cada) · "Atenção" nos passos críticos ·
+fechamento "na dúvida, chame o líder".
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não acrescente etapa, torque ou medida que eu não informei — o padrão oficial é a instrução de trabalho da Mallory.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> compare com a IT oficial antes de usar: nenhum passo inventado, nenhum passo faltando? O checklist treina; a IT manda.</p>
+      </article>
+
+      <h3 class="eyebrow" id="area-ferramentaria">Ferramentaria</h3>
+
+      <article class="card-prompt">
+        <h4>Plano de manutenção preventiva de molde</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Ferramentaria</dd>
+          <dt>Para quando:</dt><dd>o molde crítico só recebe atenção quando trava — e você quer virar o jogo para o preventivo.</dd>
+          <dt>Você leva:</dt><dd>rascunho de plano preventivo com frequências propostas, para validar com a experiência da bancada.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um planejador de manutenção de moldes de injeção experiente.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Fábrica de eletroportáteis. Molde [apelido fictício — ex.: "molde da jarra"], uso intenso.
+Histórico recente, nas minhas palavras (sem desenho nem especificação):
+[ex.: "travamento em março e maio, sempre depois de campanha longa; desgaste visível
+no pino extrator; limpeza hoje é feita só quando a qualidade reclama de mancha"]
+Paradas programadas disponíveis: [ex.: sábados alternados, 4h]
+
+<span class="prompt-marker"># TAREFA</span>
+Monte o rascunho de um plano de manutenção preventiva para este molde: itens de verificação,
+frequência sugerida e sinal de alerta que antecipa cada problema do histórico.
+
+<span class="prompt-marker"># FORMATO</span>
+Tabela: Item | O que verificar | Frequência sugerida | Sinal de alerta.
+Máximo 10 itens — os que importam, não a lista enciclopédica.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+As frequências são ponto de partida para minha validação — não as apresente como norma do fabricante.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> a bancada reconhece os itens e ajustaria no máximo as frequências? Bom rascunho. Se o plano ignora o histórico que você deu, refaça com mais contexto.</p>
+      </article>
+
+      <h3 class="eyebrow" id="area-manutencao">Manutenção</h3>
+
+      <article class="card-prompt">
+        <h4>Priorização de OS a partir do histórico de falhas</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Manutenção</dd>
+          <dt>Para quando:</dt><dd>a semana tem mais OS que gente e a priorização está sendo feita no olho.</dd>
+          <dt>Você leva:</dt><dd>prioridades com justificativa, para bater com o seu julgamento antes de abrir as OS.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um planejador de manutenção industrial experiente.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Fábrica de eletroportáteis. Histórico de falhas FICTÍCIO de uma injetora (troque pelo seu, sem
+parâmetro de máquina):
+- jan: vazamento de óleo (2x)
+- fev: sensor da porta (1x)
+- mar: vazamento de óleo (1x), travamento da rosca (1x)
+- abr: vazamento de óleo (2x), sensor da porta (1x)
+- mai: travamento da rosca (2x)
+Contexto operacional: [ex.: peça do sensor demora 30 dias para chegar; linha roda 2 turnos]
+
+<span class="prompt-marker"># TAREFA</span>
+Analise o padrão de falhas e proponha prioridades de OS preventiva para a semana,
+com justificativa de 1 linha por prioridade.
+
+<span class="prompt-marker"># FORMATO</span>
+Tabela: Prioridade | Falha/Item | Justificativa (frequência, tendência, risco de parada).
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não estime custo nem prazo de reparo — isso sai do meu planejamento, não do histórico.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> a prioridade nº 1 da IA bate com a que você faria? Onde discorda, você sabe o porquê (peça em falta, criticidade da linha)? Refine na mesma conversa com essa informação.</p>
+      </article>
+
+      <article class="card-prompt">
+        <h4>Roteiro de inspeção de rota</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Manutenção</dd>
+          <dt>Para quando:</dt><dd>montar a rota de inspeção do turno sem esquecer ponto — e sem depender de quem "sabe de cabeça".</dd>
+          <dt>Você leva:</dt><dd>roteiro sequenciado que qualquer técnico do time executa e registra igual.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um supervisor de manutenção experiente em planta industrial.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Fábrica de eletroportáteis. Preciso padronizar a rota de inspeção do turno em [área — ex.: injetoras].
+Pontos que hoje inspecionamos, nas minhas palavras: [liste — ex.: "nível de óleo das unidades
+hidráulicas, ruído anormal nas bombas, temperatura dos painéis, vazamento visível nas mangueiras,
+estado das proteções"]
+Tempo disponível para a rota: [ex.: 40 min no início do turno]
+
+<span class="prompt-marker"># TAREFA</span>
+Organize um roteiro de inspeção sequenciado: ordem lógica de percurso, o que verificar
+em cada ponto e o que registrar quando encontrar anormalidade.
+
+<span class="prompt-marker"># FORMATO</span>
+Lista numerada na ordem do percurso: Ponto | O que verificar | Registrar se anormal.
+Cabeçalho com turno, data e nome de quem executou (campos em branco).
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não acrescente ponto de inspeção que eu não citei — a rota oficial passa pela minha validação.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> um técnico que nunca fez a rota executa com o papel na mão? Rode 1 semana em paralelo com o jeito atual antes de oficializar.</p>
+      </article>
+
+      <h3 class="eyebrow" id="area-pcp">PCP</h3>
+
+      <article class="card-prompt">
+        <h4>Comunicado de replanejamento</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>PCP</dd>
+          <dt>Para quando:</dt><dd>o plano da semana mudou (falta de componente, pedido antecipado) e cada área precisa saber só o que muda para ela.</dd>
+          <dt>Você leva:</dt><dd>comunicado curto por área afetada — sem a planilha inteira anexada.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um analista de PCP experiente em fábrica de eletroportáteis.
+
+<span class="prompt-marker"># CONTEXTO</span>
+O plano da semana mudou. Fatos (sem preço nem dado de fornecedor):
+- Motivo: [ex.: atraso na chegada de componente da linha de ventiladores]
+- O que muda: [ex.: ventilador da linha 1 adiado para quinta; batedeira antecipada para terça]
+- Áreas afetadas e como: [ex.: montagem remaneja linha 1; almoxarifado inverte abastecimento;
+  qualidade ajusta plano de inspeção]
+
+<span class="prompt-marker"># TAREFA</span>
+Escreva o comunicado de replanejamento com uma seção por área afetada — cada uma lê só o seu bloco
+e sabe o que fazer.
+
+<span class="prompt-marker"># FORMATO</span>
+Abertura de 2 linhas (o que houve, desde quando) + 1 bloco por área: "O que muda para [área]"
+em até 3 linhas cada.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não cite fornecedor, preço nem condição de compra — o motivo fica no nível "atraso de componente".</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> cada área entende a sua parte sem abrir a planilha do plano? Se todo mundo te ligou mesmo assim, o bloco por área ficou genérico.</p>
+      </article>
+
+      <article class="card-prompt">
+        <h4>Análise de aderência semanal</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>PCP</dd>
+          <dt>Para quando:</dt><dd>fechar a semana comparando planejado × realizado sem passar a sexta-feira montando o resumo.</dd>
+          <dt>Você leva:</dt><dd>resumo de aderência com os desvios que merecem conversa na reunião de planejamento.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um analista de planejamento de produção experiente.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Fábrica de eletroportáteis. Planejado × realizado da semana (FICTÍCIO — troque pelos seus números):
+- linha 1 (liquidificador): plano 10.000 · real 9.400
+- linha 2 (air fryer): plano 6.000 · real 6.100
+- linha 3 (ventilador): plano 8.000 · real 5.900 (parada de 6h por falta de componente na quarta)
+- linha 4 (batedeira): plano 4.000 · real 4.000
+Meta de aderência da fábrica: 95%.
+
+<span class="prompt-marker"># TAREFA</span>
+Calcule a aderência por linha e da fábrica, aponte quais desvios são relevantes (fora da meta)
+e o que cada desvio sugere verificar para a próxima semana.
+
+<span class="prompt-marker"># FORMATO</span>
+Tabela: Linha | Plano | Real | Aderência % | Relevante? · Fechamento com os 2 pontos
+para a reunião de planejamento.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Confiro todos os percentuais antes de usar. Não atribua causa a desvio que não tem causa anotada — marque como "verificar".</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> recalcule 2 percentuais na mão — bateram? Os "2 pontos para a reunião" são os que você levaria? Número que sobe para relatório, você confere sempre.</p>
+      </article>
+
+      <h3 class="eyebrow" id="area-qualidade">Qualidade</h3>
+
+      <article class="card-prompt">
+        <h4>Instrução de trabalho para desvio recorrente</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Qualidade</dd>
+          <dt>Para quando:</dt><dd>o mesmo desvio volta toda semana e a correção vive na cabeça de 2 pessoas — precisa virar padrão escrito.</dd>
+          <dt>Você leva:</dt><dd>rascunho de instrução operacional no padrão ISO, pronto para sua revisão e aprovação formal.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um analista de qualidade experiente em fábrica certificada ISO 9001.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Desvio recorrente na [área — ex.: montagem]: [descreva sem especificação de produto —
+ex.: "etiqueta de identificação aplicada fora da posição, detectada na inspeção final,
+3 ocorrências por semana"]. Correção que hoje é feita de boca: [descreva o passo a passo
+que os experientes aplicam — ex.: "conferir gabarito antes do lote, reposicionar a bobina,
+validar as 5 primeiras peças"]
+
+<span class="prompt-marker"># TAREFA</span>
+Transforme a correção em rascunho de instrução de trabalho: quando aplicar, passo a passo,
+como verificar que funcionou e quando escalar para o supervisor.
+
+<span class="prompt-marker"># FORMATO</span>
+4 seções numeradas: Quando aplicar · Passo a passo · Verificação · Escalonamento.
+Máximo 1 página, linguagem de posto de trabalho.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não cite norma nem código de procedimento — a numeração e o enquadramento no sistema da qualidade são feitos por mim.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> quem executa a correção hoje lê o rascunho e diz "é isso"? Então segue para o rito formal — a IA rascunhou, o sistema de qualidade aprova.</p>
+      </article>
+
+      <h3 class="eyebrow" id="area-seguranca">Segurança do Trabalho</h3>
+
+      <article class="card-prompt">
+        <h4>Análise preliminar de risco (APR)</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Segurança do Trabalho</dd>
+          <dt>Para quando:</dt><dd>uma tarefa não rotineira vai acontecer (manutenção em altura, içamento, serviço a quente) e a APR precisa sair completa.</dd>
+          <dt>Você leva:</dt><dd>rascunho de APR com riscos e medidas organizados — a aprovação continua do técnico de segurança.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um técnico de segurança do trabalho experiente em indústria de manufatura.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Tarefa não rotineira: [descreva — ex.: "troca de refletores no telhado do galpão de injetoras,
+2 pessoas, 4 horas, uso de plataforma elevatória, linha continua operando embaixo"].
+Riscos que já identifiquei: [liste os seus — ex.: "queda de altura, queda de material sobre a linha,
+contato com rede elétrica"]
+
+<span class="prompt-marker"># TAREFA</span>
+Organize a APR: para cada risco identificado, descreva a consequência possível e as medidas
+de controle — e aponte se percebe algum risco típico desta tarefa que eu não listei,
+marcado como "sugestão a validar".
+
+<span class="prompt-marker"># FORMATO</span>
+Tabela: Etapa/Risco | Consequência | Medidas de controle · Sugestões a validar em bloco separado.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não cite NR nem item de norma — a base legal quem confere e insere sou eu, na fonte.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> as sugestões da IA ficaram claramente separadas do que você identificou? Cada medida é executável com o que existe na fábrica? A APR só vale com a sua assinatura — e norma se confere na norma.</p>
+      </article>
+
+      <h3 class="eyebrow" id="area-almoxarifado">Almoxarifado / Remanufatura</h3>
+
+      <article class="card-prompt">
+        <h4>Registro de discrepância de estoque</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Almoxarifado / Remanufatura</dd>
+          <dt>Para quando:</dt><dd>o físico não bateu com o sistema e o registro precisa ficar claro para quem for investigar.</dd>
+          <dt>Você leva:</dt><dd>registro factual da discrepância, sem culpado apontado e sem causa inventada.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um supervisor de almoxarifado experiente em indústria com ERP.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Fábrica de eletroportáteis, controle no ERP (Datasul). Discrepância encontrada (FICTÍCIA —
+troque pelos seus dados, sem preço):
+- Item: [ex.: trava do copo, código interno genérico]
+- Sistema: 1.480 unidades · Físico contado: 1.310 (2 contagens, mesma pessoa não repetiu)
+- Última movimentação registrada: [ex.: requisição da linha 3, terça-feira]
+- O que já foi verificado: [ex.: "conferi devoluções pendentes e a prateleira de retrabalho — nada"]
+
+<span class="prompt-marker"># TAREFA</span>
+Escreva o registro da discrepância para abrir a investigação: o que foi encontrado, como foi
+contado, o que já foi descartado e o que falta verificar.
+
+<span class="prompt-marker"># FORMATO</span>
+4 blocos curtos: Discrepância (números) · Como foi verificado · Hipóteses já descartadas ·
+Próximos passos de verificação. Máximo 12 linhas.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não sugira causa provável nem responsável — o registro abre a investigação, não conclui.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> quem pegar a investigação amanhã sabe exatamente o que já foi feito e por onde continuar? Registro bom economiza a segunda contagem.</p>
+      </article>
+
+      <h3 class="eyebrow" id="area-pos-vendas">Pós-Vendas / ADM. Vendas</h3>
+
+      <article class="card-prompt">
+        <h4>Resposta a reclamação de assistência técnica</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Pós-Vendas / ADM. Vendas</dd>
+          <dt>Para quando:</dt><dd>a reclamação chegou irritada e a resposta precisa sair no mesmo dia — firme no processo, respeitosa no tom.</dd>
+          <dt>Você leva:</dt><dd>resposta padronizada que informa prazo e próximo passo sem prometer o que o processo não garante.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um analista de pós-vendas experiente em fabricante de eletroportáteis.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Reclamação recebida sobre atendimento de assistência técnica (RESUMO desidentificado — sem nome,
+telefone ou dado do cliente): [ex.: "produto na assistência há 20 dias, consumidor sem previsão,
+já ligou 2 vezes, ameaça registrar no órgão de defesa do consumidor"]
+Situação real do caso no processo: [ex.: "peça aguardando reposição, previsão de 7 dias úteis,
+assistência autorizada já informada ontem"]
+O que posso oferecer: [ex.: "prazo confirmado + retorno ativo nosso em 3 dias"]
+
+<span class="prompt-marker"># TAREFA</span>
+Redija a resposta ao consumidor: reconheça a demora sem se justificar em excesso, informe
+a situação real, o prazo e o compromisso de retorno ativo.
+
+<span class="prompt-marker"># FORMATO</span>
+E-mail de até 12 linhas: reconhecimento · situação e prazo · compromisso de retorno ·
+canal direto. Tom firme e respeitoso, sem juridiquês.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não prometa prazo ou compensação que não estejam no que eu posso oferecer. Não inclua dado pessoal do cliente.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> a resposta compromete só o que o processo sustenta? Se o consumidor ligar no dia seguinte, o que está escrito se confirma? Então pode enviar.</p>
+      </article>
+
+      <h3 class="eyebrow" id="area-trade">Trade Marketing</h3>
+
+      <article class="card-prompt">
+        <h4>Briefing de ação em ponto de venda</h4>
+        <dl class="prompt-meta">
+          <dt>Área:</dt><dd>Trade Marketing</dd>
+          <dt>Para quando:</dt><dd>a ação de PDV precisa de briefing para o promotor executar igual em toda loja — sem reunião de 1 hora.</dd>
+          <dt>Você leva:</dt><dd>briefing de 1 página que o promotor lê no celular e executa sem te ligar.</dd>
+        </dl>
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code><span class="prompt-marker"># PAPEL</span>
+Você é um coordenador de trade marketing experiente em eletroportáteis no varejo.
+
+<span class="prompt-marker"># CONTEXTO</span>
+Ação em ponto de venda (dados FICTÍCIOS — troque pelos seus, sem preço nem condição comercial):
+- Produto em destaque: [ex.: linha de air fryer]
+- Período e lojas: [ex.: semana do dia 20, 12 lojas da rede X na região metropolitana]
+- Objetivo da ação: [ex.: ponto extra montado + demonstração aos sábados]
+- Material disponível: [ex.: display de chão, wobbler, 1 unidade de demonstração por loja]
+- O que o promotor deve checar e reportar: [ex.: foto do ponto montado, ruptura na gôndola]
+
+<span class="prompt-marker"># TAREFA</span>
+Monte o briefing da ação para os promotores: o que montar, como, quando, o que reportar
+e para quem — executável sem ligação de dúvida.
+
+<span class="prompt-marker"># FORMATO</span>
+1 página: Objetivo (2 linhas) · Checklist de montagem · Calendário · O que reportar
+(com formato: foto, mensagem) · Contato para imprevisto.
+
+<span class="prompt-marker"># LIMITAÇÕES</span>
+Se faltar informação, pergunte. Não invente.
+Não inclua preço, margem nem condição negociada com o varejo — briefing de execução, não comercial.</code></pre>
+        </div>
+        <p class="como-avaliar"><strong>Como avaliar:</strong> um promotor que nunca fez a ação executa com o briefing no celular? As fotos de reporte chegaram no formato pedido? Briefing bom se mede na segunda-feira seguinte.</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>Antes de fechar a página</h2>
+      <ul>
+        <li>Prompt usado é prompt salvo: seus 3 melhores são patrimônio seu — guarde onde você acha (notas do celular vale).</li>
+        <li>Dúvida sobre o que pode entrar no prompt? Revise os 3 "nunca" e o protocolo completo no <a href="../m4/">M4 · Usando IA com Segurança</a>.</li>
+        <li>Esqueceu uma camada do PCTFL? O método completo está no <a href="../m2/">M2 · Primeiro Prompt</a>.</li>
+      </ul>
+    </section>
+
+    <div class="module-nav-secondary">
+      <a href="../">← Início</a>
+      <a href="../artefatos/">Artefatos →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-logos">
+      <img src="../assets/logos/iel-ceara.png" alt="IEL Ceará">
+      <img src="../assets/logos/educa-mais-mallory.png" alt="Educa+ Mallory">
+    </div>
+    <div class="footer-meta">
+      Realização IEL Ceará · Programa Educa+ Mallory<br>
+      PDL 2026 · Material v1 · Instrutor Rafael Lima (@iacomrafael)
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/script.js" defer></script>
+</body>
+</html>
