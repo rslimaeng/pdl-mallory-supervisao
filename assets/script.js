@@ -91,29 +91,6 @@
     });
   });
 
-  /* ---------- 4. IA aninhada — hover/foco das camadas atualiza descrição ---------- */
-
-  document.querySelectorAll('.ia-aninhada').forEach(function (root) {
-    var circles = root.querySelectorAll('.ia-aninhada-svg circle[data-layer]');
-    var desc = root.querySelector('.ia-aninhada-desc');
-    var titleEl = desc && desc.querySelector('strong');
-    var textEl = desc && desc.querySelector('.desc-text');
-
-    function updateDesc(c) {
-      if (!desc) return;
-      circles.forEach(function (o) { o.classList.remove('active'); });
-      c.classList.add('active');
-      if (titleEl) titleEl.textContent = c.getAttribute('data-title') || '';
-      if (textEl) textEl.textContent = c.getAttribute('data-desc') || '';
-    }
-
-    circles.forEach(function (c) {
-      c.setAttribute('tabindex', '0');
-      c.addEventListener('mouseenter', function () { updateDesc(c); });
-      c.addEventListener('focus', function () { updateDesc(c); });
-    });
-  });
-
   /* ---------- 5. Accordion "3 modos" (um aberto por vez) ---------- */
 
   document.querySelectorAll('.modos-accordion').forEach(function (root) {
@@ -314,98 +291,139 @@
     render(start);
   });
 
-  /* ---------- 9. Simulador dos 3 modos (goal 5f) ---------- */
+  /* ---------- 9. Simulador dos 3 modos · auto-sugestão por heurística (goal 6a §5) ---------- */
+
+  var SIM_HEURISTICA = {
+    autopiloto: ['organizar', 'organiza', 'renomear', 'renomeia', 'processar', 'processa lote', 'em lote', 'em massa', 'padronizar', 'padroniza', 'formatar', 'converter', 'extrair', 'exportar', 'consolidar', 'juntar arquivos', 'unir', 'ordenar', 'classificar'],
+    colaboracao: ['redigir', 'redija', 'escrever', 'escreva', 'rascunhar', 'rascunho', 'resumir', 'resumo', 'traduzir', 'reescrever', 'melhorar texto', 'explicar', 'transformar em', 'passar a limpo', 'criar', 'sugerir', 'ideias', 'brainstorm', 'proposta', 'plano', 'roteiro', 'ata', 'comunicado', 'e-mail', 'email', 'mensagem'],
+    manual: ['decidir', 'decisão', 'aprovar', 'aprovação', 'reprovar', 'avaliar', 'avaliação', 'julgar', 'advertir', 'advertência', 'demitir', 'contratar', 'negociar', 'negociação', 'contrato', 'penalidade', 'sanção', 'diagnóstico médico', 'assinar', 'assumir responsabilidade']
+  };
+  var SIM_NOME = { autopiloto: 'Autopiloto', colaboracao: 'Colaboração', manual: 'Manual' };
+  var SIM_CANONICO = {
+    autopiloto: {
+      titulo: 'Autopiloto — IA executa, você revisa',
+      modo: 'Tarefa repetitiva que segue sempre o mesmo padrão. Você define uma vez, a IA executa, você revisa no fim. Baixo risco, alto ganho de tempo.',
+      exemplo: 'organizar uma pasta com 200 arquivos por tipo e data — a IA executa, você revisa a estrutura no fim.'
+    },
+    colaboracao: {
+      titulo: 'Colaboração — IA e você pensam juntos',
+      modo: 'A IA rascunha e propõe; você dá o contexto que só quem trabalha aqui tem, critica e decide. Risco médio, ganho em qualidade.',
+      exemplo: 'redigir um comunicado explicando uma mudança pra equipe — a IA sugere a estrutura, você ajusta o tom pro seu time.'
+    },
+    manual: {
+      titulo: 'Manual — IA inspira, você decide',
+      modo: 'A IA no máximo dá referência; a decisão, o registro e a responsabilidade continuam com você. Alta responsabilidade autoral.',
+      exemplo: 'decidir se um colaborador leva advertência formal ou conversa reservada — a IA fica fora, é seu julgamento e sua responsabilidade.'
+    }
+  };
+  var SIM_PLACEHOLDERS = [
+    'Organizar 200 relatórios de turno por data',
+    'Redigir e-mail pra próximo turno',
+    'Decidir advertência de um operador'
+  ];
+
+  function simSugerir(texto) {
+    var t = (texto || '').toLowerCase().trim();
+    if (!t) return null;
+    var scores = { autopiloto: 0, colaboracao: 0, manual: 0 };
+    Object.keys(SIM_HEURISTICA).forEach(function (modo) {
+      SIM_HEURISTICA[modo].forEach(function (p) { if (t.indexOf(p) !== -1) scores[modo] += 1; });
+    });
+    var max = Math.max(scores.autopiloto, scores.colaboracao, scores.manual);
+    if (max === 0) return 'colaboracao';
+    if (scores.autopiloto === max) return 'autopiloto';
+    if (scores.colaboracao === max) return 'colaboracao';
+    return 'manual';
+  }
 
   document.querySelectorAll('.modos-simulador').forEach(function (root) {
-    var dados = window.M1_SIMULADOR;
-    if (!dados) return;
     var input = root.querySelector('#simulador-tarefa');
+    var sugestaoEl = root.querySelector('#simulador-sugestao');
     var opcoes = root.querySelectorAll('.simulador-opcao');
     var out = root.querySelector('.simulador-resultado');
     if (!out || !opcoes.length) return;
 
-    function render(modo) {
-      var d = dados[modo];
+    var debounce = null;
+    var phIndex = 0;
+
+    function atualizarSugestao() {
+      if (!sugestaoEl) return;
+      var sugerido = simSugerir(input && input.value);
+      if (!sugerido) { sugestaoEl.innerHTML = ''; return; }
+      sugestaoEl.innerHTML = '💡 Parece <strong>' + SIM_NOME[sugerido] + '</strong> — clique num modo pra confirmar ou testar outro';
+    }
+
+    function render(modoEscolhido) {
+      var d = SIM_CANONICO[modoEscolhido];
       if (!d) return;
-      opcoes.forEach(function (o) { o.classList.toggle('selected', o.getAttribute('data-modo') === modo); });
+      opcoes.forEach(function (o) { o.classList.toggle('selected', o.getAttribute('data-modo') === modoEscolhido); });
       var tarefa = (input && input.value.trim()) || '';
+      var sugerido = simSugerir(tarefa);
+      var estado = 'direto';
+      if (tarefa) estado = (sugerido === modoEscolhido) ? 'acerto' : 'miss';
+
       var box = document.createElement('div');
-      box.className = 'resultado-box modo-' + modo;
+      box.className = 'resultado-box simulador-feedback modo-' + modoEscolhido;
+      box.setAttribute('data-estado', estado);
+
+      var marcaHtml = '';
+      if (estado === 'acerto') marcaHtml = '<p class="feedback-marca">✓ Você acertou o modo. Aqui está o porquê:</p>';
+      else if (estado === 'miss') marcaHtml = '<p class="feedback-marca">⚠️ Eu pensei em ' + SIM_NOME[sugerido] + '. Veja por quê:</p>';
+
       box.innerHTML =
+        marcaHtml +
         '<p class="resultado-titulo">' + d.titulo + '</p>' +
         '<dl>' +
           '<dt>O modo</dt><dd>' + d.modo + '</dd>' +
-          '<dt>Exemplo Mallory canônico</dt><dd>' + d.exemplo + '</dd>' +
+          '<dt>Exemplo canônico</dt><dd>' + d.exemplo + '</dd>' +
         '</dl>' +
-        '<div class="resultado-alerta"><strong>Sinal de alerta:</strong> <span class="alerta-texto"></span></div>' +
+        '<div class="feedback-alerta"></div>' +
         '<button class="btn-testar-outro" type="button">Testar outro modo</button>';
-      var alertaEl = box.querySelector('.alerta-texto');
+
+      var alertaEl = box.querySelector('.feedback-alerta');
       if (alertaEl) {
-        if (tarefa) {
+        if (estado === 'miss') {
           alertaEl.appendChild(document.createTextNode('Sua tarefa "'));
           var strong = document.createElement('strong');
           strong.textContent = tarefa;
           alertaEl.appendChild(strong);
-          alertaEl.appendChild(document.createTextNode('" — ' + d.alerta));
+          alertaEl.appendChild(document.createTextNode('" parece ' + SIM_NOME[sugerido] + ' pela forma como você descreveu. Não existe resposta única — o que decide é o risco: quanto maior o impacto, mais Manual. Clique em ' + SIM_NOME[sugerido] + ' pra comparar.'));
         } else {
-          alertaEl.textContent = d.alerta;
+          alertaEl.parentNode.removeChild(alertaEl);
         }
       }
       out.innerHTML = '';
       out.appendChild(box);
       var btnOutro = box.querySelector('.btn-testar-outro');
       if (btnOutro) btnOutro.addEventListener('click', function () {
-        if (input) input.focus();
         out.innerHTML = '';
         opcoes.forEach(function (o) { o.classList.remove('selected'); });
-        try { localStorage.removeItem('m1-simulador-modo'); } catch (e) {}
+        if (input) input.focus();
       });
-      try { localStorage.setItem('m1-simulador-modo', modo); } catch (e) {}
+
+      try {
+        localStorage.setItem('m1-simulador-ultimo', JSON.stringify({ tarefa: tarefa, modoEscolhido: modoEscolhido, timestamp: Date.now() }));
+      } catch (e) {}
     }
 
     opcoes.forEach(function (o) {
       o.addEventListener('click', function () { render(o.getAttribute('data-modo')); });
     });
+
     if (input) {
       input.addEventListener('input', function () {
-        try { localStorage.setItem('m1-simulador-tarefa', input.value); } catch (e) {}
+        if (debounce) clearTimeout(debounce);
+        debounce = setTimeout(atualizarSugestao, 300);
       });
-      try { var st = localStorage.getItem('m1-simulador-tarefa'); if (st) input.value = st; } catch (e) {}
+      if (!reducedMotion) {
+        setInterval(function () {
+          if (document.activeElement === input) return;
+          if (input.value.trim()) return;
+          phIndex = (phIndex + 1) % SIM_PLACEHOLDERS.length;
+          input.setAttribute('placeholder', SIM_PLACEHOLDERS[phIndex]);
+        }, 4000);
+      }
     }
-    try { var sm = localStorage.getItem('m1-simulador-modo'); if (sm && dados[sm]) render(sm); } catch (e) {}
-  });
-
-  /* ---------- 10. Explorador WYSIATI · 3 zonas (goal 5f) ---------- */
-
-  document.querySelectorAll('.wysiati-explorer').forEach(function (root) {
-    var zonas = window.M1_ZONAS;
-    if (!zonas) return;
-    var cards = root.querySelectorAll('.zona-card');
-    var out = root.querySelector('.zona-detalhe');
-    if (!out || !cards.length) return;
-
-    function render(zona) {
-      var z = zonas[zona];
-      if (!z) return;
-      cards.forEach(function (c) {
-        var on = c.getAttribute('data-zona') === zona;
-        c.classList.toggle('active', on);
-        c.setAttribute('aria-expanded', on ? 'true' : 'false');
-      });
-      out.innerHTML =
-        '<div class="detalhe-box">' +
-          '<h4>' + z.cabecalho + '</h4>' +
-          '<p>' + z.corpo + '</p>' +
-          '<div class="detalhe-exemplo"><strong>Exemplo Mallory:</strong> ' + z.exemplo + '</div>' +
-          '<span class="detalhe-modo">Modo típico: ' + z.modo + '</span>' +
-        '</div>';
-      try { localStorage.setItem('m1-wysiati-zona', zona); } catch (e) {}
-    }
-
-    cards.forEach(function (c) {
-      c.addEventListener('click', function () { render(c.getAttribute('data-zona')); });
-    });
-    try { var sz = localStorage.getItem('m1-wysiati-zona'); if (sz && zonas[sz]) render(sz); } catch (e) {}
   });
 
   /* ---------- 11. Modal do autodiagnóstico (goal 5f) ---------- */
@@ -445,4 +463,37 @@
       }
     });
   });
+
+  /* ---------- 12. Accordion Delegação × Estruturação (goal 6a §8, só T2) ---------- */
+
+  (function initAccordionFamilias() {
+    var headers = document.querySelectorAll('.familia-header');
+    if (!headers.length) return;
+    headers.forEach(function (h) {
+      h.addEventListener('click', function () {
+        var expanded = h.getAttribute('aria-expanded') === 'true';
+        headers.forEach(function (other) {
+          other.setAttribute('aria-expanded', 'false');
+          var b = document.getElementById(other.getAttribute('aria-controls'));
+          if (b) b.hidden = true;
+          var item = other.closest('.familia-item');
+          if (item) item.removeAttribute('data-open');
+        });
+        if (!expanded) {
+          h.setAttribute('aria-expanded', 'true');
+          var body = document.getElementById(h.getAttribute('aria-controls'));
+          if (body) body.hidden = false;
+          var self = h.closest('.familia-item');
+          if (self) self.setAttribute('data-open', 'true');
+        }
+      });
+    });
+    var primeira = document.querySelector('.familia-item[data-familia="delegacao"] .familia-header');
+    if (primeira && primeira.getAttribute('aria-expanded') === 'true') {
+      var body = document.getElementById(primeira.getAttribute('aria-controls'));
+      if (body) body.hidden = false;
+      var item = primeira.closest('.familia-item');
+      if (item) item.setAttribute('data-open', 'true');
+    }
+  })();
 })();

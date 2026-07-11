@@ -852,11 +852,6 @@ main {
   margin-bottom: 0;
 }
 
-.contrato .tempo-leitura {
-  font-size: 14px;
-  color: var(--text-secondary);
-}
-
 /* --- Conceito em 5 pontos --- */
 
 .point-numbered {
@@ -1852,3 +1847,273 @@ main .container {
 .modal-close { position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; border-radius: var(--radius-sm); border: none; background: var(--bg-light); color: var(--text-primary); font-size: 18px; cursor: pointer; z-index: 2; }
 .modal-close:hover { background: var(--accent-red); }
 body.modal-open { overflow: hidden; }
+
+/* ===================================================================
+   Goal 6a — patches M1 (matriz, WYSIATI, simulador, não-entra, famílias)
+   =================================================================== */
+
+/* --- 9.13 Matriz IA aninhada · retângulos (goal 6a §3) --- */
+.matriz-ia {
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) 1.4fr;
+  gap: 32px;
+  align-items: center;
+  margin: 8px 0 4px;
+}
+.matriz-ia__caixas {
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: var(--radius);
+}
+.matriz-ia .caixa {
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  position: relative;
+}
+.matriz-ia .caixa-1 { background: transparent; }
+.matriz-ia .caixa-2 { margin-top: 12px; background: rgba(255, 255, 255, .02); }
+.matriz-ia .caixa-3 { margin-top: 12px; background: rgba(255, 255, 255, .04); }
+.matriz-ia .caixa-4 {
+  margin-top: 12px;
+  background: color-mix(in oklab, var(--accent-blue) 15%, transparent);
+  border-color: var(--accent-blue);
+  border-width: 2px;
+}
+.matriz-ia .caixa-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .08em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.matriz-ia .caixa-4 .caixa-label { color: var(--accent-blue); font-weight: 600; }
+.matriz-ia .caixa-voce {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-primary);
+  font-style: italic;
+}
+.matriz-ia__legenda { color: var(--text-primary); }
+.matriz-ia .legenda-frase {
+  font-size: 17px;
+  line-height: 1.5;
+  border-left: 3px solid var(--accent-yellow);
+  padding-left: 16px;
+  margin: 0 0 20px;
+}
+.matriz-ia .legenda-lista { padding-left: 20px; margin: 0; }
+.matriz-ia .legenda-lista li { margin-bottom: 12px; line-height: 1.55; color: var(--text-secondary); }
+.matriz-ia .legenda-lista li strong { color: var(--text-primary); }
+@media (max-width: 768px) { .matriz-ia { grid-template-columns: 1fr; gap: 20px; } }
+
+/* --- 9.14 WYSIATI · 3 zonas retangulares + tabela (goal 6a §4) --- */
+.wysiati {
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) 1.4fr;
+  gap: 32px;
+  align-items: center;
+  margin: 8px 0;
+}
+.wysiati__caixas {
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: var(--radius);
+}
+.wysiati .zona {
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  position: relative;
+}
+.wysiati .zona-3 { background: rgba(255, 255, 255, .04); }
+.wysiati .zona-2 { margin-top: 12px; background: color-mix(in oklab, var(--accent-yellow) 10%, transparent); border-color: color-mix(in oklab, var(--accent-yellow) 40%, transparent); }
+.wysiati .zona-1 { margin-top: 12px; background: color-mix(in oklab, var(--accent-blue) 15%, transparent); border-color: color-mix(in oklab, var(--accent-blue) 55%, transparent); }
+.wysiati .zona-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.wysiati .zona-1 .zona-label { color: var(--accent-blue); }
+.wysiati .zona-2 .zona-label { color: var(--accent-yellow); }
+.wysiati__legenda { color: var(--text-primary); }
+.wysiati__titulo { font-family: var(--font-title); font-size: 28px; margin: 0 0 4px; }
+.wysiati__origem { color: var(--text-secondary); margin: 0 0 14px; font-size: 14px; }
+.wysiati__intro { line-height: 1.55; margin: 0 0 18px; }
+.wysiati__tabela { width: 100%; border-collapse: collapse; }
+.wysiati__tabela th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+.wysiati__tabela td {
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+  line-height: 1.5;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+.wysiati__tabela td strong { color: var(--text-primary); }
+.wysiati__tabela tr:last-child td { border-bottom: none; }
+@media (max-width: 768px) { .wysiati { grid-template-columns: 1fr; gap: 20px; } }
+
+/* --- 9.15 Simulador · auto-sugestão + estados (goal 6a §5) --- */
+.simulador-sugestao {
+  margin: 10px 0 4px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  min-height: 20px;
+}
+.simulador-sugestao:empty { display: none; }
+.simulador-sugestao strong { color: var(--accent-blue); }
+.feedback-marca {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .04em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.simulador-feedback[data-estado="acerto"] .feedback-marca { color: var(--accent-green); }
+.simulador-feedback[data-estado="miss"] .feedback-marca { color: var(--accent-yellow); }
+.feedback-alerta {
+  margin-top: 12px;
+  padding: 12px;
+  background: color-mix(in oklab, var(--accent-yellow) 10%, transparent);
+  border-left: 3px solid var(--accent-yellow);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.feedback-alerta:empty { display: none; }
+
+/* --- 9.16 Cards "onde a IA não entra" (goal 6a §6) --- */
+.nao-entra-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+.nao-entra-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-red);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+}
+.nao-entra-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--red-text);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.nao-entra-texto { margin: 0; line-height: 1.5; color: var(--text-secondary); font-size: 15px; }
+
+/* --- 9.17 Delegação × Estruturação · accordion (goal 6a §8, só T2) --- */
+.delegacao-vs-estruturacao { margin: 8px 0; }
+.delegacao-vs-estruturacao .secao-lead { color: var(--text-secondary); margin-bottom: 18px; }
+.accordion-familias { display: flex; flex-direction: column; gap: 12px; }
+.familia-item {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-card);
+  transition: border-color .2s;
+}
+.familia-item[data-open="true"] { border-color: var(--accent-blue); }
+.familia-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 18px 20px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+}
+.familia-header:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: -2px; }
+.familia-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklab, var(--accent-blue) 15%, transparent);
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+.familia-item[data-familia="estruturacao"] .familia-icone {
+  background: color-mix(in oklab, var(--accent-yellow) 15%, transparent);
+  color: var(--accent-yellow);
+}
+.familia-textos { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.familia-titulo { font-family: var(--font-title); font-weight: 700; font-size: 17px; color: var(--text-primary); }
+.familia-subtitulo { font-size: 14px; color: var(--text-secondary); }
+.familia-seta { color: var(--text-secondary); transition: transform .2s; font-size: 15px; }
+.familia-header[aria-expanded="true"] .familia-seta { transform: rotate(180deg); }
+.familia-body { padding: 0 20px 20px 76px; }
+.familia-body dl { margin: 0; }
+.familia-body dt {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  margin-top: 14px;
+}
+.familia-body dt:first-child { margin-top: 0; }
+.familia-body dd { margin: 6px 0 0; line-height: 1.55; color: var(--text-secondary); }
+.familia-body dd code {
+  display: inline-block;
+  padding: 3px 8px;
+  background: var(--bg-dark);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-primary);
+}
+.diagnostico-rapido {
+  margin-top: 18px;
+  padding: 16px 20px;
+  background: color-mix(in oklab, var(--accent-purple) 12%, transparent);
+  border-left: 3px solid var(--accent-purple);
+  border-radius: var(--radius-sm);
+}
+.diagnostico-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: var(--purple-text);
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.diagnostico-rapido p:last-child { margin: 0; line-height: 1.55; color: var(--text-secondary); }
+
+/* --- 9.18 Print dos componentes 6a --- */
+@media print {
+  .matriz-ia, .wysiati { grid-template-columns: 1fr 1fr; gap: 16px; page-break-inside: avoid; }
+  .matriz-ia__caixas, .wysiati__caixas { background: #fff; }
+  .matriz-ia .caixa, .wysiati .zona { border-color: #666; background: #fff; }
+  .familia-body { display: block !important; padding-left: 20px; }
+  .familia-header { cursor: default; }
+  .familia-seta { display: none; }
+}
