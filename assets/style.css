@@ -1792,7 +1792,8 @@ main .container {
 }
 .simulador-opcao:hover { background: rgba(255, 255, 255, .08); }
 .simulador-opcao.selected { border-color: var(--accent-blue); background: color-mix(in oklab, var(--accent-blue) 12%, transparent); }
-.opcao-icon { font-size: 20px; }
+.opcao-icon { font-size: 20px; display: inline-flex; align-items: center; justify-content: center; color: var(--accent-blue); }
+.opcao-icon svg { display: block; }
 .opcao-nome { font-weight: 600; font-size: 15px; }
 .opcao-desc { font-size: 13px; color: var(--text-secondary); }
 .simulador-resultado { margin-top: 16px; }
