@@ -2,17 +2,15 @@
 
 **Trilha 1 · Módulo 1 de 6 · 1h**
 
-Você entende o que a IA generativa faz bem, o que não faz — sem jargão e sem hype.
+Você entende o que a IA generativa faz bem, o que não faz — e onde ela entra no seu turno, sem jargão e sem hype.
 
 ---
 
 ## O contrato deste módulo
 
-**Você ganha:** um mapa claro do que a IA faz bem, do que ela não faz, e os 3 modos de usar — com exemplo de fábrica em cada um.
+**Você ganha:** um mapa claro do que a IA faz bem, do que ela não faz, os 3 modos oficiais de usar (Autopiloto, Colaboração, Manual) — com exemplo Mallory em cada um — e a régua dos 7 níveis para se localizar hoje.
 
 **Você se compromete a:** listar 5 tarefas repetitivas da sua semana e marcar 2 onde a IA poderia entrar. Papel e caneta bastam.
-
-**Tempo de leitura desta página:** 9 min
 
 ---
 
@@ -20,56 +18,121 @@ Você entende o que a IA generativa faz bem, o que não faz — sem jargão e se
 
 | Você entra com | O que acontece | Você sai com |
 |---|---|---|
-| Sua rotina de sempre — e talvez uma desconfiança justa sobre "essa história de IA" | Você vê o que a IA faz de verdade, sem hype, com exemplos do seu turno: relatório, OS, comunicado | Os 3 modos de uso (copiloto, automação, agente) e 2 tarefas suas marcadas onde a IA pode entrar |
+| Sua rotina de sempre — e talvez uma desconfiança justa sobre "essa história de IA" | Você vê o que a IA faz de verdade, sem hype, com exemplos do seu turno: relatório, OS, comunicado | Os 3 modos oficiais de uso (Autopiloto, Colaboração, Manual), seu nível atual nos 7 níveis, e 2 tarefas suas marcadas onde a IA pode entrar |
 
 ---
 
 ## Por que isso importa aqui dentro
 
-A linha 3 parou 40 minutos ontem. Você resolveu o problema em 10 — os outros 30 foram para registrar, avisar o próximo turno e explicar para o PCP. É nessa segunda parte, a do papel, que a IA entra. A primeira continua sua.
+**A linha 3 parou 40 minutos ontem.** Você resolveu o problema em 10 — os outros 30 foram para registrar, avisar o próximo turno e explicar para o PCP. É nessa segunda parte, a do papel, que a IA entra. A primeira continua sua.
 
-A Anthropic (fabricante do Claude) publica o **Anthropic Economic Index** — uma análise contínua de milhões de conversas reais de trabalho. O padrão é claro: as pessoas usam IA para escrever, resumir e organizar — não para operar máquina nem decidir por ninguém. É o tipo de tarefa que consome a manhã de um supervisor.
+**Isso não é palpite.** O **Anthropic Economic Index** — análise contínua de milhões de conversas reais de trabalho com o Claude — mostra o mesmo padrão em todo canto: as pessoas usam IA para escrever, resumir e organizar. Não para operar máquina, não para decidir por ninguém. É exatamente o tipo de tarefa que consome a manhã de um supervisor.
 
-E o índice mostra outro padrão: o resultado melhora quando quem usa domina o assunto. O contexto é seu — 11, 15, 20 anos de casa. É essa combinação que você vai entender aqui.
-
----
-
-## O que é IA generativa
-
-IA generativa é a camada mais interna de uma matriz encaixada: dentro de Deep Learning, dentro de Machine Learning. Foi treinada em uma quantidade absurda de texto e aprendeu a completar padrões.
-
-Não pensa, não sente, não conhece a Mallory. Mas escreve, resume e organiza em segundos o que levaria uma hora sua.
+**E tem um dado a seu favor.** O mesmo índice mostra que o resultado melhora quando quem usa domina o assunto. IA sem contexto vira resposta genérica. IA com o seu contexto — 11, 15, 20 anos de Mallory — vira trabalho útil. Nesse relacionamento, quem conduz é você.
 
 ---
 
-## Os 3 modos de uso
+## O que é IA generativa, em uma frase
 
-A IA entra na fábrica de 3 formas. Comece sempre pela primeira.
+**IA generativa é um auto-completar treinado em quase tudo que a humanidade já escreveu.** Ela prevê a próxima palavra baseada em probabilidade estatística — não pensa, não sente, não conhece a Mallory.
 
-**Copiloto** — te ajuda a pensar e escrever. Ex.: o Programador de Produção rascunha o comunicado da mudança de sequência da linha por causa do gargalo no molde, e revisa. *Quando NÃO usar:* quando você quer a resposta pronta sem revisar.
+Três consequências práticas:
 
-**Automação** — tarefa repetitiva feita sempre igual. Ex.: transformar os apontamentos da semana em registro padrão, toda quinta. *Quando NÃO usar:* quando o caso é único e exige julgamento novo.
+1. **Inventa quando falta dado.** Continuar texto plausível é o que ela faz — inventar não é bug, é comportamento esperado. Verificar é sua parte (M4 aprofunda).
+2. **Prompt vago = resposta genérica.** Sem contexto, ela escreve para uma fábrica que não é a sua. Contexto restringe o universo de "próximas palavras prováveis" ao espaço certo.
+3. **Papel + Contexto + Tarefa melhora muito.** Você vai aprender esse método (PCTFL) no M2 — hoje só instale a intuição.
 
-**Agente** — executa vários passos e toma ações. Ex.: ainda é horizonte para a fábrica. *Quando NÃO usar:* no seu primeiro dia com IA — comece pelo copiloto.
+### A matriz encaixada
+
+IA generativa vive dentro de uma matriz de camadas:
+
+- **Machine Learning** — a camada mais ampla: qualquer sistema que aprende padrões a partir de dados.
+- **Deep Learning** — dentro de Machine Learning: redes neurais profundas que aprendem padrões complexos.
+- **IA Generativa** — dentro de Deep Learning: redes treinadas para gerar texto, imagem, código.
+
+Ferramentas como Claude e ChatGPT vivem na camada mais interna — é onde você vai usar hoje.
 
 ---
 
-## Seus 20 anos como ativo
+## O que a IA faz por você — em 3 zonas do que você sabe
 
-A IA sem contexto produz resposta genérica. Com o seu contexto — 11, 15, 20 anos de Mallory — produz trabalho útil.
+O psicólogo Daniel Kahneman batizou uma armadilha do pensamento humano de **WYSIATI** — "What You See Is All There Is": a gente decide com base só no que enxerga. Com IA, isso vira ferramenta prática. **Seu conhecimento tem 3 zonas** e a IA opera em cada uma de um jeito:
 
-O julgamento continua sendo seu. A IA só ganha velocidade quando encontra alguém que sabe o assunto: você sabe o barulho que a injetora faz antes de quebrar, qual fornecedor atrasa, o jeito de falar com cada turno.
+**🟢 Sei que sei — o que você domina há 20 anos**
+A IA **padroniza** o que você já faz bem. Você sabe fechar o relatório de turno; ela transforma anotações brutas em texto no padrão. Ganho: velocidade, sem risco de erro (você revisa).
+
+**🟡 Sei que não sei — o que você reconhece como buraco**
+A IA **acelera aprendizado**. Você sabe que precisa explicar melhor uma ISO 9001 para o operador novo — ela traz analogia e exemplo simples. Ganho: você chega mais preparado.
+
+**🔴 Não sei que não sei — o que sequer aparece no seu radar**
+A IA **expande o campo de visão**. Você pergunta "que perguntas eu deveria estar fazendo sobre esse indicador?" — ela sugere ângulos que você não considerou. Ganho: menos ponto cego.
+
+**Regra prática:** contexto seu + zona certa da IA = trabalho útil. **Seu conhecimento é o direcionador da IA — não o contrário.**
 
 ---
 
-## Onde a IA não entra
+## Os 3 modos oficiais de uso da IA
 
-Quatro fronteiras que a IA não cruza — e não vai cruzar neste treinamento:
+A IA entra no seu dia de 3 formas. **Este vocabulário te acompanha do M1 ao M6** — vale a pena fixar.
 
-- **Pessoa** — decisão sobre gente: advertência, escala, avaliação.
-- **Segurança** — assinatura de registro que exige a sua responsabilidade.
-- **Sinal físico** — o barulho da injetora, o cheiro no torno, o olhar do operador.
-- **Contrato** — condição comercial, negociação com fornecedor.
+### 🚗 Autopiloto — IA executa, você revisa
+
+Tarefa repetitiva que segue sempre o mesmo padrão. Você define uma vez, ela roda. Você olha a saída e libera.
+
+- **Exemplo Mallory:** transformar os apontamentos brutos da semana em registro padrão de qualidade. Toda quinta, mesmo formato.
+- **Baixo risco.** Alto ganho de tempo em coisa que já era mecânica.
+- **Quando NÃO usar:** quando o caso é único e exige julgamento novo. Autopiloto vale para o repetitivo — o excepcional pede olho humano.
+
+### 🤝 Colaboração — IA e você pensam juntos
+
+Você conduz, ela apoia. Você dá contexto, ela rascunha; você critica, ela refaz.
+
+- **Exemplo Mallory:** o Programador de Produção rascunha com ela o comunicado da mudança de sequência da linha por causa do gargalo no molde. Ela sugere estrutura; ele decide o tom e ajusta o que a equipe precisa entender.
+- **Risco médio.** Ganho em qualidade e velocidade — mas exige seu envolvimento.
+- **Quando NÃO usar:** quando você quer a resposta pronta sem revisar. Colaboração pede que você conduza — se abrir mão, sai genérico.
+
+### ✋ Manual — IA inspira, você decide
+
+Território seu. A IA no máximo dá referência; a decisão, o registro e a responsabilidade continuam com você.
+
+- **Exemplo Mallory:** aplicar advertência para operador, aprovar registro de segurança, ler o barulho da injetora antes dela quebrar.
+- **Alta responsabilidade autoral.** Não delegar — nem quando a IA parecer útil.
+- **Quando NÃO usar:** o Manual não tem exceção. Se a decisão envolve pessoa, sinal físico ou assinatura sua, é sempre Manual.
+
+**Regra de ouro dos 3 modos:** quanto maior o impacto ou o risco da decisão, mais Manual o modo. Comece pelo Autopiloto na próxima semana.
+
+---
+
+## Onde você quer chegar hoje: os 7 níveis de uso da IA
+
+O treinamento faz mais sentido quando você sabe **de onde parte e para onde vai**. Existem 7 níveis de maturidade no uso da IA (versão Mallory). Não precisa chegar no topo hoje — precisa saber para onde caminhar.
+
+| Nível | Nome | O que caracteriza |
+|---|---|---|
+| **N1** | Curioso | Abre a IA de vez em quando, quando lembra. Resposta genérica, fecha, esquece. |
+| **N2** | Prompter consciente | Pensa antes de perguntar. Sabe que o jeito de perguntar muda a resposta. |
+| **N3** | Operador com contexto | Tem seu contexto salvo. A IA já sabe quem você é — não re-explica a cada conversa. |
+| **N4** | Orquestrador | Usa 3+ ferramentas de IA e sabe qual usar para cada tarefa. |
+| **N5** | Construtor de processos | Criou pelo menos 1 automação/skill que roda sem ele. |
+| **N6** | Builder | Trabalha no terminal, opera arquivos, constrói sistemas com IA. |
+| **N7** | Workforce de agentes | Múltiplos agentes em paralelo — fronteira, quase ninguém chegou. |
+
+**Meta do dia:** sair do treinamento em **N2 sólido** — sabendo perguntar, avaliando a resposta com critério, com pelo menos 3 prompts que funcionaram e você guardou.
+
+**Meta pós-treinamento (3-6 meses):** N3 — seu contexto salvo, IA respondendo no seu tom. O M6 aponta o caminho.
+
+---
+
+## Onde a IA não entra — e não vai entrar hoje
+
+Fronteiras que a IA não cruza. Não é limitação técnica — é decisão pedagógica do treinamento:
+
+- **Decisão sobre pessoa** — advertência, escala, avaliação, feedback sensível. Você conhece o time; a IA não conhece ninguém.
+- **Assinatura de responsabilidade** — registro de qualidade, segurança, conformidade. Quem assina é você, e a assinatura vem depois do seu julgamento — não da resposta da IA.
+- **Sinal físico** — barulho da injetora antes de quebrar, cheiro estranho no torno, olhar do operador que sinaliza problema. A IA não está na linha; você está.
+- **Relacionamento contratual** — negociação com fornecedor, condição comercial, avaliação de proposta. A IA pode preparar; a mesa é sua.
+
+Regra prática: **se a decisão envolve uma dessas 4 categorias, é Manual.** Sem exceção.
 
 ---
 
@@ -86,24 +149,41 @@ Quatro fronteiras que a IA não cruza — e não vai cruzar neste treinamento:
 
 ## Prompt-âncora do módulo
 
-O PCTFL completo vem no M2. Por enquanto, uma versão simples — para você ver a diferença que o contexto faz:
+O PCTFL completo vem no M2. Por enquanto, uma versão simples com os 3 modos oficiais definidos inline — o prompt funciona copiado e colado num chat novo, mesmo sem alguém ter feito este treinamento antes:
 
 ```text
 # PAPEL
-Você é um consultor prático de produtividade industrial.
+Você é um consultor sênior de produtividade industrial em fábrica de manufatura.
+Sua função é ajudar supervisores a decidir onde a IA entra na semana deles,
+sem prometer o que a IA não entrega.
 
 # CONTEXTO
-Sou supervisor em uma fábrica de eletroportáteis. Minhas tarefas mais repetitivas da semana:
-[cole aqui suas 5 tarefas — ex.: relatório de turno, comunicado de mudança de linha, registro de parada]
+Sou supervisor em uma fábrica de eletroportáteis com certificação ISO 9001.
+Minhas 5 tarefas mais repetitivas da semana:
+[cole aqui suas 5 tarefas — ex.: relatório de turno, comunicado de mudança
+de linha, registro de parada, DDS, consolidação de apontamentos]
 
 # TAREFA
-Para cada tarefa, diga se a IA pode ajudar como copiloto, como automação, ou se deve ficar comigo — e por quê, em 1 linha.
+Classifique cada tarefa em um dos 3 modos de uso da IA:
+
+- Autopiloto: tarefa repetitiva que segue sempre o mesmo padrão. A IA executa,
+  você revisa. Ex.: transformar apontamentos brutos em relatório padrão.
+
+- Colaboração: tarefa que precisa do seu contexto e julgamento. A IA rascunha,
+  você conduz e decide. Ex.: escrever comunicado sensível para o time.
+
+- Manual: decisão ou sinal que é só seu. Ex.: advertência, aprovar registro
+  de qualidade, ler barulho da injetora.
+
+Para cada tarefa, indique o modo e a razão em 1 linha.
 
 # FORMATO
-Tabela: Tarefa | Modo (copiloto / automação / fica comigo) | Por quê.
+Tabela: Tarefa | Modo (Autopiloto/Colaboração/Manual) | Por quê.
 
 # LIMITAÇÕES
 Se faltar informação, pergunte. Não invente.
+Nunca classifique como Autopiloto uma tarefa que envolva pessoa, sinal físico
+ou assinatura de responsabilidade — essas são sempre Manual.
 ```
 
 *(marque "Rodei este prompt no Claude" quando testar)*
@@ -134,7 +214,7 @@ Se faltar informação, pergunte. Não invente.
 1. Abra [claude.ai](https://claude.ai) no celular (o passo a passo de conta é no M2 — se ainda não tem, faça em dupla com quem tem).
 2. Copie o prompt-âncora acima e cole suas 5 tarefas no lugar indicado.
 3. Envie e leia a tabela que voltar.
-4. Compare com a sua marcação do Básico: a IA concordou com você? Onde discordou?
+4. Compare com a sua marcação do Básico: a IA concordou com você? Onde discordou, você tem argumento?
 
 **Resultado esperado:** a tabela da IA, comparada com o seu próprio julgamento.
 
@@ -147,8 +227,8 @@ Se faltar informação, pergunte. Não invente.
 | Erro | Sintoma | Causa | Como corrigir |
 |---|---|---|---|
 | Tratar a IA como o Google | Pergunta curta, resposta genérica, você fecha e conclui "não serve" | A IA não busca — ela escreve a partir do que você dá | Dê contexto: quem você é, qual a situação, o que quer receber |
-| Achar que ela vai substituir quem sabe | Resistência antes de testar: "20 anos de linha não se aprende em app" | Confundir a parte do papel com a parte do julgamento | Teste numa tarefa de papel. O julgamento não está em jogo — é pré-requisito |
-| Desistir na primeira resposta ruim | Um teste vago, resultado fraco, ferramenta abandonada | Prompt sem contexto gera resposta sem valor — sempre | Antes de desistir, refaça com contexto. O M2 mostra o método |
+| Achar que ela vai substituir quem sabe | Resistência antes de testar: "20 anos de linha não se aprende em app" | Confundir a parte do papel (Autopiloto/Colaboração) com a parte do julgamento (Manual) | Teste numa tarefa de papel. O julgamento não está em jogo — é pré-requisito |
+| Desistir na primeira resposta ruim | Um teste vago, resultado fraco, ferramenta abandonada | Prompt sem contexto gera resposta sem valor — sempre | Antes de desistir, refaça com contexto. O M2 mostra o método (PCTFL) |
 
 ---
 

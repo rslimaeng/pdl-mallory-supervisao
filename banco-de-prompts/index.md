@@ -44,27 +44,56 @@ Os mesmos prompts que você rodou em sala — na íntegra, para reusar.
 
 **Área:** todas — é o ponto de partida
 **Para quando:** você quer saber onde a IA entra na sua semana antes de gastar tempo testando.
-**Você leva:** uma tabela com cada tarefa classificada em copiloto, automação ou "fica comigo".
+**Você leva:** uma tabela com cada tarefa classificada em Autopiloto, Colaboração ou Manual — e a primeira que vai testar.
 
 ```text
 # PAPEL
-Você é um consultor prático de produtividade industrial.
+Você é um consultor sênior de produtividade industrial em fábrica de manufatura.
+Sua função é ajudar supervisores a decidir onde a IA entra na semana deles,
+sem prometer o que a IA não entrega.
 
 # CONTEXTO
-Sou supervisor em uma fábrica de eletroportáteis. Minhas tarefas mais repetitivas da semana:
-[cole aqui suas 5 tarefas — ex.: relatório de turno, comunicado de mudança de linha, registro de parada]
+Sou supervisor de produção em uma fabricante de eletroportáteis (linha branca:
+liquidificador, air fryer, ventilador, batedeira). Fábrica com certificação ISO 9001,
+ERP Datasul, turnos manhã/tarde/noite. Minhas 5 tarefas mais repetitivas da semana:
+
+[cole aqui suas 5 tarefas — exemplos comuns na fábrica:
+- Relatório de passagem de turno (paradas, produção, pendências)
+- DDS de segunda-feira (Diálogo Diário de Segurança)
+- Comunicado de mudança de sequência da linha por gargalo de molde
+- Registro de não-conformidade para o sistema da qualidade
+- Consolidação dos apontamentos da semana em registro padrão]
 
 # TAREFA
-Para cada tarefa, diga se a IA pode ajudar como copiloto, como automação, ou se deve ficar comigo — e por quê, em 1 linha.
+Classifique cada tarefa em um dos 3 modos de uso da IA — use estas definições exatas:
+
+- Autopiloto: tarefa repetitiva que segue sempre o mesmo padrão. Você define uma vez,
+  a IA executa, você revisa. Baixo risco, alto ganho de tempo.
+  Ex.: transformar apontamentos brutos em relatório padrão de turno.
+
+- Colaboração: tarefa que precisa do seu contexto e julgamento junto. A IA rascunha,
+  você conduz e decide. Risco médio, ganho em qualidade e velocidade.
+  Ex.: escrever comunicado sensível para o time considerando o histórico da linha.
+
+- Manual: decisão ou sinal que é só seu — a IA não entra. Alta responsabilidade autoral.
+  Ex.: aplicar advertência, aprovar registro de qualidade, ler barulho da injetora.
+
+Para cada uma das 5 tarefas: qual dos 3 modos e por quê, em 1 linha. Ao final,
+recomende qual você deve testar primeiro (a mais Autopiloto/simples).
 
 # FORMATO
-Tabela: Tarefa | Modo (copiloto / automação / fica comigo) | Por quê.
+Tabela com 3 colunas: Tarefa | Modo (Autopiloto / Colaboração / Manual) | Por quê (1 linha).
+Depois da tabela, 1 parágrafo curto (2-3 linhas): "Comece por [tarefa X] porque [razão]."
 
 # LIMITAÇÕES
-Se faltar informação, pergunte. Não invente.
+Se faltar informação sobre alguma tarefa, pergunte antes de classificar. Não invente.
+Não sugira tarefa que dependa de comprar sistema ou automação industrial —
+o supervisor usa a IA como está, com conta gratuita no Claude ou ChatGPT.
+Não classifique como Autopiloto uma tarefa que exija decisão sobre pessoa,
+sinal físico da máquina ou assinatura de responsabilidade — essas são Manual.
 ```
 
-**Como avaliar:** você consegue explicar por que concorda ou discorda de cada linha da tabela? Então o mapa é seu, não da IA.
+**Como avaliar:** você consegue explicar, olhando cada linha, por que concorda ou discorda da IA? Se sim, o mapa é seu — a IA só ajudou a organizar. Se não, refine o CONTEXTO com mais detalhe de como você faz cada tarefa hoje.
 
 ### M2 · DDS de segurança
 

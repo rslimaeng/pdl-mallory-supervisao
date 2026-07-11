@@ -154,7 +154,7 @@ A última linha do L é o espírito do módulo: a IA sugere, o grupo bate o mart
 > | Área | Tarefa (toda semana a gente...) | Impacto (1-5) | Facilidade (1-5) | Como começar |
 > |---|---|---|---|---|
 > | Produção | ...fecha o relatório de passagem de turno na correria | 4 | 5 | Prompt-âncora do M5, quinta-feira, revisar e enviar |
-> | PCP / Produção | ...comunica mudança de sequência da linha por gargalo no molde | 4 | 4 | Copiloto do M1: fatos no contexto, comunicado em 10 linhas |
+> | PCP / Produção | ...comunica mudança de sequência da linha por gargalo no molde | 4 | 4 | Modo Colaboração (M1): fatos no contexto, IA rascunha, você conduz — comunicado em 10 linhas |
 > | Segurança | ...monta o DDS de segunda sem repetir o do mês passado | 3 | 5 | Prompt-âncora do M2 com o tema da semana |
 > | Qualidade | ...registra não-conformidade correndo, e a auditoria cobra clareza | 4 | 4 | Prompt-âncora do M4 — fatos completos, sem causa-raiz inventada |
 > | Manutenção | ...prioriza OS no olho, sem olhar o histórico de falhas | 5 | 3 | Desafio do M5: colar histórico fictício e validar o padrão |
