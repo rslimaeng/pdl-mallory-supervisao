@@ -304,7 +304,7 @@ main {
 }
 
 .section {
-  margin-bottom: 64px;
+  margin-bottom: 38px;
 }
 
 .section > h2 {
@@ -1074,7 +1074,7 @@ h3.eyebrow {
   }
 
   .section {
-    margin-bottom: 96px;
+    margin-bottom: 56px;
   }
 
   /* Nav inline no desktop; hamburger some */
