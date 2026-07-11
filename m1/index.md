@@ -28,33 +28,48 @@ Você entende o que a IA generativa faz bem, o que não faz — sem jargão e se
 
 A linha 3 parou 40 minutos ontem. Você resolveu o problema em 10 — os outros 30 foram para registrar, avisar o próximo turno e explicar para o PCP. É nessa segunda parte, a do papel, que a IA entra. A primeira continua sua.
 
-A Anthropic (fabricante do Claude) publica uma análise contínua sobre uso de IA no trabalho — o Anthropic Economic Index, com dados de milhões de conversas reais. O padrão que aparece é claro: as pessoas usam IA principalmente para escrever, resumir e organizar informação — não para operar máquina nem para decidir por ninguém. É exatamente o tipo de tarefa que consome a manhã de um supervisor na Mallory.
+A Anthropic (fabricante do Claude) publica o **Anthropic Economic Index** — uma análise contínua de milhões de conversas reais de trabalho. O padrão é claro: as pessoas usam IA para escrever, resumir e organizar — não para operar máquina nem decidir por ninguém. É o tipo de tarefa que consome a manhã de um supervisor.
 
-E tem um detalhe que joga a seu favor: a IA sem contexto produz resposta genérica. Quem dá o contexto é você — 11, 15, 20 anos de casa. Neste módulo você vai entender por que essa combinação funciona.
+E o índice mostra outro padrão: o resultado melhora quando quem usa domina o assunto. O contexto é seu — 11, 15, 20 anos de casa. É essa combinação que você vai entender aqui.
 
 ---
 
-## O conceito em 5 pontos
+## O que é IA generativa
 
-### 1. IA generativa é uma máquina de completar texto — muito bem treinada
+IA generativa é a camada mais interna de uma matriz encaixada: dentro de Deep Learning, dentro de Machine Learning. Foi treinada em uma quantidade absurda de texto e aprendeu a completar padrões.
 
-Ela leu uma quantidade absurda de texto e aprendeu a prever o que vem depois. Não pensa, não sente, não conhece a Mallory. Mas escreve, resume e organiza em segundos o que levaria uma hora sua.
+Não pensa, não sente, não conhece a Mallory. Mas escreve, resume e organiza em segundos o que levaria uma hora sua.
 
-### 2. Ela faz bem o que é texto; faz mal o que é fato que ela não recebeu
+---
 
-Faz bem: rascunhar comunicado, resumir instrução de trabalho, organizar anotação bagunçada. Faz mal: dizer o parâmetro exato do molde X, lembrar o histórico da injetora 5, dar número que você não forneceu. A regra: o que você entrega, ela trabalha; o que você não entrega, ela pode inventar.
+## Os 3 modos de uso
 
-### 3. Os 3 modos de uso — e onde cada um aparece na fábrica
+A IA entra na fábrica de 3 formas. Comece sempre pela primeira.
 
-**Copiloto:** te ajuda a pensar e escrever — o Programador de Produção rascunha com ela o comunicado da mudança de sequência da linha por causa do gargalo no molde, e revisa. **Automação:** tarefa repetitiva feita sozinha, sempre igual — transformar os apontamentos da semana em registro padrão. **Agente:** executa processos de vários passos e toma ações — ainda é horizonte para nós; começamos pelo copiloto.
+**Copiloto** — te ajuda a pensar e escrever. Ex.: o Programador de Produção rascunha o comunicado da mudança de sequência da linha por causa do gargalo no molde, e revisa. *Quando NÃO usar:* quando você quer a resposta pronta sem revisar.
 
-### 4. Seus 20 anos de casa são o ativo, não o obstáculo
+**Automação** — tarefa repetitiva feita sempre igual. Ex.: transformar os apontamentos da semana em registro padrão, toda quinta. *Quando NÃO usar:* quando o caso é único e exige julgamento novo.
 
-O Anthropic Economic Index mostra outro padrão: o resultado melhora quando quem usa domina o assunto. Exemplo daqui: o histórico de falhas da injetora só vira prioridade de OS certa se quem pede sabe qual falha derruba a linha e qual espera. Você sabe o que a IA nunca vai saber — o barulho que a injetora faz antes de quebrar, qual fornecedor atrasa, o jeito de falar com cada turno. A IA entra com velocidade; o julgamento continua sendo seu.
+**Agente** — executa vários passos e toma ações. Ex.: ainda é horizonte para a fábrica. *Quando NÃO usar:* no seu primeiro dia com IA — comece pelo copiloto.
 
-### 5. Onde a IA não entra — e não vai entrar neste treinamento
+---
 
-Decisão sobre pessoa (advertência, escala, avaliação). Negociação. Qualquer coisa que dependa de estar lá: cheiro, vibração, o olhar do operador. E decisão final de qualidade ou segurança — ela rascunha o registro, você assina.
+## Seus 20 anos como ativo
+
+A IA sem contexto produz resposta genérica. Com o seu contexto — 11, 15, 20 anos de Mallory — produz trabalho útil.
+
+O julgamento continua sendo seu. A IA só ganha velocidade quando encontra alguém que sabe o assunto: você sabe o barulho que a injetora faz antes de quebrar, qual fornecedor atrasa, o jeito de falar com cada turno.
+
+---
+
+## Onde a IA não entra
+
+Quatro fronteiras que a IA não cruza — e não vai cruzar neste treinamento:
+
+- **Pessoa** — decisão sobre gente: advertência, escala, avaliação.
+- **Segurança** — assinatura de registro que exige a sua responsabilidade.
+- **Sinal físico** — o barulho da injetora, o cheiro no torno, o olhar do operador.
+- **Contrato** — condição comercial, negociação com fornecedor.
 
 ---
 
@@ -91,11 +106,13 @@ Tabela: Tarefa | Modo (copiloto / automação / fica comigo) | Por quê.
 Se faltar informação, pergunte. Não invente.
 ```
 
+*(marque "Rodei este prompt no Claude" quando testar)*
+
 ---
 
 ## Exercício
 
-### Camada 1 — Básico (todos · 10-15 min)
+### Camada 1 — Básico
 
 **Objetivo:** mapear onde a IA entra na sua semana — ainda sem usar IA.
 
@@ -109,7 +126,7 @@ Se faltar informação, pergunte. Não invente.
 
 **Como avaliar:** se as 2 marcadas acontecem toda semana e terminam em papel ou mensagem, você acertou.
 
-### Camada 2 — Desafio (para quem terminou · +10-15 min)
+### Camada 2 — Desafio
 
 **Objetivo:** testar o prompt-âncora com a sua lista real.
 
@@ -138,6 +155,7 @@ Se faltar informação, pergunte. Não invente.
 > 🟣 **Marco: o que você leva para a Mallory na 2ª feira**
 > Até sexta-feira, registre as 5 tarefas repetitivas da sua semana com 2 marcadas para IA — e mostre a lista para um colega do seu turno.
 > Como saber que aconteceu: a lista existe no papel ou no celular, e um colega viu.
+> *(marque "Compromisso feito" quando fechar com o colega)*
 
 ---
 
