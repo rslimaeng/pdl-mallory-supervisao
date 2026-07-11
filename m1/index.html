@@ -55,7 +55,6 @@
       <div class="contrato">
         <p><strong>Você ganha:</strong> um mapa claro do que a IA faz bem, do que ela não faz, e os 3 modos de usar — com exemplo de fábrica em cada um.</p>
         <p><strong>Você se compromete a:</strong> listar 5 tarefas repetitivas da sua semana e marcar 2 onde a IA poderia entrar. Papel e caneta bastam.</p>
-        <p class="tempo-leitura"><strong>Tempo de leitura desta página:</strong> 9 min</p>
       </div>
     </section>
 
@@ -81,60 +80,81 @@
 
     <section class="section">
       <h2>Por que isso importa aqui dentro</h2>
-      <p>A linha 3 parou 40 minutos ontem. Você resolveu o problema em 10 — os outros 30 foram para registrar, avisar o próximo turno e explicar para o PCP. É nessa segunda parte, a do papel, que a IA entra. A primeira continua sua.</p>
-      <p>A Anthropic (fabricante do Claude) publica o <strong>Anthropic Economic Index</strong> — uma análise contínua de milhões de conversas reais de trabalho. O padrão é claro: as pessoas usam IA para escrever, resumir e organizar — não para operar máquina nem decidir por ninguém. É o tipo de tarefa que consome a manhã de um supervisor.</p>
-      <p>E o índice mostra outro padrão: o resultado melhora quando quem usa domina o assunto. O contexto é seu — 11, 15, 20 anos de casa. É essa combinação que você vai entender aqui.</p>
+      <p>O dia do supervisor tem duas metades. Numa metade você opera: acompanha linha, resolve problema no chão, coordena turma. Nessa parte, a IA não entra — ela não sente o que você sente ali. Na outra metade você registra, comunica, documenta: relatório de turno, aviso pro próximo, e-mail pro PCP, ata de reunião, checklist pro RH. É nessa segunda metade que a IA faz diferença — e ela pesa mais no seu dia do que a gente costuma admitir.</p>
+      <p>A Anthropic (fabricante do Claude) publica o <strong>Anthropic Economic Index</strong> — uma análise contínua de milhões de conversas reais de trabalho. O padrão é claro: as pessoas usam IA pra escrever, resumir e organizar — não pra operar máquina nem decidir por ninguém. É exatamente o tipo de tarefa que consome a metade "de papel" do supervisor.</p>
+      <p>E o índice mostra outro padrão: o resultado melhora quando quem usa domina o assunto. O contexto é seu — anos de casa, conhecimento do processo, do time, das exceções. É essa combinação — sua experiência + a máquina que escreve — que você vai entender aqui.</p>
     </section>
 
     <section class="section">
       <h2>O que é IA generativa</h2>
-      <p>Uma matriz encaixada. Passe o mouse (ou toque) em cada camada para ver:</p>
-      <div class="ia-aninhada">
-        <p class="ia-aninhada-hint">↑ Passe o mouse sobre cada anel</p>
-        <svg class="ia-aninhada-svg" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IA generativa aninhada dentro de Deep Learning, dentro de Machine Learning">
-          <circle cx="170" cy="170" r="160" data-layer="ml"
-                  data-title="Machine Learning"
-                  data-desc="Uma máquina que aprende com exemplos. Recomendação de filme, filtro de spam, previsão de venda — tudo isso é ML."></circle>
-          <text x="170" y="30">Machine Learning</text>
-          <circle cx="170" cy="180" r="110" data-layer="dl"
-                  data-title="Deep Learning"
-                  data-desc="ML com redes neurais profundas. Reconhece imagem, transcreve fala, traduz texto — o que ficou pesado na década passada."></circle>
-          <text x="170" y="80">Deep Learning</text>
-          <circle cx="170" cy="185" r="60" data-layer="gen" class="active"
-                  data-title="IA Generativa"
-                  data-desc="Deep Learning treinado para gerar texto, imagem, código. O ChatGPT e o Claude vivem aqui — é o que a gente vai usar hoje."></circle>
-          <text x="170" y="195">IA Generativa</text>
-        </svg>
-        <div class="ia-aninhada-desc" aria-live="polite">
-          <strong>IA Generativa</strong>
-          <span class="desc-text">Deep Learning treinado para gerar texto, imagem, código. O ChatGPT e o Claude vivem aqui — é o que a gente vai usar hoje.</span>
+      <div class="matriz-ia" role="group" aria-label="Matriz de conceitos: Inteligência Artificial contém Machine Learning, que contém Deep Learning, que contém IA Generativa">
+        <div class="matriz-ia__caixas" aria-hidden="true">
+          <div class="caixa caixa-1" data-nivel="ia">
+            <span class="caixa-label">Inteligência Artificial</span>
+            <div class="caixa caixa-2" data-nivel="ml">
+              <span class="caixa-label">Machine Learning</span>
+              <div class="caixa caixa-3" data-nivel="dl">
+                <span class="caixa-label">Deep Learning</span>
+                <div class="caixa caixa-4 caixa-ativa" data-nivel="genai">
+                  <span class="caixa-label">IA Generativa</span>
+                  <span class="caixa-voce">você está aqui</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <aside class="matriz-ia__legenda">
+          <p class="legenda-frase"><strong>IA generativa é um auto-completar treinado em quase tudo que a humanidade já escreveu.</strong> Ela não pensa — ela prevê qual palavra vem em seguida.</p>
+          <ol class="legenda-lista">
+            <li><strong>Por que ela inventa norma técnica com confiança total</strong> — continuar o texto de forma plausível é o que ela foi treinada pra fazer. Inventar não é bug; é como ela funciona.</li>
+            <li><strong>Por que prompts vagos geram respostas vagas</strong> — sem contexto, ela auto-completa pra média estatística da internet.</li>
+            <li><strong>Por que ela melhora com papel + contexto + tarefa</strong> — você restringe o universo de "próximas palavras prováveis" pro espaço certo.</li>
+          </ol>
+        </aside>
       </div>
       <p>Não pensa, não sente, não conhece a Mallory. Mas escreve, resume e organiza em segundos o que levaria uma hora sua.</p>
     </section>
 
-    <section class="section wysiati-explorer" aria-label="WYSIATI e as 3 zonas do que você sabe">
+    <section class="section" aria-label="WYSIATI e as 3 zonas do que você sabe">
       <h2>O que a IA faz por você — em 3 zonas do que você sabe</h2>
-      <p class="wysiati-intro">O psicólogo Daniel Kahneman batizou uma armadilha do pensamento humano de <strong>WYSIATI</strong> — "What You See Is All There Is": a gente decide com base só no que enxerga. Com IA, isso vira ferramenta prática. <strong>Clique em cada zona para ver como a IA opera nela na sua rotina Mallory.</strong></p>
-      <div class="zonas-grid">
-        <button class="zona-card" data-zona="verde" aria-expanded="false" type="button">
-          <span class="zona-icon" aria-hidden="true">🟢</span>
-          <span class="zona-nome">Sei que sei</span>
-          <span class="zona-frase">O que você domina</span>
-        </button>
-        <button class="zona-card" data-zona="amarela" aria-expanded="false" type="button">
-          <span class="zona-icon" aria-hidden="true">🟡</span>
-          <span class="zona-nome">Sei que não sei</span>
-          <span class="zona-frase">O buraco que você reconhece</span>
-        </button>
-        <button class="zona-card" data-zona="vermelha" aria-expanded="false" type="button">
-          <span class="zona-icon" aria-hidden="true">🔴</span>
-          <span class="zona-nome">Não sei que não sei</span>
-          <span class="zona-frase">O ponto cego</span>
-        </button>
+      <div class="wysiati" role="group" aria-label="3 zonas do conhecimento">
+        <div class="wysiati__caixas" aria-hidden="true">
+          <div class="zona zona-3">
+            <span class="zona-label">Não sei que não sei</span>
+            <div class="zona zona-2">
+              <span class="zona-label">Sei que não sei</span>
+              <div class="zona zona-1">
+                <span class="zona-label">Sei que sei</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="wysiati__legenda">
+          <h3 class="wysiati__titulo">WYSIATI</h3>
+          <p class="wysiati__origem"><em>What You See Is All There Is</em> — Daniel Kahneman</p>
+          <p class="wysiati__intro">A gente decide com base só no que está visível na cabeça. Em IA isso vira armadilha: <strong>muita coisa boa está invisível pra você</strong> — não porque é difícil, mas porque ninguém te mostrou que existia.</p>
+          <table class="wysiati__tabela">
+            <thead>
+              <tr><th>Zona</th><th>O que a IA faz por você</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Sei que sei</strong></td>
+                <td><strong>Padroniza</strong> o que você já faz bem — transforma apontamentos brutos em registro no seu formato</td>
+              </tr>
+              <tr>
+                <td><strong>Sei que não sei</strong></td>
+                <td><strong>Acelera</strong> o aprendizado — explica a NR-12 pro operador novo com exemplos práticos</td>
+              </tr>
+              <tr>
+                <td><strong>Não sei que não sei</strong></td>
+                <td><strong>Expande</strong> seu campo de visão — sugere perguntas que você ainda não tinha feito sobre um registro de manutenção</td>
+              </tr>
+            </tbody>
+          </table>
+        </aside>
       </div>
-      <div class="zona-detalhe" id="zona-detalhe" aria-live="polite"></div>
-      <p class="wysiati-conexao"><strong>Aplicação prática:</strong> cada zona tem um modo típico. Verde é território de <strong>Autopiloto</strong> — repete o padrão. Amarela e vermelha são território de <strong>Colaboração</strong> — a IA ajuda você pensar. Nenhuma delas é Manual — Manual é decisão que não se delega. <a href="#modos-simulador">Testar no Simulador dos 3 modos ↓</a></p>
+      <p class="wysiati-conexao"><strong>Aplicação prática:</strong> cada zona tem um modo típico. "Sei que sei" é território de <strong>Autopiloto</strong> — repete o padrão. As outras duas são território de <strong>Colaboração</strong> — a IA ajuda você pensar. Nenhuma delas é Manual — Manual é decisão que não se delega. <a href="#modos-simulador">Testar no Simulador dos 3 modos ↓</a></p>
     </section>
 
     <section class="section">
@@ -213,8 +233,9 @@
           <h3>Sua tarefa é qual modo?</h3>
           <p>Descreva uma tarefa da sua semana. Depois escolha o modo que você acha que ela é. Receba feedback com exemplo Mallory similar.</p>
         </div>
-        <label for="simulador-tarefa" class="simulador-label">Sua tarefa em 1 linha</label>
-        <input type="text" id="simulador-tarefa" placeholder="Ex.: escrever o comunicado da mudança da linha 3 pra próxima semana" maxlength="200">
+        <label for="simulador-tarefa" class="simulador-label">Sua tarefa em 1 linha (opcional — pode só clicar num modo)</label>
+        <input type="text" id="simulador-tarefa" placeholder="Organizar 200 relatórios de turno por data" maxlength="200">
+        <div class="simulador-sugestao" id="simulador-sugestao" aria-live="polite"></div>
         <div class="simulador-opcoes">
           <button class="simulador-opcao" data-modo="autopiloto" type="button">
             <span class="opcao-icon" aria-hidden="true">🚗</span>
@@ -270,26 +291,22 @@
 
     <section class="section">
       <h2>Onde a IA não entra — e não vai entrar hoje</h2>
-      <div class="selos-nao-entra">
-        <div class="selo">
-          <div class="selo-icon" aria-hidden="true">👤</div>
-          <div class="selo-label">Pessoa</div>
-          <div class="selo-sub">Advertência, escala, avaliação — decisão é sua</div>
+      <div class="nao-entra-grid">
+        <div class="nao-entra-card">
+          <span class="nao-entra-label">Pessoa</span>
+          <p class="nao-entra-texto">Advertência, escala, avaliação — decisão é sua</p>
         </div>
-        <div class="selo">
-          <div class="selo-icon" aria-hidden="true">📝</div>
-          <div class="selo-label">Segurança</div>
-          <div class="selo-sub">Assinatura de registro que exige responsabilidade</div>
+        <div class="nao-entra-card">
+          <span class="nao-entra-label">Segurança</span>
+          <p class="nao-entra-texto">Assinatura de registro que exige responsabilidade</p>
         </div>
-        <div class="selo">
-          <div class="selo-icon" aria-hidden="true">🔧</div>
-          <div class="selo-label">Sinal físico</div>
-          <div class="selo-sub">Barulho da injetora, cheiro no torno, olhar do operador</div>
+        <div class="nao-entra-card">
+          <span class="nao-entra-label">Sinal físico</span>
+          <p class="nao-entra-texto">Barulho da injetora, cheiro no torno, olhar do operador</p>
         </div>
-        <div class="selo">
-          <div class="selo-icon" aria-hidden="true">📄</div>
-          <div class="selo-label">Contrato</div>
-          <div class="selo-sub">Negociação, condição comercial, fornecedor</div>
+        <div class="nao-entra-card">
+          <span class="nao-entra-label">Contrato</span>
+          <p class="nao-entra-texto">Negociação, condição comercial, fornecedor</p>
         </div>
       </div>
     </section>
@@ -334,20 +351,28 @@
         <div class="prompt-box">
           <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
           <pre><code><span class="prompt-marker"># PAPEL</span>
-Você é um consultor prático de produtividade industrial.
+Você é um assistente que ajuda um profissional Mallory a escrever, resumir ou organizar
+algo do dia a dia dele. Sua função é fazer a metade "de papel" do trabalho — nunca decidir
+por ele, nunca operar máquina, nunca substituir julgamento de segurança.
 
 <span class="prompt-marker"># CONTEXTO</span>
-Sou supervisor em uma fábrica de eletroportáteis. Minhas tarefas mais repetitivas da semana:
-[cole aqui suas 5 tarefas — ex.: relatório de turno, comunicado de mudança de linha, registro de parada]
+[Aluno preenche 1-2 linhas: o que você faz na Mallory e há quanto tempo]
+Exemplo: "Sou supervisor de produção na linha de eletroportáteis, há 12 anos.
+Gerencio turma de ~15 operadores em turno."
 
 <span class="prompt-marker"># TAREFA</span>
-Para cada tarefa, diga se a IA pode entrar como Autopiloto, como Colaboração, ou se deve ficar comigo (Manual) — e por quê, em 1 linha.
+[O que você quer produzir agora]
+Exemplo: "Escrever um comunicado de 10 linhas explicando a nova regra de troca de
+turno pra equipe, tom firme e respeitoso."
 
 <span class="prompt-marker"># FORMATO</span>
-Tabela: Tarefa | Modo (Autopiloto / Colaboração / Manual) | Por quê.
+[Como quer receber]
+Exemplo: "Texto corrido em 2 parágrafos + 1 lista de 3 pontos-chave no final."
 
 <span class="prompt-marker"># LIMITAÇÕES</span>
-Se faltar informação, pergunte. Não invente.</code></pre>
+- Nada confidencial (nome de pessoa, dado de folha, informação de contrato)
+- Precisa caber em 1 página
+- Linguagem Mallory: direta, respeitosa, sem jargão corporativo</code></pre>
         </div>
         <label class="action-check" data-key="m1-prompt-ancora">
           <input type="checkbox">
@@ -476,48 +501,6 @@ Se faltar informação, pergunte. Não invente.</code></pre>
   </div>
 </footer>
 
-<script>
-  window.M1_ZONAS = {
-    verde: {
-      cabecalho: 'A IA padroniza o que você já faz bem',
-      corpo: 'Você sabe fechar o relatório de turno; ela transforma anotações brutas em texto no padrão. Ganho: velocidade, sem risco de erro (você revisa).',
-      exemplo: 'Transforme apontamentos brutos da semana em registro padrão de qualidade.',
-      modo: 'Autopiloto'
-    },
-    amarela: {
-      cabecalho: 'A IA acelera aprendizado',
-      corpo: 'Você sabe que precisa explicar melhor uma ISO 9001 para o operador novo — ela traz analogia e exemplo simples. Ganho: você chega mais preparado.',
-      exemplo: 'Explique a NR-12 pra um operador novo em 3 exemplos práticos.',
-      modo: 'Colaboração'
-    },
-    vermelha: {
-      cabecalho: 'A IA expande o campo de visão',
-      corpo: 'Você pergunta "que perguntas eu deveria estar fazendo sobre esse indicador?" — ela sugere ângulos que você não considerou. Ganho: menos ponto cego.',
-      exemplo: 'Analise esse registro de manutenção. Que perguntas eu deveria fazer sobre padrões que ainda não vi?',
-      modo: 'Colaboração'
-    }
-  };
-  window.M1_SIMULADOR = {
-    autopiloto: {
-      titulo: '✓ Autopiloto — bom começo pra tarefa repetitiva',
-      modo: 'Tarefa que segue sempre o mesmo padrão. Você define uma vez, a IA executa, você revisa. Baixo risco, alto ganho de tempo em coisa mecânica.',
-      exemplo: 'transformar os apontamentos brutos da semana em registro padrão de qualidade. Toda quinta, mesmo formato.',
-      alerta: 'se ela envolve decisão sobre alguém do time, sinal físico da máquina, ou assinatura de responsabilidade, provavelmente é Manual, não Autopiloto. Reveja.'
-    },
-    colaboracao: {
-      titulo: '✓ Colaboração — a IA rascunha, você conduz',
-      modo: 'A IA rascunha e propõe; você dá o contexto que só quem trabalha aqui tem, critica e decide. Risco médio, ganho em qualidade.',
-      exemplo: 'o comunicado da mudança de sequência da linha por causa do gargalo no molde — a IA sugere a estrutura, você ajusta o tom pro seu time.',
-      alerta: 'se você quer a resposta pronta sem revisar, Colaboração vai falhar. Se é só velocidade em coisa mecânica, era Autopiloto.'
-    },
-    manual: {
-      titulo: '✓ Manual — a decisão é sua',
-      modo: 'A IA no máximo dá referência; a decisão, o registro e a responsabilidade continuam com você. Alta responsabilidade autoral.',
-      exemplo: 'aplicar advertência para operador, aprovar registro de segurança, ler o barulho da injetora antes dela quebrar.',
-      alerta: 'se sua tarefa é só gerar um rascunho de texto, você está sub-utilizando a IA. Manual é pra decisão irreversível, não pra rascunho.'
-    }
-  };
-</script>
 <script src="../assets/script.js" defer></script>
 </body>
 </html>
