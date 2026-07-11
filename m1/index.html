@@ -113,6 +113,30 @@
       <p>Não pensa, não sente, não conhece a Mallory. Mas escreve, resume e organiza em segundos o que levaria uma hora sua.</p>
     </section>
 
+    <section class="section wysiati-explorer" aria-label="WYSIATI e as 3 zonas do que você sabe">
+      <h2>O que a IA faz por você — em 3 zonas do que você sabe</h2>
+      <p class="wysiati-intro">O psicólogo Daniel Kahneman batizou uma armadilha do pensamento humano de <strong>WYSIATI</strong> — "What You See Is All There Is": a gente decide com base só no que enxerga. Com IA, isso vira ferramenta prática. <strong>Clique em cada zona para ver como a IA opera nela na sua rotina Mallory.</strong></p>
+      <div class="zonas-grid">
+        <button class="zona-card" data-zona="verde" aria-expanded="false" type="button">
+          <span class="zona-icon" aria-hidden="true">🟢</span>
+          <span class="zona-nome">Sei que sei</span>
+          <span class="zona-frase">O que você domina</span>
+        </button>
+        <button class="zona-card" data-zona="amarela" aria-expanded="false" type="button">
+          <span class="zona-icon" aria-hidden="true">🟡</span>
+          <span class="zona-nome">Sei que não sei</span>
+          <span class="zona-frase">O buraco que você reconhece</span>
+        </button>
+        <button class="zona-card" data-zona="vermelha" aria-expanded="false" type="button">
+          <span class="zona-icon" aria-hidden="true">🔴</span>
+          <span class="zona-nome">Não sei que não sei</span>
+          <span class="zona-frase">O ponto cego</span>
+        </button>
+      </div>
+      <div class="zona-detalhe" id="zona-detalhe" aria-live="polite"></div>
+      <p class="wysiati-conexao"><strong>Aplicação prática:</strong> cada zona tem um modo típico. Verde é território de <strong>Autopiloto</strong> — repete o padrão. Amarela e vermelha são território de <strong>Colaboração</strong> — a IA ajuda você pensar. Nenhuma delas é Manual — Manual é decisão que não se delega. <a href="#modos-simulador">Testar no Simulador dos 3 modos ↓</a></p>
+    </section>
+
     <section class="section">
       <h2>Os 3 modos de uso</h2>
       <p>A IA entra na fábrica de 3 formas. Clique para expandir cada modo:</p>
@@ -182,18 +206,67 @@
         </div>
 
       </div>
+
+      <div class="modos-simulador" id="modos-simulador" aria-label="Simulador: sua tarefa é qual modo?">
+        <div class="simulador-header">
+          <span class="simulador-kicker">SIMULADOR INTERATIVO</span>
+          <h3>Sua tarefa é qual modo?</h3>
+          <p>Descreva uma tarefa da sua semana. Depois escolha o modo que você acha que ela é. Receba feedback com exemplo Mallory similar.</p>
+        </div>
+        <label for="simulador-tarefa" class="simulador-label">Sua tarefa em 1 linha</label>
+        <input type="text" id="simulador-tarefa" placeholder="Ex.: escrever o comunicado da mudança da linha 3 pra próxima semana" maxlength="200">
+        <div class="simulador-opcoes">
+          <button class="simulador-opcao" data-modo="autopiloto" type="button">
+            <span class="opcao-icon" aria-hidden="true">🚗</span>
+            <span class="opcao-nome">Autopiloto</span>
+            <span class="opcao-desc">IA executa, você revisa</span>
+          </button>
+          <button class="simulador-opcao" data-modo="colaboracao" type="button">
+            <span class="opcao-icon" aria-hidden="true">🤝</span>
+            <span class="opcao-nome">Colaboração</span>
+            <span class="opcao-desc">IA e você juntos</span>
+          </button>
+          <button class="simulador-opcao" data-modo="manual" type="button">
+            <span class="opcao-icon" aria-hidden="true">✋</span>
+            <span class="opcao-nome">Manual</span>
+            <span class="opcao-desc">Só você decide</span>
+          </button>
+        </div>
+        <div class="simulador-resultado" id="simulador-resultado" aria-live="polite"></div>
+      </div>
     </section>
 
     <section class="section">
-      <h2>Seus 20 anos como ativo</h2>
-      <div class="callout-ativo">
-        <div class="callout-ativo-icon" aria-hidden="true">🎯</div>
-        <div class="callout-ativo-text">
-          <h3>Seus 20 anos de casa são o ativo</h3>
-          <p>A IA sem contexto produz resposta genérica. Com o seu — 11, 15, 20 anos de Mallory — produz trabalho útil. O julgamento continua sendo seu; a IA só ganha velocidade quando encontra alguém que sabe o assunto: você sabe o barulho que a injetora faz antes de quebrar, qual fornecedor atrasa, o jeito de falar com cada turno.</p>
+      <h2>Onde você quer chegar hoje: os 7 níveis de uso da IA</h2>
+      <p>O treinamento faz mais sentido quando você sabe <strong>de onde parte e para onde vai</strong>. Não precisa chegar no topo hoje — precisa saber para onde caminhar. <strong>Clique em cada nível para explorar.</strong></p>
+      <div class="niveis-explorer" aria-label="Os 7 níveis de uso da IA">
+        <div class="niveis-tabs" role="tablist">
+          <button class="nivel-tab active" role="tab" aria-selected="true" data-nivel="pre-1">pré-1</button>
+          <button class="nivel-tab" role="tab" aria-selected="false" data-nivel="N1">N1</button>
+          <button class="nivel-tab" role="tab" aria-selected="false" data-nivel="N2">N2</button>
+          <button class="nivel-tab" role="tab" aria-selected="false" data-nivel="N3">N3</button>
+          <button class="nivel-tab" role="tab" aria-selected="false" data-nivel="N4">N4</button>
+          <button class="nivel-tab" role="tab" aria-selected="false" data-nivel="N5">N5</button>
+          <button class="nivel-tab" role="tab" aria-selected="false" data-nivel="N6">N6</button>
+          <button class="nivel-tab" role="tab" aria-selected="false" data-nivel="N7">N7</button>
         </div>
+        <div class="nivel-card" role="tabpanel" id="nivel-card"></div>
+      </div>
+      <p><strong>Meta do dia:</strong> sair do treinamento em <strong>N2 sólido</strong> — sabendo perguntar, avaliando a resposta com critério, com pelo menos 3 prompts que funcionaram e você guardou. <strong>Meta pós-treinamento (3-6 meses):</strong> N3 — seu contexto salvo, IA respondendo no seu tom.</p>
+      <div class="autodiagnostico-cta">
+        <p>Quer descobrir seu nível atual com 7 perguntas honestas?</p>
+        <button class="btn-primary" id="abrir-autodiagnostico" type="button">Descobrir meu nível →</button>
       </div>
     </section>
+
+    <div class="autodiagnostico-modal" id="autodiagnostico-modal" role="dialog" aria-modal="true" aria-labelledby="ad-modal-titulo" hidden>
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-content">
+        <h2 id="ad-modal-titulo" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Autodiagnóstico dos 7 níveis</h2>
+        <button class="modal-close" data-close aria-label="Fechar">✕</button>
+        <iframe src="../artefatos/autodiagnostico-7-niveis.html" title="Autodiagnóstico dos 7 níveis" loading="lazy"></iframe>
+      </div>
+    </div>
 
     <section class="section">
       <h2>Onde a IA não entra — e não vai entrar hoje</h2>
@@ -403,6 +476,48 @@ Se faltar informação, pergunte. Não invente.</code></pre>
   </div>
 </footer>
 
+<script>
+  window.M1_ZONAS = {
+    verde: {
+      cabecalho: 'A IA padroniza o que você já faz bem',
+      corpo: 'Você sabe fechar o relatório de turno; ela transforma anotações brutas em texto no padrão. Ganho: velocidade, sem risco de erro (você revisa).',
+      exemplo: 'Transforme apontamentos brutos da semana em registro padrão de qualidade.',
+      modo: 'Autopiloto'
+    },
+    amarela: {
+      cabecalho: 'A IA acelera aprendizado',
+      corpo: 'Você sabe que precisa explicar melhor uma ISO 9001 para o operador novo — ela traz analogia e exemplo simples. Ganho: você chega mais preparado.',
+      exemplo: 'Explique a NR-12 pra um operador novo em 3 exemplos práticos.',
+      modo: 'Colaboração'
+    },
+    vermelha: {
+      cabecalho: 'A IA expande o campo de visão',
+      corpo: 'Você pergunta "que perguntas eu deveria estar fazendo sobre esse indicador?" — ela sugere ângulos que você não considerou. Ganho: menos ponto cego.',
+      exemplo: 'Analise esse registro de manutenção. Que perguntas eu deveria fazer sobre padrões que ainda não vi?',
+      modo: 'Colaboração'
+    }
+  };
+  window.M1_SIMULADOR = {
+    autopiloto: {
+      titulo: '✓ Autopiloto — bom começo pra tarefa repetitiva',
+      modo: 'Tarefa que segue sempre o mesmo padrão. Você define uma vez, a IA executa, você revisa. Baixo risco, alto ganho de tempo em coisa mecânica.',
+      exemplo: 'transformar os apontamentos brutos da semana em registro padrão de qualidade. Toda quinta, mesmo formato.',
+      alerta: 'se ela envolve decisão sobre alguém do time, sinal físico da máquina, ou assinatura de responsabilidade, provavelmente é Manual, não Autopiloto. Reveja.'
+    },
+    colaboracao: {
+      titulo: '✓ Colaboração — a IA rascunha, você conduz',
+      modo: 'A IA rascunha e propõe; você dá o contexto que só quem trabalha aqui tem, critica e decide. Risco médio, ganho em qualidade.',
+      exemplo: 'o comunicado da mudança de sequência da linha por causa do gargalo no molde — a IA sugere a estrutura, você ajusta o tom pro seu time.',
+      alerta: 'se você quer a resposta pronta sem revisar, Colaboração vai falhar. Se é só velocidade em coisa mecânica, era Autopiloto.'
+    },
+    manual: {
+      titulo: '✓ Manual — a decisão é sua',
+      modo: 'A IA no máximo dá referência; a decisão, o registro e a responsabilidade continuam com você. Alta responsabilidade autoral.',
+      exemplo: 'aplicar advertência para operador, aprovar registro de segurança, ler o barulho da injetora antes dela quebrar.',
+      alerta: 'se sua tarefa é só gerar um rascunho de texto, você está sub-utilizando a IA. Manual é pra decisão irreversível, não pra rascunho.'
+    }
+  };
+</script>
 <script src="../assets/script.js" defer></script>
 </body>
 </html>
