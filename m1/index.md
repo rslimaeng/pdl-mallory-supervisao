@@ -232,7 +232,7 @@ ou assinatura de responsabilidade — essas são sempre Manual.
 
 ---
 
-> 🟣 **Marco: o que você leva para a Mallory na 2ª feira**
+> **Marco: o que você leva para a Mallory na 2ª feira**
 > Até sexta-feira, registre as 5 tarefas repetitivas da sua semana com 2 marcadas para IA — e mostre a lista para um colega do seu turno.
 > Como saber que aconteceu: a lista existe no papel ou no celular, e um colega viu.
 > *(marque "Compromisso feito" quando fechar com o colega)*
