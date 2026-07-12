@@ -142,37 +142,55 @@
     <section class="section">
       <h2>PCTFL + Critério de Sucesso — as 6 camadas de um pedido profissional</h2>
       <p class="secao-lead">Cinco camadas montam o pedido; a sexta diz quando ele ficou bom. Antes de enviar, pergunte-se: preenchi todas?</p>
-      <div class="pctfl-grid">
-        <div class="pctfl-card">
-          <span class="pctfl-letra">P</span>
-          <span class="pctfl-nome">Papel</span>
-          <span class="pctfl-desc">Quem a IA deve ser — define o vocabulário e o nível da resposta.</span>
-        </div>
-        <div class="pctfl-card">
-          <span class="pctfl-letra">C</span>
-          <span class="pctfl-nome">Contexto</span>
-          <span class="pctfl-desc">A situação real. Sem isso, ela responde para uma fábrica genérica.</span>
-        </div>
-        <div class="pctfl-card">
-          <span class="pctfl-letra">T</span>
-          <span class="pctfl-nome">Tarefa</span>
-          <span class="pctfl-desc">O que fazer, com verbo claro — escreva, resuma, liste (ver tabela).</span>
-        </div>
-        <div class="pctfl-card">
-          <span class="pctfl-letra">F</span>
-          <span class="pctfl-nome">Formato</span>
-          <span class="pctfl-desc">Como entregar — lista, tabela, texto de 5 linhas.</span>
-        </div>
-        <div class="pctfl-card">
-          <span class="pctfl-letra">L</span>
-          <span class="pctfl-nome">Limitações</span>
-          <span class="pctfl-desc">O que não fazer — e a regra de ouro logo abaixo.</span>
-        </div>
-        <div class="pctfl-card pctfl-card-plus">
-          <span class="pctfl-letra pctfl-letra-plus">CS</span>
-          <span class="pctfl-nome">Critério de Sucesso</span>
-          <span class="pctfl-desc">Como você sabe que ficou bom — a resposta serve se você a usa com 2 ajustes, sem reescrever tudo.</span>
-        </div>
+      <div class="pctfl-tabela-wrap">
+        <table class="pctfl-tabela">
+          <thead>
+            <tr>
+              <th class="col-letra">Letra</th>
+              <th class="col-elemento">Elemento</th>
+              <th class="col-define">O que define</th>
+              <th class="col-exemplo">Exemplo (Mallory)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="letra letra-p">P</td>
+              <td>Papel</td>
+              <td>Quem a IA deve ser</td>
+              <td>Técnico de segurança do trabalho experiente em fábrica de eletroportáteis.</td>
+            </tr>
+            <tr>
+              <td class="letra letra-c">C</td>
+              <td>Contexto</td>
+              <td>A situação real</td>
+              <td>DDS de segunda na montagem, tema EPI, equipe de 14 no turno da manhã — 2 registros de EPI na semana passada.</td>
+            </tr>
+            <tr>
+              <td class="letra letra-t">T</td>
+              <td>Tarefa</td>
+              <td>O que fazer (com verbo claro)</td>
+              <td>"Escreva o roteiro do DDS de 5 min, com pergunta que abre conversa e fechamento que peça compromisso."</td>
+            </tr>
+            <tr>
+              <td class="letra letra-f">F</td>
+              <td>Formato</td>
+              <td>Como entregar</td>
+              <td>3 blocos (abertura · mensagem · fechamento), máx 20 linhas, linguagem falada.</td>
+            </tr>
+            <tr>
+              <td class="letra letra-l">L</td>
+              <td>Limitações</td>
+              <td>O que NÃO fazer</td>
+              <td>"Se faltar informação, pergunte. Não invente. Não cite norma ou NR — eu confirmo na fonte."</td>
+            </tr>
+            <tr class="row-plus">
+              <td class="letra letra-cs">CS</td>
+              <td>Critério de Sucesso</td>
+              <td>Quando a resposta é boa?</td>
+              <td>Apresento o DDS em 5 min sem ler, e o time entende o compromisso final sem perguntar de novo.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="callout callout-info">
         <p class="callout-title">A regra de ouro da camada L</p>
@@ -225,42 +243,42 @@
               <span class="campo-letra">P</span> Papel
               <span class="campo-hint">quem a IA deve ser</span>
             </label>
-            <textarea id="pctfl-papel" data-campo="papel" rows="2" placeholder="Você é um técnico de segurança do trabalho experiente em fábrica de eletroportáteis."></textarea>
+            <textarea id="pctfl-papel" data-campo="papel" rows="2" placeholder="Você é um [consultor / analista / mentor / …] com [X] anos em [área: qualidade / produção / RH / …]. Sua função é [me ajudar a …]."></textarea>
           </div>
           <div class="gerador-campo">
             <label for="pctfl-contexto">
               <span class="campo-letra">C</span> Contexto
               <span class="campo-hint">a situação real, sem inventar</span>
             </label>
-            <textarea id="pctfl-contexto" data-campo="contexto" rows="4" placeholder="Vou conduzir o DDS de segunda na área de montagem. Tema: uso correto de EPI. Motivo: 2 registros na semana passada. Equipe: 14 pessoas, turno da manhã. Já falamos deste tema no mês passado."></textarea>
+            <textarea id="pctfl-contexto" data-campo="contexto" rows="4" placeholder="[descreva a situação real: o que aconteceu, onde, com quem, quando]. Ex: &quot;Amanhã vou conduzir DDS na área de montagem, tema EPI, equipe de 14 pessoas, turno da manhã.&quot;"></textarea>
           </div>
           <div class="gerador-campo">
             <label for="pctfl-tarefa">
               <span class="campo-letra">T</span> Tarefa
               <span class="campo-hint">verbo cirúrgico (ver tabela acima)</span>
             </label>
-            <textarea id="pctfl-tarefa" data-campo="tarefa" rows="2" placeholder="Escreva o roteiro do DDS de no máximo 5 min de fala, com uma pergunta que abra conversa e um fechamento que peça compromisso."></textarea>
+            <textarea id="pctfl-tarefa" data-campo="tarefa" rows="2" placeholder="[verbo cirúrgico + o que produzir]. Ex: &quot;Escreva um roteiro de 5 min com uma pergunta abrindo conversa e um fechamento com compromisso.&quot;"></textarea>
           </div>
           <div class="gerador-campo">
             <label for="pctfl-formato">
               <span class="campo-letra">F</span> Formato
               <span class="campo-hint">como quer receber</span>
             </label>
-            <textarea id="pctfl-formato" data-campo="formato" rows="2" placeholder="3 blocos: Abertura (com a pergunta) · Mensagem central (com exemplo) · Fechamento (com compromisso). Máx 20 linhas. Linguagem falada."></textarea>
+            <textarea id="pctfl-formato" data-campo="formato" rows="2" placeholder="[como quer receber: número de blocos, tamanho, linguagem]. Ex: &quot;3 blocos (abertura + mensagem + fechamento), máx 20 linhas, linguagem falada.&quot;"></textarea>
           </div>
           <div class="gerador-campo">
             <label for="pctfl-limites">
               <span class="campo-letra">L</span> Limitações
               <span class="campo-hint">o que não fazer + regra de ouro</span>
             </label>
-            <textarea id="pctfl-limites" data-campo="limites" rows="3" placeholder="Se faltar informação, pergunte. Não invente. Não cite norma ou número de NR — eu confirmo na fonte."></textarea>
+            <textarea id="pctfl-limites" data-campo="limites" rows="3" placeholder="Se faltar informação, pergunte. Não invente. [liste o que a IA não deve fazer]. Ex: &quot;Não cite norma ou número de NR — eu confirmo na fonte.&quot;"></textarea>
           </div>
           <div class="gerador-campo gerador-campo-avancado">
             <label for="pctfl-sucesso">
               <span class="campo-letra campo-letra-plus">CS</span> Critério de Sucesso
               <span class="campo-hint">como você saberá que ficou bom</span>
             </label>
-            <textarea id="pctfl-sucesso" data-campo="sucesso" rows="2" placeholder="Consigo apresentar o DDS em 5 minutos sem ler, e o time entende o compromisso final sem perguntar de novo."></textarea>
+            <textarea id="pctfl-sucesso" data-campo="sucesso" rows="2" placeholder="[como saber que a resposta funcionou]. Ex: &quot;Consigo apresentar em 5 min sem ler, e o time entende o compromisso final sem perguntar de novo.&quot;"></textarea>
           </div>
 
           <div class="gerador-acoes">
