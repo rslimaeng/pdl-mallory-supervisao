@@ -143,6 +143,14 @@ Troque "me ajude" por verbo cirúrgico — a tabela por área:
 
 ---
 
+## As outras ferramentas de IA — e por que Claude aqui
+
+Você vai ouvir falar de **ChatGPT, Copilot, Gemini** — todas fazem coisas parecidas por caminhos diferentes. O bom pedido que este M2 ensina funciona nas 3.
+
+**Por que Claude neste treino:** a TI da Mallory comprou **licenças Claude Pro pagas** — você recebe acesso e leva pra dentro da sua rotina.
+
+---
+
 ## Gerador de prompt — ferramenta viva
 
 Uma ferramenta viva pra montar seu próprio PCTFL+CS: 6 campos à esquerda, o prompt monta sozinho à direita — você copia e cola no Claude. **Está na versão HTML deste módulo** (abra a página no navegador): é o modo Colaboração com método. Lendo só este Markdown? Use o prompt-âncora abaixo como molde e preencha as 6 camadas na mão.
