@@ -1,6 +1,6 @@
 # M2 · Primeiro Prompt: Mão na Massa
 
-**Trilha 1 · Módulo 2 de 6 · 1h30**
+**Trilha 1 · Módulo 2 de 6**
 
 Seu primeiro resultado útil com IA em menos de 10 minutos — DDS, e-mail difícil, resumo de instrução.
 
@@ -11,8 +11,6 @@ Seu primeiro resultado útil com IA em menos de 10 minutos — DDS, e-mail difí
 **Você ganha:** o método PCTFL — a estrutura que transforma pergunta vaga em instrução profissional — e seus 3 primeiros prompts executados com resultado real.
 
 **Você se compromete a:** criar sua conta no Claude (ou usar a da dupla), rodar os exercícios ao vivo e avaliar cada resposta com critério — sem aceitar a primeira que vier.
-
-**Tempo de leitura desta página:** 11 min
 
 ---
 
@@ -34,15 +32,31 @@ E o primeiro resultado vem rápido. O DDS que consome sua manhã de segunda sai 
 
 ---
 
+## Um prompt ruim é sempre culpa do humano
+
+A IA é previsível: ela gera saídas proporcionais à qualidade da entrada. Prompt vago → resposta vaga. Prompt preciso → resposta precisa. **A engenharia de prompt é a habilidade de escrever a entrada certa.**
+
+**Anthropic Economic Index** confirma o padrão: os usos que mais falham são os pedidos vagos, sem contexto. O que resolve é método — não talento nem ferramenta melhor.
+
+| Prompt vago | Problema | Resultado provável |
+|---|---|---|
+| "Faz um DDS pra segunda" | Sem tema, sem público, sem formato | Palestra genérica, precisa refazer |
+| "Melhora esse texto" | Sem critério, sem destinatário | Versão levemente diferente, sem ganho |
+| "Explica a norma pro time" | Sem recorte de aplicação | 10 parágrafos genéricos, ninguém lê |
+
+Esse módulo te dá o método pra sair desses 3 casos — em 3 exercícios executados por você, ao vivo.
+
+---
+
 ## O conceito em 5 pontos
 
 ### 1. O jeito de perguntar muda a resposta — não é detalhe, é o mecanismo
 
 A IA completa texto a partir do que você escreveu. Pedido vago ativa resposta genérica; pedido com contexto ativa resposta específica. "Me ajuda com segurança" devolve palestra. "Escreva um DDS de 5 minutos sobre EPI na montagem" devolve um DDS.
 
-### 2. PCTFL — as 5 camadas de um pedido profissional
+### 2. PCTFL + Critério de Sucesso — as 6 camadas de um pedido profissional
 
-**P**apel: quem a IA deve ser (define vocabulário e nível). **C**ontexto: a situação real (sem isso, ela responde para uma fábrica genérica). **T**arefa: o que fazer, com verbo claro. **F**ormato: como entregar (lista, tabela, texto de 5 linhas). **L**imitações: o que não fazer. Cinco camadas, um checklist — antes de enviar, pergunte-se: preenchi todas?
+**P**apel: quem a IA deve ser (define vocabulário e nível). **C**ontexto: a situação real (sem isso, ela responde para uma fábrica genérica). **T**arefa: o que fazer, com verbo claro. **F**ormato: como entregar (lista, tabela, texto de 5 linhas). **L**imitações: o que não fazer. **CS** (Critério de Sucesso): como você sabe que a resposta ficou boa antes de usar. Seis camadas, um checklist — antes de enviar, pergunte-se: preenchi todas?
 
 ### 3. A regra de ouro da camada L
 
@@ -66,6 +80,25 @@ Nome ou dado de funcionário. Parâmetro ou especificação de produto e molde. 
 | Melhorar o tom de um e-mail difícil antes de enviar | Enviar a resposta da IA sem ler — o nome que assina é o seu |
 | Resumir instrução de trabalho ou procedimento longo | Colar documento com dado de funcionário ou especificação de produto |
 | Pedir 3 versões de um texto e escolher a melhor | Pedir fato que você não pode conferir (norma, prazo legal, parâmetro) |
+
+---
+
+## O verbo de ação é o núcleo do T
+
+Todo prompt tem uma "Tarefa". A qualidade da resposta está sempre em **um único lugar: o verbo da Tarefa.** Quando o verbo é vago ("me ajude", "veja"), a IA escolhe sozinha o que fazer — e escolhe pra média. Quando o verbo é preciso ("liste", "compare", "reescreva no tom X"), a IA obedece.
+
+**Teste prático:** se você não consegue substituir o verbo da sua Tarefa por outro sem mudar completamente o pedido, você acertou o verbo.
+
+> ⚙️ **Regra prática:** antes de rodar um prompt, sublinhe o verbo da sua Tarefa. Se for "me ajude", "faça", "veja", "melhore" — pare e troque. Só rode com verbo cirúrgico.
+
+---
+
+> 💡 **Conexão com o M1: modo + método**
+> No M1 você viu os 3 modos (Autopiloto · Colaboração · Manual). O PCTFL é o método
+> que você usa nos 3 — mas com dosagem diferente:
+> - **Autopiloto:** você escreve o PCTFL 1 vez, roda no lote todo (100 apontamentos, 50 e-mails).
+> - **Colaboração:** você escreve o PCTFL, roda, critica, refina em 2ª rodada. O modo dominante hoje.
+> - **Manual:** você nem chega ao PCTFL — a decisão é sua, sem intermédio.
 
 ---
 
@@ -94,6 +127,9 @@ Fechamento (com o compromisso). Máximo 20 linhas. Linguagem falada, direta.
 # LIMITAÇÕES
 Se faltar informação, pergunte. Não invente.
 Não cite norma ou número de NR — se precisar, eu confirmo na fonte e acrescento.
+
+# CRITÉRIO DE SUCESSO
+Consigo apresentar o DDS em 5 minutos sem ler, e o time entende o compromisso final sem perguntar de novo.
 ```
 
 Para adaptar ao seu caso: troque o CONTEXTO pela sua situação real e mantenha o resto. A estrutura é reutilizável — é isso que você leva.
@@ -151,7 +187,24 @@ Para adaptar ao seu caso: troque o CONTEXTO pela sua situação real e mantenha 
 
 ---
 
-> 🟣 **Marco: o que você leva para a Mallory na 2ª feira**
+## Do prompt ao assistente persistente — o próximo passo
+
+Você aprendeu a escrever um prompt PCTFL. O passo seguinte é transformá-lo em um **assistente persistente** — um parceiro especializado que já sabe quem você é e o que você faz, sem você re-explicar a cada nova conversa.
+
+**Como funciona na prática:**
+- Você abre o [Claude Projects](https://claude.ai/projects) (versão paga) e cria um projeto.
+- Coloca lá o seu contexto fixo (seu cargo, sua área, suas normas de trabalho, exemplos do seu formato preferido).
+- Toda conversa nova dentro do projeto já entra com esse contexto — você só descreve a tarefa do momento.
+
+**Existe em outros ecossistemas:** o padrão é o mesmo. **GPTs personalizados** (ChatGPT) e **Gems** (Gemini) seguem a mesma lógica — você cria um assistente com contexto fixo, ele responde já sabendo quem é.
+
+**Por que isso importa:** é o salto de "usei IA hoje" para "tenho IA no meu processo". Você deixa de operar com prompts isolados e passa a operar com assistentes especializados.
+
+> 🔮 **No M5 você vai construir o seu.** A partir do prompt-âncora deste módulo, você monta um assistente que fica funcionando pra você — na sua conta, com o seu contexto. Este módulo prepara o método; o M5 prepara a ferramenta.
+
+---
+
+> **Marco: o que você leva para a Mallory na 2ª feira**
 > Até sexta-feira, gere com o prompt-âncora (adaptado) o DDS, comunicado ou registro real da sua semana — e use de verdade com o seu time.
 > Como saber que aconteceu: o documento foi usado — falado no DDS, enviado ao time ou registrado no sistema.
 
