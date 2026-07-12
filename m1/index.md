@@ -24,11 +24,11 @@ Você entende o que a IA generativa faz bem, o que não faz — e onde ela entra
 
 ## Por que isso importa aqui dentro
 
-**A linha 3 parou 40 minutos ontem.** Você resolveu o problema em 10 — os outros 30 foram para registrar, avisar o próximo turno e explicar para o PCP. É nessa segunda parte, a do papel, que a IA entra. A primeira continua sua.
+O dia do supervisor tem duas metades. Numa metade você opera: acompanha linha, resolve problema no chão, coordena turma. Nessa parte, a IA não entra — ela não sente o que você sente ali. Na outra metade você registra, comunica, documenta: relatório de turno, aviso pro próximo, e-mail pro PCP, ata de reunião, checklist pro RH. **É nessa segunda metade que a IA faz diferença** — e ela pesa mais no seu dia do que a gente costuma admitir.
 
-**Isso não é palpite.** O **Anthropic Economic Index** — análise contínua de milhões de conversas reais de trabalho com o Claude — mostra o mesmo padrão em todo canto: as pessoas usam IA para escrever, resumir e organizar. Não para operar máquina, não para decidir por ninguém. É exatamente o tipo de tarefa que consome a manhã de um supervisor.
+A Anthropic (fabricante do Claude) publica o **Anthropic Economic Index** — uma análise contínua de milhões de conversas reais de trabalho. O padrão é claro: as pessoas usam IA pra escrever, resumir e organizar — não pra operar máquina nem decidir por ninguém. É exatamente o tipo de tarefa que consome a metade "de papel" do supervisor.
 
-**E tem um dado a seu favor.** O mesmo índice mostra que o resultado melhora quando quem usa domina o assunto. IA sem contexto vira resposta genérica. IA com o seu contexto — 11, 15, 20 anos de Mallory — vira trabalho útil. Nesse relacionamento, quem conduz é você.
+E tem um dado a seu favor. O mesmo índice mostra que o resultado melhora quando **quem usa domina o assunto**. IA sem contexto vira resposta genérica. IA com o seu contexto — os anos que você tem de fábrica — vira trabalho útil. Nesse relacionamento, quem conduz é você.
 
 ---
 
@@ -71,35 +71,9 @@ A IA **expande o campo de visão**. Você pergunta "que perguntas eu deveria est
 
 ---
 
-## Os 3 modos oficiais de uso da IA
+## Os 3 modos de uso
 
-A IA entra no seu dia de 3 formas. **Este vocabulário te acompanha do M1 ao M6** — vale a pena fixar.
-
-### 🚗 Autopiloto — IA executa, você revisa
-
-Tarefa repetitiva que segue sempre o mesmo padrão. Você define uma vez, ela roda. Você olha a saída e libera.
-
-- **Exemplo Mallory:** transformar os apontamentos brutos da semana em registro padrão de qualidade. Toda quinta, mesmo formato.
-- **Baixo risco.** Alto ganho de tempo em coisa que já era mecânica.
-- **Quando NÃO usar:** quando o caso é único e exige julgamento novo. Autopiloto vale para o repetitivo — o excepcional pede olho humano.
-
-### 🤝 Colaboração — IA e você pensam juntos
-
-Você conduz, ela apoia. Você dá contexto, ela rascunha; você critica, ela refaz.
-
-- **Exemplo Mallory:** o Programador de Produção rascunha com ela o comunicado da mudança de sequência da linha por causa do gargalo no molde. Ela sugere estrutura; ele decide o tom e ajusta o que a equipe precisa entender.
-- **Risco médio.** Ganho em qualidade e velocidade — mas exige seu envolvimento.
-- **Quando NÃO usar:** quando você quer a resposta pronta sem revisar. Colaboração pede que você conduza — se abrir mão, sai genérico.
-
-### ✋ Manual — IA inspira, você decide
-
-Território seu. A IA no máximo dá referência; a decisão, o registro e a responsabilidade continuam com você.
-
-- **Exemplo Mallory:** aplicar advertência para operador, aprovar registro de segurança, ler o barulho da injetora antes dela quebrar.
-- **Alta responsabilidade autoral.** Não delegar — nem quando a IA parecer útil.
-- **Quando NÃO usar:** o Manual não tem exceção. Se a decisão envolve pessoa, sinal físico ou assinatura sua, é sempre Manual.
-
-**Regra de ouro dos 3 modos:** quanto maior o impacto ou o risco da decisão, mais Manual o modo. Comece pelo Autopiloto na próxima semana.
+A IA entra no seu dia de 3 formas. **Este vocabulário te acompanha do M1 ao M6** — vale fixar. Regra de ouro: quanto maior o impacto ou o risco da decisão, mais Manual o modo. Comece pelo Autopiloto na próxima semana.
 
 ---
 
@@ -117,9 +91,7 @@ O treinamento faz mais sentido quando você sabe **de onde parte e para onde vai
 | **N6** | Builder | Trabalha no terminal, opera arquivos, constrói sistemas com IA. |
 | **N7** | Workforce de agentes | Múltiplos agentes em paralelo — fronteira, quase ninguém chegou. |
 
-**Meta do dia:** sair do treinamento em **N2 sólido** — sabendo perguntar, avaliando a resposta com critério, com pelo menos 3 prompts que funcionaram e você guardou.
-
-**Meta pós-treinamento (3-6 meses):** N3 — seu contexto salvo, IA respondendo no seu tom. O M6 aponta o caminho.
+**Como avançar de nível:** cada nível tem 1 hábito-chave. N1→N2: escrever prompts estruturados (o M2 desta manhã te ensina o PCTFL). N2→N3: montar seu contexto salvo. N3+: o M6 aponta o caminho.
 
 ---
 
@@ -158,7 +130,9 @@ Sua função é ajudar supervisores a decidir onde a IA entra na semana deles,
 sem prometer o que a IA não entrega.
 
 # CONTEXTO
-Sou supervisor em uma fábrica de eletroportáteis com certificação ISO 9001.
+[Sou/Trabalho como] [seu cargo em Mallory: supervisor de produção /
+técnico de qualidade / analista de RH / líder de célula / …]
+em uma fábrica de eletroportáteis com certificação ISO 9001.
 Minhas 5 tarefas mais repetitivas da semana:
 [cole aqui suas 5 tarefas — ex.: relatório de turno, comunicado de mudança
 de linha, registro de parada, DDS, consolidação de apontamentos]
