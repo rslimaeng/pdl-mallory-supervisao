@@ -496,4 +496,149 @@
       if (item) item.setAttribute('data-open', 'true');
     }
   })();
+
+  /* ---------- 13. Gerador PCTFL inline (goal 6b §4/§5) ---------- */
+
+  (function initGeradorPCTFL() {
+    var gerador = document.querySelector('.gerador-pctfl');
+    if (!gerador) return;
+
+    var modo = gerador.getAttribute('data-modo') || 't1';
+    var preview = gerador.querySelector('#pctfl-preview');
+    var campos = gerador.querySelectorAll('.gerador-campo textarea');
+    var STORAGE_KEY = 'm2-gerador-pctfl-' + modo;
+
+    var TEMPLATES = {
+      t1: [
+        { chave: 'papel', label: '# PAPEL' },
+        { chave: 'contexto', label: '# CONTEXTO' },
+        { chave: 'tarefa', label: '# TAREFA' },
+        { chave: 'formato', label: '# FORMATO' },
+        { chave: 'limites', label: '# LIMITAÇÕES' }
+      ],
+      t2: [
+        { chave: 'papel', label: '# PAPEL' },
+        { chave: 'contexto', label: '# CONTEXTO' },
+        { chave: 'tarefa', label: '# TAREFA' },
+        { chave: 'formato', label: '# FORMATO' },
+        { chave: 'limites', label: '# LIMITAÇÕES' },
+        { chave: 'sucesso', label: '# CRITÉRIO DE SUCESSO' },
+        { chave: 'negativo', label: '# CRITÉRIO NEGATIVO' }
+      ]
+    };
+
+    var EXEMPLOS = {
+      t1: {
+        papel: 'Você é um técnico de segurança do trabalho experiente em fábrica de eletroportáteis.',
+        contexto: 'Vou conduzir o DDS (Diálogo Diário de Segurança) de segunda-feira na área de montagem. Tema: uso correto de EPI — luvas e óculos. Motivo: na semana passada houve 2 registros de operadores sem óculos na bancada de rebarbação. Equipe: 14 pessoas, turno da manhã. Já falamos deste tema no mês passado — não pode ficar repetitivo.',
+        tarefa: 'Escreva o roteiro do DDS de no máximo 5 minutos de fala, com uma pergunta para abrir conversa com o time e um fechamento que peça compromisso prático.',
+        formato: '3 blocos: Abertura (com a pergunta) · Mensagem central (com exemplo concreto) · Fechamento (com o compromisso). Máximo 20 linhas. Linguagem falada, direta.',
+        limites: 'Se faltar informação, pergunte. Não invente.\nNão cite norma ou número de NR — se precisar, eu confirmo na fonte e acrescento.'
+      },
+      t2: {
+        papel: 'Você é um controller sênior com experiência em indústria de manufatura no Brasil.',
+        contexto: 'Fechamento de junho de uma fabricante de eletroportáteis. Dados FICTÍCIOS do meu resumo:\n- Orçado total: R$ 8,2 mi · Realizado: R$ 8,9 mi (desvio +8,5%)\n- Frete: orçado R$ 620 mil, realizado R$ 840 mil (3º mês seguido acima)\n- Energia: orçado R$ 410 mil, realizado R$ 465 mil (bandeira, pontual)\n- Manutenção: orçado R$ 380 mil, realizado R$ 510 mil (parada não programada da injetora 7)\n- Demais rubricas dentro de ±2%',
+        tarefa: 'Redija o briefing de desvios para a reunião de diretoria: separe desvio estrutural de pontual, explique o direcionador de cada um e sugira 1 ação por desvio relevante.',
+        formato: '1 página: parágrafo de abertura com o número total e a mensagem central · tabela (Rubrica | Desvio | Estrutural ou Pontual | Direcionador | Ação sugerida) · fechamento com os 2 pontos que exigem decisão da diretoria.',
+        limites: 'Se faltar informação, pergunte. Não invente.\nUse apenas os números do contexto — não crie projeção que os dados não sustentam.',
+        sucesso: 'A diretoria decide sobre os 2 pontos finais sem abrir o relatório completo.',
+        negativo: 'Não use jargão contábil sem tradução. Não suavize desvio estrutural como se fosse pontual. Não proponha ação que dependa de orçamento novo.'
+      }
+    };
+
+    function render() {
+      var template = TEMPLATES[modo];
+      var linhas = template.map(function (item) {
+        var textarea = gerador.querySelector('[data-campo="' + item.chave + '"]');
+        var valor = textarea && textarea.value.trim() ? textarea.value : '[preencha ao lado]';
+        return item.label + '\n' + valor;
+      });
+      preview.textContent = linhas.join('\n\n');
+      salvar();
+    }
+
+    function salvar() {
+      var estado = {};
+      campos.forEach(function (t) { estado[t.getAttribute('data-campo')] = t.value; });
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(estado)); } catch (e) {}
+    }
+
+    function restaurar() {
+      try {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        var estado = JSON.parse(raw);
+        campos.forEach(function (t) {
+          var k = t.getAttribute('data-campo');
+          if (estado[k]) t.value = estado[k];
+        });
+      } catch (e) {}
+    }
+
+    function carregarExemplo() {
+      var exemplo = EXEMPLOS[modo];
+      campos.forEach(function (t) {
+        var k = t.getAttribute('data-campo');
+        if (exemplo[k]) t.value = exemplo[k];
+      });
+      render();
+    }
+
+    function limpar() {
+      campos.forEach(function (t) { t.value = ''; });
+      render();
+    }
+
+    function copiar() {
+      var texto = preview.textContent;
+      function feedback() {
+        preview.classList.add('pctfl-copiado');
+        setTimeout(function () { preview.classList.remove('pctfl-copiado'); }, 1200);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(feedback).catch(function () { selecionar(); });
+      } else {
+        selecionar();
+      }
+    }
+
+    function selecionar() {
+      var range = document.createRange();
+      range.selectNode(preview);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+    }
+
+    restaurar();
+    render();
+    campos.forEach(function (t) { t.addEventListener('input', render); });
+    var btnCarregar = gerador.querySelector('[data-acao="carregar"]');
+    var btnLimpar = gerador.querySelector('[data-acao="limpar"]');
+    var btnCopiar = gerador.querySelector('[data-acao="copiar"]');
+    if (btnCarregar) btnCarregar.addEventListener('click', carregarExemplo);
+    if (btnLimpar) btnLimpar.addEventListener('click', limpar);
+    if (btnCopiar) btnCopiar.addEventListener('click', copiar);
+  })();
+
+  /* ---------- 14. Entregável-list com localStorage (goal 6b §7) ---------- */
+
+  (function initEntregavelList() {
+    var listas = document.querySelectorAll('.entregavel-list[data-storage-key]');
+    listas.forEach(function (lista) {
+      var key = lista.getAttribute('data-storage-key');
+      try {
+        var estado = JSON.parse(localStorage.getItem(key) || '{}');
+        lista.querySelectorAll('input[type="checkbox"]').forEach(function (cb) {
+          if (estado[cb.getAttribute('data-item')]) cb.checked = true;
+        });
+      } catch (e) {}
+      lista.addEventListener('change', function () {
+        var estado = {};
+        lista.querySelectorAll('input[type="checkbox"]').forEach(function (cb) {
+          if (cb.checked) estado[cb.getAttribute('data-item')] = true;
+        });
+        try { localStorage.setItem(key, JSON.stringify(estado)); } catch (e) {}
+      });
+    });
+  })();
 })();
