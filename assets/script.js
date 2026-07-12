@@ -596,3 +596,26 @@
     });
   })();
 })();
+
+/* --- M3: copiar de cada bloco do trio de prompts (goal 8 §5.2) --- */
+(function () {
+  'use strict';
+  function initPromptCopiar() {
+    document.querySelectorAll('.prompt-bloco__copiar').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var bloco = btn.closest('.prompt-bloco');
+        var pre = bloco ? bloco.querySelector('pre') : null;
+        if (!pre) return;
+        var texto = pre.textContent;
+        try {
+          navigator.clipboard.writeText(texto).then(function () {
+            btn.textContent = '✓ Copiado';
+            btn.classList.add('copiado');
+            setTimeout(function () { btn.textContent = 'Copiar'; btn.classList.remove('copiado'); }, 2000);
+          });
+        } catch (e) {}
+      });
+    });
+  }
+  initPromptCopiar();
+})();
