@@ -84,6 +84,26 @@
       <p>E o primeiro resultado vem rápido. O rascunho que consome sua manhã sai em 2 minutos — revisado por você, que é quem sabe se está certo.</p>
     </section>
 
+    <section class="section">
+      <span class="eyebrow">O problema</span>
+      <h2>Um prompt ruim é sempre culpa do humano</h2>
+      <p>A IA é previsível: ela gera saídas proporcionais à qualidade da entrada. Prompt vago → resposta vaga. Prompt preciso → resposta precisa. <strong>A engenharia de prompt é a habilidade de escrever a entrada certa.</strong></p>
+      <p><strong>Anthropic Economic Index</strong> confirma o padrão: os usos que mais falham são os pedidos vagos, sem contexto. O que resolve é método — não talento nem ferramenta melhor.</p>
+      <div class="table-wrap">
+        <table class="table-default">
+          <thead>
+            <tr><th>Prompt vago</th><th>Problema</th><th>Resultado provável</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>"Faz um DDS pra segunda"</td><td>Sem tema, sem público, sem formato</td><td>Palestra genérica, precisa refazer</td></tr>
+            <tr><td>"Melhora esse texto"</td><td>Sem critério, sem destinatário</td><td>Versão levemente diferente, sem ganho</td></tr>
+            <tr><td>"Explica a norma pro time"</td><td>Sem recorte de aplicação</td><td>10 parágrafos genéricos, ninguém lê</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Esse módulo te dá o método pra sair desses 3 casos — em 3 exercícios executados por você, ao vivo.</p>
+    </section>
+
     <section class="section compare-section">
       <h2>Antes do método: vago × situado</h2>
       <p class="secao-lead">O mesmo pedido escrito de dois jeitos. Um recebe o que a internet daria. O outro recebe o que você precisa.</p>
@@ -120,8 +140,8 @@
     </section>
 
     <section class="section">
-      <h2>PCTFL — as 5 camadas de um pedido profissional</h2>
-      <p class="secao-lead">Cinco camadas, um checklist. Antes de enviar, pergunte-se: preenchi todas?</p>
+      <h2>PCTFL + Critério de Sucesso — as 6 camadas de um pedido profissional</h2>
+      <p class="secao-lead">Cinco camadas montam o pedido; a sexta diz quando ele ficou bom. Antes de enviar, pergunte-se: preenchi todas?</p>
       <div class="pctfl-grid">
         <div class="pctfl-card">
           <span class="pctfl-letra">P</span>
@@ -148,6 +168,11 @@
           <span class="pctfl-nome">Limitações</span>
           <span class="pctfl-desc">O que não fazer — e a regra de ouro logo abaixo.</span>
         </div>
+        <div class="pctfl-card pctfl-card-plus">
+          <span class="pctfl-letra pctfl-letra-plus">CS</span>
+          <span class="pctfl-nome">Critério de Sucesso</span>
+          <span class="pctfl-desc">Como você sabe que ficou bom — a resposta serve se você a usa com 2 ajustes, sem reescrever tudo.</span>
+        </div>
       </div>
       <div class="callout callout-info">
         <p class="callout-title">A regra de ouro da camada L</p>
@@ -155,13 +180,20 @@
       </div>
       <div class="callout callout-info">
         <p class="callout-title">Conexão com o M1: modo + método</p>
-        <p>No M1 você viu os 3 modos — <strong>Autopiloto</strong> (a IA executa, você revisa), <strong>Colaboração</strong> (vocês pensam juntos) e <strong>Manual</strong> (a decisão é sua). Eles dizem <em>quando</em> usar a IA. O PCTFL diz <em>como</em> pedir. Quase tudo neste módulo é o modo <strong>Colaboração</strong> ganhando método: a IA rascunha, você conduz e decide. Quando a tarefa vira repetição de padrão, o mesmo prompt vira <strong>Autopiloto</strong>. O que nunca muda: o julgamento final é seu — isso é <strong>Manual</strong>, e nenhum prompt substitui.</p>
+        <p>No M1 você viu os 3 modos (<strong>Autopiloto</strong> · <strong>Colaboração</strong> · <strong>Manual</strong>). O PCTFL é o método que você usa nos 3 — mas com dosagem diferente:</p>
+        <ul>
+          <li><strong>Autopiloto:</strong> você escreve o PCTFL 1 vez, roda no lote todo (100 apontamentos, 50 e-mails).</li>
+          <li><strong>Colaboração:</strong> você escreve o PCTFL, roda, critica, refina em 2ª rodada. O modo dominante hoje.</li>
+          <li><strong>Manual:</strong> você nem chega ao PCTFL — a decisão é sua, sem intermédio.</li>
+        </ul>
       </div>
     </section>
 
     <section class="section verbos-section">
-      <h2>Troque "me ajude" por verbo cirúrgico</h2>
-      <p class="secao-lead">A IA obedece o verbo. Verbo vago = resposta vaga. Verbo preciso = resposta útil.</p>
+      <h2>O verbo de ação é o núcleo do T</h2>
+      <p>Todo prompt tem uma "Tarefa". A qualidade da resposta está sempre em <strong>um único lugar: o verbo da Tarefa.</strong> Quando o verbo é vago ("me ajude", "veja"), a IA escolhe sozinha o que fazer — e escolhe pra média. Quando o verbo é preciso ("liste", "compare", "reescreva no tom X"), a IA obedece.</p>
+      <p><strong>Teste prático:</strong> se você não consegue substituir o verbo da sua Tarefa por outro sem mudar completamente o pedido, você acertou o verbo.</p>
+      <p class="secao-lead">Troque "me ajude" por verbo cirúrgico — a tabela por área:</p>
       <div class="table-wrap">
         <table class="verbos-tabela">
           <thead>
@@ -176,11 +208,15 @@
           </tbody>
         </table>
       </div>
+      <div class="callout callout-info">
+        <p class="callout-title">Regra prática</p>
+        <p>Antes de rodar um prompt, sublinhe o verbo da sua Tarefa. Se for "me ajude", "faça", "veja", "melhore" — pare e troque. Só rode com verbo cirúrgico.</p>
+      </div>
     </section>
 
     <section class="section gerador-section">
       <h2>Monte seu prompt agora — ferramenta viva</h2>
-      <p class="secao-lead">Preencha os 5 campos à esquerda. O prompt monta sozinho à direita. Copie e cole no Claude — é o modo Colaboração na prática.</p>
+      <p class="secao-lead">Preencha os 6 campos à esquerda. O prompt monta sozinho à direita. Copie e cole no Claude — é o modo Colaboração com método.</p>
 
       <div class="gerador-pctfl" data-modo="t1">
         <form class="gerador-form" onsubmit="return false;">
@@ -219,6 +255,13 @@
             </label>
             <textarea id="pctfl-limites" data-campo="limites" rows="3" placeholder="Se faltar informação, pergunte. Não invente. Não cite norma ou número de NR — eu confirmo na fonte."></textarea>
           </div>
+          <div class="gerador-campo gerador-campo-avancado">
+            <label for="pctfl-sucesso">
+              <span class="campo-letra campo-letra-plus">CS</span> Critério de Sucesso
+              <span class="campo-hint">como você saberá que ficou bom</span>
+            </label>
+            <textarea id="pctfl-sucesso" data-campo="sucesso" rows="2" placeholder="Consigo apresentar o DDS em 5 minutos sem ler, e o time entende o compromisso final sem perguntar de novo."></textarea>
+          </div>
 
           <div class="gerador-acoes">
             <button type="button" class="gerador-btn gerador-carregar" data-acao="carregar">Carregar exemplo DDS</button>
@@ -229,7 +272,6 @@
         <aside class="gerador-preview">
           <div class="preview-topo">
             <span class="preview-label">Seu prompt · pronto pra copiar</span>
-            <button type="button" class="gerador-btn gerador-copiar" data-acao="copiar">Copiar</button>
           </div>
           <pre class="preview-conteudo" id="pctfl-preview" aria-live="polite"># PAPEL
 [preencha ao lado]
@@ -244,8 +286,14 @@
 [preencha ao lado]
 
 # LIMITAÇÕES
+[preencha ao lado]
+
+# CRITÉRIO DE SUCESSO
 [preencha ao lado]</pre>
-          <p class="preview-nota">O que aparece aqui é o prompt final. Nada é enviado — cole no Claude quando quiser.</p>
+          <div class="preview-rodape">
+            <button type="button" class="gerador-btn gerador-copiar" data-acao="copiar">📋 Copiar prompt</button>
+            <span class="preview-nota">Nada é enviado — cole no Claude quando quiser.</span>
+          </div>
         </aside>
       </div>
     </section>
@@ -418,6 +466,24 @@
           </label>
         </li>
       </ul>
+    </section>
+
+    <section class="section">
+      <span class="eyebrow">Próximo nível</span>
+      <h2>Do prompt ao assistente persistente — o próximo passo</h2>
+      <p>Você aprendeu a escrever um prompt PCTFL. O passo seguinte é transformá-lo em um <strong>assistente persistente</strong> — um parceiro especializado que já sabe quem você é e o que você faz, sem você re-explicar a cada nova conversa.</p>
+      <p><strong>Como funciona na prática:</strong></p>
+      <ul>
+        <li>Você abre o <a href="https://claude.ai/projects" target="_blank" rel="noopener">Claude Projects</a> (versão paga) e cria um projeto.</li>
+        <li>Coloca lá o seu contexto fixo (seu cargo, sua área, suas normas de trabalho, exemplos do seu formato preferido).</li>
+        <li>Toda conversa nova dentro do projeto já entra com esse contexto — você só descreve a tarefa do momento.</li>
+      </ul>
+      <p><strong>Existe em outros ecossistemas:</strong> o padrão é o mesmo. <strong>GPTs personalizados</strong> (ChatGPT) e <strong>Gems</strong> (Gemini) seguem a mesma lógica — você cria um assistente com contexto fixo, ele responde já sabendo quem é.</p>
+      <p><strong>Por que isso importa:</strong> é o salto de "usei IA hoje" para "tenho IA no meu processo". Você deixa de operar com prompts isolados e passa a operar com assistentes especializados.</p>
+      <div class="callout callout-marco">
+        <p class="callout-title">No M5 você vai construir o seu</p>
+        <p>A partir do prompt-âncora deste módulo, você monta um assistente que fica funcionando pra você — na sua conta, com o seu contexto. Este módulo prepara o método; o M5 prepara a ferramenta.</p>
+      </div>
     </section>
 
     <div class="callout callout-marco">
