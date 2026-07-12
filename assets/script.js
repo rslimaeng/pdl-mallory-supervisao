@@ -91,30 +91,7 @@
     });
   });
 
-  /* ---------- 5. Accordion "3 modos" (um aberto por vez) ---------- */
-
-  document.querySelectorAll('.modos-accordion').forEach(function (root) {
-    var cards = root.querySelectorAll('.modo-card');
-    cards.forEach(function (card) {
-      var header = card.querySelector('.modo-header');
-      if (!header) return;
-      header.addEventListener('click', function () {
-        var isOpen = card.classList.contains('open');
-        cards.forEach(function (c) {
-          c.classList.remove('open');
-          var h = c.querySelector('.modo-header');
-          if (h) h.setAttribute('aria-expanded', 'false');
-        });
-        if (!isOpen) {
-          card.classList.add('open');
-          header.setAttribute('aria-expanded', 'true');
-        }
-      });
-      header.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); header.click(); }
-      });
-    });
-  });
+  /* ---------- 5. (removido na onda 7) Accordion "3 modos" — Explorador clicável (§9c) é o único ponto dos 3 modos no M1 ---------- */
 
   /* ---------- 6. Tabs do exercício (lembra última aberta) ---------- */
 
@@ -347,26 +324,52 @@
     if (!explorador) return;
     var cards = explorador.querySelectorAll('.explorador-card');
     var painel = explorador.querySelector('.explorador-painel');
-    var MODOS = {
+    var trilha = explorador.getAttribute('data-trilha') || 't1';
+
+    var MODOS_T1 = {
       autopiloto: {
         titulo: 'Autopiloto — IA executa, você revisa',
         modo: 'Tarefa repetitiva que segue sempre o mesmo padrão. Você define uma vez, a IA executa, você revisa a saída. Baixo risco, alto ganho de tempo.',
-        exemplo: 'Organizar uma pasta com 200 arquivos por tipo e data. A IA classifica, renomeia, cria subpastas. Você abre no fim e confere se ficou como queria.',
+        exemplo: 'Transformar os apontamentos brutos da semana em registro padrão de qualidade. Toda quinta, mesmo formato — a IA reescreve, você confere.',
         naoUsar: 'Quando o caso é único e exige julgamento novo. Autopiloto vale pro repetitivo — o excepcional pede olho humano.'
       },
       colaboracao: {
         titulo: 'Colaboração — IA e você juntos',
         modo: 'Você conduz, a IA apoia. Você dá o contexto que só quem trabalha aqui tem, ela rascunha e propõe; você critica e decide. Risco médio, ganho em qualidade.',
-        exemplo: 'Redigir um comunicado explicando uma mudança pra equipe. A IA sugere a estrutura, você ajusta o tom pro seu time — porque só você conhece o time.',
-        naoUsar: 'Quando você quer resposta pronta sem revisar. Colaboração exige que você conduza. Se você largar a rédea, sai genérico.'
+        exemplo: 'Rascunhar o comunicado da mudança de sequência da linha por causa do gargalo no molde. A IA sugere estrutura; você ajusta o tom pro seu turno.',
+        naoUsar: 'Quando você quer resposta pronta sem revisar. Colaboração exige que você conduza. Se largar a rédea, sai genérico.'
       },
       manual: {
         titulo: 'Manual — Só você decide',
         modo: 'Território seu. A IA no máximo dá referência; a decisão, o registro e a responsabilidade continuam com você. Alto impacto, autoria autoral.',
-        exemplo: 'Decidir se um colaborador leva advertência formal ou conversa reservada. A IA fica fora — é seu julgamento, seu peso, sua responsabilidade.',
-        naoUsar: 'Manual não tem "quando não usar". Se a decisão envolve pessoa, sinal físico ou assinatura sua, é sempre Manual.'
+        exemplo: 'Decidir se um operador leva advertência formal ou conversa reservada. Ler o barulho da injetora antes dela quebrar. A IA fica fora — é seu julgamento.',
+        naoUsar: 'Manual não tem "quando não usar". Se envolve pessoa, sinal físico ou assinatura sua, é sempre Manual.'
       }
     };
+
+    var MODOS_T2 = {
+      autopiloto: {
+        titulo: 'Autopiloto — IA executa, você revisa',
+        modo: 'Rotina que segue sempre o mesmo padrão. A IA executa, você revisa a saída. Baixo risco, alto ganho de tempo.',
+        exemplo: 'Transformar reunião de área gravada em ata estruturada. Toda semana, mesmo formato — a IA extrai decisões, ações e responsáveis; você libera.',
+        naoUsar: 'Rotina que envolve dado sensível não desidentificado (as 5 categorias do M4). Ou processo único que exige julgamento novo.'
+      },
+      colaboracao: {
+        titulo: 'Colaboração — IA e você juntos',
+        modo: 'Rotina que precisa do seu contexto estratégico + iteração. A IA rascunha e propõe cenários; você critica e decide. Risco médio, ganho em qualidade da decisão.',
+        exemplo: 'Estruturar cenários para negociação com fornecedor. A IA lista trade-offs por opção; você escolhe onde ceder — porque só você tem histórico do fornecedor.',
+        naoUsar: 'Quando quer resposta pronta sem revisar. Colaboração exige que você conduza — se largar, o parecer sai morno.'
+      },
+      manual: {
+        titulo: 'Manual — Só você decide',
+        modo: 'Decisão de alta responsabilidade autoral. A IA no máximo dá referência; a decisão e a assinatura são só suas.',
+        exemplo: 'Decisão de demissão. Aprovação de investimento. Parecer para a diretoria. Posicionamento em crise pública. A IA fica fora — é sua autoria e sua responsabilidade.',
+        naoUsar: 'Manual não tem exceção. Alta responsabilidade → Manual, sempre.'
+      }
+    };
+
+    var MODOS = (trilha === 't2') ? MODOS_T2 : MODOS_T1;
+
     function render(m) {
       var d = MODOS[m]; if (!d) return;
       cards.forEach(function (c) { c.setAttribute('aria-pressed', c.dataset.modo === m ? 'true' : 'false'); });

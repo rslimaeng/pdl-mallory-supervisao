@@ -2068,28 +2068,65 @@ body.modal-open { overflow: hidden; }
    Goal 6b — M2 (PCTFL grid, compare vago×situado, verbos, gerador, trio, entregável)
    =================================================================== */
 
-/* --- 10.1 PCTFL grid — as camadas do método (goal 6b §1.6) --- */
-.pctfl-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 12px;
-  margin: 20px 0;
-}
-.pctfl-card {
-  background: var(--bg-card);
+/* --- 10.1 PCTFL — tabela didática das 6 camadas (goal 7 §8, padrão Débora) --- */
+.pctfl-tabela-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0;
   border: 1px solid var(--border-subtle);
-  border-top: 3px solid var(--accent-blue);
-  border-radius: var(--radius-sm);
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  border-radius: var(--radius);
+  background: var(--bg-light);
 }
-.pctfl-letra { font-family: var(--font-mono); font-size: 22px; font-weight: 700; color: var(--accent-blue); }
-.pctfl-nome { font-family: var(--font-title); font-weight: 700; font-size: 16px; color: var(--text-primary); }
-.pctfl-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
-.pctfl-card-plus { border-top-color: var(--accent-yellow); }
-.pctfl-card-plus .pctfl-letra { color: var(--accent-yellow); font-size: 18px; }
+.pctfl-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+.pctfl-tabela thead {
+  background: color-mix(in oklab, var(--accent-blue) 12%, transparent);
+}
+.pctfl-tabela th {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.pctfl-tabela td {
+  padding: 0.9rem 1rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  line-height: 1.55;
+}
+.pctfl-tabela tbody tr:last-child td { border-bottom: none; }
+.pctfl-tabela tbody tr:nth-child(odd) { background: color-mix(in oklab, var(--bg-dark) 30%, transparent); }
+.pctfl-tabela .letra {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--accent-blue);
+  text-align: center;
+}
+.pctfl-tabela .letra-cs { color: var(--accent-yellow); }
+.pctfl-tabela .row-plus td { background: color-mix(in oklab, var(--accent-yellow) 8%, transparent); }
+.col-letra { width: 60px; }
+.col-elemento { width: 140px; font-weight: 600; }
+.col-define { width: 200px; color: var(--text-secondary); font-size: 0.9rem; }
+
+@media (max-width: 640px) {
+  .pctfl-tabela th, .pctfl-tabela td { padding: 0.6rem 0.7rem; font-size: 0.88rem; }
+  .col-letra { width: 40px; }
+  .col-elemento { width: auto; }
+}
+@media print {
+  .pctfl-tabela-wrap { overflow: visible; background: white; border-color: #ccc; }
+  .pctfl-tabela th, .pctfl-tabela td { color: black; border-color: #ccc; }
+  .pctfl-tabela tbody tr:nth-child(odd) { background: #f7f7f7; }
+}
 
 /* --- 10.2 Compare-grid vago × situado (goal 6b §2) --- */
 .compare-section { margin: 8px 0; }
