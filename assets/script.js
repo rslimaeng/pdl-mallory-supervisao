@@ -291,140 +291,100 @@
     render(start);
   });
 
-  /* ---------- 9. Simulador dos 3 modos · auto-sugestão por heurística (goal 6a §5) ---------- */
+  /* ---------- 9. Matriz IA generativa · clique troca a legenda (goal 6a3 §1.2) ---------- */
 
-  var SIM_HEURISTICA = {
-    autopiloto: ['organizar', 'organiza', 'renomear', 'renomeia', 'processar', 'processa lote', 'em lote', 'em massa', 'padronizar', 'padroniza', 'formatar', 'converter', 'extrair', 'exportar', 'consolidar', 'juntar arquivos', 'unir', 'ordenar', 'classificar'],
-    colaboracao: ['redigir', 'redija', 'escrever', 'escreva', 'rascunhar', 'rascunho', 'resumir', 'resumo', 'traduzir', 'reescrever', 'melhorar texto', 'explicar', 'transformar em', 'passar a limpo', 'criar', 'sugerir', 'ideias', 'brainstorm', 'proposta', 'plano', 'roteiro', 'ata', 'comunicado', 'e-mail', 'email', 'mensagem'],
-    manual: ['decidir', 'decisão', 'aprovar', 'aprovação', 'reprovar', 'avaliar', 'avaliação', 'julgar', 'advertir', 'advertência', 'demitir', 'contratar', 'negociar', 'negociação', 'contrato', 'penalidade', 'sanção', 'diagnóstico médico', 'assinar', 'assumir responsabilidade']
-  };
-  var SIM_NOME = { autopiloto: 'Autopiloto', colaboracao: 'Colaboração', manual: 'Manual' };
-  var SIM_CANONICO = {
-    autopiloto: {
-      titulo: 'Autopiloto — IA executa, você revisa',
-      modo: 'Tarefa repetitiva que segue sempre o mesmo padrão. Você define uma vez, a IA executa, você revisa no fim. Baixo risco, alto ganho de tempo.',
-      exemplo: 'organizar uma pasta com 200 arquivos por tipo e data — a IA executa, você revisa a estrutura no fim.'
-    },
-    colaboracao: {
-      titulo: 'Colaboração — IA e você pensam juntos',
-      modo: 'A IA rascunha e propõe; você dá o contexto que só quem trabalha aqui tem, critica e decide. Risco médio, ganho em qualidade.',
-      exemplo: 'redigir um comunicado explicando uma mudança pra equipe — a IA sugere a estrutura, você ajusta o tom pro seu time.'
-    },
-    manual: {
-      titulo: 'Manual — IA inspira, você decide',
-      modo: 'A IA no máximo dá referência; a decisão, o registro e a responsabilidade continuam com você. Alta responsabilidade autoral.',
-      exemplo: 'decidir se um colaborador leva advertência formal ou conversa reservada — a IA fica fora, é seu julgamento e sua responsabilidade.'
+  function initMatrizIA() {
+    var matriz = document.querySelector('.matriz-ia');
+    if (!matriz) return;
+    var caixas = matriz.querySelectorAll('.caixa[data-nivel]');
+    var blocos = matriz.querySelectorAll('.legenda-bloco[data-nivel]');
+    function ativar(nivel) {
+      caixas.forEach(function (c) {
+        var on = c.dataset.nivel === nivel;
+        c.classList.toggle('caixa-ativa', on);
+        c.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      blocos.forEach(function (b) { b.hidden = (b.dataset.nivel !== nivel); });
     }
-  };
-  var SIM_PLACEHOLDERS = [
-    'Organizar 200 relatórios de turno por data',
-    'Redigir e-mail pra próximo turno',
-    'Decidir advertência de um operador'
-  ];
-
-  function simSugerir(texto) {
-    var t = (texto || '').toLowerCase().trim();
-    if (!t) return null;
-    var scores = { autopiloto: 0, colaboracao: 0, manual: 0 };
-    Object.keys(SIM_HEURISTICA).forEach(function (modo) {
-      SIM_HEURISTICA[modo].forEach(function (p) { if (t.indexOf(p) !== -1) scores[modo] += 1; });
+    caixas.forEach(function (caixa) {
+      caixa.addEventListener('click', function (e) { e.stopPropagation(); ativar(caixa.dataset.nivel); });
+      caixa.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); ativar(caixa.dataset.nivel); }
+      });
     });
-    var max = Math.max(scores.autopiloto, scores.colaboracao, scores.manual);
-    if (max === 0) return 'colaboracao';
-    if (scores.autopiloto === max) return 'autopiloto';
-    if (scores.colaboracao === max) return 'colaboracao';
-    return 'manual';
   }
+  initMatrizIA();
 
-  document.querySelectorAll('.modos-simulador').forEach(function (root) {
-    var input = root.querySelector('#simulador-tarefa');
-    var sugestaoEl = root.querySelector('#simulador-sugestao');
-    var opcoes = root.querySelectorAll('.simulador-opcao');
-    var out = root.querySelector('.simulador-resultado');
-    if (!out || !opcoes.length) return;
+  /* ---------- 9b. WYSIATI · hover na zona destaca a linha da tabela (goal 6a3 §1.3) ---------- */
 
-    var debounce = null;
-    var phIndex = 0;
-
-    function atualizarSugestao() {
-      if (!sugestaoEl) return;
-      var sugerido = simSugerir(input && input.value);
-      if (!sugerido) { sugestaoEl.innerHTML = ''; return; }
-      sugestaoEl.innerHTML = '💡 Parece <strong>' + SIM_NOME[sugerido] + '</strong> — clique num modo pra confirmar ou testar outro';
-    }
-
-    function render(modoEscolhido) {
-      var d = SIM_CANONICO[modoEscolhido];
-      if (!d) return;
-      opcoes.forEach(function (o) { o.classList.toggle('selected', o.getAttribute('data-modo') === modoEscolhido); });
-      var tarefa = (input && input.value.trim()) || '';
-      var sugerido = simSugerir(tarefa);
-      var estado = 'direto';
-      if (tarefa) estado = (sugerido === modoEscolhido) ? 'acerto' : 'miss';
-
-      var box = document.createElement('div');
-      box.className = 'resultado-box simulador-feedback modo-' + modoEscolhido;
-      box.setAttribute('data-estado', estado);
-
-      var marcaHtml = '';
-      if (estado === 'acerto') marcaHtml = '<p class="feedback-marca">✓ Você acertou o modo. Aqui está o porquê:</p>';
-      else if (estado === 'miss') marcaHtml = '<p class="feedback-marca">⚠️ Eu pensei em ' + SIM_NOME[sugerido] + '. Veja por quê:</p>';
-
-      box.innerHTML =
-        marcaHtml +
-        '<p class="resultado-titulo">' + d.titulo + '</p>' +
-        '<dl>' +
-          '<dt>O modo</dt><dd>' + d.modo + '</dd>' +
-          '<dt>Exemplo canônico</dt><dd>' + d.exemplo + '</dd>' +
-        '</dl>' +
-        '<div class="feedback-alerta"></div>' +
-        '<button class="btn-testar-outro" type="button">Testar outro modo</button>';
-
-      var alertaEl = box.querySelector('.feedback-alerta');
-      if (alertaEl) {
-        if (estado === 'miss') {
-          alertaEl.appendChild(document.createTextNode('Sua tarefa "'));
-          var strong = document.createElement('strong');
-          strong.textContent = tarefa;
-          alertaEl.appendChild(strong);
-          alertaEl.appendChild(document.createTextNode('" parece ' + SIM_NOME[sugerido] + ' pela forma como você descreveu. Não existe resposta única — o que decide é o risco: quanto maior o impacto, mais Manual. Clique em ' + SIM_NOME[sugerido] + ' pra comparar.'));
-        } else {
-          alertaEl.parentNode.removeChild(alertaEl);
-        }
-      }
-      out.innerHTML = '';
-      out.appendChild(box);
-      var btnOutro = box.querySelector('.btn-testar-outro');
-      if (btnOutro) btnOutro.addEventListener('click', function () {
-        out.innerHTML = '';
-        opcoes.forEach(function (o) { o.classList.remove('selected'); });
-        if (input) input.focus();
+  function initWysiatiHover() {
+    var wysiati = document.querySelector('.wysiati');
+    if (!wysiati) return;
+    var zonas = wysiati.querySelectorAll('.zona[class*="zona-"]');
+    var linhas = wysiati.querySelectorAll('.wysiati__tabela tr[data-zona]');
+    function destacar(n) { linhas.forEach(function (l) { l.classList.toggle('destacada', l.dataset.zona === String(n)); }); }
+    function limpar() { linhas.forEach(function (l) { l.classList.remove('destacada'); }); }
+    zonas.forEach(function (zona) {
+      var m = zona.className.match(/zona-(\d)/); if (!m) return;
+      var n = m[1];
+      zona.addEventListener('mouseenter', function (e) { e.stopPropagation(); destacar(n); });
+      zona.addEventListener('mouseleave', function (e) {
+        var rel = e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest('.zona');
+        if (!rel) limpar();
+        else { var rm = rel.className.match(/zona-(\d)/); if (rm) destacar(rm[1]); }
       });
-
-      try {
-        localStorage.setItem('m1-simulador-ultimo', JSON.stringify({ tarefa: tarefa, modoEscolhido: modoEscolhido, timestamp: Date.now() }));
-      } catch (e) {}
-    }
-
-    opcoes.forEach(function (o) {
-      o.addEventListener('click', function () { render(o.getAttribute('data-modo')); });
+      zona.addEventListener('focus', function () { destacar(n); });
+      zona.addEventListener('blur', limpar);
+      zona.setAttribute('tabindex', '0');
     });
+  }
+  initWysiatiHover();
 
-    if (input) {
-      input.addEventListener('input', function () {
-        if (debounce) clearTimeout(debounce);
-        debounce = setTimeout(atualizarSugestao, 300);
-      });
-      if (!reducedMotion) {
-        setInterval(function () {
-          if (document.activeElement === input) return;
-          if (input.value.trim()) return;
-          phIndex = (phIndex + 1) % SIM_PLACEHOLDERS.length;
-          input.setAttribute('placeholder', SIM_PLACEHOLDERS[phIndex]);
-        }, 4000);
+  /* ---------- 9c. Explorador dos 3 modos · substitui o simulador (goal 6a3 §1.4) ---------- */
+
+  function initExploradorModos() {
+    var explorador = document.querySelector('.modos-explorador');
+    if (!explorador) return;
+    var cards = explorador.querySelectorAll('.explorador-card');
+    var painel = explorador.querySelector('.explorador-painel');
+    var MODOS = {
+      autopiloto: {
+        titulo: 'Autopiloto — IA executa, você revisa',
+        modo: 'Tarefa repetitiva que segue sempre o mesmo padrão. Você define uma vez, a IA executa, você revisa a saída. Baixo risco, alto ganho de tempo.',
+        exemplo: 'Organizar uma pasta com 200 arquivos por tipo e data. A IA classifica, renomeia, cria subpastas. Você abre no fim e confere se ficou como queria.',
+        naoUsar: 'Quando o caso é único e exige julgamento novo. Autopiloto vale pro repetitivo — o excepcional pede olho humano.'
+      },
+      colaboracao: {
+        titulo: 'Colaboração — IA e você juntos',
+        modo: 'Você conduz, a IA apoia. Você dá o contexto que só quem trabalha aqui tem, ela rascunha e propõe; você critica e decide. Risco médio, ganho em qualidade.',
+        exemplo: 'Redigir um comunicado explicando uma mudança pra equipe. A IA sugere a estrutura, você ajusta o tom pro seu time — porque só você conhece o time.',
+        naoUsar: 'Quando você quer resposta pronta sem revisar. Colaboração exige que você conduza. Se você largar a rédea, sai genérico.'
+      },
+      manual: {
+        titulo: 'Manual — Só você decide',
+        modo: 'Território seu. A IA no máximo dá referência; a decisão, o registro e a responsabilidade continuam com você. Alto impacto, autoria autoral.',
+        exemplo: 'Decidir se um colaborador leva advertência formal ou conversa reservada. A IA fica fora — é seu julgamento, seu peso, sua responsabilidade.',
+        naoUsar: 'Manual não tem "quando não usar". Se a decisão envolve pessoa, sinal físico ou assinatura sua, é sempre Manual.'
       }
+    };
+    function render(m) {
+      var d = MODOS[m]; if (!d) return;
+      cards.forEach(function (c) { c.setAttribute('aria-pressed', c.dataset.modo === m ? 'true' : 'false'); });
+      painel.innerHTML =
+        '<div class="explorador-conteudo">' +
+          '<h4 class="explorador-titulo">' + d.titulo + '</h4>' +
+          '<dl>' +
+            '<dt>O modo</dt><dd>' + d.modo + '</dd>' +
+            '<dt>Exemplo</dt><dd>' + d.exemplo + '</dd>' +
+            '<dt>Quando NÃO usar</dt><dd>' + d.naoUsar + '</dd>' +
+          '</dl>' +
+        '</div>';
+      try { localStorage.setItem('m1-explorador-modo', m); } catch (e) {}
     }
-  });
+    cards.forEach(function (card) { card.addEventListener('click', function () { render(card.dataset.modo); }); });
+    try { var u = localStorage.getItem('m1-explorador-modo'); if (u && MODOS[u]) render(u); } catch (e) {}
+  }
+  initExploradorModos();
 
   /* ---------- 11. Modal do autodiagnóstico (goal 5f) ---------- */
 
@@ -508,24 +468,16 @@
     var campos = gerador.querySelectorAll('.gerador-campo textarea');
     var STORAGE_KEY = 'm2-gerador-pctfl-' + modo;
 
-    var TEMPLATES = {
-      t1: [
-        { chave: 'papel', label: '# PAPEL' },
-        { chave: 'contexto', label: '# CONTEXTO' },
-        { chave: 'tarefa', label: '# TAREFA' },
-        { chave: 'formato', label: '# FORMATO' },
-        { chave: 'limites', label: '# LIMITAÇÕES' }
-      ],
-      t2: [
-        { chave: 'papel', label: '# PAPEL' },
-        { chave: 'contexto', label: '# CONTEXTO' },
-        { chave: 'tarefa', label: '# TAREFA' },
-        { chave: 'formato', label: '# FORMATO' },
-        { chave: 'limites', label: '# LIMITAÇÕES' },
-        { chave: 'sucesso', label: '# CRITÉRIO DE SUCESSO' },
-        { chave: 'negativo', label: '# CRITÉRIO NEGATIVO' }
-      ]
-    };
+    // Padrão único de 6 elementos (goal 6a3 §3.1): PCTFL + Critério de Sucesso. Critério Negativo saiu.
+    // data-modo permanece só pra escolher o exemplo canônico (DDS × briefing) e a chave de localStorage.
+    var TEMPLATE = [
+      { chave: 'papel', label: '# PAPEL' },
+      { chave: 'contexto', label: '# CONTEXTO' },
+      { chave: 'tarefa', label: '# TAREFA' },
+      { chave: 'formato', label: '# FORMATO' },
+      { chave: 'limites', label: '# LIMITAÇÕES' },
+      { chave: 'sucesso', label: '# CRITÉRIO DE SUCESSO' }
+    ];
 
     var EXEMPLOS = {
       t1: {
@@ -533,7 +485,8 @@
         contexto: 'Vou conduzir o DDS (Diálogo Diário de Segurança) de segunda-feira na área de montagem. Tema: uso correto de EPI — luvas e óculos. Motivo: na semana passada houve 2 registros de operadores sem óculos na bancada de rebarbação. Equipe: 14 pessoas, turno da manhã. Já falamos deste tema no mês passado — não pode ficar repetitivo.',
         tarefa: 'Escreva o roteiro do DDS de no máximo 5 minutos de fala, com uma pergunta para abrir conversa com o time e um fechamento que peça compromisso prático.',
         formato: '3 blocos: Abertura (com a pergunta) · Mensagem central (com exemplo concreto) · Fechamento (com o compromisso). Máximo 20 linhas. Linguagem falada, direta.',
-        limites: 'Se faltar informação, pergunte. Não invente.\nNão cite norma ou número de NR — se precisar, eu confirmo na fonte e acrescento.'
+        limites: 'Se faltar informação, pergunte. Não invente.\nNão cite norma ou número de NR — se precisar, eu confirmo na fonte e acrescento.',
+        sucesso: 'Consigo apresentar o DDS em 5 minutos sem ler, e o time entende o compromisso final sem perguntar de novo.'
       },
       t2: {
         papel: 'Você é um controller sênior com experiência em indústria de manufatura no Brasil.',
@@ -541,14 +494,12 @@
         tarefa: 'Redija o briefing de desvios para a reunião de diretoria: separe desvio estrutural de pontual, explique o direcionador de cada um e sugira 1 ação por desvio relevante.',
         formato: '1 página: parágrafo de abertura com o número total e a mensagem central · tabela (Rubrica | Desvio | Estrutural ou Pontual | Direcionador | Ação sugerida) · fechamento com os 2 pontos que exigem decisão da diretoria.',
         limites: 'Se faltar informação, pergunte. Não invente.\nUse apenas os números do contexto — não crie projeção que os dados não sustentam.',
-        sucesso: 'A diretoria decide sobre os 2 pontos finais sem abrir o relatório completo.',
-        negativo: 'Não use jargão contábil sem tradução. Não suavize desvio estrutural como se fosse pontual. Não proponha ação que dependa de orçamento novo.'
+        sucesso: 'A diretoria decide sobre os 2 pontos finais sem abrir o relatório completo.'
       }
     };
 
     function render() {
-      var template = TEMPLATES[modo];
-      var linhas = template.map(function (item) {
+      var linhas = TEMPLATE.map(function (item) {
         var textarea = gerador.querySelector('[data-campo="' + item.chave + '"]');
         var valor = textarea && textarea.value.trim() ? textarea.value : '[preencha ao lado]';
         return item.label + '\n' + valor;
