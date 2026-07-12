@@ -121,46 +121,25 @@ Regra prática: **se a decisão envolve uma dessas 4 categorias, é Manual.** Se
 
 ## Prompt-âncora do módulo
 
-O PCTFL completo vem no M2. Por enquanto, uma versão simples com os 3 modos oficiais definidos inline — o prompt funciona copiado e colado num chat novo, mesmo sem alguém ter feito este treinamento antes:
+O M2 vai te dar o método formal (PCTFL + Critério de Sucesso). Aqui, um par de exemplos macro pra você **ver a diferença que o contexto faz** — antes de aprender a estruturar.
 
-```text
-# PAPEL
-Você é um consultor sênior de produtividade industrial em fábrica de manufatura.
-Sua função é ajudar supervisores a decidir onde a IA entra na semana deles,
-sem prometer o que a IA não entrega.
+### Sem contexto — pergunta genérica
 
-# CONTEXTO
-[Sou/Trabalho como] [seu cargo em Mallory: supervisor de produção /
-técnico de qualidade / analista de RH / líder de célula / …]
-em uma fábrica de eletroportáteis com certificação ISO 9001.
-Minhas 5 tarefas mais repetitivas da semana:
-[cole aqui suas 5 tarefas — ex.: relatório de turno, comunicado de mudança
-de linha, registro de parada, DDS, consolidação de apontamentos]
+    Como fazer uma boa gestão de projetos?
 
-# TAREFA
-Classifique cada tarefa em um dos 3 modos de uso da IA:
+A IA vai responder bem — mas genérico. Vai falar de metodologia, cronograma, stakeholder. Palestra de livro. Serve pra estudar, não pra usar segunda-feira.
 
-- Autopiloto: tarefa repetitiva que segue sempre o mesmo padrão. A IA executa,
-  você revisa. Ex.: transformar apontamentos brutos em relatório padrão.
+### Com contexto — mesma pergunta, seu chão de fábrica
 
-- Colaboração: tarefa que precisa do seu contexto e julgamento. A IA rascunha,
-  você conduz e decide. Ex.: escrever comunicado sensível para o time.
+    Como fazer uma boa gestão de projetos como supervisor de produção na
+    Mallory, na linha de eletroportáteis? Tenho equipe de ~15 operadores
+    em turno, e o "projeto" mais comum é conduzir uma melhoria de processo
+    (reduzir refugo, ajustar setup, treinar um novato) em 2-3 semanas
+    sem parar a linha.
 
-- Manual: decisão ou sinal que é só seu. Ex.: advertência, aprovar registro
-  de qualidade, ler barulho da injetora.
+Agora a resposta vai citar o **seu** contexto: turno, refugo, treinamento no posto, indicador de linha. Fica prático. Serve pra segunda-feira.
 
-Para cada tarefa, indique o modo e a razão em 1 linha.
-
-# FORMATO
-Tabela: Tarefa | Modo (Autopiloto/Colaboração/Manual) | Por quê.
-
-# LIMITAÇÕES
-Se faltar informação, pergunte. Não invente.
-Nunca classifique como Autopiloto uma tarefa que envolva pessoa, sinal físico
-ou assinatura de responsabilidade — essas são sempre Manual.
-```
-
-*(marque "Rodei este prompt no Claude" quando testar)*
+**A regra do M1:** contexto não é enfeite — é o que separa resposta de biblioteca de resposta de campo. O M2 vai formalizar isso em 6 elementos.
 
 ---
 

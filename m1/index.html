@@ -305,41 +305,35 @@
 
     <section class="section">
       <h2>Prompt-âncora do módulo</h2>
-      <p>O PCTFL completo vem no M2. Por enquanto, uma versão simples — para você ver a diferença que o contexto faz:</p>
+      <p>O M2 vai te dar o método formal (PCTFL + Critério de Sucesso). Aqui, um par de exemplos macro pra você <strong>ver a diferença que o contexto faz</strong> — antes de aprender a estruturar.</p>
 
+      <h3>Sem contexto — pergunta genérica</h3>
       <div class="card-prompt">
         <div class="prompt-box">
           <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
-          <pre><code><span class="prompt-marker"># PAPEL</span>
-Você é um assistente que ajuda um profissional Mallory a escrever, resumir ou organizar
-algo do dia a dia dele. Sua função é fazer a metade "de papel" do trabalho — nunca decidir
-por ele, nunca operar máquina, nunca substituir julgamento de segurança.
+          <pre><code>Como fazer uma boa gestão de projetos?</code></pre>
+        </div>
+      </div>
+      <p>A IA vai responder bem — mas genérico. Vai falar de metodologia, cronograma, stakeholder. Palestra de livro. Serve pra estudar, não pra usar segunda-feira.</p>
 
-<span class="prompt-marker"># CONTEXTO</span>
-[Seu cargo em Mallory — produção / qualidade / RH / manutenção / … — e há
-quanto tempo. 1-2 linhas]
-Exemplo: "Sou supervisor de produção na linha de eletroportáteis, há 12 anos.
-Gerencio turma de ~15 operadores em turno."
-
-<span class="prompt-marker"># TAREFA</span>
-[O que você quer produzir agora]
-Exemplo: "Escrever um comunicado de 10 linhas explicando a nova regra de troca de
-turno pra equipe, tom firme e respeitoso."
-
-<span class="prompt-marker"># FORMATO</span>
-[Como quer receber]
-Exemplo: "Texto corrido em 2 parágrafos + 1 lista de 3 pontos-chave no final."
-
-<span class="prompt-marker"># LIMITAÇÕES</span>
-- Nada confidencial (nome de pessoa, dado de folha, informação de contrato)
-- Precisa caber em 1 página
-- Linguagem Mallory: direta, respeitosa, sem jargão corporativo</code></pre>
+      <h3>Com contexto — mesma pergunta, seu chão de fábrica</h3>
+      <div class="card-prompt">
+        <div class="prompt-box">
+          <button class="btn-copy" type="button" aria-label="Copiar prompt">Copiar</button>
+          <pre><code>Como fazer uma boa gestão de projetos como supervisor de produção na
+Mallory, na linha de eletroportáteis? Tenho equipe de ~15 operadores
+em turno, e o "projeto" mais comum é conduzir uma melhoria de processo
+(reduzir refugo, ajustar setup, treinar um novato) em 2-3 semanas
+sem parar a linha.</code></pre>
         </div>
         <label class="action-check" data-key="m1-prompt-ancora">
           <input type="checkbox">
           <span>Rodei este prompt no Claude</span>
         </label>
       </div>
+      <p>Agora a resposta vai citar o <strong>seu</strong> contexto: turno, refugo, treinamento no posto, indicador de linha. Fica prático. Serve pra segunda-feira.</p>
+
+      <p><strong>A regra do M1:</strong> contexto não é enfeite — é o que separa resposta de biblioteca de resposta de campo. O M2 vai formalizar isso em 6 elementos.</p>
     </section>
 
     <section class="section">
