@@ -415,8 +415,13 @@
       <div class="prompt-copiar">
         <div class="prompt-copiar__header">
           <span class="mono">PROMPT COMPLETO · COLE NO CLAUDE PRO</span>
-          <button class="btn-copiar" type="button" data-copy-target="#prompt-ancora-m3">Copiar prompt</button>
+          <div class="prompt-copiar__actions">
+            <button class="btn-secondary btn-toggle-prompt" type="button" aria-expanded="false" aria-controls="prompt-ancora-m3-details">Ver prompt (~85 linhas)</button>
+            <button class="btn-copiar" type="button" data-copy-target="#prompt-ancora-m3">Copiar prompt</button>
+          </div>
         </div>
+        <details class="prompt-copiar__details" id="prompt-ancora-m3-details">
+          <summary class="visually-hidden">Prompt completo (colapsado)</summary>
         <pre id="prompt-ancora-m3"># PAPEL
 Você é uma consultora sênior em transformação de rotina de trabalho com IA.
 Já ajudou centenas de profissionais a sair do "sei que devia usar" pro
@@ -511,6 +516,7 @@ Só gere o Artifact APÓS eu validar as 4 fases. Não antecipe.
    · Rodapé mono: "PDL 2026 · Mallory Eletroportáteis · Trilha 1 · Supervisão ·
      @iacomrafael".
    · JavaScript vanilla, zero framework, zero dependência externa além do Google Fonts.</pre>
+        </details>
       </div>
       <div class="callout callout-info">
         <p><strong>Artefato do módulo:</strong> depois de gerar o Mapa de Oportunidades no chat, leve a top-1 pra <a href="../artefatos/calculadora-roi.html">Calculadora ROI</a> e coloque o valor em R$/mês. Fecha o argumento pra levar pra segunda.</p>
@@ -699,6 +705,23 @@ Só gere o Artifact APÓS eu validar as 4 fases. Não antecipe.
     });
     atualizarContador();
   }
+
+  // Accordion do prompt-âncora: botão externo abre/fecha o bloco colapsável; print A4 abre tudo
+  document.querySelectorAll('.btn-toggle-prompt').forEach(function (btn) {
+    var target = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!target) return;
+    var labelAberto = 'Ocultar prompt';
+    var labelFechado = btn.textContent.trim();
+    function sync() {
+      btn.setAttribute('aria-expanded', String(target.open));
+      btn.textContent = target.open ? labelAberto : labelFechado;
+    }
+    btn.addEventListener('click', function () { target.open = !target.open; sync(); });
+    target.addEventListener('toggle', sync);
+  });
+  window.addEventListener('beforeprint', function () {
+    document.querySelectorAll('.prompt-copiar__details').forEach(function (d) { d.open = true; });
+  });
 })();
 </script>
 </body>
