@@ -2,7 +2,7 @@
 
 **Trilha 1 · Módulo 2 de 6**
 
-Seu primeiro resultado útil com IA em menos de 10 minutos — DDS, e-mail difícil, resumo de instrução.
+Seu primeiro resultado útil com IA em menos de 10 minutos — DDS (Diálogo Diário de Segurança), e-mail difícil, resumo de instrução.
 
 ---
 
@@ -18,7 +18,7 @@ Seu primeiro resultado útil com IA em menos de 10 minutos — DDS, e-mail difí
 
 | Você entra com | O que acontece | Você sai com |
 |---|---|---|
-| As 2 tarefas marcadas no M1 e um celular ou computador | Você acessa o Claude, aprende as 5 camadas do PCTFL e executa 3 prompts reais — DDS, e-mail difícil, resumo | 3 prompts executados por você, com resultado que você mesmo avaliou |
+| As 2 tarefas marcadas no M1 e um celular ou computador | Você acessa o Claude, aprende as 6 camadas do PCTFL e executa 3 prompts reais — DDS, e-mail difícil, resumo | 3 prompts executados por você, com resultado que você mesmo avaliou |
 
 ---
 
@@ -158,7 +158,7 @@ O DDS de segunda-feira, resolvido com PCTFL completo. Copie, cole no Claude e ro
 Você é um técnico de segurança do trabalho experiente em fábrica de eletroportáteis.
 
 # CONTEXTO
-Vou conduzir o DDS (Diálogo Diário de Segurança) de segunda-feira na área de montagem.
+Vou conduzir o DDS de segunda-feira na área de montagem.
 Tema: uso correto de EPI — luvas e óculos. Motivo: na semana passada houve 2 registros
 de operadores sem óculos na bancada de rebarbação. Equipe: 14 pessoas, turno da manhã.
 Já falamos deste tema no mês passado — não pode ficar repetitivo.
@@ -192,7 +192,7 @@ Para adaptar ao seu caso: troque o CONTEXTO pela sua situação real e mantenha 
 **Passo a passo:**
 1. Primeiro acesso, do zero: abra [claude.ai](https://claude.ai) no navegador do celular ou computador → toque em "Continuar com Google" (ou digite seu e-mail e confirme o código que chegar) → pronto, a tela de conversa abre. Conta gratuita, sem cartão. Quem já tem, ajuda o colega do lado.
 2. Rode o prompt-âncora do DDS como está. Leia a resposta.
-3. Agora adapte: troque o CONTEXTO por uma situação real da sua área (mantenha as 5 camadas) e rode de novo.
+3. Agora adapte: troque o CONTEXTO por uma situação real da sua área (mantenha as 6 camadas) e rode de novo.
 4. Terceiro prompt: pegue um e-mail ou mensagem difícil que você precisa mandar e peça: papel + contexto + "reescreva com tom firme e respeitoso" + formato + regra de ouro.
 5. Para cada resposta, aplique a validação de 30 segundos (fonte · coerência · seu conhecimento).
 
@@ -220,7 +220,7 @@ Para adaptar ao seu caso: troque o CONTEXTO pela sua situação real e mantenha 
 
 | Erro | Sintoma | Causa | Como corrigir |
 |---|---|---|---|
-| Prompt de uma linha | "Escreva um DDS" — resposta bonita e inútil, serve para qualquer fábrica | Faltou C e F: a IA não sabe sua situação nem o formato | Preencha as 5 camadas. Contexto real muda tudo |
+| Prompt de uma linha | "Escreva um DDS" — resposta bonita e inútil, serve para qualquer fábrica | Faltou C e F: a IA não sabe sua situação nem o formato | Preencha as 6 camadas. Contexto real muda tudo |
 | Aceitar a primeira resposta | Copiou, colou, enviou — e tinha um detalhe errado no meio | Pressa + confiança no texto fluido da IA | Validação de 30 segundos, sempre. E peça revisão: "melhore X" |
 | Verbo vago na tarefa | "Me ajude com o relatório" — a IA escolhe sozinha o que fazer | Tarefa sem verbo de ação claro | Troque por verbo preciso: escreva, resuma, liste, compare, reescreva |
 
