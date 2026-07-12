@@ -2579,3 +2579,212 @@ body.modal-open { overflow: hidden; }
   .gatilhos-grid { display: block; }
   .gatilho-card { break-inside: avoid; margin-bottom: 0.75rem; }
 }
+
+/* ===== M3 v3 (goal 10): bloco IPO · accordion conceito · prompt-âncora único ===== */
+
+/* callout variante "dica" (Prompt 0 virou dica curta) */
+.callout-dica { border-left-color: var(--accent-yellow); }
+
+/* --- Bloco IPO visual (3 caixas Entra → Processa → Sai) --- */
+.ipo-caixas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+@media (max-width: 720px) { .ipo-caixas { grid-template-columns: 1fr; } }
+
+.ipo-caixa {
+  background: color-mix(in oklab, var(--bg-light) 92%, transparent);
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid var(--accent-blue);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ipo-caixa--entra { border-top-color: var(--accent-blue); }
+.ipo-caixa--processa { border-top-color: var(--accent-yellow); }
+.ipo-caixa--sai { border-top-color: var(--accent-green); }
+
+.ipo-caixa__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.ipo-caixa h3 {
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+.ipo-caixa p { margin: 0; font-size: 0.9rem; line-height: 1.5; }
+.ipo-caixa__mallory {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  border-left: 2px solid var(--accent-yellow);
+  padding-left: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.ipo-calc-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: color-mix(in oklab, var(--accent-yellow) 12%, var(--bg-light));
+  border: 1px solid color-mix(in oklab, var(--accent-yellow) 40%, transparent);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+.ipo-calc-card__conteudo { flex: 1; }
+.ipo-calc-card__conteudo h3 {
+  font-family: var(--font-title);
+  margin: 0.25rem 0 0.5rem;
+  color: var(--text-primary);
+}
+.ipo-calc-card__conteudo p { margin: 0; font-size: 0.92rem; color: var(--text-secondary); }
+.ipo-calc-card .btn-primary { white-space: nowrap; }
+@media (max-width: 640px) { .ipo-calc-card { flex-direction: column; align-items: flex-start; } }
+
+/* --- Accordion "conceito em 5 pontos" --- */
+.conceito-item {
+  background: color-mix(in oklab, var(--bg-light) 92%, transparent);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-blue);
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+.conceito-item summary {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+}
+.conceito-item summary::-webkit-details-marker { display: none; }
+.conceito-item summary:hover { background: color-mix(in oklab, var(--accent-blue) 8%, transparent); }
+.conceito-item__num {
+  font-family: var(--font-title);
+  font-weight: 700;
+  color: var(--accent-blue);
+  font-size: 1.1rem;
+}
+.conceito-item__titulo { font-family: var(--font-body); font-weight: 600; flex: 1; color: var(--text-primary); }
+.conceito-item__marker {
+  font-family: var(--font-mono);
+  color: var(--accent-blue);
+  flex-shrink: 0;
+}
+.conceito-item__marker::after { content: "+"; font-size: 1.2rem; }
+.conceito-item[open] .conceito-item__marker::after { content: "\2212"; }
+.conceito-item__body { padding: 0 1.25rem 1.25rem 3.35rem; }
+.conceito-item__body p { margin: 0 0 0.5rem; line-height: 1.55; }
+.conceito-item__mallory {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  border-left: 2px solid var(--accent-yellow);
+  padding-left: 0.75rem;
+}
+.conceito-item__check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+.conceito-progresso {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+/* --- Prompt-âncora único: wizard de 4 fases + bloco copiar --- */
+.prompt-fases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0;
+}
+.prompt-fase {
+  background: color-mix(in oklab, var(--bg-light) 90%, transparent);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent-blue);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+.prompt-fase__num {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-blue);
+  font-size: 0.78rem;
+}
+.prompt-fase h3 { font-family: var(--font-title); font-size: 1rem; margin: 0.4rem 0 0.35rem; color: var(--text-primary); }
+.prompt-fase p { font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.45; }
+
+.prompt-copiar {
+  margin-top: 1.5rem;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.prompt-copiar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.prompt-copiar__header .mono {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+.btn-copiar {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  background: var(--accent-blue);
+  color: var(--bg-dark);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  white-space: nowrap;
+}
+.btn-copiar:hover { background: color-mix(in oklab, var(--accent-blue) 85%, white); }
+.btn-copiar.is-success { background: var(--accent-green); }
+.prompt-copiar pre {
+  margin: 0;
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text-primary);
+  white-space: pre;
+}
+
+@media print {
+  .ipo-caixas { grid-template-columns: 1fr; }
+  .ipo-caixa, .conceito-item, .prompt-fase { break-inside: avoid; }
+  .conceito-item__body { display: block !important; }
+  .prompt-copiar pre { white-space: pre-wrap; word-wrap: break-word; color: #000; background: #f4f4f4; }
+  .btn-copiar, .prompt-copiar__header { display: none; }
+}
