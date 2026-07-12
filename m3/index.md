@@ -1,16 +1,16 @@
-# M3 · Mapa de Oportunidades IA
+# M3 · IA no Seu Setor: Identificando Oportunidades Reais
 
 **Trilha 1 · Módulo 3 de 6**
 
-A habilidade universal deste módulo: **pegar qualquer tarefa da sua semana e responder — a IA pode entrar aqui, sim ou não? Onde exatamente?** No fim, um mapa das suas 5 tarefas com ranking pronto pra ação.
+A promessa desta ementa: **onde a IA cabe na rotina da sua área — sim ou não, e onde exatamente.** Sai daqui com 5 tarefas da sua semana desmontadas em IPO, ranqueadas por impacto × facilidade, e a #1 testada no Claude com Artifact HTML pra levar pra segunda.
 
 ---
 
 ## Três dores que este módulo cura
 
-- **"Sei que a IA pode me ajudar em algo, mas não sei onde começar."** Você viu 3 modos e o PCTFL, e agora precisa de um método pra decidir o que testar primeiro.
-- **"Já testei em uma tarefa e não deu certo — desanimei."** Provavelmente escolheu a tarefa errada. Este módulo dá o filtro pra escolher.
-- **"Não tenho tempo pra experimentar com tudo."** Você tem 3 oportunidades boas na semana — não 30. O ranking mostra as 3.
+- **"Meu turno tem 5 rotinas que me consomem manhã inteira — mas se me perguntam 'onde a IA entra?' eu trava."** Você tem apontamento, DDS, comunicado pro próximo turno, categorização de não-conformidade, briefing de linha. Este módulo te dá o filtro pra saber qual das 5 é a #1 pra testar segunda.
+- **"Já vi colega usando IA pra escrever email — mas não vi ninguém usar pra apontamento ou DDS."** Porque falta método. Este módulo mostra que o padrão é o mesmo (IPO) — muda só o que entra.
+- **"Se eu levar uma proposta 'usar IA na linha' pro meu supervisor, ele pede número — e eu não tenho."** Você vai sair com R$/mês por tarefa, ranking impresso, e a #1 testada. Argumento pronto, não achismo.
 
 **No fim deste módulo você vai conseguir, na prática:**
 
@@ -61,27 +61,57 @@ E o grupo por área ajuda: quem vive a mesma dor enxerga coisa no seu processo q
 
 ---
 
+## O padrão universal · toda tarefa se desmonta em 3 pedaços
+
+Entra → processa → sai. Isso vale pra apontamento de turno, pra fechamento financeiro, pra DDS, pra briefing. A IA rende quando o que entra é claro e o que sai é definido — o meio é onde ela ajuda.
+
+**01 · Entra — insumo bruto**
+Anotações, apontamentos, extratos, foto de quadro, planilha herdada, transcrição de reunião.
+*Na Mallory:* planilha de apontamentos do turno · comentários de pesquisa de clima · notas de reunião de fechamento.
+
+**02 · Processa — onde a IA rende**
+Categoriza, resume, extrai padrões, redige rascunho, traduz intenção em fórmula, digitaliza imagem em tabela.
+*Regra de ouro:* se você conseguisse explicar a etapa pro colega novo do turno em 10 segundos, a IA consegue assistir.
+
+**03 · Sai — produto final**
+Documento padrão, tabela categorizada, comunicado, DDS, briefing, relatório.
+*Na Mallory:* briefing pro próximo turno · consolidado de não-conformidades por tipo · rascunho de comunicado de mudança de escala.
+
+> **Resultado prático:** IPO te dá o mapa da tarefa; a [Calculadora ROI](../artefatos/calculadora-roi.html) te dá o valor — horas economizadas × frequência × custo/hora. Sem R$ estimado, é ideia; com R$, é proposta.
+
+---
+
 ## O conceito em 5 pontos
 
 ### 1. Tarefa repetitiva e tarefa de julgamento são bichos diferentes
 
 Repetitiva: acontece toda semana, segue o mesmo padrão, termina em documento ou mensagem. De julgamento: depende da sua experiência, do contexto da hora, de estar lá. O relatório de turno é repetitivo; decidir se a linha para é julgamento. A IA assiste a primeira; a segunda é sua.
 
+*Aterrissa em Mallory:* consolidar apontamento é repetitiva; decidir advertência de operador é julgamento.
+
 ### 2. Toda tarefa se desmonta em três pedaços: entra → processa → sai
 
 O que **entra** (anotações, apontamentos, histórico), o que você **faz** com isso (organiza, resume, prioriza), o que **sai** (relatório, OS, comunicado). Desmonte assim e a resposta aparece sozinha: a IA é boa no meio — o processar — desde que você dê a entrada e revise a saída.
+
+*Aterrissa em Mallory:* apontamentos brutos entram; categorização acontece; briefing pro próximo turno sai.
 
 ### 3. O teste da assistência: uma pergunta, resposta em 10 segundos
 
 "Se eu explicasse essa parte da tarefa para uma pessoa nova, ela conseguiria fazer com as informações que estão no papel?" Se sim, a IA pode assistir. Se a resposta é "não, precisa de vivência" — essa parte fica com você. Simples assim, e funciona para qualquer área da fábrica ao escritório.
 
+*Aterrissa em Mallory:* "se eu explicasse essa tarefa pro colega novo do turno, ele fazia com o que está no papel?"
+
 ### 4. Em grupo por área, o mapeamento rende o dobro
 
 Seu colega de setor conhece as mesmas dores e enxerga as suas tarefas de fora. Na dinâmica, cada tarefa que um mapeia lembra outra que o vizinho esqueceu. Por isso o exercício central deste módulo é em grupo — e o grupo apresenta junto no M6.
 
+*Aterrissa em Mallory:* colega da injetora vê a sua planilha herdada com olhos frescos — e vice-versa.
+
 ### 5. O que fica de fora — sem negociação
 
 Decisão sobre pessoa. Negociação com fornecedor ou cliente. Sinal físico da máquina — barulho, vibração, cheiro. E qualquer registro que exija dado sensível real no prompt: esse você trata com dado fictício ou desidentificado, como o M4 vai detalhar.
+
+*Aterrissa em Mallory:* sinal físico da máquina (vibração, cheiro), advertência a operador, aprovação final de qualidade.
 
 ---
 
