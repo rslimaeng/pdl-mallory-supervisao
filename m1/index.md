@@ -75,6 +75,13 @@ A IA **expande o campo de visão**. Você pergunta "que perguntas eu deveria est
 
 A IA entra no seu dia de 3 formas. **Este vocabulário te acompanha do M1 ao M6** — vale fixar. Regra de ouro: quanto maior o impacto ou o risco da decisão, mais Manual o modo. Comece pelo Autopiloto na próxima semana.
 
+> 💡 **Se você viu a ementa, é a mesma coisa com outro nome.**
+> A ementa fala em **Copiloto · Automação · Agente**. Aqui usamos **Colaboração · Autopiloto · Manual** — nomes mais precisos pra este treino:
+> - **Colaboração** = Copiloto da ementa (IA te ajuda a pensar, você conduz)
+> - **Autopiloto** = Automação da ementa (IA faz o rascunho, você revisa e assina)
+> - **Manual** = a IA fica fora (decisão sobre pessoa, julgamento de segurança, assinatura final) — não estava na ementa; adicionamos por rigor
+> - **Agente** da ementa (IA executa **fora do chat**, mexe em arquivos, roda tarefas) — é o assunto do **M5 (Claude Cowork)**. Fica pra depois.
+
 ---
 
 ## Onde você quer chegar hoje: os 7 níveis de uso da IA
@@ -116,6 +123,16 @@ Regra prática: **se a decisão envolve uma dessas 4 categorias, é Manual.** Se
 | Resumir instrução de trabalho ou procedimento longo | Substituir a leitura do sinal físico da máquina |
 | Organizar anotações bagunçadas do turno em texto claro | Dar o fato exato que você não forneceu (parâmetro, histórico, norma) |
 | Explicar um termo ou conceito que apareceu num documento | Aprovar registro de qualidade ou segurança — isso é assinatura sua |
+
+---
+
+## Amplificador, não substituto
+
+Quem tem 10 anos de fábrica sabe coisas que a IA não tem como saber. **Como o refugo do lote 4-B tende a subir na virada de turno de segunda.** **Que a máquina 3 precisa de setup mais lento com o material do fornecedor X.** **Qual operador precisa de um lembrete a mais nas primeiras semanas.** Nada disso está em livro, curso ou base de dados de treinamento da IA.
+
+A IA chega ao trabalho **sem esse contexto** — e por isso responde genérico. Quando você dá contexto no prompt (na próxima página, o M2 formaliza como), você está fazendo o oposto de ser substituído: você está **transferindo pra IA parte do que sabe pra ela virar útil pra você**.
+
+**A regra da casa:** IA sem seu know-how vira palestra. Seu know-how sem IA vira retrabalho. Os dois juntos é o que este treinamento ensina.
 
 ---
 
