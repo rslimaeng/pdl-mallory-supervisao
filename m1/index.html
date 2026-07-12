@@ -186,75 +186,9 @@
 
     <section class="section">
       <h2>Os 3 modos de uso</h2>
-      <p>A IA entra na fábrica de 3 formas. Clique para expandir cada modo:</p>
-      <div class="modos-accordion">
+      <p>A IA entra no seu dia de 3 formas. <strong>Este vocabulário te acompanha do M1 ao M6</strong> — vale fixar. Regra de ouro: quanto maior o impacto ou o risco da decisão, mais Manual o modo. Comece pelo Autopiloto na próxima semana.</p>
 
-        <div class="modo-card open">
-          <button class="modo-header" aria-expanded="true">
-            <span class="modo-numero" aria-hidden="true">1</span>
-            <span>
-              <span class="modo-titulo">Autopiloto</span>
-              <span class="modo-resumo">IA executa, você revisa</span>
-            </span>
-            <span class="modo-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="modo-body">
-            <dl>
-              <dt>Como funciona</dt>
-              <dd>Tarefa repetitiva que segue sempre o mesmo padrão. Você define uma vez, ela roda. Você olha a saída e libera.</dd>
-              <dt>Exemplo Mallory</dt>
-              <dd>Transformar os apontamentos brutos da semana em registro padrão de qualidade. Toda quinta, mesmo formato.</dd>
-              <dt>Quando NÃO usar</dt>
-              <dd>Quando o caso é único e exige julgamento novo. Autopiloto vale para o repetitivo — o excepcional pede olho humano.</dd>
-            </dl>
-          </div>
-        </div>
-
-        <div class="modo-card">
-          <button class="modo-header" aria-expanded="false">
-            <span class="modo-numero" aria-hidden="true">2</span>
-            <span>
-              <span class="modo-titulo">Colaboração</span>
-              <span class="modo-resumo">IA e você pensam juntos</span>
-            </span>
-            <span class="modo-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="modo-body">
-            <dl>
-              <dt>Como funciona</dt>
-              <dd>Você conduz, ela apoia. Você dá contexto, ela rascunha; você critica, ela refaz.</dd>
-              <dt>Exemplo Mallory</dt>
-              <dd>O Programador de Produção rascunha com ela o comunicado da mudança de sequência da linha por causa do gargalo no molde. Ela sugere estrutura; ele decide o tom e ajusta o que a equipe precisa entender.</dd>
-              <dt>Quando NÃO usar</dt>
-              <dd>Quando você quer a resposta pronta sem revisar. Colaboração pede que você conduza — se abrir mão, sai genérico.</dd>
-            </dl>
-          </div>
-        </div>
-
-        <div class="modo-card">
-          <button class="modo-header" aria-expanded="false">
-            <span class="modo-numero" aria-hidden="true">3</span>
-            <span>
-              <span class="modo-titulo">Manual</span>
-              <span class="modo-resumo">IA inspira, você decide</span>
-            </span>
-            <span class="modo-chevron" aria-hidden="true">▾</span>
-          </button>
-          <div class="modo-body">
-            <dl>
-              <dt>Como funciona</dt>
-              <dd>Território seu. A IA no máximo dá referência; a decisão, o registro e a responsabilidade continuam com você.</dd>
-              <dt>Exemplo Mallory</dt>
-              <dd>Aplicar advertência para operador, aprovar registro de segurança, ler o barulho da injetora antes dela quebrar.</dd>
-              <dt>Quando NÃO usar</dt>
-              <dd>O Manual não tem exceção. Se a decisão envolve pessoa, sinal físico ou assinatura sua, é sempre Manual.</dd>
-            </dl>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="modos-explorador" id="modos-explorador" aria-label="Explorador dos 3 modos">
+      <div class="modos-explorador" id="modos-explorador" data-trilha="t1" aria-label="Explorador dos 3 modos">
         <div class="explorador-header">
           <span class="explorador-kicker">EXPLORADOR</span>
           <h3>Os 3 modos com exemplo</h3>
@@ -299,7 +233,7 @@
         </div>
         <div class="nivel-card" role="tabpanel" id="nivel-card"></div>
       </div>
-      <p><strong>Meta do dia:</strong> sair do treinamento em <strong>N2 sólido</strong> — sabendo perguntar, avaliando a resposta com critério, com pelo menos 3 prompts que funcionaram e você guardou. <strong>Meta pós-treinamento (3-6 meses):</strong> N3 — seu contexto salvo, IA respondendo no seu tom.</p>
+      <p><strong>Como avançar de nível:</strong> cada nível tem 1 hábito-chave. N1→N2: escrever prompts estruturados (o M2 desta manhã te ensina o PCTFL). N2→N3: montar seu contexto salvo. N3+: o M6 aponta o caminho.</p>
       <div class="autodiagnostico-cta">
         <p>Quer descobrir seu nível atual com 7 perguntas honestas?</p>
         <button class="btn-primary" id="abrir-autodiagnostico" type="button">Descobrir meu nível →</button>
@@ -382,7 +316,8 @@ algo do dia a dia dele. Sua função é fazer a metade "de papel" do trabalho �
 por ele, nunca operar máquina, nunca substituir julgamento de segurança.
 
 <span class="prompt-marker"># CONTEXTO</span>
-[Aluno preenche 1-2 linhas: o que você faz na Mallory e há quanto tempo]
+[Seu cargo em Mallory — produção / qualidade / RH / manutenção / … — e há
+quanto tempo. 1-2 linhas]
 Exemplo: "Sou supervisor de produção na linha de eletroportáteis, há 12 anos.
 Gerencio turma de ~15 operadores em turno."
 
