@@ -6,18 +6,18 @@ A promessa desta ementa: **onde a IA cabe na rotina da sua área — sim ou não
 
 ---
 
-## Três dores que este módulo cura
+## No fim deste módulo você vai conseguir, na prática
 
-- **"Meu turno tem 5 rotinas que me consomem manhã inteira — mas se me perguntam 'onde a IA entra?' eu trava."** Você tem apontamento, DDS, comunicado pro próximo turno, categorização de não-conformidade, briefing de linha. Este módulo te dá o filtro pra saber qual das 5 é a #1 pra testar segunda.
-- **"Já vi colega usando IA pra escrever email — mas não vi ninguém usar pra apontamento ou DDS."** Porque falta método. Este módulo mostra que o padrão é o mesmo (IPO) — muda só o que entra.
-- **"Se eu levar uma proposta 'usar IA na linha' pro meu supervisor, ele pede número — e eu não tenho."** Você vai sair com R$/mês por tarefa, ranking impresso, e a #1 testada. Argumento pronto, não achismo.
+Cada linha abaixo se transforma em algo que você **faz** — não em algo que você "aprende sobre". A ordem é a ordem em que acontece na aula.
 
-**No fim deste módulo você vai conseguir, na prática:**
-
-- Mapear suas 5 tarefas repetitivas com IPO — **em 15 min, sem consultor**
-- Ranquear as 5 por impacto × facilidade — **matriz 2×2 na sua mão**
-- Testar a #1 do ranking na hora — **com Artifact HTML pra levar pra segunda**
-- Aplicar o mesmo método em qualquer nova tarefa que aparecer — **fica seu, não do treinamento**
+- **Mapear suas 5 tarefas repetitivas com IPO** — em 15 min, sem consultor.
+  <br>*Onde acontece:* Fase 1 do Prompt-âncora, na hands-on de 40 min.
+- **Ranquear as 5 por impacto × facilidade** — matriz 2×2 na sua mão.
+  <br>*Onde acontece:* Fase 2 e Fase 3 do Prompt-âncora, com ranking automático.
+- **Testar a #1 do ranking na hora** — com Artifact HTML pra levar pra segunda.
+  <br>*Onde acontece:* Fase 4 (validação) + botão "Copiar prompt PCTFL" no Artifact.
+- **Aplicar o mesmo método em qualquer nova tarefa que aparecer** — fica seu, não do treinamento.
+  <br>*Onde acontece:* Casa · fim de semana, com a #2 do seu ranking.
 
 ---
 
