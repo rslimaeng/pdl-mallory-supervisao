@@ -1,18 +1,45 @@
-# M3 · IA no Seu Setor: Identificando Oportunidades Reais
+# M3 · Mapa de Oportunidades IA
 
-**Trilha 1 · Módulo 3 de 6 · 1h30**
+**Trilha 1 · Módulo 3 de 6**
 
-Em grupo, por área, você separa o que exige o seu julgamento do que a IA pode assistir.
+A habilidade universal deste módulo: **pegar qualquer tarefa da sua semana e responder — a IA pode entrar aqui, sim ou não? Onde exatamente?** No fim, um mapa das suas 5 tarefas com ranking pronto pra ação.
+
+---
+
+## Três dores que este módulo cura
+
+- **"Sei que a IA pode me ajudar em algo, mas não sei onde começar."** Você viu 3 modos e o PCTFL, e agora precisa de um método pra decidir o que testar primeiro.
+- **"Já testei em uma tarefa e não deu certo — desanimei."** Provavelmente escolheu a tarefa errada. Este módulo dá o filtro pra escolher.
+- **"Não tenho tempo pra experimentar com tudo."** Você tem 3 oportunidades boas na semana — não 30. O ranking mostra as 3.
+
+**No fim deste módulo você vai conseguir, na prática:**
+
+- Mapear suas 5 tarefas repetitivas com IPO — **em 15 min, sem consultor**
+- Ranquear as 5 por impacto × facilidade — **matriz 2×2 na sua mão**
+- Testar a #1 do ranking na hora — **com Artifact HTML pra levar pra segunda**
+- Aplicar o mesmo método em qualquer nova tarefa que aparecer — **fica seu, não do treinamento**
+
+---
+
+## As 3 habilidades deste módulo
+
+| # | Habilidade | Hoje (sem IA) | Com o Claude | Onde pratica | Nível |
+|---|---|---|---|---|---|
+| 1 | Desmontar tarefa em IPO (entra · processa · sai) | análise "no feeling" · trava em tarefa grande | 5 min por tarefa · o que a IA faz e o que fica com você | Exercício momento 1 | L1 |
+| 2 | Pontuar impacto × facilidade | "vou testar essa que dói mais" (raramente termina) | matriz 2×2 · ranking automático · defensável pro chefe | Artifact do momento 2 | L1 → L2 |
+| 3 | Aplicar em qualquer tarefa nova | reinventa toda semana | método fica seu, adapta em 2 min | Casa · fim de semana | L2 |
+
+**Leitura da tabela:** "Hoje" é o que a tarefa custa sem método. "Com o Claude" é o que você mesmo passa a fazer. "Nível" segue os 7 níveis do M1 (L1 estrutura, L2 dados).
 
 ---
 
 ## O contrato deste módulo
 
-**Você ganha:** um método simples para desmontar qualquer tarefa e decidir onde a IA entra — e 5 demonstrações ao vivo com casos reais de fábrica.
+**Você ganha:** o método IPO + matriz 2D + um Artifact HTML com o seu mapa pessoal — pronto pra imprimir e usar na semana.
 
-**Você se compromete a:** mapear as 5 tarefas mais repetitivas da sua semana e, com o seu grupo, escolher 2 oportunidades e testar 1 ao vivo.
+**Você se compromete a:** listar 5 tarefas de verdade da sua semana (não teóricas), pontuar honestamente, e testar a #1 do ranking hoje.
 
-**Tempo de leitura desta página:** 10 min
+**Tempo:** ~15 min de leitura · ~40 min de hands-on.
 
 ---
 
@@ -20,17 +47,17 @@ Em grupo, por área, você separa o que exige o seu julgamento do que a IA pode 
 
 | Você entra com | O que acontece | Você sai com |
 |---|---|---|
-| A lista do M1 e o método PCTFL do M2 | 5 demos ao vivo (OS, relatório de turno, checklist, não-conformidade, DDS) e dinâmica em grupos por área | 2 oportunidades concretas mapeadas na sua área — e 1 delas testada ao vivo |
+| PCTFL do M2 + 5 tarefas repetitivas da sua semana | Método IPO · demo com caso universal (planilha herdada) · matriz 2×2 · Artifact ao vivo | Artifact HTML com suas 5 tarefas ranqueadas + #1 testada + método pra aplicar em qualquer tarefa nova |
 
 ---
 
 ## Por que isso importa aqui dentro
 
-O Programador de Produção precisa avisar a supervisão que a sequência da linha de injetoras vai mudar por causa do gargalo no molde. O Supervisor de Manutenção precisa transformar o histórico de falhas da injetora em prioridade de OS. A Técnica de Segurança precisa do DDS de segunda. São áreas diferentes, mas a estrutura é a mesma: informação entra, alguém organiza, documento sai.
+Toda semana você faz umas 5 tarefas que se parecem: alguma coisa entra (anotações, planilha, lista), você organiza (categoriza, resume, prioriza), sai um documento (relatório, OS, comunicado). É o mesmo padrão do supervisor de injetoras, do técnico de qualidade, do coordenador de importação, do analista fiscal.
 
-Esse é o padrão que você vai aprender a enxergar. Não é "onde usar IA na Mallory" em geral — é onde usar na **sua** área, nas tarefas que já existem. A ISO 9001 já ensinou esta casa a mapear processo; hoje você aplica o mesmo olhar com uma pergunta nova.
+**O padrão universal — IPO (entra · processa · sai) — vale pra fábrica e escritório.** A IA rende sempre no **processa**, quando o que entra é claro e o que sai é definido. Este módulo te dá o filtro pra achar onde isso já acontece na sua semana.
 
-E você não faz isso sozinho. O grupo é por afinidade de área de propósito: quem é de PCP enxerga coisa no seu processo que você não vê — e vice-versa.
+E o grupo por área ajuda: quem vive a mesma dor enxerga coisa no seu processo que você não vê — e vice-versa.
 
 ---
 
@@ -69,65 +96,199 @@ Decisão sobre pessoa. Negociação com fornecedor ou cliente. Sinal físico da 
 
 ---
 
-## Prompt-âncora do módulo
+## Caso-âncora universal: a planilha herdada
 
-O caso mais universal da trilha: o relatório de passagem de turno. Roda como está — os dados são fictícios:
+Você recebeu uma planilha de outro colega (ou do sistema legado) com 200 linhas: apontamentos misturados, sem categoria, algumas linhas sem valor, códigos que ninguém mais lembra. O chefe pede um resumo até amanhã.
 
-```text
-# PAPEL
-Você é um líder de produção experiente em fábrica de eletroportáteis.
+**Sem IA:** 2 horas categorizando manualmente. Se pular alguma, entra erro no resumo.
+**Com IA (modo Colaboração + PCTFL do M2):** a IA lê, categoriza por grupo, aponta linhas duvidosas com ⚠️, gera o resumo. Você revisa em 15 min.
 
-# CONTEXTO
-Estou fechando o turno da manhã na área de injetoras. Minhas anotações brutas:
-- linha 2 parou 35 min, molde da air fryer travou, ferramentaria atuou, liberado 10h40
-- produção: 4.200 peças (meta 4.500)
-- 1 operador remanejado da linha 4 para cobrir falta
-- pendência: molde da linha 2 precisa de revisão preventiva, ferramentaria avisada
-- turno da tarde precisa priorizar reposição das 300 peças
+**Por que este caso é universal:** herança de planilha acontece em toda área. Quem é da fábrica herda apontamento de turno; quem é do administrativo herda extrato, contrato ou pesquisa. **O método é o mesmo — muda só a planilha.**
 
-# TAREFA
-Organize essas anotações no relatório de passagem de turno para o supervisor da tarde.
+**Onde isso mora na Mallory:**
+- Consolidar apontamentos de turno da semana (produção)
+- Categorizar não-conformidades por tipo de defeito (qualidade)
+- Reorganizar checklist de segurança em ordem de prioridade (SST)
+- Resumir DDS de 4 semanas em 1 tabela (RH · SST)
+- Limpar comunicações da linha em 1 briefing pro próximo turno (supervisão)
 
-# FORMATO
-4 blocos: Paradas (com horário e causa) · Produção (realizado × meta) ·
-Pessoal · Pendências para o próximo turno. Máximo 15 linhas, direto ao ponto.
-
-# LIMITAÇÕES
-Se faltar informação, pergunte. Não invente.
-Use apenas os números das minhas anotações — não complete lacunas com estimativa.
-```
-
-Na demonstração ao vivo, este mesmo padrão resolve os outros casos: a OS de manutenção a partir do histórico de falhas, o checklist de qualidade, o registro de não-conformidade e o comunicado de mudança de sequência da linha.
+Mesmo método. Muda só a entrada.
 
 ---
 
-## Exercício
+## Prompt-âncora do módulo — mapa das suas oportunidades gera Artifact
 
-### Camada 1 — Básico (todos · 10-15 min)
+O prompt roda como está no [Claude Pro](https://claude.ai). Ele executa em 3 fases (você valida cada uma) e no fim gera um **Artifact HTML interativo** com a matriz 2×2 das suas oportunidades — pra imprimir e levar pra segunda-feira.
 
-**Objetivo:** mapear as 5 tarefas mais repetitivas da sua semana e escolher, em grupo, 2 oportunidades.
+### Prompt 0 · Pré-preparo (opcional) — Se você travar em listar suas 5 tarefas
 
-**Passo a passo:**
-1. Individual (5 min): liste suas 5 tarefas mais repetitivas. Use o roteiro: o que entra → o que você faz → o que sai.
-2. Para cada uma, aplique o teste da assistência: "uma pessoa nova faria com o que está no papel?"
-3. No grupo (por área): cada um lê sua lista. Marquem as tarefas que apareceram em mais de uma lista — essas são as fortes.
-4. Escolham as 2 oportunidades do grupo: as mais frequentes e mais fáceis de testar.
+```text
+# PAPEL
+Você é um consultor especialista em ajudar profissionais não-técnicos a mapear
+rotina de trabalho — sem jargão.
 
-**Resultado esperado:** a lista individual de 5 tarefas + as 2 oportunidades do grupo escritas em uma frase cada.
+# CONTEXTO
+[Sou/Trabalho como] [seu cargo em Mallory] há [X] anos.
+Estou tentando listar minhas 5 tarefas mais repetitivas da semana e travei —
+sinto que faço "várias coisas", mas não consigo nomear 5 concretas.
 
-**Como avaliar:** cada oportunidade tem que caber na frase "toda semana a gente [tarefa], e a IA pode assistir a parte de [pedaço]". Se não cabe, está vaga — refine.
+# TAREFA
+Me faça 5 perguntas dirigidas (uma por vez, esperando minha resposta) pra
+extrair minhas 5 tarefas repetitivas. Use gatilhos como "toda segunda você...",
+"quando fecha o mês/turno...", "quando abre um novo cliente/pedido/OS...".
+No fim, me devolva a lista das 5 tarefas em bullets curtos.
 
-### Camada 2 — Desafio (para quem terminou · +10-15 min)
+# FORMATO
+Perguntas 1 por vez. Ao fim, lista numerada de 5 tarefas + 1 linha de contexto cada.
 
-**Objetivo:** testar 1 das 2 oportunidades ao vivo, agora.
+# LIMITAÇÕES
+Se eu responder algo genérico ("faço muita coisa"), pergunte mais.
+Não invente tarefas que eu não citei.
+```
 
-**Passo a passo:**
-1. Escolham a oportunidade mais fácil das 2.
-2. Montem o prompt PCTFL: copiem a estrutura do prompt-âncora e troquem CONTEXTO e TAREFA pela tarefa escolhida. Usem dados fictícios ou troquem nomes e números reais por inventados.
-3. Rodem no celular de um do grupo. Apliquem a validação de 30 segundos do M2.
-4. Registrem em 2 linhas: funcionou? O que precisaria ajustar para usar de verdade?
+**Prompt-âncora — Mapa de Oportunidades (Colaboração · gera Artifact)**
 
-**Resultado esperado:** 1 oportunidade testada, com veredito honesto do grupo.
+Cole no Claude Pro (dentro de um Project novo, ou conversa nova).
+
+```text
+# PAPEL
+Você é uma consultora sênior em transformação de rotina de trabalho com IA.
+Já ajudou centenas de profissionais a sair do "sei que devia usar" pro
+"testei essa semana em 3 tarefas concretas".
+
+# CONTEXTO
+[Sou/Trabalho como] [seu cargo em Mallory] há [X] anos.
+Minhas 5 tarefas mais repetitivas da semana (ou saída do Prompt 0):
+1. [tarefa 1 — ex.: consolidar apontamentos de turno]
+2. [tarefa 2 — ex.: escrever DDS de segunda]
+3. [tarefa 3 — ex.: categorizar não-conformidades da semana]
+4. [tarefa 4 — ex.: montar checklist da inspeção de qualidade]
+5. [tarefa 5 — ex.: redigir comunicado de mudança de linha pro próximo turno]
+
+# TAREFA
+Execute em 3 fases, PARANDO em cada uma pra minha validação:
+
+1. **IPO por tarefa** — pra cada uma das 5, desmonte em:
+   · **Entra** (o que você recebe — dados brutos, anotações, arquivo)
+   · **Processa** (o que você faz com isso hoje — categorizar, resumir, redigir, priorizar)
+   · **Sai** (o produto final — documento, mensagem, tabela)
+   Aponte também: nesta tarefa, **onde exatamente a IA pode entrar?**
+   (regra: IA rende no "processa" quando entrada é clara e saída é definida)
+
+2. **Pontuação impacto × facilidade** — pra cada tarefa, pontue 1-5:
+   · **Impacto** — quanto tempo/dor a IA remove por semana se der certo (5 = economiza 2h+/semana, 1 = economiza 15min ou menos)
+   · **Facilidade** — dá pra testar amanhã, sem pedir permissão, com o Claude já disponível? (5 = testo em 20 min, 1 = precisa integrar sistema)
+   Explique cada nota em 1 linha.
+
+3. **Ranking + top 1** — ranqueie por (Impacto × Facilidade). Aponte a #1 (a que **você deveria testar hoje**) e explique em 2 linhas por que ela ganhou.
+
+# FORMATO
+Fase 1 em tabela (Tarefa · Entra · Processa · Sai · Onde a IA entra).
+Fase 2 em tabela (Tarefa · Impacto · Facilidade · Justificativa I · Justificativa F).
+Fase 3 em ranking numerado + parágrafo de 2 linhas explicando o #1.
+
+# LIMITAÇÕES
+- Se eu descrever uma tarefa vaga ("mexer com relatório"), pergunte antes de pontuar.
+- Não invente entrada/saída — pergunte se ficar em dúvida.
+- Não pontue 5 em impacto sem justificativa concreta.
+
+FORMATO DE ENTREGA (2 partes — ORDEM OBRIGATÓRIA)
+Só gere o Artifact APÓS eu validar as 3 fases. Não antecipe.
+
+1. Análise textual completa das 3 fases.
+
+2. Artifact HTML self-contained interativo — Mapa de Oportunidades IA:
+   · Paleta Slate Mallory: fundo #262A35, painel #353A45, texto #E8ECF3, azul #4AA6D7,
+     amarelo #F7AC19, verde #65A941, vermelho #D72C35.
+     Fontes Archivo (títulos, 500-800) + Inter (corpo, 400-600) + JetBrains Mono
+     (labels, 400-500) via Google Fonts.
+   · Header: eyebrow "MAPA DE OPORTUNIDADES · MALLORY · TRILHA 1" (mono) +
+     título Archivo "Meu mapa da semana" + subtítulo Inter "5 tarefas · IPO · matriz 2×2
+     impacto × facilidade" + botão 🖨️ imprimir (window.print).
+   · **Matriz 2×2 SVG**: eixos "Impacto ↑" (vertical) e "Facilidade →" (horizontal),
+     4 quadrantes rotulados (Q1: baixo impacto+baixa facilidade "adiar", Q2: baixo impacto+alta
+     facilidade "adiar mesmo assim", Q3: alto impacto+baixa facilidade "estruturar",
+     Q4: alto impacto+alta facilidade "**FAZER HOJE**" — realçado em amarelo #F7AC19).
+     Cada tarefa vira um dot na matriz na posição (facilidade × 100, 100 - impacto × 100),
+     dot #4AA6D7 com número dentro (1-5 conforme ranking). Tooltip no hover: nome da tarefa.
+   · **Tabela de tarefas** abaixo da matriz: 5 linhas com Nome (input text editável) ·
+     Entra · Processa · Sai (todos inputs) · Impacto (slider 1-5) · Facilidade (slider 1-5)
+     · Ranking (calculado, número dentro de círculo colorido).
+     Ao mudar qualquer slider, matriz e ranking recalculam ao vivo.
+   · **Card top 1** no rodapé destacando a tarefa #1 do ranking com fundo âmbar #F7AC19 20%
+     transparente + borda âmbar + label "TESTE ESSA HOJE" (mono) + botão "Copiar
+     prompt PCTFL pra essa tarefa" que joga no clipboard um PCTFL vazio com Papel/
+     Contexto/Tarefa/Formato/Limitações/Critério de Sucesso pré-preenchidos com a
+     tarefa selecionada.
+   · **Estado em localStorage** (chave `m3-mapa-oportunidades-t1`) — recarregar preserva.
+   · **@media print A4 paisagem** — todos os inputs viram texto, matriz mantém, botões
+     escondidos.
+   · Rodapé mono: "PDL 2026 · Mallory Eletroportáteis · Trilha 1 · Supervisão ·
+     @iacomrafael".
+   · JavaScript vanilla, zero framework, zero dependência externa além do Google Fonts.
+```
+
+**Prompt 2 · Refino — Pressionar o mapa antes de rodar**
+
+Cole quando o Claude entregar as 3 fases, mas ANTES de validar pra gerar o Artifact:
+
+```text
+# PAPEL
+Você é um advogado do diabo — ex-consultor de campo que já viu muito mapa
+bonito virar zero execução.
+
+# CONTEXTO
+Cola abaixo o mapa das 3 fases que acabamos de fazer.
+
+# TAREFA
+Pressione o mapa em 3 ângulos, direto ao ponto:
+
+1. **Tarefa vaga:** aponte qualquer uma das 5 tarefas que ainda soa genérica
+   ("mexer com relatório"). Reescreva mais específica ou peça a pergunta pra
+   deixar concreta.
+2. **Nota infantil:** ache pontuações que provavelmente foram torcida
+   ("dei 5 em impacto porque me dá raiva"). Recalibra com critério objetivo.
+3. **Top 1 realista:** o #1 do ranking pode ser testado com o Claude Pro que
+   eu tenho hoje, sem integrar sistema, sem pedir permissão? Se não, aponte o
+   próximo do ranking que é.
+
+# FORMATO
+3 blocos em ordem. Cada um em 3-5 linhas.
+
+# LIMITAÇÕES
+Se estiver tudo bem, diga que passou. Não crie problema pra parecer útil.
+
+MAPA:
+[cole as 3 fases da resposta anterior aqui]
+```
+
+*(Depois do refino, volte pro Claude e valide as 3 fases pra ele gerar o Artifact.)*
+
+---
+
+## Momento hands-on — 40 min pra o mapa da sua semana
+
+**Habilidade destravada aqui:** você chega com "5 tarefas na cabeça". Sai com **mapa impresso das 5 tarefas ranqueadas** + a #1 testada + método pra aplicar em qualquer tarefa nova.
+
+**O que a IA faz**
+- Desmonta cada tarefa em IPO com você (via Prompt 0 se precisar)
+- Executa o Prompt-âncora nas 3 fases
+- Gera o Artifact HTML interativo com sua matriz 2×2
+
+**O que você faz**
+- Lista 5 tarefas de verdade (não teóricas)
+- Pontua honestamente impacto e facilidade
+- Passa pelo Prompt 2 (advogado do diabo) antes de gerar o Artifact
+- Roda o #1 do ranking usando o botão "Copiar prompt PCTFL"
+
+**Passo a passo** (~40 min):
+
+1. **Individual** (10 min): abra o Claude Pro no celular ou no computador. Se travou nas 5 tarefas, cole o **Prompt 0** e responda as perguntas. Se não travou, pule pro passo 2.
+2. **Individual** (15 min): cole o **Prompt-âncora**, valide fase por fase, cole o **Prompt 2** pra refinar, depois autorize o Artifact.
+3. **Em grupo por área** (10 min): abram os Artifacts lado a lado. Cada um mostra o próprio #1 do ranking. Discutam: as tarefas #1 do grupo se parecem? Alguém pontuou algo que o vizinho enxergaria diferente?
+4. **Individual** (5 min): rode o #1 do ranking usando o botão "Copiar prompt PCTFL" do Artifact. Preencha o PCTFL. Rode. Aplique a validação de 30s do M2.
+
+**Marco ✓:** você sai com o Artifact impresso (ou salvo) e a #1 testada com veredito honesto ("serve pra segunda" / "precisa refinar").
 
 **Como avaliar:** o teste vale mesmo se o resultado for "ainda não serve" — saber por que não serviu já é mapa. O que não vale é não testar.
 
@@ -152,7 +313,7 @@ Na demonstração ao vivo, este mesmo padrão resolve os outros casos: a OS de m
 ---
 
 > 🟣 **Marco: o que você leva para a Mallory na 2ª feira**
-> Até sexta-feira, execute na sua rotina real 1 das 2 oportunidades mapeadas — com dado que pode usar — e registre o antes e depois em 3 linhas (quanto tempo levava, quanto levou, o que ajustou).
+> Até sexta-feira, execute na sua rotina real 1 das tarefas do topo do seu mapa — com dado que pode usar — e registre o antes e depois em 3 linhas (quanto tempo levava, quanto levou, o que ajustou).
 > Como saber que aconteceu: o registro de 3 linhas existe e o documento gerado foi usado.
 
 ---
