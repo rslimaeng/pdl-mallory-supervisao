@@ -25,7 +25,7 @@ A promessa desta ementa: **onde a IA cabe na rotina da sua área — sim ou não
 
 | # | Habilidade | Hoje (sem IA) | Com o Claude | Onde pratica | Nível |
 |---|---|---|---|---|---|
-| 1 | Desmontar tarefa em IPO (entra · processa · sai) | análise "no feeling" · trava em tarefa grande | 5 min por tarefa · o que a IA faz e o que fica com você | Exercício momento 1 | L1 |
+| 1 | Desmontar tarefa em IPO (entrada · processo · saída) | análise "no feeling" · trava em tarefa grande | 5 min por tarefa · o que a IA faz e o que fica com você | Exercício momento 1 | L1 |
 | 2 | Pontuar impacto × facilidade | "vou testar essa que dói mais" (raramente termina) | matriz 2×2 · ranking automático · defensável pro chefe | Artifact do momento 2 | L1 → L2 |
 | 3 | Aplicar em qualquer tarefa nova | reinventa toda semana | método fica seu, adapta em 2 min | Casa · fim de semana | L2 |
 
@@ -55,7 +55,7 @@ A promessa desta ementa: **onde a IA cabe na rotina da sua área — sim ou não
 
 Toda semana você faz umas 5 tarefas que se parecem: alguma coisa entra (anotações, planilha, lista), você organiza (categoriza, resume, prioriza), sai um documento (relatório, OS, comunicado). É o mesmo padrão do supervisor de injetoras, do técnico de qualidade, do coordenador de importação, do analista fiscal.
 
-**O padrão universal — IPO (entra · processa · sai) — vale pra fábrica e escritório.** A IA rende sempre no **processa**, quando o que entra é claro e o que sai é definido. Este módulo te dá o filtro pra achar onde isso já acontece na sua semana.
+**O padrão universal — IPO (entrada · processo · saída) — vale pra fábrica e escritório.** A IA rende sempre no **processo**, quando a entrada é clara e a saída é definida. Este módulo te dá o filtro pra achar onde isso já acontece na sua semana.
 
 E o grupo por área ajuda: quem vive a mesma dor enxerga coisa no seu processo que você não vê — e vice-versa.
 
@@ -63,17 +63,17 @@ E o grupo por área ajuda: quem vive a mesma dor enxerga coisa no seu processo q
 
 ## O padrão universal · toda tarefa se desmonta em 3 pedaços
 
-Entra → processa → sai. Isso vale pra apontamento de turno, pra fechamento financeiro, pra DDS, pra briefing. A IA rende quando o que entra é claro e o que sai é definido — o meio é onde ela ajuda.
+Entrada → processo → saída. Isso vale pra apontamento de turno, pra fechamento financeiro, pra DDS, pra briefing. A IA rende quando a entrada é clara e a saída é definida — o meio é onde ela ajuda.
 
-**01 · Entra — insumo bruto**
+**01 · Entrada — insumo bruto**
 Anotações, apontamentos, extratos, foto de quadro, planilha herdada, transcrição de reunião.
 *Na Mallory:* planilha de apontamentos do turno · comentários de pesquisa de clima · notas de reunião de fechamento.
 
-**02 · Processa — onde a IA rende**
+**02 · Processo — onde a IA rende**
 Categoriza, resume, extrai padrões, redige rascunho, traduz intenção em fórmula, digitaliza imagem em tabela.
 *Regra de ouro:* se você conseguisse explicar a etapa pro colega novo do turno em 10 segundos, a IA consegue assistir.
 
-**03 · Sai — produto final**
+**03 · Saída — produto final**
 Documento padrão, tabela categorizada, comunicado, DDS, briefing, relatório.
 *Na Mallory:* briefing pro próximo turno · consolidado de não-conformidades por tipo · rascunho de comunicado de mudança de escala.
 
@@ -89,7 +89,7 @@ Repetitiva: acontece toda semana, segue o mesmo padrão, termina em documento ou
 
 *Aterrissa em Mallory:* consolidar apontamento é repetitiva; decidir advertência de operador é julgamento.
 
-### 2. Toda tarefa se desmonta em três pedaços: entra → processa → sai
+### 2. Toda tarefa se desmonta em três pedaços: entrada → processo → saída
 
 O que **entra** (anotações, apontamentos, histórico), o que você **faz** com isso (organiza, resume, prioriza), o que **sai** (relatório, OS, comunicado). Desmonte assim e a resposta aparece sozinha: a IA é boa no meio — o processar — desde que você dê a entrada e revise a saída.
 
@@ -365,7 +365,7 @@ Só gere o Artifact APÓS eu validar as 4 fases. Não antecipe.
 
 | Erro | Sintoma | Causa | Como corrigir |
 |---|---|---|---|
-| Mapear a tarefa gigante | "Usar IA no PCP" — bonito no papel, impossível de testar | Faltou desmontar: entra → processa → sai | Quebre até virar uma tarefa de 30 minutos com documento no final |
+| Mapear a tarefa gigante | "Usar IA no PCP" — bonito no papel, impossível de testar | Faltou desmontar: entrada → processo → saída | Quebre até virar uma tarefa de 30 minutos com documento no final |
 | Escolher a tarefa rara | A oportunidade é o relatório anual — teste fica para dezembro | Escolheu pelo tamanho da dor, não pela frequência | Priorize o que se repete toda semana: o ganho composto vem daí |
 | Levar dado real para o teste | Nome de operador ou parâmetro de molde no prompt da dinâmica | Empolgação no exercício, hábito ainda não formado | Dado fictício no treino, sempre. O M4 fecha essa regra |
 
