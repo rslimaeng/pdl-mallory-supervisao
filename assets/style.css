@@ -2504,3 +2504,78 @@ body.modal-open { overflow: hidden; }
   .prompt-bloco pre { white-space: pre-wrap; word-wrap: break-word; color: #000; background: #f4f4f4; }
   .dor-card, .momento-passo, .mora-card, .prompt-bloco { break-inside: avoid; }
 }
+
+/* 6 Gatilhos M3 v2 · sem emoji · padrão Slate Mallory */
+.gatilhos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.gatilho-card {
+  background: var(--bg-light);
+  border-left: 4px solid var(--accent-blue);
+  border-radius: 4px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.gatilho-card__header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--accent-blue) 25%, transparent);
+}
+
+.gatilho-card__num {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--accent-blue);
+  letter-spacing: 0.02em;
+}
+
+.gatilho-card__nome {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.gatilho-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.gatilho-card__dor,
+.gatilho-card__solucao {
+  color: var(--text-secondary);
+}
+
+.gatilho-card__exemplo-univ,
+.gatilho-card__exemplo-mallory {
+  padding: 0.5rem 0.75rem;
+  border-radius: 3px;
+  background: color-mix(in oklab, var(--bg-dark) 60%, transparent);
+  font-size: 0.85rem;
+}
+
+.gatilho-card__exemplo-mallory {
+  border-left: 2px solid var(--accent-yellow);
+}
+
+.gatilhos-diagnostico {
+  margin-top: 1.5rem;
+}
+
+@media print {
+  .gatilhos-grid { display: block; }
+  .gatilho-card { break-inside: avoid; margin-bottom: 0.75rem; }
+}
