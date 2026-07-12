@@ -48,6 +48,22 @@ Esse módulo te dá o método pra sair desses 3 casos — em 3 exercícios execu
 
 ---
 
+## Vago × Situado — a diferença que muda tudo
+
+O mesmo pedido escrito de dois jeitos. Um recebe o que a internet daria; o outro recebe o que você precisa.
+
+**Exemplo 1 · comunicado**
+- 🔴 **Vago:** "Me ajuda com um comunicado sobre mudança de procedimento pra equipe." → texto genérico, tom impessoal, sem contexto do seu time — e você reescreve.
+- 🟢 **Situado:** "Escreva um comunicado de 10 linhas explicando a nova regra de troca de turno pra minha equipe (14 pessoas, turno da manhã). Tom firme e respeitoso. Termine com pergunta que abre conversa. Sem jargão." → rascunho colável, tom certo, formato pronto — você ajusta 2 detalhes.
+
+**Exemplo 2 · resumo**
+- 🔴 **Vago:** "Como resumir isso aqui?" → resumo padrão, sem hierarquia, sem foco no que importa pra você.
+- 🟢 **Situado:** "Resuma esta ata de reunião em 5 bullets. Destaque: (1) decisões tomadas, (2) responsáveis, (3) prazos. Sem elogio, sem introdução." → 5 bullets acionáveis, direto pra sua próxima mensagem no time.
+
+A diferença não é a IA. É o quanto você **situa** o pedido. O método a seguir — PCTFL — é isso, virado em checklist.
+
+---
+
 ## O conceito em 5 pontos
 
 ### 1. O jeito de perguntar muda a resposta — não é detalhe, é o mecanismo
@@ -72,6 +88,21 @@ Nome ou dado de funcionário. Parâmetro ou especificação de produto e molde. 
 
 ---
 
+## As 6 camadas — PCTFL + Critério de Sucesso
+
+| Letra | Elemento | O que define | Exemplo (Mallory) |
+|---|---|---|---|
+| **P** | Papel | Quem a IA deve ser | Técnico de segurança do trabalho experiente em fábrica de eletroportáteis. |
+| **C** | Contexto | A situação real | DDS de segunda na montagem, tema EPI, equipe de 14 no turno da manhã. |
+| **T** | Tarefa | O que fazer (com verbo claro) | "Escreva o roteiro do DDS de 5 min, com pergunta de abertura e fechamento com compromisso." |
+| **F** | Formato | Como entregar | 3 blocos (abertura · mensagem · fechamento), máx 20 linhas, linguagem falada. |
+| **L** | Limitações | O que NÃO fazer | "Se faltar informação, pergunte. Não invente. Não cite norma ou NR — confirmo na fonte." |
+| **CS** | Critério de Sucesso | Quando a resposta é boa? | Apresento o DDS em 5 min sem ler, e o time entende o compromisso final. |
+
+**Regra de ouro:** quanto mais você preenche o PCTFL+CS, menos a IA precisa adivinhar — e menos chance de alucinação ou resultado genérico. O CS é o ponto que mais sobe a qualidade: transforma "achei ok" em "atende o critério".
+
+---
+
 ## Quando aplicar / Quando NÃO aplicar
 
 | 🟢 Quando aplicar | 🔴 Quando NÃO aplicar |
@@ -89,6 +120,16 @@ Todo prompt tem uma "Tarefa". A qualidade da resposta está sempre em **um únic
 
 **Teste prático:** se você não consegue substituir o verbo da sua Tarefa por outro sem mudar completamente o pedido, você acertou o verbo.
 
+Troque "me ajude" por verbo cirúrgico — a tabela por área:
+
+| Área | Verbo vago | Verbo cirúrgico | Exemplo |
+|---|---|---|---|
+| Escrita | me ajude, faça, veja | escreva, redija, reescreva | "Escreva um comunicado de 10 linhas…" |
+| Análise | analise, veja | liste, compare, aponte | "Liste os 3 pontos que exigem decisão…" |
+| Síntese | resuma, condense | resuma em N bullets, extraia | "Resuma em 5 bullets destacando…" |
+| Estruturação | organize, arrume | classifique, ordene por, agrupe | "Classifique por urgência e responsável…" |
+| Refino | melhore, arruma | reescreva no tom X, ajuste pra público Y | "Reescreva no tom firme + respeitoso…" |
+
 > ⚙️ **Regra prática:** antes de rodar um prompt, sublinhe o verbo da sua Tarefa. Se for "me ajude", "faça", "veja", "melhore" — pare e troque. Só rode com verbo cirúrgico.
 
 ---
@@ -99,6 +140,12 @@ Todo prompt tem uma "Tarefa". A qualidade da resposta está sempre em **um únic
 > - **Autopiloto:** você escreve o PCTFL 1 vez, roda no lote todo (100 apontamentos, 50 e-mails).
 > - **Colaboração:** você escreve o PCTFL, roda, critica, refina em 2ª rodada. O modo dominante hoje.
 > - **Manual:** você nem chega ao PCTFL — a decisão é sua, sem intermédio.
+
+---
+
+## Gerador de prompt — ferramenta viva
+
+Uma ferramenta viva pra montar seu próprio PCTFL+CS: 6 campos à esquerda, o prompt monta sozinho à direita — você copia e cola no Claude. **Está na versão HTML deste módulo** (abra a página no navegador): é o modo Colaboração com método. Lendo só este Markdown? Use o prompt-âncora abaixo como molde e preencha as 6 camadas na mão.
 
 ---
 
@@ -201,6 +248,18 @@ Você aprendeu a escrever um prompt PCTFL. O passo seguinte é transformá-lo em
 **Por que isso importa:** é o salto de "usei IA hoje" para "tenho IA no meu processo". Você deixa de operar com prompts isolados e passa a operar com assistentes especializados.
 
 > 🔮 **No M5 você vai construir o seu.** A partir do prompt-âncora deste módulo, você monta um assistente que fica funcionando pra você — na sua conta, com o seu contexto. Este módulo prepara o método; o M5 prepara a ferramenta.
+
+---
+
+## Entregável do módulo
+
+Ao final do M2, você sai com (marque conforme concluir):
+
+- [ ] Rodei o prompt-âncora do módulo — como está — e li a resposta
+- [ ] Adaptei o Contexto pra minha situação real e rodei de novo
+- [ ] Rodei um 3º prompt totalmente meu com PCTFL completo
+- [ ] Apliquei a validação de 30 segundos (fonte · coerência · meu conhecimento) em pelo menos 1 resposta
+- [ ] Salvei meu prompt-âncora adaptado no meu bloco de notas ou histórico do Claude
 
 ---
 
