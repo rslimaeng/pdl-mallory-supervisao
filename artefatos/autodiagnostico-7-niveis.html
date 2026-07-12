@@ -434,9 +434,9 @@
   <div class="question" data-q="4">
     <div class="question-header">
       <span class="question-num">04</span>
-      <span class="question-text">Você usa 3 ou mais ferramentas de IA e sabe qual delas usar para cada tipo de tarefa?</span>
+      <span class="question-text">Você usa 3+ tipos diferentes de ferramenta de IA (não só chats) e sabe qual usar para cada tarefa?</span>
     </div>
-    <p class="question-hint">Ex.: Claude para redação, ChatGPT para brainstorm, Copilot para código, Gemini para pesquisa — ou similar.</p>
+    <p class="question-hint">Ex.: Claude/ChatGPT (LLM) + Notebook LM (documento longo) + Artifacts/Canvas (prototipar tela) + automação leve (Zapier). Só trocar entre 3 chats não conta.</p>
     <div class="question-actions">
       <button class="btn" data-q="4" data-a="yes">Sim, oriento pelo caso</button>
       <button class="btn" data-q="4" data-a="no">Ainda não</button>
@@ -817,7 +817,7 @@ Se faltar contexto sobre o sistema, pergunte com precisão.`
     let level = 1;
     for (let i = 1; i <= 7; i++) {
       if (state.answers[i] === 'yes') {
-        level = i + 1;
+        level = i;
       } else {
         break;
       }
