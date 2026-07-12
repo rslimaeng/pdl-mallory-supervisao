@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora ROI · Oportunidades de IA · Mallory PDL 2026</title>
+<meta name="description" content="Traduza suas oportunidades do Mapa de Oportunidades em R$/mês e R$/ano. Preencha 5 campos, empilhe várias oportunidades e leve o ranking com valor defensável em 1 minuto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-dark: #262A35;
+    --bg-light: #353A45;
+    --bg-card: rgba(255,255,255,.045);
+    --bg-input: #1F232C;
+    --text: #E8ECF3;
+    --text-muted: #A0A8B8;
+    --text-dim: #6B7385;
+    --accent-blue: #4AA6D7;
+    --accent-yellow: #F7AC19;
+    --accent-green: #65A941;
+    --danger: #D72C35;
+    --border: rgba(255,255,255,.08);
+    --border-strong: rgba(255,255,255,.16);
+    --radius-sm: 6px;
+    --radius: 10px;
+    --radius-lg: 14px;
+    --shadow-md: 0 4px 12px rgba(0,0,0,.28);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,.4);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before, body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: .06;
+    background-repeat: no-repeat;
+    animation: blob 28s ease-in-out infinite;
+  }
+  body::before { background: radial-gradient(circle 400px at 15% 20%, var(--accent-blue), transparent 60%); }
+  body::after { background: radial-gradient(circle 500px at 85% 80%, var(--accent-yellow), transparent 60%); animation-delay: -14s; animation-duration: 32s; }
+  @keyframes blob { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(20px,-30px) scale(1.05);} }
+  @media (prefers-reduced-motion: reduce) { body::before, body::after { animation: none; } }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 40px 20px 96px; }
+
+  .back-link {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  .back-link:hover { color: var(--accent-blue); }
+
+  header { margin-bottom: 28px; }
+  .badge {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+  .badge-artifact { color: var(--accent-blue); background: rgba(74,166,215,.12); margin-bottom: 16px; }
+  h1 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: clamp(26px, 5vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    margin-bottom: 12px;
+  }
+  .subtitle { color: var(--text-muted); font-size: 16px; max-width: 640px; }
+
+  .callout {
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    font-size: 14px;
+    margin: 20px 0;
+  }
+  .callout-info { background: rgba(74,166,215,.08); border-left: 3px solid var(--accent-blue); }
+  .callout-next { background: rgba(247,172,25,.08); border-left: 3px solid var(--accent-yellow); }
+  .callout strong { color: var(--text); }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .card h2 {
+    font-family: 'Archivo', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .card-sub { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; }
+
+  .field-nome-print { margin-bottom: 20px; }
+
+  form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field.full { grid-column: 1 / -1; }
+  @media (max-width: 640px) { form { grid-template-columns: 1fr; } .field.full { grid-column: 1; } }
+
+  label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--text);
+  }
+  .hint { font-size: 12px; color: var(--text-dim); }
+  input, select {
+    width: 100%;
+    background: var(--bg-input);
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+  }
+  input:focus, select:focus { outline: 2px solid var(--accent-blue); outline-offset: 1px; border-color: var(--accent-blue); }
+  select { cursor: pointer; }
+
+  .field-error { color: var(--danger); font-size: 13px; margin-top: 12px; min-height: 0; }
+
+  .form-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+  .btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    border: none;
+    background: var(--accent-blue);
+    color: var(--bg-dark);
+    cursor: pointer;
+    transition: opacity .15s ease;
+  }
+  .btn:hover { opacity: .92; }
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+  }
+  .btn-secondary:hover { background: rgba(74,166,215,.1); }
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    color: var(--text-muted);
+  }
+  .btn-ghost:hover { border-color: var(--accent-blue); color: var(--text); }
+  [hidden] { display: none !important; }
+
+  /* resultado */
+  .numeros-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  @media (max-width: 640px) { .numeros-grid { grid-template-columns: 1fr 1fr; } }
+  .num-cell {
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    text-align: center;
+  }
+  .num-label {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+  .num-valor {
+    display: block;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: clamp(20px, 3.5vw, 28px);
+    line-height: 1.1;
+    color: var(--text);
+  }
+  .classe-badge {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-top: 4px;
+  }
+  .classe-alto { color: var(--accent-green); background: rgba(101,169,65,.14); }
+  .classe-medio { color: var(--accent-yellow); background: rgba(247,172,25,.14); }
+  .classe-baixo { color: var(--text-muted); background: rgba(160,168,184,.12); }
+
+  /* tabela ranking */
+  .table-wrap { overflow-x: auto; }
+  table.ranking-tabela { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .ranking-tabela th, .ranking-tabela td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  .ranking-tabela th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--text-dim);
+    font-weight: 500;
+  }
+  .ranking-tabela tbody tr:nth-child(even) { background: rgba(255,255,255,.02); }
+  .ranking-tabela tbody tr.top1 { border-left: 4px solid var(--accent-green); background: rgba(101,169,65,.06); }
+  .ranking-tabela td.num-rank { font-family: 'Archivo', sans-serif; font-weight: 700; color: var(--accent-blue); }
+  .ranking-tabela .cell-classe { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+  .ranking-tabela td.rm { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .ranking-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+
+  .empty-state { text-align: center; padding: 24px; color: var(--text-dim); font-size: 14px; }
+
+  footer { margin-top: 56px; text-align: center; color: var(--text-dim); font-size: 13px; }
+  footer a { color: var(--accent-blue); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .footer-mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+
+  .print-header { display: none; }
+
+  @media print {
+    @page { size: A4 landscape; margin: 12mm; }
+    body { background: white; color: black; }
+    body::before, body::after { display: none; }
+    .container { padding: 0; max-width: 100%; }
+    .back-link, .form-actions, .ranking-actions, .badge-artifact, .field-nome-print { display: none; }
+    .calc-form-card, .callout-info { display: none; }
+    .card { background: white; border: 1px solid #ccc; box-shadow: none; }
+    .num-cell, .ranking-tabela th, input, select { background: white; color: black; }
+    .num-valor, .num-label, h1, h2, .card-sub { color: black; }
+    .print-header { display: block; margin-bottom: 12px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: black; }
+    .ranking-tabela tbody tr.top1 { background: #eef7e9; }
+    .classe-alto { color: #3d7a1e; }
+    .classe-medio { color: #9a6a06; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <a href="../m3/" class="back-link">← Voltar pra M3</a>
+
+  <header>
+    <span class="badge badge-artifact">M3 · Artefato</span>
+    <h1>Calculadora ROI · Oportunidades de IA</h1>
+    <p class="subtitle">Traduza suas oportunidades do Mapa em R$/mês e R$/ano — pra defender prioridade em 1 minuto.</p>
+    <div class="callout callout-info">
+      <strong>Este número é estimativa, não promessa.</strong> ROI conservador ganha argumento; ROI otimista perde credibilidade na primeira pergunta. Use pra priorizar e defender — não pra contrato.
+    </div>
+  </header>
+
+  <div class="print-header" id="printHeader"></div>
+
+  <section class="card calc-form-card">
+    <h2>Nova oportunidade</h2>
+    <p class="card-sub">Preencha os 5 campos e clique em <strong>Calcular</strong>. Depois, empilhe quantas quiser pra montar o ranking.</p>
+
+    <div class="field field-nome-print full">
+      <label for="participante">Seu nome (aparece só na impressão)</label>
+      <input type="text" id="participante" placeholder="ex: seu nome — opcional, pra levar impresso">
+    </div>
+
+    <form id="oportunidade-form" novalidate>
+      <div class="field full">
+        <label for="nome">1 · Nome da oportunidade</label>
+        <input type="text" id="nome" required placeholder='ex: "Consolidar apontamentos de turno"'>
+      </div>
+
+      <div class="field full">
+        <label for="gatilho">2 · Gatilho</label>
+        <select id="gatilho">
+          <option value="Robô Humano">Robô Humano</option>
+          <option value="Tela em Branco">Tela em Branco</option>
+          <option value="Detetive Cansado">Detetive Cansado</option>
+          <option value="Parceiro de Sparring">Parceiro de Sparring</option>
+          <option value="Tradutor Técnico">Tradutor Técnico</option>
+          <option value="Olho Biônico">Olho Biônico</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="tempoAtual">3 · Tempo atual (horas por execução)</label>
+        <input type="number" id="tempoAtual" step="0.25" min="0.25" placeholder="ex: 2">
+      </div>
+
+      <div class="field">
+        <label for="tempoIa">4 · Tempo estimado com IA (horas por execução)</label>
+        <input type="number" id="tempoIa" step="0.25" min="0.1" placeholder="ex: 0.33">
+      </div>
+
+      <div class="field">
+        <label for="frequencia">5 · Frequência</label>
+        <select id="frequencia">
+          <option value="20">Diária (×20)</option>
+          <option value="4" selected>Semanal (×4)</option>
+          <option value="2">Quinzenal (×2)</option>
+          <option value="1">Mensal (×1)</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="custoHora">6 · Custo/hora estimado (R$)</label>
+        <input type="number" id="custoHora" min="10" placeholder="ex: 40">
+        <span class="hint">Salário bruto ÷ 160. Se não sabe, use média de mercado (Glassdoor).</span>
+      </div>
+    </form>
+
+    <div class="field-error" id="formError" role="alert"></div>
+
+    <div class="form-actions">
+      <button type="button" class="btn" id="calcularBtn">Calcular</button>
+      <button type="button" class="btn btn-secondary" id="adicionarBtn" hidden>Adicionar oportunidade</button>
+    </div>
+  </section>
+
+  <section class="card calc-result" id="resultCard" hidden aria-live="polite">
+    <h2>Resultado desta oportunidade</h2>
+    <p class="card-sub" id="resultNome"></p>
+    <div class="numeros-grid">
+      <div class="num-cell"><span class="num-label">Horas/mês</span><span class="num-valor" id="outHoras">—</span></div>
+      <div class="num-cell"><span class="num-label">ROI R$/mês</span><span class="num-valor" id="outMes">—</span></div>
+      <div class="num-cell"><span class="num-label">ROI R$/ano</span><span class="num-valor" id="outAno">—</span></div>
+      <div class="num-cell"><span class="num-label">Classificação</span><span class="classe-badge" id="outClasse">—</span></div>
+    </div>
+  </section>
+
+  <section class="card calc-ranking" id="rankingCard" hidden>
+    <h2>Ranking das oportunidades</h2>
+    <p class="card-sub">Ordenado por ROI R$/mês. A #1 é a que rende mais — leve essa pro Mapa de Oportunidades.</p>
+    <div class="table-wrap">
+      <table class="ranking-tabela">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Oportunidade</th>
+            <th>Gatilho</th>
+            <th>h/mês</th>
+            <th>R$/mês</th>
+            <th>R$/ano</th>
+            <th>Classe</th>
+          </tr>
+        </thead>
+        <tbody id="rankingBody"></tbody>
+      </table>
+    </div>
+    <div class="ranking-actions">
+      <button type="button" class="btn btn-secondary" id="copiarBtn">Copiar ranking (texto)</button>
+      <button type="button" class="btn btn-ghost" id="imprimirBtn">Imprimir A4</button>
+      <button type="button" class="btn btn-ghost" id="zerarBtn">Zerar tudo</button>
+    </div>
+  </section>
+
+  <div class="callout callout-next">
+    <strong>Próximo passo:</strong> leve a top-1 pro Mapa de Oportunidades (Artifact do M3) e prepare o PCTFL pra rodar no M4.
+  </div>
+
+  <footer>
+    <p class="footer-mono">Calculadora ROI · PDL 2026 · Mallory Eletroportáteis · <a href="https://www.instagram.com/iacomrafael/" target="_blank" rel="noopener">@iacomrafael</a></p>
+    <p style="margin-top:6px;"><a href="../m3/">← Voltar pra M3</a> · <a href="../artefatos/">Artefatos</a> · <a href="../">Hub do treinamento</a></p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  // Chave por trilha, mas arquivo byte-idêntico: deriva de location.pathname.
+  var TRILHA = location.pathname.indexOf('gestao') !== -1 ? 't2' : 't1';
+  var STORE_KEY = 'mallory-calc-roi-' + TRILHA;
+
+  var els = {
+    participante: document.getElementById('participante'),
+    nome: document.getElementById('nome'),
+    gatilho: document.getElementById('gatilho'),
+    tempoAtual: document.getElementById('tempoAtual'),
+    tempoIa: document.getElementById('tempoIa'),
+    frequencia: document.getElementById('frequencia'),
+    custoHora: document.getElementById('custoHora'),
+    formError: document.getElementById('formError'),
+    calcularBtn: document.getElementById('calcularBtn'),
+    adicionarBtn: document.getElementById('adicionarBtn'),
+    resultCard: document.getElementById('resultCard'),
+    resultNome: document.getElementById('resultNome'),
+    outHoras: document.getElementById('outHoras'),
+    outMes: document.getElementById('outMes'),
+    outAno: document.getElementById('outAno'),
+    outClasse: document.getElementById('outClasse'),
+    rankingCard: document.getElementById('rankingCard'),
+    rankingBody: document.getElementById('rankingBody'),
+    copiarBtn: document.getElementById('copiarBtn'),
+    imprimirBtn: document.getElementById('imprimirBtn'),
+    zerarBtn: document.getElementById('zerarBtn'),
+    printHeader: document.getElementById('printHeader')
+  };
+
+  var state = { participante: '', itens: [] };
+  var currentCalc = null; // oportunidade calculada mas ainda não adicionada
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(STORE_KEY);
+      if (raw) {
+        var parsed = JSON.parse(raw);
+        if (parsed && typeof parsed === 'object') {
+          state.participante = parsed.participante || '';
+          state.itens = Array.isArray(parsed.itens) ? parsed.itens : [];
+        }
+      }
+    } catch (e) { /* ignora storage corrompido */ }
+  }
+
+  function save() {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(state)); } catch (e) { /* quota/privado */ }
+  }
+
+  function moneyBRL(n) {
+    return 'R$ ' + Math.round(n).toLocaleString('pt-BR');
+  }
+  function horasFmt(n) {
+    return n.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' h';
+  }
+
+  function classificar(roiMes, horasMes) {
+    if (roiMes >= 1000 || horasMes >= 20) return 'Alto';
+    if (roiMes >= 300 || horasMes >= 5) return 'Médio';
+    return 'Baixo';
+  }
+  function classeSlug(classe) {
+    if (classe === 'Alto') return 'classe-alto';
+    if (classe === 'Médio') return 'classe-medio';
+    return 'classe-baixo';
+  }
+
+  function lerFormulario() {
+    var nome = (els.nome.value || '').trim();
+    var tAtual = parseFloat(els.tempoAtual.value);
+    var tIa = parseFloat(els.tempoIa.value);
+    var freq = parseFloat(els.frequencia.value);
+    var custo = parseFloat(els.custoHora.value);
+
+    if (!nome) return { erro: 'Dê um nome à oportunidade (campo 1).' };
+    if (isNaN(tAtual) || tAtual <= 0) return { erro: 'Preencha o tempo atual em horas (campo 3).' };
+    if (isNaN(tIa) || tIa < 0) return { erro: 'Preencha o tempo estimado com IA (campo 4).' };
+    if (tIa >= tAtual) return { erro: 'O tempo com IA precisa ser menor que o tempo atual — senão não há ganho.' };
+    if (isNaN(custo) || custo <= 0) return { erro: 'Preencha o custo/hora em R$ (campo 6).' };
+
+    var horasMes = (tAtual - tIa) * freq;
+    var roiMes = horasMes * custo;
+    var roiAno = roiMes * 12;
+    var classe = classificar(roiMes, horasMes);
+
+    return {
+      nome: nome,
+      gatilho: els.gatilho.value,
+      tAtual: tAtual, tIa: tIa, freq: freq, custo: custo,
+      horasMes: horasMes, roiMes: roiMes, roiAno: roiAno, classe: classe
+    };
+  }
+
+  function mostrarResultado(op) {
+    els.resultNome.textContent = op.nome + ' · ' + op.gatilho;
+    els.outHoras.textContent = horasFmt(op.horasMes);
+    els.outMes.textContent = moneyBRL(op.roiMes);
+    els.outAno.textContent = moneyBRL(op.roiAno);
+    els.outClasse.textContent = op.classe;
+    els.outClasse.className = 'classe-badge ' + classeSlug(op.classe);
+    els.resultCard.hidden = false;
+    els.adicionarBtn.hidden = false;
+  }
+
+  function calcular() {
+    var r = lerFormulario();
+    if (r.erro) {
+      els.formError.textContent = r.erro;
+      els.resultCard.hidden = true;
+      els.adicionarBtn.hidden = true;
+      currentCalc = null;
+      return;
+    }
+    els.formError.textContent = '';
+    currentCalc = r;
+    mostrarResultado(r);
+  }
+
+  function adicionar() {
+    // recalcula pra pegar edições feitas depois do último Calcular
+    var r = lerFormulario();
+    if (r.erro) { els.formError.textContent = r.erro; return; }
+    state.itens.push(r);
+    save();
+    renderRanking();
+    // limpa form pra próxima
+    els.nome.value = '';
+    els.tempoAtual.value = '';
+    els.tempoIa.value = '';
+    els.custoHora.value = '';
+    els.gatilho.selectedIndex = 0;
+    els.frequencia.value = '4';
+    els.resultCard.hidden = true;
+    els.adicionarBtn.hidden = true;
+    els.formError.textContent = '';
+    currentCalc = null;
+    els.nome.focus();
+  }
+
+  function ordenados() {
+    return state.itens.slice().sort(function (a, b) { return b.roiMes - a.roiMes; });
+  }
+
+  function renderRanking() {
+    var itens = ordenados();
+    if (!itens.length) {
+      els.rankingCard.hidden = true;
+      atualizarPrintHeader();
+      return;
+    }
+    els.rankingCard.hidden = false;
+    var html = '';
+    itens.forEach(function (op, i) {
+      var pos = i + 1;
+      html += '<tr class="' + (pos === 1 ? 'top1' : '') + '">';
+      html += '<td class="num-rank">' + pos + '</td>';
+      html += '<td>' + escapeHtml(op.nome) + '</td>';
+      html += '<td>' + escapeHtml(op.gatilho) + '</td>';
+      html += '<td class="rm">' + horasFmt(op.horasMes) + '</td>';
+      html += '<td class="rm">' + moneyBRL(op.roiMes) + '</td>';
+      html += '<td class="rm">' + moneyBRL(op.roiAno) + '</td>';
+      html += '<td class="cell-classe ' + classeSlug(op.classe) + '">' + op.classe + '</td>';
+      html += '</tr>';
+    });
+    els.rankingBody.innerHTML = html;
+    atualizarPrintHeader();
+  }
+
+  function atualizarPrintHeader() {
+    var nome = state.participante ? ('Participante: ' + state.participante + ' · ') : '';
+    els.printHeader.textContent = 'Calculadora ROI · Oportunidades de IA · ' + nome + state.itens.length + ' oportunidade(s)';
+  }
+
+  function copiarRanking() {
+    var itens = ordenados();
+    if (!itens.length) return;
+    var linhas = ['RANKING DE OPORTUNIDADES · IA' + (state.participante ? (' — ' + state.participante) : '')];
+    itens.forEach(function (op, i) {
+      linhas.push('#' + (i + 1) + ' ' + op.nome + ' · Gatilho: ' + op.gatilho +
+        ' · ' + horasFmt(op.horasMes) + '/mês · ' + moneyBRL(op.roiMes) + '/mês · ' +
+        moneyBRL(op.roiAno) + '/ano · ' + op.classe);
+    });
+    var texto = linhas.join('\n');
+    var done = function () {
+      var original = els.copiarBtn.textContent;
+      els.copiarBtn.textContent = '✓ Copiado';
+      setTimeout(function () { els.copiarBtn.textContent = original; }, 2000);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(done, function () { fallbackCopy(texto, done); });
+    } else {
+      fallbackCopy(texto, done);
+    }
+  }
+
+  function fallbackCopy(texto, cb) {
+    var ta = document.createElement('textarea');
+    ta.value = texto;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) { /* nada */ }
+    document.body.removeChild(ta);
+    if (cb) cb();
+  }
+
+  function zerar() {
+    if (!state.itens.length && !state.participante) return;
+    if (!window.confirm('Zerar todas as oportunidades? Isso não pode ser desfeito.')) return;
+    state.itens = [];
+    try { localStorage.removeItem(STORE_KEY); } catch (e) { /* nada */ }
+    save();
+    renderRanking();
+    els.resultCard.hidden = true;
+    els.adicionarBtn.hidden = true;
+    els.formError.textContent = '';
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  // eventos
+  els.calcularBtn.addEventListener('click', calcular);
+  els.adicionarBtn.addEventListener('click', adicionar);
+  els.copiarBtn.addEventListener('click', copiarRanking);
+  els.imprimirBtn.addEventListener('click', function () { window.print(); });
+  els.zerarBtn.addEventListener('click', zerar);
+  els.participante.addEventListener('input', function () {
+    state.participante = els.participante.value.trim();
+    save();
+    atualizarPrintHeader();
+  });
+
+  // init
+  load();
+  els.participante.value = state.participante;
+  renderRanking();
+})();
+</script>
+
+</body>
+</html>

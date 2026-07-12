@@ -6,6 +6,16 @@
 
 ---
 
+## Calculadora ROI · Oportunidades de IA
+
+Ferramenta interativa do **M3**. Traduza suas oportunidades do Mapa em R$/mês e R$/ano — pra defender prioridade em 1 minuto. Preencha 5 campos, empilhe quantas oportunidades quiser e leve o ranking com valor defensável.
+
+*Módulo · M3 · Identificação de Oportunidades*
+
+**[→ Abrir a Calculadora ROI](calculadora-roi.html)**
+
+---
+
 ## Templates copiáveis
 
 ### Canvas de Oportunidades — exemplo preenchido (casos vistos em sala)
