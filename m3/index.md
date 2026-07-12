@@ -222,35 +222,11 @@ Mesmo método. Muda só a entrada.
 
 ## Prompt-âncora do módulo — mapa das suas oportunidades gera Artifact
 
-O prompt roda como está no [Claude Pro](https://claude.ai). Ele executa em 3 fases (você valida cada uma) e no fim gera um **Artifact HTML interativo** com a matriz 2×2 das suas oportunidades — pra imprimir e levar pra segunda-feira.
+O prompt roda como está no [Claude Pro](https://claude.ai). Ele executa em 4 fases (você valida cada uma) e no fim gera um **Artifact HTML interativo** com a matriz 2×2 das suas oportunidades — pra imprimir e levar pra segunda-feira.
 
 > A partir desta versão, o Prompt-âncora pede que cada linha do Mapa seja classificada em **1 dos 6 Gatilhos** apresentados acima. Isso ancora sua tarefa no padrão macro e prepara a próxima etapa (M4): cada gatilho tem prompt PCTFL característico.
 
-### Prompt 0 · Pré-preparo (opcional) — Se você travar em listar suas 5 tarefas
-
-```text
-# PAPEL
-Você é um consultor especialista em ajudar profissionais não-técnicos a mapear
-rotina de trabalho — sem jargão.
-
-# CONTEXTO
-[Sou/Trabalho como] [seu cargo em Mallory] há [X] anos.
-Estou tentando listar minhas 5 tarefas mais repetitivas da semana e travei —
-sinto que faço "várias coisas", mas não consigo nomear 5 concretas.
-
-# TAREFA
-Me faça 5 perguntas dirigidas (uma por vez, esperando minha resposta) pra
-extrair minhas 5 tarefas repetitivas. Use gatilhos como "toda segunda você...",
-"quando fecha o mês/turno...", "quando abre um novo cliente/pedido/OS...".
-No fim, me devolva a lista das 5 tarefas em bullets curtos.
-
-# FORMATO
-Perguntas 1 por vez. Ao fim, lista numerada de 5 tarefas + 1 linha de contexto cada.
-
-# LIMITAÇÕES
-Se eu responder algo genérico ("faço muita coisa"), pergunte mais.
-Não invente tarefas que eu não citei.
-```
+> **Travou em listar 5 tarefas?** Antes de colar o prompt-âncora, peça ao Claude: *"me faça 5 perguntas dirigidas, uma por vez, pra extrair minhas 5 tarefas repetitivas da semana"*. Ele conduz — você responde. Não é um segundo prompt, é um empurrão.
 
 **Prompt-âncora — Mapa de Oportunidades (Colaboração · gera Artifact)**
 
@@ -264,7 +240,7 @@ Já ajudou centenas de profissionais a sair do "sei que devia usar" pro
 
 # CONTEXTO
 [Sou/Trabalho como] [seu cargo em Mallory] há [X] anos.
-Minhas 5 tarefas mais repetitivas da semana (ou saída do Prompt 0):
+Minhas 5 tarefas mais repetitivas da semana:
 1. [tarefa 1 — ex.: consolidar apontamentos de turno]
 2. [tarefa 2 — ex.: escrever DDS de segunda]
 3. [tarefa 3 — ex.: categorizar não-conformidades da semana]
@@ -272,36 +248,51 @@ Minhas 5 tarefas mais repetitivas da semana (ou saída do Prompt 0):
 5. [tarefa 5 — ex.: redigir comunicado de mudança de linha pro próximo turno]
 
 # TAREFA
-Execute em 3 fases, PARANDO em cada uma pra minha validação:
+Execute em 4 fases, PARANDO em cada uma pra minha validação:
 
 1. **IPO por tarefa** — pra cada uma das 5, desmonte em:
    · **Entra** (o que você recebe — dados brutos, anotações, arquivo)
-   · **Processa** (o que você faz com isso hoje — categorizar, resumir, redigir, priorizar)
+   · **Processa** (o que você faz com isso hoje)
    · **Sai** (o produto final — documento, mensagem, tabela)
    Aponte também: nesta tarefa, **onde exatamente a IA pode entrar?**
-   (regra: IA rende no "processa" quando entrada é clara e saída é definida)
+   Classifique cada tarefa em 1 dos 6 Gatilhos: Robô Humano · Tela em Branco ·
+   Detetive Cansado · Parceiro de Sparring · Tradutor Técnico · Olho Biônico.
 
 2. **Pontuação impacto × facilidade** — pra cada tarefa, pontue 1-5:
-   · **Impacto** — quanto tempo/dor a IA remove por semana se der certo (5 = economiza 2h+/semana, 1 = economiza 15min ou menos)
-   · **Facilidade** — dá pra testar amanhã, sem pedir permissão, com o Claude já disponível? (5 = testo em 20 min, 1 = precisa integrar sistema)
+   · **Impacto** — quanto tempo/dor a IA remove por semana se der certo (5 = economiza
+     2h+/semana, 1 = economiza 15min ou menos)
+   · **Facilidade** — dá pra testar amanhã, sem pedir permissão, com o Claude já
+     disponível? (5 = testo em 20 min, 1 = precisa integrar sistema)
    Explique cada nota em 1 linha.
 
-3. **Ranking + top 1** — ranqueie por (Impacto × Facilidade). Aponte a #1 (a que **você deveria testar hoje**) e explique em 2 linhas por que ela ganhou.
+3. **Ranking + top 1** — ranqueie por (Impacto × Facilidade). Aponte a #1 (a que
+   **você deveria testar hoje**) e explique em 2 linhas por que ela ganhou.
+
+4. **Pressão final — antes de gerar o Artifact** — pressione o próprio mapa em 3
+   ângulos:
+   · **Tarefa vaga:** alguma das 5 ainda soa genérica ("mexer com relatório")?
+     Reescreva mais específica ou pergunte pra concretizar.
+   · **Nota infantil:** alguma pontuação foi torcida ("dei 5 porque me dá raiva")?
+     Recalibre com critério objetivo.
+   · **Top-1 realista:** o #1 pode ser testado com Claude Pro hoje, sem integrar
+     sistema, sem pedir permissão? Se não, aponte o próximo do ranking que é.
+   Se estiver tudo bem, diga que passou. Não crie problema pra parecer útil.
 
 # FORMATO
-Fase 1 em tabela (Tarefa · Entra · Processa · Sai · Onde a IA entra).
+Fase 1 em tabela (Tarefa · Entra · Processa · Sai · Gatilho · Onde a IA entra).
 Fase 2 em tabela (Tarefa · Impacto · Facilidade · Justificativa I · Justificativa F).
 Fase 3 em ranking numerado + parágrafo de 2 linhas explicando o #1.
+Fase 4 em 3 blocos curtos (Tarefa vaga · Nota infantil · Top-1 realista).
 
 # LIMITAÇÕES
-- Se eu descrever uma tarefa vaga ("mexer com relatório"), pergunte antes de pontuar.
+- Se eu descrever uma tarefa vaga, pergunte antes de pontuar.
 - Não invente entrada/saída — pergunte se ficar em dúvida.
 - Não pontue 5 em impacto sem justificativa concreta.
 
 FORMATO DE ENTREGA (2 partes — ORDEM OBRIGATÓRIA)
-Só gere o Artifact APÓS eu validar as 3 fases. Não antecipe.
+Só gere o Artifact APÓS eu validar as 4 fases. Não antecipe.
 
-1. Análise textual completa das 3 fases.
+1. Análise textual completa das 4 fases.
 
 2. Artifact HTML self-contained interativo — Mapa de Oportunidades IA:
    · Paleta Slate Mallory: fundo #262A35, painel #353A45, texto #E8ECF3, azul #4AA6D7,
@@ -338,42 +329,6 @@ Só gere o Artifact APÓS eu validar as 3 fases. Não antecipe.
    · JavaScript vanilla, zero framework, zero dependência externa além do Google Fonts.
 ```
 
-**Prompt 2 · Refino — Pressionar o mapa antes de rodar**
-
-Cole quando o Claude entregar as 3 fases, mas ANTES de validar pra gerar o Artifact:
-
-```text
-# PAPEL
-Você é um advogado do diabo — ex-consultor de campo que já viu muito mapa
-bonito virar zero execução.
-
-# CONTEXTO
-Cola abaixo o mapa das 3 fases que acabamos de fazer.
-
-# TAREFA
-Pressione o mapa em 3 ângulos, direto ao ponto:
-
-1. **Tarefa vaga:** aponte qualquer uma das 5 tarefas que ainda soa genérica
-   ("mexer com relatório"). Reescreva mais específica ou peça a pergunta pra
-   deixar concreta.
-2. **Nota infantil:** ache pontuações que provavelmente foram torcida
-   ("dei 5 em impacto porque me dá raiva"). Recalibra com critério objetivo.
-3. **Top 1 realista:** o #1 do ranking pode ser testado com o Claude Pro que
-   eu tenho hoje, sem integrar sistema, sem pedir permissão? Se não, aponte o
-   próximo do ranking que é.
-
-# FORMATO
-3 blocos em ordem. Cada um em 3-5 linhas.
-
-# LIMITAÇÕES
-Se estiver tudo bem, diga que passou. Não crie problema pra parecer útil.
-
-MAPA:
-[cole as 3 fases da resposta anterior aqui]
-```
-
-*(Depois do refino, volte pro Claude e valide as 3 fases pra ele gerar o Artifact.)*
-
 > **Artefato do módulo:** depois de gerar o Mapa de Oportunidades no chat, leve a top-1 pra [Calculadora ROI](../artefatos/calculadora-roi.html) e coloque o valor em R$/mês. Fecha o argumento pra levar pra segunda.
 
 ---
@@ -383,20 +338,20 @@ MAPA:
 **Habilidade destravada aqui:** você chega com "5 tarefas na cabeça". Sai com **mapa impresso das 5 tarefas ranqueadas** + a #1 testada + método pra aplicar em qualquer tarefa nova.
 
 **O que a IA faz**
-- Desmonta cada tarefa em IPO com você (via Prompt 0 se precisar)
-- Executa o Prompt-âncora nas 3 fases
+- Desmonta cada tarefa em IPO com você (use a dica das 5 perguntas se precisar)
+- Executa o Prompt-âncora nas 4 fases
 - Gera o Artifact HTML interativo com sua matriz 2×2
 
 **O que você faz**
 - Lista 5 tarefas de verdade (não teóricas)
 - Pontua honestamente impacto e facilidade
-- Passa pelo Prompt 2 (advogado do diabo) antes de gerar o Artifact
+- Encara a Fase 4 (pressão do advogado do diabo) antes de gerar o Artifact
 - Roda o #1 do ranking usando o botão "Copiar prompt PCTFL"
 
 **Passo a passo** (~40 min):
 
-1. **Individual** (10 min): abra o Claude Pro no celular ou no computador. Se travou nas 5 tarefas, cole o **Prompt 0** e responda as perguntas. Se não travou, pule pro passo 2.
-2. **Individual** (15 min): cole o **Prompt-âncora**, valide fase por fase, cole o **Prompt 2** pra refinar, depois autorize o Artifact.
+1. **Individual** (10 min): abra o Claude Pro no celular ou no computador. Se travou nas 5 tarefas, use a dica das 5 perguntas (peça ao Claude pra te entrevistar). Se não travou, pule pro passo 2.
+2. **Individual** (15 min): cole o **Prompt-âncora**, valide fase por fase — a Fase 4 é a pressão do advogado do diabo — depois autorize o Artifact.
 3. **Em grupo por área** (10 min): abram os Artifacts lado a lado. Cada um mostra o próprio #1 do ranking. Discutam: as tarefas #1 do grupo se parecem? Alguém pontuou algo que o vizinho enxergaria diferente?
 4. **Individual** (5 min): rode o #1 do ranking usando o botão "Copiar prompt PCTFL" do Artifact. Preencha o PCTFL. Rode. Aplique a validação de 30s do M2.
 
