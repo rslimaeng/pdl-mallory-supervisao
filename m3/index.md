@@ -355,9 +355,9 @@ Esses são os 6 casos onde a IA generativa cabe hoje na rotina do supervisor Mal
 
 ---
 
-## Momento hands-on — 40 min pra o mapa da sua semana
+## Momento hands-on — 40 min pra o mapa do seu grupo
 
-**Habilidade destravada aqui:** você chega com "5 tarefas na cabeça". Sai com **mapa impresso das 5 tarefas ranqueadas** + a #1 testada + método pra aplicar em qualquer tarefa nova.
+**Habilidade destravada aqui:** você chega com "5 tarefas na cabeça". Sai com **mapa impresso das 5 tarefas ranqueadas individualmente** + **2 oportunidades priorizadas pelo grupo da sua área** + a #1 do grupo testada + método pra aplicar em qualquer tarefa nova.
 
 **O que a IA faz**
 - Desmonta cada tarefa em IPO com você (use a dica das 5 perguntas se precisar)
@@ -368,18 +368,43 @@ Esses são os 6 casos onde a IA generativa cabe hoje na rotina do supervisor Mal
 - Lista 5 tarefas de verdade (não teóricas)
 - Pontua honestamente impacto e facilidade
 - Encara a Fase 4 (pressão do advogado do diabo) antes de gerar o Artifact
-- Roda o #1 do ranking usando o botão "Copiar prompt PCTFL"
+- No bloco em grupo: ajuda a priorizar 2 oportunidades da área
 
 **Passo a passo** (~40 min):
 
-1. **Individual** (10 min): abra o Claude Pro no celular ou no computador. Se travou nas 5 tarefas, use a dica das 5 perguntas (peça ao Claude pra te entrevistar). Se não travou, pule pro passo 2.
-2. **Individual** (15 min): cole o **Prompt-âncora**, valide fase por fase — a Fase 4 é a pressão do advogado do diabo — depois autorize o Artifact.
-3. **Em grupo por área** (10 min): abram os Artifacts lado a lado. Cada um mostra o próprio #1 do ranking. Discutam: as tarefas #1 do grupo se parecem? Alguém pontuou algo que o vizinho enxergaria diferente?
-4. **Individual** (5 min): rode o #1 do ranking usando o botão "Copiar prompt PCTFL" do Artifact. Preencha o PCTFL. Rode. Aplique a validação de 30s do M2.
+### 1. Individual · 10 min — cada supervisor com sua matriz
 
-**Marco ✓:** você sai com o Artifact impresso (ou salvo) e a #1 testada com veredito honesto ("serve pra segunda" / "precisa refinar").
+Abra o Claude Pro no celular ou no computador. Cole o **Prompt-âncora** e rode até a **Fase 4** (pressão do advogado do diabo). Autorize o Artifact.
+Se travou nas 5 tarefas, use a dica das 5 perguntas (peça ao Claude pra te entrevistar).
 
-**Como avaliar:** o teste vale mesmo se o resultado for "ainda não serve" — saber por que não serviu já é mapa. O que não vale é não testar.
+### 2. Em grupo por área · 15 min — 2 oportunidades da área
+
+**Sugerimos que se organizem por área** (produção, PCP, manutenção, ferramentaria, qualidade, logística, almoxarifado, pós-vendas, segurança do trabalho, trade marketing). Se a divisão da turma não permitir, agrupem-se de outra forma que faça sentido — por proximidade de linha, por turno, por afinidade de dor.
+
+Cada grupo (3-5 pessoas), com Artifacts individuais na mesa:
+
+- **(3 min) Compartilhem** — cada um mostra a #1 do próprio ranking em 30s.
+- **(10 min) Priorizem 2 oportunidades da área** — escolham 2 tarefas que fazem sentido do ponto de vista **do time da área**, não do indivíduo. Podem ser 2 diferentes de 2 pessoas, ou uma que se repete em todos os Artifacts. Critério: as 2 que, se rodadas em 30 dias, ajudam mais a rotina do time do que qualquer outra combinação.
+- **(2 min) Escolham a #1 do grupo** — das 2, qual o grupo vai testar agora? A que estiver mais pronta pra rodar (Impacto alto · Facilidade alta · dado do dia a dia).
+
+**Saída do bloco em grupo:** 2 oportunidades priorizadas da área + a #1 do grupo destacada. Anote no papel ou no celular — é o insumo pro **Canvas de Oportunidades do M6**.
+
+### 3. Em grupo · 10 min — teste da #1 do grupo
+
+Ainda no grupo, rodem a #1 escolhida usando o botão "Copiar prompt PCTFL" do Artifact de quem sugeriu essa tarefa. Preencham o PCTFL juntos, com o contexto da área. Rodem. Aplique a validação de 30s do M2 na resposta.
+
+### 4. Individual · 5 min — Calculadora ROI da sua #1 individual
+
+Volte à sua matriz individual. Abra a [Calculadora ROI](../artefatos/calculadora-roi.html) e dimensione R$/mês da sua **#1 pessoal** (não da #1 do grupo). Serve pra você levar pra reunião de turno na segunda com número na mão.
+
+---
+
+**Marco ✓:** o grupo sai com:
+- **2 oportunidades priorizadas da área** anotadas
+- **A #1 do grupo testada** com veredito honesto ("serve pra segunda" / "precisa refinar")
+- Cada supervisor sai com o **Artifact individual impresso ou salvo** e a #1 individual dimensionada em R$/mês
+
+**Como avaliar:** o teste vale mesmo se o resultado for "ainda não serve" — saber por que não serviu já é mapa. O que não vale é (a) não testar em grupo, ou (b) sair sem as 2 da área anotadas.
 
 ---
 
