@@ -107,11 +107,16 @@ Seu colega de setor conhece as mesmas dores e enxerga as suas tarefas de fora. N
 
 *Aterrissa em Mallory:* colega da injetora vê a sua planilha herdada com olhos frescos — e vice-versa.
 
-### 5. O que fica de fora — sem negociação
+### 5. O que fica de fora — o modo **Manual** sem negociação
 
-Decisão sobre pessoa. Negociação com fornecedor ou cliente. Sinal físico da máquina — barulho, vibração, cheiro. E qualquer registro que exija dado sensível real no prompt: esse você trata com dado fictício ou desidentificado, como o M4 vai detalhar.
+Todo módulo deste treinamento anda com 3 modos de uso da IA — **Autopiloto** (IA executa, você revisa), **Colaboração** (você e a IA pensam juntos) e **Manual** (a IA fica fora — decisão é sua, sem intermédio). No M3 o filtro é claro: as tarefas do seu mapa em grupo entram em Autopiloto ou Colaboração; o que fica de fora é **Manual**.
 
-*Aterrissa em Mallory:* sinal físico da máquina (vibração, cheiro), advertência a operador, aprovação final de qualidade.
+- **Decisão sobre pessoa** — advertência, escala, avaliação, feedback sensível.
+- **Negociação com fornecedor ou cliente** — condição comercial, prazo, exceção.
+- **Sinal físico da máquina** — barulho antes de quebrar, vibração, cheiro, olhar do operador.
+- **Dado sensível real no prompt** — nome, matrícula, parâmetro de molde. Use dado fictício ou desidentificado; o M4 detalha o protocolo.
+
+*Aterrissa em Mallory:* Autopiloto pra consolidar apontamento; Colaboração pra montar o DDS; **Manual** pra advertir operador, pra aprovar registro final de qualidade, pra sentir a injetora antes de decidir parar.
 
 ---
 
