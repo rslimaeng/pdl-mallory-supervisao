@@ -209,6 +209,10 @@ Agora a resposta vai citar o **seu** contexto: turno, refugo, treinamento no pos
 
 ---
 
+> **Como isso vira insumo do M3:** as 5 tarefas repetitivas que você mapear hoje viram o ponto de partida do prompt-âncora do M3 — quando você chegar lá, a IA vai desmontar cada uma em IPO (entrada · processo · saída) e ajudar o grupo da sua área a priorizar as 2 mais fortes. Não precisa refazer a lista; vai reusar.
+
+---
+
 [← Início](../) · [M2 · Primeiro Prompt: Mão na Massa →](../m2/)
 
 [Banco de Prompts](../banco-de-prompts/) · [Artefatos](../artefatos/)
