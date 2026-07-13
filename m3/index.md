@@ -143,7 +143,7 @@ Antes de mapear onde a IA entra na sua semana, **calibre o olhar**. Seis padrõe
 
 **Exemplo universal:** padronizar dezenas de registros ou anotações em um formato único.
 
-**Aterrissa em Mallory:** consolidação de apontamentos, relatórios ou fichas operacionais recorrentes em uma tabela única.
+**Aterrissa em Mallory:** apontamento de defeito da injetora vira **OS de manutenção** estruturada (descrição · categoria · urgência · área); consolidação de apontamentos, relatórios ou fichas operacionais recorrentes em uma tabela única.
 
 ### 02 · Tela em Branco
 
@@ -335,6 +335,23 @@ Só gere o Artifact APÓS eu validar as 4 fases. Não antecipe.
 ```
 
 > **Artefato do módulo:** depois de gerar o Mapa de Oportunidades no chat, leve a top-1 pra [Calculadora ROI](../artefatos/calculadora-roi.html) e coloque o valor em R$/mês. Fecha o argumento pra levar pra segunda.
+
+---
+
+## Os 6 casos práticos da sua trilha
+
+Esses são os 6 casos onde a IA generativa cabe hoje na rotina do supervisor Mallory. Todos seguem o mesmo padrão IPO (entrada · processo · saída). Reconheça qual desses aparece na sua semana e leve pra Fase 1 do prompt-âncora:
+
+| Caso | Entrada típica | Saída típica | Gatilho principal |
+|---|---|---|---|
+| **OS de manutenção** | Apontamento de defeito ou anomalia da linha | OS estruturada pro sistema (descrição · categoria · urgência · área) | 🤖 Robô Humano |
+| **Relatório de turno** | Anotações e apontamentos brutos do turno | Relatório em texto padrão pro próximo turno | 🤖 Robô Humano |
+| **Checklist de qualidade** | Especificação da peça + observações do inspetor | Checklist estruturado com critério de aceitação | 🩺 Detetive Cansado |
+| **Registro de não-conformidade** | Descrição livre do desvio observado | NC categorizada por tipo, gravidade e área responsável | 🩺 Detetive Cansado |
+| **DDS (Diálogo Diário de Segurança)** | Tema + 1-2 fatos ou dados | Roteiro de 5-8 minutos com abertura, exemplo e fechamento | ✏️ Tela em Branco |
+| **Comunicado ao time** | Fato ou decisão + tom desejado | Mensagem de 3-5 linhas pronta pra enviar (WhatsApp/mural) | ✏️ Tela em Branco |
+
+**Aterrissa em Mallory:** os 6 casos existem em todas as áreas da fábrica — o que muda é o vocabulário. OS de manutenção na injetora tem o mesmo padrão IPO que OS de manutenção na ferramentaria — muda o dado bruto, o método é idêntico.
 
 ---
 
