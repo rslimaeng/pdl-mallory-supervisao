@@ -277,6 +277,10 @@ Ao final do M2, você sai com (marque conforme concluir):
 
 ---
 
+> **Como o PCTFL vira motor no M3:** o botão "Copiar prompt PCTFL" do Artifact que você vai gerar no M3 injeta exatamente esse esqueleto (Papel · Contexto · Tarefa · Formato · Limitações) pré-preenchido com a tarefa #1 do seu ranking. O que você aprendeu aqui vira a linguagem em que a IA opera lá — sem re-aprender.
+
+---
+
 [← M1 · IA na Fábrica e no Escritório](../m1/) · [M3 · IA no Seu Setor →](../m3/)
 
 [Banco de Prompts](../banco-de-prompts/) · [Artefatos](../artefatos/)
