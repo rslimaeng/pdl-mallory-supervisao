@@ -26,9 +26,29 @@ Você entende o que a IA generativa faz bem, o que não faz — e onde ela entra
 
 O dia do supervisor tem duas metades. Numa metade você opera: acompanha linha, resolve problema no chão, coordena turma. Nessa parte, a IA não entra — ela não sente o que você sente ali. Na outra metade você registra, comunica, documenta: relatório de turno, aviso pro próximo, e-mail pro PCP, ata de reunião, checklist pro RH. **É nessa segunda metade que a IA faz diferença** — e ela pesa mais no seu dia do que a gente costuma admitir.
 
-A Anthropic (fabricante do Claude) publica o **Anthropic Economic Index** — uma análise contínua de milhões de conversas reais de trabalho. O padrão é claro: as pessoas usam IA pra escrever, resumir e organizar — não pra operar máquina nem decidir por ninguém. É exatamente o tipo de tarefa que consome a metade "de papel" do supervisor.
+### O que pessoas realmente fazem com IA no trabalho
 
-E tem um dado a seu favor. O mesmo índice mostra que o resultado melhora quando **quem usa domina o assunto**. IA sem contexto vira resposta genérica. IA com o seu contexto — os anos que você tem de fábrica — vira trabalho útil. Nesse relacionamento, quem conduz é você.
+*Pesquisa Anthropic · Economic Index · jun 2026*
+
+A Anthropic (fabricante do Claude) analisa milhões de conversas reais de trabalho. O padrão é global e estável — e mostra exatamente onde a IA faz diferença pro supervisor.
+
+| Dado | O que representa |
+|---|---|
+| **40%** | dos trabalhadores nos EUA usam IA no trabalho — ↑ dobrou vs 20% em 2023 |
+| **86%** | ganham velocidade na tarefa — relatam ganho direto de tempo |
+| **82%** | ampliam o escopo do que conseguem fazer — assumem o que antes não dava tempo |
+
+**Pra quê as pessoas usam IA — top do índice:**
+
+- **Escrever** — alto
+- **Resumir / analisar texto** — alto
+- **Organizar informação** — alto
+- Operar máquina — ~0
+- Decidir por alguém — ~0
+
+> **O padrão a seu favor.** O mesmo índice mostra: quem domina o assunto vê ganho maior — em tarefas de nível superior o ganho de velocidade chega a **12×**. IA sem contexto vira resposta genérica. IA com os seus anos de fábrica vira trabalho útil. Nessa combinação, quem conduz é você.
+
+*fonte: anthropic.com/economic-index · relatórios mar/2026 · jun/2026*
 
 ---
 

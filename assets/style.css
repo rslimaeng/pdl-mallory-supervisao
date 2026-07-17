@@ -2822,3 +2822,184 @@ body.modal-open { overflow: hidden; }
   .prompt-copiar__details:not([open]) > pre { display: block !important; }
   .prompt-copiar__actions { display: none; }
 }
+
+/* ============================================================
+   §1 (goal-16) · Anthropic Economic Index — blocos reaproveitáveis
+   Dashboard (stats+bars) + Cockpit (kpi+matriz). Cores só de var(--*).
+   ============================================================ */
+.aei-kicker {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  color: var(--accent-blue);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.aei-kicker-purple { color: var(--purple-text); }
+
+/* stat tiles (dashboard) */
+.aei-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 18px 0;
+}
+.aei-stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 16px;
+}
+.aei-stat-n {
+  font-family: var(--font-title);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent-blue);
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.aei-stat-lbl { font-size: .82rem; margin-top: 8px; color: var(--text-primary); line-height: 1.35; }
+.aei-stat-cmp {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  opacity: .75;
+}
+
+/* bar chart (dashboard) */
+.aei-bars {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin: 16px 0;
+}
+.aei-bars h4 {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+.aei-bar-row {
+  display: grid;
+  grid-template-columns: 170px 1fr 60px;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: .85rem;
+}
+.aei-bar-name { color: var(--text-primary); }
+.aei-bar-track { height: 20px; background: rgba(255, 255, 255, .05); border-radius: 6px; overflow: hidden; }
+.aei-bar-fill { height: 100%; background: var(--accent-blue); border-radius: 6px; }
+.aei-bar-val { font-family: var(--font-mono); font-size: .75rem; color: var(--text-secondary); text-align: right; }
+.aei-bar-dim .aei-bar-fill { background: rgba(224, 224, 224, .2); }
+.aei-bar-dim .aei-bar-name { color: var(--text-secondary); opacity: .6; }
+
+/* KPI grid (cockpit) */
+.aei-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 18px 0;
+}
+.aei-kpi {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 14px 12px;
+}
+.aei-kpi-top {
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  opacity: .7;
+  margin-bottom: 6px;
+}
+.aei-kpi-n {
+  font-family: var(--font-title);
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.02em;
+}
+.aei-kpi-n-purple { color: var(--purple-text); }
+.aei-kpi-n-blue { color: var(--accent-blue); }
+.aei-kpi-n-green { color: var(--accent-green); }
+.aei-kpi-n-yellow { color: var(--accent-yellow); }
+.aei-kpi-lbl { font-size: .72rem; color: var(--text-primary); margin-top: 6px; line-height: 1.3; }
+
+/* matriz 2x2 (cockpit) */
+.aei-matriz {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 16px 0;
+}
+.aei-matriz h4 {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+.aei-quad { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.aei-qcell {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .03);
+  border: 1px solid var(--border-subtle);
+}
+.aei-qcell-head {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.aei-qcell-txt { font-size: .85rem; color: var(--text-primary); line-height: 1.4; }
+.aei-qcell-txt strong { font-family: var(--font-title); font-size: 1.1rem; font-weight: 800; display: block; margin-bottom: 2px; }
+.aei-qcell-purple { border-color: rgba(138, 58, 137, .4); background: rgba(138, 58, 137, .08); }
+.aei-qcell-purple .aei-qcell-head { color: var(--purple-text); }
+.aei-qcell-blue { border-color: rgba(74, 166, 215, .35); background: rgba(74, 166, 215, .05); }
+.aei-qcell-blue .aei-qcell-head { color: var(--accent-blue); }
+.aei-qcell-yellow { border-color: rgba(247, 172, 25, .35); background: rgba(247, 172, 25, .05); }
+.aei-qcell-yellow .aei-qcell-head { color: var(--accent-yellow); }
+.aei-qcell-red { border-color: rgba(215, 44, 53, .25); background: rgba(215, 44, 53, .04); }
+.aei-qcell-red .aei-qcell-head { color: var(--red-text); }
+
+.aei-source {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  color: var(--text-secondary);
+  opacity: .65;
+  margin-top: 16px;
+  text-align: right;
+}
+
+/* callouts reaproveitaveis (goal-16) */
+.callout-green { border-left-color: var(--accent-green); background-color: rgba(101, 169, 65, .08); }
+.callout-green .callout-title { color: var(--accent-green); }
+.callout-green strong { color: var(--accent-green); }
+.callout-yellow { border-left-color: var(--accent-yellow); background-color: rgba(247, 172, 25, .06); }
+.callout-yellow .callout-title { color: var(--accent-yellow); }
+.callout-yellow strong { color: var(--accent-yellow); }
+.callout-badge {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-bottom: 6px;
+  color: var(--accent-yellow);
+}
+
+@media (max-width: 640px) {
+  .aei-stats { grid-template-columns: 1fr; }
+  .aei-bar-row { grid-template-columns: 100px 1fr 50px; font-size: .75rem; }
+  .aei-kpi-grid { grid-template-columns: 1fr 1fr; }
+  .aei-quad { grid-template-columns: 1fr; }
+}
