@@ -87,56 +87,107 @@
     <section class="section">
       <span class="eyebrow">O problema</span>
       <h2>Um prompt ruim é sempre culpa do humano</h2>
-      <p>A IA é previsível: ela gera saídas proporcionais à qualidade da entrada. Prompt vago → resposta vaga. Prompt preciso → resposta precisa. <strong>A engenharia de prompt é a habilidade de escrever a entrada certa.</strong></p>
-      <p><strong>Anthropic Economic Index</strong> confirma o padrão: os usos que mais falham são os pedidos vagos, sem contexto. O que resolve é método — não talento nem ferramenta melhor.</p>
-      <div class="table-wrap">
-        <table class="table-default">
-          <thead>
-            <tr><th>Prompt vago</th><th>Problema</th><th>Resultado provável</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>"Faz um DDS pra segunda"</td><td>Sem tema, sem público, sem formato</td><td>Palestra genérica, precisa refazer</td></tr>
-            <tr><td>"Melhora esse texto"</td><td>Sem critério, sem destinatário</td><td>Versão levemente diferente, sem ganho</td></tr>
-            <tr><td>"Explica a norma pro time"</td><td>Sem recorte de aplicação</td><td>10 parágrafos genéricos, ninguém lê</td></tr>
-          </tbody>
-        </table>
+      <p class="secao-lead">A IA é previsível. Entrada vaga → saída vaga. Entrada precisa → saída precisa. O problema quase nunca é a ferramenta.</p>
+
+      <div class="pruim-wrap">
+        <div class="pruim-top">
+          <div class="pruim-frase">
+            A engenharia de prompt é a habilidade de escrever a <mark>entrada certa</mark> — e ela é <mark>ensinável em 4 horas</mark>. É o que a gente vai fazer agora.
+          </div>
+          <div class="pruim-stat">
+            <div class="grande">26,7%</div>
+            <div class="label">preocupação nº 1 com IA</div>
+            <div class="fonte"><strong>Inconfiabilidade</strong> — o que o PCTFL resolve.<br>Anthropic Economic Index.</div>
+          </div>
+        </div>
+
+        <div class="pruim-tabela">
+          <div class="pruim-linha">
+            <div class="pruim-cel vago"><span class="lbl">🔴 Prompt vago</span><div class="quote">"Faz um DDS pra segunda"</div></div>
+            <div class="pruim-cel prob"><span class="lbl">Problema</span><p>Sem tema, sem público, sem formato.</p></div>
+            <div class="pruim-cel result"><span class="lbl">Resultado provável</span><p>Palestra genérica, precisa refazer.</p></div>
+          </div>
+          <div class="pruim-linha">
+            <div class="pruim-cel vago"><span class="lbl">🔴 Prompt vago</span><div class="quote">"Melhora esse texto"</div></div>
+            <div class="pruim-cel prob"><span class="lbl">Problema</span><p>Sem critério, sem destinatário.</p></div>
+            <div class="pruim-cel result"><span class="lbl">Resultado provável</span><p>Versão levemente diferente, sem ganho.</p></div>
+          </div>
+          <div class="pruim-linha">
+            <div class="pruim-cel vago"><span class="lbl">🔴 Prompt vago</span><div class="quote">"Explica a norma pro time"</div></div>
+            <div class="pruim-cel prob"><span class="lbl">Problema</span><p>Sem recorte de aplicação.</p></div>
+            <div class="pruim-cel result"><span class="lbl">Resultado provável</span><p>10 parágrafos genéricos, ninguém lê.</p></div>
+          </div>
+        </div>
+
+        <div class="pruim-arrow">O método sai desses 3 casos</div>
+
+        <div class="pruim-saida">
+          Esse módulo te dá o método pra sair desses 3 casos — em <strong>3 exercícios executados por você, ao vivo</strong>. No próximo bloco, você vê o antes e depois de cada um antes de aprender a estrutura.
+        </div>
       </div>
-      <p>Esse módulo te dá o método pra sair desses 3 casos — em 3 exercícios executados por você, ao vivo.</p>
     </section>
 
-    <section class="section compare-section">
+    <section class="section">
+      <span class="eyebrow">Antes do método</span>
       <h2>Antes do método: vago × situado</h2>
-      <p class="secao-lead">O mesmo pedido escrito de dois jeitos. Um recebe o que a internet daria. O outro recebe o que você precisa.</p>
 
-      <div class="compare-grid" role="group" aria-label="Comparação prompt vago vs prompt situado">
-        <div class="compare-par">
-          <div class="compare-col compare-vago" data-tipo="vago">
-            <span class="compare-label">Vago</span>
-            <pre class="compare-prompt">Me ajuda com um comunicado sobre mudança de procedimento pra equipe.</pre>
-            <p class="compare-consequencia">Recebe: texto genérico, tom impessoal, sem contexto do seu time — e você reescreve.</p>
-          </div>
-          <div class="compare-col compare-situado" data-tipo="situado">
-            <span class="compare-label">Situado</span>
-            <pre class="compare-prompt">Escreva um comunicado de 10 linhas explicando a nova regra de troca de turno pra minha equipe (14 pessoas, turno da manhã). Tom firme e respeitoso. Termine com pergunta que abre conversa. Sem jargão.</pre>
-            <p class="compare-consequencia">Recebe: rascunho colável, tom certo, formato pronto — você ajusta 2 detalhes.</p>
+      <div class="vs-intro-card">
+        <p>O mesmo pedido escrito de <strong>dois jeitos</strong>. Um recebe o que a internet daria; o outro recebe o que você precisa.</p>
+        <em>Antes de aprender a estrutura (PCTFL), olhe a saída dos dois lados — e você já vai querer o método pra chegar no jeito da direita sem pensar.</em>
+      </div>
+
+      <div class="vs-toggle">
+        <div class="cabec vago">🔴 Vago <span class="badge">o que a internet daria</span></div>
+        <div class="cabec situ">🟢 Situado <span class="badge">o que você precisa</span></div>
+      </div>
+
+      <div class="vs-caso">
+        <div class="vs-caso-hdr">
+          <div class="vs-caso-num">1</div>
+          <div>
+            <div class="vs-caso-titulo">Comunicado pra equipe</div>
+            <div class="vs-caso-sub">mudança de procedimento · turno da manhã</div>
           </div>
         </div>
-
-        <div class="compare-par">
-          <div class="compare-col compare-vago" data-tipo="vago">
-            <span class="compare-label">Vago</span>
-            <pre class="compare-prompt">Como resumir isso aqui?</pre>
-            <p class="compare-consequencia">Recebe: resumo padrão, sem hierarquia, sem foco no que importa pra você.</p>
+        <div class="vs-grid">
+          <div class="vs-lado vago">
+            <span class="top">🔴 Vago</span>
+            <div class="prompt">Me ajuda com um comunicado sobre mudança de procedimento pra equipe.</div>
+            <div class="recebe"><strong>Recebe:</strong> texto genérico, tom impessoal, sem contexto do seu time — e você reescreve.</div>
           </div>
-          <div class="compare-col compare-situado" data-tipo="situado">
-            <span class="compare-label">Situado</span>
-            <pre class="compare-prompt">Resuma esta ata de reunião em 5 bullets. Destaque: (1) decisões tomadas, (2) responsáveis, (3) prazos. Sem elogio, sem introdução.</pre>
-            <p class="compare-consequencia">Recebe: 5 bullets acionáveis, direto pra sua próxima mensagem no time.</p>
+          <div class="vs-lado situ">
+            <span class="top">🟢 Situado</span>
+            <div class="prompt">Escreva um comunicado de 10 linhas explicando a nova regra de troca de turno pra minha equipe (14 pessoas, turno da manhã). Tom firme e respeitoso. Termine com pergunta que abre conversa. Sem jargão.</div>
+            <div class="recebe"><strong>Recebe:</strong> rascunho colável, tom certo, formato pronto — você ajusta 2 detalhes.</div>
           </div>
         </div>
       </div>
 
-      <p class="compare-fecho">A diferença não é a IA. É o quanto você <strong>situa</strong> o pedido. O método a seguir — PCTFL — é isso, virado em checklist.</p>
+      <div class="vs-caso">
+        <div class="vs-caso-hdr">
+          <div class="vs-caso-num">2</div>
+          <div>
+            <div class="vs-caso-titulo">Resumo de ata</div>
+            <div class="vs-caso-sub">reunião de planejamento · sua próxima mensagem no time</div>
+          </div>
+        </div>
+        <div class="vs-grid">
+          <div class="vs-lado vago">
+            <span class="top">🔴 Vago</span>
+            <div class="prompt">Como resumir isso aqui?</div>
+            <div class="recebe"><strong>Recebe:</strong> resumo padrão, sem hierarquia, sem foco no que importa pra você.</div>
+          </div>
+          <div class="vs-lado situ">
+            <span class="top">🟢 Situado</span>
+            <div class="prompt">Resuma esta ata de reunião em 5 bullets. Destaque: (1) decisões tomadas, (2) responsáveis, (3) prazos. Sem elogio, sem introdução.</div>
+            <div class="recebe"><strong>Recebe:</strong> 5 bullets acionáveis, direto pra sua próxima mensagem no time.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vs-fecho">
+        A diferença não é a IA. É o quanto você <strong>situa</strong> o pedido. O método a seguir — <strong>PCTFL</strong> — é isso, virado em checklist.
+      </div>
     </section>
 
     <section class="section">
@@ -210,25 +261,100 @@
     <section class="section verbos-section">
       <h2>O verbo de ação é o núcleo do T</h2>
       <p>Todo prompt tem uma "Tarefa". A qualidade da resposta está sempre em <strong>um único lugar: o verbo da Tarefa.</strong> Quando o verbo é vago ("me ajude", "veja"), a IA escolhe sozinha o que fazer — e escolhe pra média. Quando o verbo é preciso ("liste", "compare", "reescreva no tom X"), a IA obedece.</p>
-      <p><strong>Teste prático:</strong> se você não consegue substituir o verbo da sua Tarefa por outro sem mudar completamente o pedido, você acertou o verbo.</p>
-      <p class="secao-lead">Troque "me ajude" por verbo cirúrgico — a tabela por área:</p>
-      <div class="table-wrap">
-        <table class="verbos-tabela">
-          <thead>
-            <tr><th>Área</th><th>Verbo vago</th><th>Verbo cirúrgico</th><th>Exemplo</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Escrita</td><td>me ajude, faça, veja</td><td>escreva, redija, reescreva</td><td>"Escreva um comunicado de 10 linhas…"</td></tr>
-            <tr><td>Análise</td><td>analise, veja</td><td>liste, compare, aponte</td><td>"Liste os 3 pontos que exigem decisão…"</td></tr>
-            <tr><td>Síntese</td><td>resuma, condense</td><td>resuma em N bullets, extraia</td><td>"Resuma em 5 bullets destacando…"</td></tr>
-            <tr><td>Estruturação</td><td>organize, arrume</td><td>classifique, ordene por, agrupe</td><td>"Classifique por urgência e responsável…"</td></tr>
-            <tr><td>Refino</td><td>melhore, arruma</td><td>reescreva no tom X, ajuste pra público Y</td><td>"Reescreva no tom firme + respeitoso…"</td></tr>
-          </tbody>
-        </table>
+      <div class="verb-intro">
+        <div class="regra">Verbo vago → a IA escolhe pela média. Verbo cirúrgico → a IA obedece a estrutura.</div>
+        <strong>Teste prático:</strong> se você consegue trocar o verbo da sua Tarefa por outro qualquer sem mudar o pedido, o verbo está vago. Verbo cirúrgico não aceita substituto — ele carrega a decisão.
       </div>
-      <div class="callout callout-info">
-        <p class="callout-title">Regra prática</p>
-        <p>Antes de rodar um prompt, sublinhe o verbo da sua Tarefa. Se for "me ajude", "faça", "veja", "melhore" — pare e troque. Só rode com verbo cirúrgico.</p>
+
+      <p class="secao-lead">Troque "me ajude" por verbo cirúrgico — cada área tem seu par + o que muda na resposta da IA:</p>
+
+      <div class="verb-card">
+        <div class="verb-card-hdr">
+          <div class="verb-area">Escrita</div>
+          <div><div class="verb-cols">
+            <div class="verb-lado vago"><span class="lbl">🔴 Verbo vago</span><div class="verbo">me ajude, faça, veja</div><div class="pergunta">"Me ajuda com um comunicado."</div></div>
+            <div class="verb-lado cir"><span class="lbl">🟢 Verbo cirúrgico</span><div class="verbo">escreva, redija, reescreva</div><div class="pergunta">"Escreva um comunicado de 10 linhas…"</div></div>
+          </div></div>
+        </div>
+        <div class="verb-resp">
+          <span class="top">Como muda a resposta da IA</span>
+          <div class="split">
+            <div class="out mal"><span class="marca">🔴 devolve</span>Texto genérico de 3 parágrafos, tom impessoal, saudação padrão. Você reescreve inteiro.</div>
+            <div class="out bom"><span class="marca">🟢 devolve</span>Rascunho colável de 10 linhas com tom certo, formato pronto, pergunta final aberta. Você ajusta 2 detalhes.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="verb-card">
+        <div class="verb-card-hdr">
+          <div class="verb-area">Análise</div>
+          <div><div class="verb-cols">
+            <div class="verb-lado vago"><span class="lbl">🔴 Verbo vago</span><div class="verbo">analise, veja</div><div class="pergunta">"Analise esse apontamento aí."</div></div>
+            <div class="verb-lado cir"><span class="lbl">🟢 Verbo cirúrgico</span><div class="verbo">liste, compare, aponte</div><div class="pergunta">"Liste os 3 pontos que exigem decisão…"</div></div>
+          </div></div>
+        </div>
+        <div class="verb-resp">
+          <span class="top">Como muda a resposta da IA</span>
+          <div class="split">
+            <div class="out mal"><span class="marca">🔴 devolve</span>Parágrafo descritivo com "vejo que…". Nenhuma priorização, nenhum ponto acionável.</div>
+            <div class="out bom"><span class="marca">🟢 devolve</span>3 bullets numerados com o que decidir, para quem, e o prazo. Você leva pronto pra reunião.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="verb-card">
+        <div class="verb-card-hdr">
+          <div class="verb-area">Síntese</div>
+          <div><div class="verb-cols">
+            <div class="verb-lado vago"><span class="lbl">🔴 Verbo vago</span><div class="verbo">resuma, condense</div><div class="pergunta">"Resume isso aí."</div></div>
+            <div class="verb-lado cir"><span class="lbl">🟢 Verbo cirúrgico</span><div class="verbo">resuma em N bullets, extraia</div><div class="pergunta">"Resuma em 5 bullets destacando…"</div></div>
+          </div></div>
+        </div>
+        <div class="verb-resp">
+          <span class="top">Como muda a resposta da IA</span>
+          <div class="split">
+            <div class="out mal"><span class="marca">🔴 devolve</span>Resumo genérico, decisão e contexto misturados num parágrafo só.</div>
+            <div class="out bom"><span class="marca">🟢 devolve</span>5 bullets com decisões / responsáveis / prazos claros. Direto pra mensagem no time.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="verb-card">
+        <div class="verb-card-hdr">
+          <div class="verb-area">Estruturação</div>
+          <div><div class="verb-cols">
+            <div class="verb-lado vago"><span class="lbl">🔴 Verbo vago</span><div class="verbo">organize, arrume</div><div class="pergunta">"Organize essa lista aí."</div></div>
+            <div class="verb-lado cir"><span class="lbl">🟢 Verbo cirúrgico</span><div class="verbo">classifique, ordene por, agrupe</div><div class="pergunta">"Classifique por urgência e responsável…"</div></div>
+          </div></div>
+        </div>
+        <div class="verb-resp">
+          <span class="top">Como muda a resposta da IA</span>
+          <div class="split">
+            <div class="out mal"><span class="marca">🔴 devolve</span>Lista redistribuída sem lógica clara — os itens mudam de ordem, mas você não sabe por quê.</div>
+            <div class="out bom"><span class="marca">🟢 devolve</span>Grupos nomeados com critério explícito (urgência × responsável). A decisão fica facilitada.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="verb-card">
+        <div class="verb-card-hdr">
+          <div class="verb-area">Refino</div>
+          <div><div class="verb-cols">
+            <div class="verb-lado vago"><span class="lbl">🔴 Verbo vago</span><div class="verbo">melhore, arruma</div><div class="pergunta">"Melhore esse texto."</div></div>
+            <div class="verb-lado cir"><span class="lbl">🟢 Verbo cirúrgico</span><div class="verbo">reescreva no tom X, ajuste pra público Y</div><div class="pergunta">"Reescreva no tom firme + respeitoso…"</div></div>
+          </div></div>
+        </div>
+        <div class="verb-resp">
+          <span class="top">Como muda a resposta da IA</span>
+          <div class="split">
+            <div class="out mal"><span class="marca">🔴 devolve</span>Versão levemente diferente — ninguém percebe a mudança.</div>
+            <div class="out bom"><span class="marca">🟢 devolve</span>Mudança de tom mensurável, diferença sentida na leitura.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="verb-regra">
+        <strong>⚙ Regra prática:</strong> antes de rodar um prompt, <strong>sublinhe o verbo da sua Tarefa</strong>. Se for "me ajude", "faça", "veja", "melhore" — pare e troque. Só rode com verbo cirúrgico.
       </div>
     </section>
 
@@ -323,14 +449,34 @@
     </section>
 
     <section class="section">
+      <span class="eyebrow">O que fica com você</span>
       <h2>Dois hábitos que fecham o método</h2>
-      <div class="callout callout-info">
-        <p class="callout-title">Validação em 30 segundos — antes de usar qualquer resposta</p>
-        <p>Três perguntas: <strong>Fonte</strong> — os fatos vieram de mim ou a IA acrescentou coisas? <strong>Coerência</strong> — algum número, nome ou norma apareceu do nada? <strong>Meu conhecimento</strong> — bate com o que eu sei do meu setor? Falhou em qualquer uma, você corrige antes de usar. Você é o inspetor de qualidade da resposta.</p>
-      </div>
-      <div class="callout callout-aviso">
-        <p class="callout-title">O que nunca entra no prompt</p>
-        <p>Nome ou dado de funcionário. Parâmetro ou especificação de produto e molde. Contrato, preço, dado de fornecedor. Se você não colocaria num grupo aberto de WhatsApp, não coloca na IA. Detalhe completo no M4 — a regra prática começa agora.</p>
+      <p class="fecho-intro">Você não precisa lembrar dos "5 pontos" pra levar o M2 pra segunda-feira. Você precisa de <strong>dois hábitos</strong>. Um é <strong>cinto de segurança</strong> — impede a IA de inventar. Outro é <strong>checagem final</strong> — impede você de mandar antes de conferir.</p>
+
+      <div class="fecho-grid">
+        <div class="fecho-card">
+          <span class="kicker">Hábito 1 de 2 · o cinto de segurança</span>
+          <h4>"Se faltar informação, pergunte. Não invente."</h4>
+          <div class="subtit">Uma frase, sempre presente, em todo prompt seu.</div>
+          <div class="frase"># LIMITAÇÕES<br>Se faltar informação, pergunte.<br>Não invente. Não cite norma ou NR —<br>confirmo na fonte.</div>
+          <div class="quando">
+            <span class="marca">Quando ativa</span>
+            <strong>Sempre.</strong> É a frase mais barata que existe — 8 palavras que impedem a IA de preencher os buracos com invenção. Sem ela, um DDS pode virar "conforme a NR-XX" com número inventado.
+          </div>
+          <div class="aterrissa"><strong>Aterrissa no M4</strong> — protocolo completo de anti-alucinação (fonte · coerência · seu conhecimento). Aqui, o hábito começa.</div>
+        </div>
+
+        <div class="fecho-card">
+          <span class="kicker">Hábito 2 de 2 · a checagem de 30 segundos</span>
+          <h4>Valide antes de mandar — 3 filtros rápidos</h4>
+          <div class="subtit">Você é o inspetor de qualidade da resposta.</div>
+          <div class="frase">1. Fonte — os fatos vieram de mim?<br>2. Coerência — número ou norma inventada?<br>3. Meu conhecimento — bate com o que eu sei?</div>
+          <div class="quando">
+            <span class="marca">Quando ativa</span>
+            <strong>Antes de usar qualquer resposta.</strong> Falhou em qualquer um dos 3, corrige antes. Um DDS com norma errada perde a autoridade toda — e o seu nome vai junto.
+          </div>
+          <div class="aterrissa"><strong>Aterrissa no M4</strong> — o Validador de resposta em 30s (artefato interativo). Aqui, você já começa a rodar mentalmente.</div>
+        </div>
       </div>
     </section>
 
@@ -366,44 +512,128 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section exc-section t1">
       <h2>Exercício</h2>
-      <div class="tabs-exercicio" data-tabs-key="m2-exercicio">
-        <div class="tabs-list" role="tablist" aria-label="Camadas do exercício">
-          <button class="tab-button active" role="tab" aria-selected="true" data-tab="0">Camada 1 — Básico</button>
-          <button class="tab-button" role="tab" aria-selected="false" data-tab="1">Camada 2 — Desafio</button>
-        </div>
 
-        <div class="tab-panel active" role="tabpanel">
-          <div class="exercise-block">
-            <h3>Camada 1 — Básico <span class="badge badge-hands-on">todos · 10-15 min</span></h3>
-            <p><strong>Objetivo:</strong> executar seus 3 primeiros prompts com resultado útil.</p>
-            <p><strong>Passo a passo:</strong></p>
-            <ol>
-              <li>Primeiro acesso, do zero: abra <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> no navegador do celular ou computador → toque em "Continuar com Google" (ou digite seu e-mail e confirme o código que chegar) → pronto, a tela de conversa abre. Conta gratuita, sem cartão. Quem já tem, ajuda o colega do lado.</li>
-              <li>Rode o prompt-âncora do DDS (botão <strong>"Carregar exemplo DDS"</strong> no gerador acima) como está. Leia a resposta.</li>
-              <li>Agora adapte: troque o CONTEXTO por uma situação real da sua área (mantenha as 6 camadas) e rode de novo.</li>
-              <li>Terceiro prompt: pegue um e-mail ou mensagem difícil que você precisa mandar e peça: papel + contexto + "reescreva com tom firme e respeitoso" + formato + regra de ouro.</li>
-              <li>Para cada resposta, aplique a validação de 30 segundos (fonte · coerência · seu conhecimento).</li>
-            </ol>
-            <p><strong>Resultado esperado:</strong> 3 respostas úteis no seu histórico do Claude — DDS, sua adaptação e o e-mail.</p>
-            <p><strong>Como avaliar:</strong> pergunta-teste para cada uma: "eu usaria isso depois de ajustar 2 ou 3 detalhes?" Se sim, passou. Se precisaria reescrever tudo, o CONTEXTO ficou raso — refaça com mais situação real.</p>
+      <div class="exc-tabs" role="tablist">
+        <button class="exc-tab active" data-target="t1-c1">Camada 1 — Básico</button>
+        <button class="exc-tab" data-target="t1-c2">Camada 2 — Desafio</button>
+        <button class="exc-tab" data-target="t1-c3">Camada 3 — Metaprompt</button>
+      </div>
+
+      <div class="exc-panel active" id="t1-c1">
+        <div class="exc-panel-inner">
+          <div class="exc-panel-hdr">
+            <div class="exc-panel-title">Camada 1 — Básico</div>
+            <span class="exc-panel-meta">todos · 10-15 min</span>
+          </div>
+          <div class="exc-panel-obj"><strong>Objetivo:</strong> executar seus 3 primeiros prompts com resultado útil.</div>
+          <div class="exc-split">
+            <div class="exc-passos">
+              <h5>Passo a passo</h5>
+              <div class="exc-passo"><div class="exc-num">1</div><div><strong>Primeiro acesso, do zero:</strong> abra <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> → "Continuar com Google" — 2 min, conta gratuita, sem cartão. Quem já tem, ajuda o colega do lado.</div></div>
+              <div class="exc-passo"><div class="exc-num">2</div><div>Rode o <strong>prompt-âncora do DDS</strong> (botão "Carregar exemplo DDS" no gerador acima) como está. Leia a resposta.</div></div>
+              <div class="exc-passo"><div class="exc-num">3</div><div><strong>Adapte:</strong> troque o CONTEXTO por uma situação real da sua área (mantenha as 6 camadas) e rode de novo.</div></div>
+              <div class="exc-passo"><div class="exc-num">4</div><div><strong>Terceiro prompt:</strong> pegue um e-mail difícil que precisa mandar — papel + contexto + "reescreva com tom firme e respeitoso" + formato + regra de ouro.</div></div>
+              <div class="exc-passo"><div class="exc-num">5</div><div>Aplique a <strong>validação de 30s</strong> em cada uma (fonte · coerência · seu conhecimento).</div></div>
+              <div class="exc-esperado"><strong>Resultado esperado:</strong> 3 respostas úteis no seu histórico — DDS-âncora, sua adaptação, e o e-mail.</div>
+            </div>
+            <div class="exc-exemplo">
+              <div class="exc-ex-top">
+                <div class="exc-avatar">EX</div>
+                <div>
+                  <span class="exc-ex-label">Exemplo trabalhado</span>
+                  <div class="exc-ex-persona">Supervisor de Montagem · linha 3</div>
+                </div>
+              </div>
+              <div class="exc-rotina"><strong>Situação escolhida:</strong> DDS de segunda sobre <mark>uso correto de EPI na troca de molde</mark> — 14 pessoas turno da manhã, pós-quase-acidente da semana passada.</div>
+              <div class="exc-frase"># PAPEL: técnico de segurança em fábrica de eletroportáteis.
+# CONTEXTO: DDS de segunda na montagem, tema <mark>EPI na troca de molde</mark>, equipe de 14, turno manhã.
+# TAREFA: escreva o roteiro do DDS de 5 min, com pergunta de abertura + <mark>compromisso ao final</mark>.
+# FORMATO: 3 blocos, máx 20 linhas, linguagem falada.
+# LIMITAÇÕES: se faltar informação, pergunte. Não invente. Não cite NR — confirmo na fonte.
+# CS: apresento em 5 min sem ler, e o time entende o compromisso final.</div>
+              <p class="exc-nota"><strong>Por que passa no teste:</strong> tema situado (EPI na troca de molde, não EPI genérico), destinatário nomeado, CS amarra na apresentação real de segunda, e a regra de ouro protege contra NR inventada.</p>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div class="tab-panel" role="tabpanel">
-          <div class="exercise-block">
-            <h3>Camada 2 — Desafio <span class="badge badge-hands-on">para quem terminou · +10-15 min</span></h3>
-            <p><strong>Objetivo:</strong> aprender a refinar — o segundo prompt da mesma conversa. É o modo Colaboração levado a sério: você não aceita a primeira resposta, você conduz até ficar boa.</p>
-            <p><strong>Passo a passo:</strong></p>
-            <ol>
-              <li>Pegue a resposta do seu DDS adaptado. Encontre o ponto fraco: genérico demais? Longo? Tom errado?</li>
-              <li>Na mesma conversa, escreva: "Revise considerando: [o que faltou]. Mantenha o resto."</li>
-              <li>Compare as duas versões. Repita uma vez se precisar.</li>
-              <li>Terceiro passo: resuma uma instrução de trabalho real (sem dado sensível) em 5 linhas para treinar alguém novo — PCTFL completo.</li>
-            </ol>
-            <p><strong>Resultado esperado:</strong> uma conversa com ida e volta — prompt, crítica, versão melhor — e um resumo de instrução pronto.</p>
-            <p><strong>Como avaliar:</strong> se a segunda versão ficou melhor que a primeira por causa da sua crítica, você entendeu o jogo: a IA melhora quando você exige com critério.</p>
+      <div class="exc-panel" id="t1-c2">
+        <div class="exc-panel-inner">
+          <div class="exc-panel-hdr">
+            <div class="exc-panel-title">Camada 2 — Desafio</div>
+            <span class="exc-panel-meta">pra quem terminou · +10-15 min</span>
+          </div>
+          <div class="exc-panel-obj"><strong>Objetivo:</strong> aprender a refinar — a segunda resposta bate a primeira quando você exige com critério.</div>
+          <div class="exc-split">
+            <div class="exc-passos">
+              <h5>Passo a passo</h5>
+              <div class="exc-passo"><div class="exc-num">1</div><div>Pegue a resposta do seu DDS adaptado. Encontre o <strong>ponto fraco</strong>: genérico demais? Longo? Tom errado?</div></div>
+              <div class="exc-passo"><div class="exc-num">2</div><div>Na mesma conversa: <em>"Revise considerando [o que faltou]. Mantenha o resto."</em></div></div>
+              <div class="exc-passo"><div class="exc-num">3</div><div>Compare as duas versões. Repita uma vez se precisar.</div></div>
+              <div class="exc-passo"><div class="exc-num">4</div><div><strong>Quarto passo:</strong> resuma 1 instrução de trabalho real (sem dado sensível) em 5 linhas — PCTFL completo — pra treinar alguém novo.</div></div>
+              <div class="exc-esperado"><strong>Resultado esperado:</strong> uma conversa com ida e volta — prompt, crítica, versão melhor — e um resumo de instrução pronto pra treinar.</div>
+            </div>
+            <div class="exc-exemplo">
+              <div class="exc-ex-top">
+                <div class="exc-avatar">EX</div>
+                <div>
+                  <span class="exc-ex-label">Exemplo trabalhado</span>
+                  <div class="exc-ex-persona">Supervisor de Manutenção · injetora 7</div>
+                </div>
+              </div>
+              <div class="exc-rotina"><strong>Situação escolhida:</strong> o DDS que a IA devolveu está <mark>longo demais e sem exemplo prático</mark> — vai aborrecer o time. E depois: resumir a instrução de troca de bico em 5 linhas pra treinar o operador novo do turno C.</div>
+              <div class="exc-frase">Refino: "Revise o DDS considerando: <mark>reduza pra 12 linhas</mark> e <mark>adicione 1 exemplo real de quase-acidente</mark> na linha (sem citar pessoa). Mantenha o compromisso final."
+
+Resumo: "Resuma <mark>a instrução IT-M07 de troca de bico da injetora</mark> em 5 linhas pra treinar o operador novo do turno C — o que checar antes, durante e depois. Sem jargão técnico. Regra de ouro."</div>
+              <p class="exc-nota"><strong>Por que passa no teste:</strong> o refino é cirúrgico (2 mudanças nomeadas, mantém o resto), o resumo tem público claro (operador novo turno C) e formato travado (5 linhas · 3 momentos), a regra de ouro protege contra invenção de passo que não existe na IT real.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exc-panel" id="t1-c3">
+        <div class="exc-panel-inner">
+          <div class="exc-panel-hdr">
+            <div class="exc-panel-title">Camada 3 — Metaprompt</div>
+            <span class="exc-panel-meta">opcional · +10 min</span>
+          </div>
+          <div class="exc-panel-obj"><strong>Objetivo:</strong> aprender o atalho — quando você não quer preencher as 6 camadas na mão, <strong>pede pra IA montar o prompt pra você</strong> a partir do seu objetivo.</div>
+          <div class="exc-split">
+            <div class="exc-passos">
+              <h5>Passo a passo</h5>
+              <div class="exc-passo"><div class="exc-num">1</div><div>Cole o <strong>modelo metaprompt</strong> abaixo no Claude.</div></div>
+              <div class="exc-passo"><div class="exc-num">2</div><div>Preencha só o <em>"Meu objetivo é: [o que você quer fazer]"</em> — na sua linguagem, sem se preocupar com estrutura.</div></div>
+              <div class="exc-passo"><div class="exc-num">3</div><div>A IA vai te fazer <strong>3 a 5 perguntas</strong> pra preencher o que faltou (público, formato, o que evitar). Responde direto.</div></div>
+              <div class="exc-passo"><div class="exc-num">4</div><div>A IA devolve o <strong>PCTFL completo</strong>, pronto pra rodar. Copia e cola numa nova conversa.</div></div>
+              <div class="exc-passo"><div class="exc-num">5</div><div>Leia crítico: <em>o que a IA colocou que você não teria pensado?</em> Isso vira aprendizado pra próxima vez que você montar sozinho.</div></div>
+              <div class="exc-esperado"><strong>Resultado esperado:</strong> 1 prompt gerado pela IA + sua leitura crítica de como ela estruturou — você vira o autor do próximo, não a IA.</div>
+              <div class="exc-metamodelo">
+                <h5>Modelo metaprompt · cole no Claude</h5>
+                <div class="exc-frase">Você é especialista em Engenharia de Prompt. Vou te dizer meu objetivo, e você vai criar o prompt perfeito pra mim usando o framework PCTFL (Papel, Contexto, Tarefa, Formato, Limitações).
+
+Antes de escrever o prompt final, me faça as perguntas que faltam pra preencher cada elemento.
+
+Meu objetivo é: [descreva o que você quer fazer].</div>
+              </div>
+            </div>
+            <div class="exc-exemplo">
+              <div class="exc-ex-top">
+                <div class="exc-avatar">EX</div>
+                <div>
+                  <span class="exc-ex-label">Exemplo trabalhado</span>
+                  <div class="exc-ex-persona">Supervisor de Qualidade · treinamento</div>
+                </div>
+              </div>
+              <div class="exc-rotina"><strong>Objetivo escolhido:</strong> "Quero <mark>preparar o plano de treinamento do novo operador</mark> sobre o procedimento de inspeção visual da linha 3 — inclui roteiro, exemplos práticos e checklist final."</div>
+              <div class="exc-frase">Meu objetivo é: <mark>preparar o plano de treinamento do novo operador</mark> sobre inspeção visual da linha 3.
+
+[A IA responde com 4 perguntas: (1) o operador tem experiência prévia? (2) qual o tempo do treinamento? (3) existe defeito mais comum na linha 3? (4) o treinamento tem avaliação prática ao final?]
+
+Você responde as 4 e a IA devolve <mark>PCTFL completo</mark>: papel de instrutor técnico, contexto do operador iniciante, tarefa "monte roteiro em 3 blocos", formato passo-a-passo com exemplo real, limitação "não invente defeito que não vi na linha".</div>
+              <p class="exc-nota"><strong>Por que passa no teste:</strong> supervisor deu só o objetivo em linguagem natural — a IA extraiu o resto via perguntas. Fica um roteiro de treinamento que ele reusa toda vez que chegar operador novo na linha 3.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -557,5 +787,57 @@
 </footer>
 
 <script src="../assets/script.js" defer></script>
+<script>
+/* goal-17 §11 · Exercício — tabs + botão Copiar (com fallback execCommand) */
+(function () {
+  document.querySelectorAll('.exc-section').forEach(function (section) {
+    var tabs = section.querySelectorAll('.exc-tab');
+    var panels = section.querySelectorAll('.exc-panel');
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) { t.classList.remove('active'); });
+        panels.forEach(function (p) { p.classList.remove('active'); });
+        tab.classList.add('active');
+        var target = tab.getAttribute('data-target');
+        var panel = section.querySelector('#' + target);
+        if (panel) panel.classList.add('active');
+      });
+    });
+  });
+
+  document.querySelectorAll('.exc-frase').forEach(function (frase) {
+    var btn = document.createElement('button');
+    btn.className = 'exc-copy-btn';
+    btn.type = 'button';
+    btn.textContent = 'Copiar';
+    btn.addEventListener('click', function () {
+      var texto = frase.innerText.trim();
+      var feedback = function () {
+        btn.textContent = '✓ Copiado';
+        btn.classList.add('copied');
+        setTimeout(function () { btn.textContent = 'Copiar'; btn.classList.remove('copied'); }, 1600);
+      };
+      var copyViaTextarea = function () {
+        var ta = document.createElement('textarea');
+        ta.value = texto; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); feedback(); }
+        catch (e) { btn.textContent = 'Erro'; setTimeout(function () { btn.textContent = 'Copiar'; }, 1600); }
+        document.body.removeChild(ta);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(texto).then(feedback).catch(copyViaTextarea);
+      } else {
+        copyViaTextarea();
+      }
+    });
+    var wrap = document.createElement('div');
+    wrap.className = 'exc-frase-wrap';
+    frase.parentNode.insertBefore(wrap, frase);
+    wrap.appendChild(frase);
+    wrap.appendChild(btn);
+  });
+})();
+</script>
 </body>
 </html>

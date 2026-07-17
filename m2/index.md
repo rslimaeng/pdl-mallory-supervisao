@@ -34,33 +34,48 @@ E o primeiro resultado vem rápido. O DDS que consome sua manhã de segunda sai 
 
 ## Um prompt ruim é sempre culpa do humano
 
-A IA é previsível: ela gera saídas proporcionais à qualidade da entrada. Prompt vago → resposta vaga. Prompt preciso → resposta precisa. **A engenharia de prompt é a habilidade de escrever a entrada certa.**
+A IA é previsível. Entrada vaga → saída vaga. Entrada precisa → saída precisa. O problema quase nunca é a ferramenta.
 
-**Anthropic Economic Index** confirma o padrão: os usos que mais falham são os pedidos vagos, sem contexto. O que resolve é método — não talento nem ferramenta melhor.
+**A engenharia de prompt é a habilidade de escrever a entrada certa — e ela é ensinável em 4 horas. É o que a gente vai fazer agora.**
 
-| Prompt vago | Problema | Resultado provável |
+> 📊 **26,7% — a preocupação nº 1 com IA no mundo.** *Inconfiabilidade* (inconsistência e alucinação) é o que mais preocupa quem usa IA no trabalho. É exatamente o que o **PCTFL** resolve.
+> *fonte: Anthropic Economic Index*
+
+**3 casos que todo supervisor reconhece:**
+
+| 🔴 Prompt vago | Problema | Resultado provável |
 |---|---|---|
 | "Faz um DDS pra segunda" | Sem tema, sem público, sem formato | Palestra genérica, precisa refazer |
 | "Melhora esse texto" | Sem critério, sem destinatário | Versão levemente diferente, sem ganho |
 | "Explica a norma pro time" | Sem recorte de aplicação | 10 parágrafos genéricos, ninguém lê |
 
-Esse módulo te dá o método pra sair desses 3 casos — em 3 exercícios executados por você, ao vivo.
+Esse módulo te dá o método pra sair desses 3 casos — em **3 exercícios executados por você, ao vivo**. No próximo bloco, você vê o antes e depois de cada um **antes** de aprender a estrutura.
 
 ---
 
-## Vago × Situado — a diferença que muda tudo
+## Antes do método: vago × situado
 
-O mesmo pedido escrito de dois jeitos. Um recebe o que a internet daria; o outro recebe o que você precisa.
+O mesmo pedido escrito de **dois jeitos**. Um recebe o que a internet daria; o outro recebe o que você precisa.
 
-**Exemplo 1 · comunicado**
-- 🔴 **Vago:** "Me ajuda com um comunicado sobre mudança de procedimento pra equipe." → texto genérico, tom impessoal, sem contexto do seu time — e você reescreve.
-- 🟢 **Situado:** "Escreva um comunicado de 10 linhas explicando a nova regra de troca de turno pra minha equipe (14 pessoas, turno da manhã). Tom firme e respeitoso. Termine com pergunta que abre conversa. Sem jargão." → rascunho colável, tom certo, formato pronto — você ajusta 2 detalhes.
+*Antes de aprender a estrutura (PCTFL), olhe a saída dos dois lados — e você já vai querer o método pra chegar no jeito da direita sem pensar.*
 
-**Exemplo 2 · resumo**
-- 🔴 **Vago:** "Como resumir isso aqui?" → resumo padrão, sem hierarquia, sem foco no que importa pra você.
-- 🟢 **Situado:** "Resuma esta ata de reunião em 5 bullets. Destaque: (1) decisões tomadas, (2) responsáveis, (3) prazos. Sem elogio, sem introdução." → 5 bullets acionáveis, direto pra sua próxima mensagem no time.
+### Caso 1 · Comunicado pra equipe
+*mudança de procedimento · turno da manhã*
 
-A diferença não é a IA. É o quanto você **situa** o pedido. O método a seguir — PCTFL — é isso, virado em checklist.
+- 🔴 **Vago:** "Me ajuda com um comunicado sobre mudança de procedimento pra equipe."
+  → *Recebe:* texto genérico, tom impessoal, sem contexto do seu time — e você reescreve.
+- 🟢 **Situado:** "Escreva um comunicado de 10 linhas explicando a nova regra de troca de turno pra minha equipe (14 pessoas, turno da manhã). Tom firme e respeitoso. Termine com pergunta que abre conversa. Sem jargão."
+  → *Recebe:* rascunho colável, tom certo, formato pronto — você ajusta 2 detalhes.
+
+### Caso 2 · Resumo de ata
+*reunião de planejamento · sua próxima mensagem no time*
+
+- 🔴 **Vago:** "Como resumir isso aqui?"
+  → *Recebe:* resumo padrão, sem hierarquia, sem foco no que importa pra você.
+- 🟢 **Situado:** "Resuma esta ata de reunião em 5 bullets. Destaque: (1) decisões tomadas, (2) responsáveis, (3) prazos. Sem elogio, sem introdução."
+  → *Recebe:* 5 bullets acionáveis, direto pra sua próxima mensagem no time.
+
+> A diferença não é a IA. É o quanto você **situa** o pedido. O método a seguir — **PCTFL** — é isso, virado em checklist.
 
 ---
 
@@ -120,15 +135,15 @@ Todo prompt tem uma "Tarefa". A qualidade da resposta está sempre em **um únic
 
 **Teste prático:** se você não consegue substituir o verbo da sua Tarefa por outro sem mudar completamente o pedido, você acertou o verbo.
 
-Troque "me ajude" por verbo cirúrgico — a tabela por área:
+Troque "me ajude" por verbo cirúrgico — cada área tem seu par + o que muda na resposta da IA:
 
-| Área | Verbo vago | Verbo cirúrgico | Exemplo |
+| Área | 🔴 Verbo vago (exemplo) | 🟢 Verbo cirúrgico (exemplo) | Como muda a resposta da IA |
 |---|---|---|---|
-| Escrita | me ajude, faça, veja | escreva, redija, reescreva | "Escreva um comunicado de 10 linhas…" |
-| Análise | analise, veja | liste, compare, aponte | "Liste os 3 pontos que exigem decisão…" |
-| Síntese | resuma, condense | resuma em N bullets, extraia | "Resuma em 5 bullets destacando…" |
-| Estruturação | organize, arrume | classifique, ordene por, agrupe | "Classifique por urgência e responsável…" |
-| Refino | melhore, arruma | reescreva no tom X, ajuste pra público Y | "Reescreva no tom firme + respeitoso…" |
+| **Escrita** | "me ajude com um comunicado" | "escreva um comunicado de 10 linhas…" | 🔴 texto genérico, tom impessoal — você reescreve inteiro · 🟢 rascunho colável, tom certo, formato pronto — ajusta 2 detalhes |
+| **Análise** | "analise esse apontamento" | "liste os 3 pontos que exigem decisão…" | 🔴 parágrafo descritivo, sem priorização · 🟢 3 bullets numerados com o que decidir, para quem, e o prazo |
+| **Síntese** | "resume isso aí" | "resuma em 5 bullets destacando…" | 🔴 resumo genérico, decisão e contexto misturados · 🟢 5 bullets com decisões / responsáveis / prazos, direto pra mensagem no time |
+| **Estruturação** | "organize essa lista" | "classifique por urgência e responsável…" | 🔴 lista redistribuída sem lógica clara · 🟢 grupos nomeados com critério explícito, decisão facilitada |
+| **Refino** | "melhore esse texto" | "reescreva no tom firme + respeitoso…" | 🔴 versão levemente diferente, ninguém percebe · 🟢 mudança de tom mensurável, diferença sentida na leitura |
 
 > ⚙️ **Regra prática:** antes de rodar um prompt, sublinhe o verbo da sua Tarefa. Se for "me ajude", "faça", "veja", "melhore" — pare e troque. Só rode com verbo cirúrgico.
 
@@ -151,7 +166,7 @@ Você vai ouvir falar de **ChatGPT, Copilot, Gemini** — todas fazem coisas par
 
 ---
 
-## Gerador de prompt — ferramenta viva
+## Monte seu prompt agora — ferramenta viva
 
 Uma ferramenta viva pra montar seu próprio PCTFL+CS: 6 campos à esquerda, o prompt monta sozinho à direita — você copia e cola no Claude. **Está na versão HTML deste módulo** (abra a página no navegador): é o modo Colaboração com método. Lendo só este Markdown? Use o prompt-âncora abaixo como molde e preencha as 6 camadas na mão.
 
@@ -191,6 +206,36 @@ Para adaptar ao seu caso: troque o CONTEXTO pela sua situação real e mantenha 
 
 ---
 
+## Dois hábitos que fecham o método
+
+Você não precisa lembrar dos "5 pontos" pra levar o M2 pra segunda-feira. Você precisa de **dois hábitos**. Um é **cinto de segurança** — impede a IA de inventar. Outro é **checagem final** — impede você de mandar antes de conferir.
+
+### Hábito 1 · O cinto de segurança
+
+**"Se faltar informação, pergunte. Não invente."** — uma frase, sempre presente, em todo prompt seu.
+
+    # LIMITAÇÕES
+    Se faltar informação, pergunte.
+    Não invente. Não cite norma ou NR — confirmo na fonte.
+
+**Quando ativa:** *sempre*. É a frase mais barata que existe — 8 palavras que impedem a IA de preencher os buracos com invenção. Sem ela, um DDS pode virar "conforme a NR-XX" com número inventado.
+
+*Aterrissa no M4* — protocolo completo de anti-alucinação (fonte · coerência · seu conhecimento). Aqui, o hábito começa.
+
+### Hábito 2 · A checagem de 30 segundos
+
+**Valide antes de mandar — 3 filtros rápidos.** Você é o inspetor de qualidade da resposta.
+
+    1. Fonte — os fatos vieram de mim?
+    2. Coerência — número ou norma inventada?
+    3. Meu conhecimento — bate com o que eu sei?
+
+**Quando ativa:** *antes de usar qualquer resposta*. Falhou em qualquer um dos 3, corrige antes. Um DDS com norma errada perde a autoridade toda — e o seu nome vai junto.
+
+*Aterrissa no M4* — o Validador de resposta em 30s (artefato interativo). Aqui, você já começa a rodar mentalmente.
+
+---
+
 ## Exercício
 
 ### Camada 1 — Básico (todos · 10-15 min)
@@ -198,29 +243,109 @@ Para adaptar ao seu caso: troque o CONTEXTO pela sua situação real e mantenha 
 **Objetivo:** executar seus 3 primeiros prompts com resultado útil.
 
 **Passo a passo:**
-1. Primeiro acesso, do zero: abra [claude.ai](https://claude.ai) no navegador do celular ou computador → toque em "Continuar com Google" (ou digite seu e-mail e confirme o código que chegar) → pronto, a tela de conversa abre. Conta gratuita, sem cartão. Quem já tem, ajuda o colega do lado.
-2. Rode o prompt-âncora do DDS como está. Leia a resposta.
-3. Agora adapte: troque o CONTEXTO por uma situação real da sua área (mantenha as 6 camadas) e rode de novo.
-4. Terceiro prompt: pegue um e-mail ou mensagem difícil que você precisa mandar e peça: papel + contexto + "reescreva com tom firme e respeitoso" + formato + regra de ouro.
-5. Para cada resposta, aplique a validação de 30 segundos (fonte · coerência · seu conhecimento).
+1. Primeiro acesso, do zero: abra [claude.ai](https://claude.ai) → "Continuar com Google" — 2 min, conta gratuita, sem cartão. Quem já tem, ajuda o colega do lado.
+2. Rode o **prompt-âncora do DDS** como está. Leia a resposta.
+3. **Adapte:** troque o CONTEXTO por uma situação real da sua área (mantenha as 6 camadas) e rode de novo.
+4. **Terceiro prompt:** pegue um e-mail difícil que precisa mandar — papel + contexto + "reescreva com tom firme e respeitoso" + formato + regra de ouro.
+5. Aplique a **validação de 30s** em cada uma (fonte · coerência · seu conhecimento).
 
-**Resultado esperado:** 3 respostas úteis no seu histórico do Claude — DDS, sua adaptação e o e-mail.
+**Resultado esperado:** 3 respostas úteis no seu histórico — DDS-âncora, sua adaptação, e o e-mail.
 
 **Como avaliar:** pergunta-teste para cada uma: "eu usaria isso depois de ajustar 2 ou 3 detalhes?" Se sim, passou. Se precisaria reescrever tudo, o CONTEXTO ficou raso — refaça com mais situação real.
 
+> **Exemplo trabalhado · Supervisor de Montagem · linha 3**
+>
+> *Situação escolhida:* DDS de segunda sobre **uso correto de EPI na troca de molde** — 14 pessoas turno da manhã, pós-quase-acidente da semana passada.
+>
+> ```text
+> # PAPEL: técnico de segurança em fábrica de eletroportáteis.
+> # CONTEXTO: DDS de segunda na montagem, tema EPI na troca de molde,
+>   equipe de 14, turno manhã.
+> # TAREFA: escreva o roteiro do DDS de 5 min, com pergunta de abertura
+>   + compromisso ao final.
+> # FORMATO: 3 blocos, máx 20 linhas, linguagem falada.
+> # LIMITAÇÕES: se faltar informação, pergunte. Não invente. Não cite NR
+>   — confirmo na fonte.
+> # CS: apresento em 5 min sem ler, e o time entende o compromisso final.
+> ```
+>
+> *Por que passa no teste:* tema situado (EPI na troca de molde, não EPI genérico), destinatário nomeado, CS amarra na apresentação real de segunda, regra de ouro protege contra NR inventada.
+
 ### Camada 2 — Desafio (para quem terminou · +10-15 min)
 
-**Objetivo:** aprender a refinar — o segundo prompt da mesma conversa.
+**Objetivo:** aprender a refinar — a segunda resposta bate a primeira quando você exige com critério.
 
 **Passo a passo:**
-1. Pegue a resposta do seu DDS adaptado. Encontre o ponto fraco: genérico demais? Longo? Tom errado?
-2. Na mesma conversa, escreva: "Revise considerando: [o que faltou]. Mantenha o resto."
+1. Pegue a resposta do seu DDS adaptado. Encontre o **ponto fraco**: genérico demais? Longo? Tom errado?
+2. Na mesma conversa: *"Revise considerando [o que faltou]. Mantenha o resto."*
 3. Compare as duas versões. Repita uma vez se precisar.
-4. Terceiro passo: resuma uma instrução de trabalho real (sem dado sensível) em 5 linhas para treinar alguém novo — PCTFL completo.
+4. **Quarto passo:** resuma 1 instrução de trabalho real (sem dado sensível) em 5 linhas — PCTFL completo — pra treinar alguém novo.
 
-**Resultado esperado:** uma conversa com ida e volta — prompt, crítica, versão melhor — e um resumo de instrução pronto.
+**Resultado esperado:** uma conversa com ida e volta — prompt, crítica, versão melhor — e um resumo de instrução pronto pra treinar.
 
 **Como avaliar:** se a segunda versão ficou melhor que a primeira por causa da sua crítica, você entendeu o jogo: a IA melhora quando você exige com critério.
+
+> **Exemplo trabalhado · Supervisor de Manutenção · injetora 7**
+>
+> *Situação escolhida:* o DDS que a IA devolveu está **longo demais e sem exemplo prático** — vai aborrecer o time. E depois: resumir a instrução de troca de bico em 5 linhas pra treinar o operador novo do turno C.
+>
+> ```text
+> Refino: "Revise o DDS considerando: reduza pra 12 linhas e adicione
+> 1 exemplo real de quase-acidente na linha (sem citar pessoa).
+> Mantenha o compromisso final."
+>
+> Resumo: "Resuma a instrução IT-M07 de troca de bico da injetora em
+> 5 linhas pra treinar o operador novo do turno C — o que checar antes,
+> durante e depois. Sem jargão técnico. Regra de ouro."
+> ```
+>
+> *Por que passa no teste:* o refino é cirúrgico (2 mudanças nomeadas, mantém o resto), o resumo tem público claro (operador novo turno C) e formato travado (5 linhas · 3 momentos), a regra de ouro protege contra invenção de passo que não existe na IT real.
+
+### Camada 3 — Metaprompt: deixe a IA montar o prompt (opcional · +10 min)
+
+**Objetivo:** aprender o atalho — quando você não quer preencher as 6 camadas na mão, pede pra IA montar o prompt pra você a partir do seu objetivo.
+
+**Passo a passo:**
+1. Cole o **modelo metaprompt** abaixo no Claude.
+2. Preencha só o *"Meu objetivo é: [o que você quer fazer]"* — na sua linguagem, sem se preocupar com estrutura.
+3. A IA vai te fazer **3 a 5 perguntas** pra preencher o que faltou (público, formato, o que evitar). Responde direto.
+4. A IA devolve o **PCTFL completo**, pronto pra rodar. Copia e cola numa nova conversa.
+5. Leia crítico: *o que a IA colocou que você não teria pensado?* Isso vira aprendizado pra próxima vez que montar sozinho.
+
+**Modelo metaprompt · cole no Claude:**
+
+```text
+Você é especialista em Engenharia de Prompt. Vou te dizer meu objetivo,
+e você vai criar o prompt perfeito pra mim usando o framework PCTFL
+(Papel, Contexto, Tarefa, Formato, Limitações).
+
+Antes de escrever o prompt final, me faça as perguntas que faltam pra
+preencher cada elemento.
+
+Meu objetivo é: [descreva o que você quer fazer].
+```
+
+**Resultado esperado:** 1 prompt gerado pela IA + sua leitura crítica de como ela estruturou — você vira o autor do próximo, não a IA.
+
+> **Exemplo trabalhado · Supervisor de Qualidade · treinamento**
+>
+> *Objetivo escolhido:* "Quero **preparar o plano de treinamento do novo operador** sobre o procedimento de inspeção visual da linha 3 — inclui roteiro, exemplos práticos e checklist final."
+>
+> ```text
+> Meu objetivo é: preparar o plano de treinamento do novo operador sobre
+> inspeção visual da linha 3.
+>
+> [A IA responde com 4 perguntas: (1) o operador tem experiência prévia?
+>  (2) qual o tempo do treinamento? (3) existe defeito mais comum na
+>  linha 3? (4) o treinamento tem avaliação prática ao final?]
+>
+> Você responde as 4 e a IA devolve PCTFL completo: papel de instrutor
+> técnico, contexto do operador iniciante, tarefa "monte roteiro em
+> 3 blocos", formato passo-a-passo com exemplo real, limitação
+> "não invente defeito que não vi na linha".
+> ```
+>
+> *Por que passa no teste:* supervisor deu só o objetivo em linguagem natural — a IA extraiu o resto via perguntas. Fica um roteiro de treinamento que ele reusa toda vez que chegar operador novo na linha 3.
 
 ---
 
