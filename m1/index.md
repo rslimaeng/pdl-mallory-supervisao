@@ -93,7 +93,33 @@ A IA **expande o campo de visão**. Você pergunta "que perguntas eu deveria est
 
 ## Os 3 modos de uso
 
-A IA entra no seu dia de 3 formas. **Este vocabulário te acompanha do M1 ao M6** — vale fixar. Regra de ouro: quanto maior o impacto ou o risco da decisão, mais Manual o modo. Comece pelo Autopiloto na próxima semana.
+A IA entra no seu dia de 3 formas — cada uma com um **loop de uso** diferente. **Este vocabulário te acompanha do M1 ao M6.** Se ficar em dúvida em qual modo usar, olhe pra tarefa nestes 2 eixos — o modo certo aparece sozinho:
+
+### Matriz: Risco × Rotina
+
+|  | **Tarefa única / esporádica** | **Tarefa que se repete toda semana** |
+|---|---|---|
+| **Risco alto ↑** | 🖐 **Manual** — advertir operador · aprovar registro de qualidade/segurança · negociar com fornecedor · assinar avaliação · decidir escala em conflito · aprovar parada de linha emergencial · leitura do sinal físico da máquina | 🤝 **Colaboração** — reunião difícil de escala mensal · plano de ação pós-incidente · feedback estruturado no 1×1 · investigação de reclamação recorrente · revisão de procedimento de segurança · preparação de auditoria interna · análise mensal de indicador crítico |
+| **Risco baixo** | 🤝 **Colaboração** — 1º e-mail pro PCP explicando parada · resumir instrução técnica (14 pgs) · preparar apresentação pro turno · redigir contra-argumentação · adaptar template pra caso novo · traduzir norma técnica pro time · estruturar tópicos pra reunião ad-hoc | 🤖 **Autopiloto 🎯 comece aqui** — relatório de turno padrão · DDS da semana · OS de manutenção estruturada · checklist de qualidade padronizado · comunicado semanal ao time · registro de não-conformidade · ata da reunião de PCP · consolidação de apontamentos brutos |
+
+**Como funciona cada modo:**
+
+- 🖐 **Manual** — A IA **não entra**. No máximo, prepara contexto antes ou registra depois. **Decisão e assinatura são suas, sempre.**
+- 🤝 **Colaboração** — Você propõe → IA rascunha → você ajusta → IA refina. **2-3 idas e voltas** — o valor vem da *iteração*, não da 1ª resposta.
+- 🤖 **Autopiloto** — Você define o padrão **uma vez** → IA repete toda semana → você confere em 2 min e assina. **É onde o ganho de tempo aparece direto.**
+
+### Regra de ouro — e por que é assim
+
+Quanto mais no canto **inferior-direito** (rotineiro + baixo risco), mais **Autopiloto**. Quanto mais no canto **superior-esquerdo** (único + alto risco), mais **Manual**. **Comece pelo Autopiloto na próxima semana** — é onde o retorno aparece primeiro sem risco.
+
+- **Por que rotineiro?** A IA acerta mais em tarefa que **se repete no mesmo formato**. Você aprende a checar em 2 min — o custo de revisar cai.
+- **Por que baixo risco?** Erro em relatório de turno se corrige. **Erro em advertência não**. Comece onde o custo de errar é baixo — pra ir aprendendo sem pagar caro.
+
+> **Ethan Mollick** — Professor da **Wharton School** (Univ. Pennsylvania) · autor do best-seller **"Co-Intelligence"** (2024) · newsletter **One Useful Thing** (~500k assinantes) — uma das vozes mais respeitadas do mundo sobre IA no trabalho.
+>
+> *"Vale delegar pra IA quando o tempo que ela economiza é maior que o tempo que você gasta checando. É gestão 101 — só que agora aplicada a agentes."*
+>
+> — One Useful Thing · *Management as AI Superpower* · 2026
 
 > 💡 **Se você viu a ementa, é a mesma coisa com outro nome.**
 > A ementa fala em **Copiloto · Automação · Agente**. Aqui usamos **Colaboração · Autopiloto · Manual** — nomes mais precisos pra este treino:

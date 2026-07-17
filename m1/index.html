@@ -220,7 +220,100 @@
 
     <section class="section">
       <h2>Os 3 modos de uso</h2>
-      <p>A IA entra no seu dia de 3 formas. <strong>Este vocabulário te acompanha do M1 ao M6</strong> — vale fixar. Regra de ouro: quanto maior o impacto ou o risco da decisão, mais Manual o modo. Comece pelo Autopiloto na próxima semana.</p>
+      <p>A IA entra no seu dia de 3 formas — cada uma com um <strong>loop de uso</strong> diferente. <strong>Este vocabulário te acompanha do M1 ao M6.</strong> Se ficar em dúvida em qual modo usar, olhe pra tarefa nestes 2 eixos — o modo certo aparece sozinho:</p>
+
+      <div class="modos-matriz" role="table" aria-label="Matriz 3 modos: risco × rotina">
+        <div class="modos-col-hdr" role="columnheader">Tarefa única / esporádica</div>
+        <div class="modos-col-hdr modos-col-hdr-2" role="columnheader">Tarefa que se repete toda semana</div>
+        <div class="modos-yaxis">Risco alto ↑</div>
+
+        <div class="modos-cell modos-cell-manual modos-cell-tl" role="cell">
+          <div class="modos-cell-head"><span class="modos-cell-emoji">🖐</span><span class="modos-cell-mode">Manual</span></div>
+          <div class="modos-cell-sub">Alto risco · único</div>
+          <div class="modos-cell-loop"><span class="modos-cell-loop-lbl">Como funciona</span>A IA <strong>não entra</strong>. No máximo, prepara contexto antes ou registra depois. <strong>Decisão e assinatura são suas, sempre.</strong></div>
+          <div class="modos-cell-examples-lbl">Exemplos</div>
+          <ul class="modos-cell-examples">
+            <li>Advertir operador</li>
+            <li>Aprovar registro de qualidade / segurança</li>
+            <li>Negociar com fornecedor</li>
+            <li>Assinar avaliação de desempenho</li>
+            <li>Decidir escala em conflito</li>
+            <li>Aprovar parada de linha emergencial</li>
+            <li>Leitura do sinal físico da máquina</li>
+          </ul>
+        </div>
+
+        <div class="modos-cell modos-cell-colab modos-cell-tr" role="cell">
+          <div class="modos-cell-head"><span class="modos-cell-emoji">🤝</span><span class="modos-cell-mode">Colaboração</span></div>
+          <div class="modos-cell-sub">Alto risco · rotineiro</div>
+          <div class="modos-cell-loop"><span class="modos-cell-loop-lbl">Como funciona</span>Você propõe → IA rascunha → você ajusta → IA refina. <strong>2-3 idas e voltas</strong> — o valor vem da <em>iteração</em>, não da 1ª resposta.</div>
+          <div class="modos-cell-examples-lbl">Exemplos</div>
+          <ul class="modos-cell-examples">
+            <li>Reunião difícil de escala mensal</li>
+            <li>Plano de ação pós-incidente do turno</li>
+            <li>Feedback estruturado no 1×1</li>
+            <li>Investigação de reclamação recorrente</li>
+            <li>Revisão de procedimento de segurança</li>
+            <li>Preparação de auditoria interna</li>
+            <li>Análise mensal de indicador crítico</li>
+          </ul>
+        </div>
+
+        <div class="modos-cell modos-cell-colab modos-cell-bl" role="cell">
+          <div class="modos-cell-head"><span class="modos-cell-emoji">🤝</span><span class="modos-cell-mode">Colaboração</span></div>
+          <div class="modos-cell-sub">Baixo risco · único</div>
+          <div class="modos-cell-loop"><span class="modos-cell-loop-lbl">Como funciona</span>Você conta o contexto → IA gera versão 1 → você ajusta → IA melhora. <strong>Bom pra tarefa nova onde você quer ganhar tempo.</strong></div>
+          <div class="modos-cell-examples-lbl">Exemplos</div>
+          <ul class="modos-cell-examples">
+            <li>1º e-mail pro PCP explicando parada</li>
+            <li>Resumir instrução técnica nova (14 páginas)</li>
+            <li>Preparar apresentação pro turno</li>
+            <li>Redigir contra-argumentação de proposta</li>
+            <li>Adaptar template de comunicado pra caso novo</li>
+            <li>Traduzir norma técnica em linguagem do time</li>
+            <li>Estruturar tópicos pra reunião ad-hoc</li>
+          </ul>
+        </div>
+
+        <div class="modos-cell modos-cell-auto modos-cell-br" role="cell">
+          <span class="modos-badge-comece">🎯 comece aqui</span>
+          <div class="modos-cell-head"><span class="modos-cell-emoji">🤖</span><span class="modos-cell-mode">Autopiloto</span></div>
+          <div class="modos-cell-sub">Baixo risco · rotineiro</div>
+          <div class="modos-cell-loop"><span class="modos-cell-loop-lbl">Como funciona</span>Você define o padrão <strong>uma vez</strong> → IA repete toda semana → você confere em 2 min e assina. <strong>É onde o ganho de tempo aparece direto.</strong></div>
+          <div class="modos-cell-examples-lbl">Exemplos</div>
+          <ul class="modos-cell-examples">
+            <li>Relatório de turno padrão</li>
+            <li>DDS da semana</li>
+            <li>OS de manutenção estruturada</li>
+            <li>Checklist de qualidade padronizado</li>
+            <li>Comunicado semanal ao time</li>
+            <li>Registro de não-conformidade padrão</li>
+            <li>Ata da reunião de PCP</li>
+            <li>Consolidação de apontamentos brutos</li>
+          </ul>
+        </div>
+
+        <div class="modos-xaxis">Rotina baixa ← → Rotina alta</div>
+      </div>
+
+      <div class="modos-regra">
+        <h4>Regra de ouro — e por que é assim</h4>
+        <p>Quanto mais no canto <strong>inferior-direito</strong> (rotineiro + baixo risco), mais <strong class="modos-strong-green">Autopiloto</strong>. Quanto mais no canto <strong>superior-esquerdo</strong> (único + alto risco), mais <strong class="modos-strong-red">Manual</strong>. <strong>Comece pelo Autopiloto na próxima semana</strong> — é onde o retorno aparece primeiro sem risco.</p>
+        <div class="modos-porque">
+          <div class="modos-por"><div class="modos-por-num">Por que rotineiro?</div><div class="modos-por-txt">A IA acerta mais em tarefa que <strong>se repete no mesmo formato</strong>. Você aprende a checar em 2 min — o custo de revisar cai.</div></div>
+          <div class="modos-por"><div class="modos-por-num">Por que baixo risco?</div><div class="modos-por-txt">Erro em relatório de turno se corrige. <strong>Erro em advertência não</strong>. Comece onde o custo de errar é baixo — pra ir aprendendo sem pagar caro.</div></div>
+        </div>
+      </div>
+
+      <div class="modos-autoridade">
+        <div class="modos-autoridade-avatar" aria-hidden="true">EM</div>
+        <div class="modos-autoridade-content">
+          <div class="modos-autoridade-name">Ethan Mollick</div>
+          <div class="modos-autoridade-cred">Professor da <strong>Wharton School</strong> (Univ. Pennsylvania) · autor do best-seller <strong>"Co-Intelligence"</strong> (2024) · newsletter <strong>One Useful Thing</strong> (~500k assinantes) — uma das vozes mais respeitadas do mundo sobre IA no trabalho.</div>
+          <blockquote class="modos-autoridade-quote">"Vale delegar pra IA quando o tempo que ela economiza é maior que o tempo que você gasta checando. É gestão 101 — só que agora aplicada a agentes."</blockquote>
+          <div class="modos-autoridade-source">One Useful Thing · <em>Management as AI Superpower</em> · 2026</div>
+        </div>
+      </div>
 
       <div class="modos-explorador" id="modos-explorador" data-trilha="t1" aria-label="Explorador dos 3 modos">
         <div class="explorador-header">
