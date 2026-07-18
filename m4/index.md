@@ -1,18 +1,39 @@
-# M4 · Usando IA com Segurança: LGPD, Dados e Alucinações
+# M4 · Validar antes de usar: o filtro que salva sua assinatura
 
-**Trilha 1 · Módulo 4 de 6 · 1h**
+**Trilha 1 · Módulo 4 de 6**
 
-Por que a IA "inventa" respostas e como usar sem colocar você nem a Mallory em risco.
+A habilidade universal deste módulo: **antes de mandar prompt e antes de aceitar resposta, passar por dois filtros de 30 segundos** — (1) posso enviar esse dado? e (2) posso confiar nessa resposta? No fim, um Semáforo com **suas próprias tarefas da semana** classificadas em 🟢 usa / 🟡 desidentifica / 🔴 não usa.
 
 ---
 
-## O contrato deste módulo
+## Três dores que este módulo cura
 
-**Você ganha:** a lista do que nunca enviar para a IA e um protocolo de validação em 3 passos — curto o bastante para virar hábito.
+Você já viveu (ou vai viver) pelo menos uma das três:
 
-**Você se compromete a:** fazer o teste do semáforo ao vivo e flagrar uma invenção da IA com os próprios olhos.
+**1. "Mandei o e-mail e o número estava errado."**
+Só descobriu quando o cliente respondeu perguntando. A IA tinha completado o número com algo que parecia certo — e você não conferiu.
 
-**Tempo de leitura desta página:** 10 min
+**2. "Colei a escala pra IA otimizar; só depois lembrei que tinha CPF."**
+A ferramenta é externa. O dado saiu do controle da empresa. Ninguém foi mal-intencionado — foi hábito.
+
+**3. "Meu chefe perguntou de onde saiu esse dado e eu não soube dizer."**
+A IA respondeu bonito, você usou. Na hora da pergunta, o texto assinado era seu — a fonte, não.
+
+Este módulo entrega **um filtro só, com duas metades** — antes de mandar e antes de aceitar. 30 segundos por vez. Cura as três dores acima.
+
+As três dores têm um mesmo antídoto: você para de ser só o **dono da tarefa** (quem executa) e passa a ser o **dono do critério** (quem decide o que vale). A IA rascunha; você chancela. O nome no documento é seu — e agora é seu por escolha, não por descuido.
+
+---
+
+## As 3 habilidades deste módulo
+
+| # | Habilidade | Hoje (sem IA ou sem método) | Com o Claude + o filtro | Onde você pratica | Nível |
+|---|---|---|---|---|---|
+| **1** | Filtrar o dado **antes** de colar | Cola por hábito, torce pra não vazar | Aplica o mnemônico dos 3 "nunca" (gente · produto · contrato) em 5 segundos | Registro de sistema · e-mail formal · comunicado ao time | N2 |
+| **2** | Validar a resposta em 30 segundos | Aceita se veio bonito, rejeita se estranhou | Protocolo em 3 passos: **fonte** · **número** · **consistência** | Todo documento que sai da sua mesa | N3 |
+| **3** | Reconhecer alucinação com confiança | Passa batido no texto fluido — "veio tão certinho" | Vê o padrão "confiança sem fonte" e desconfia em dobro | Qualquer resposta com dado, prazo, número, norma | N3 |
+
+A sensação certa ao terminar o módulo: **"agora eu sei o que passa e o que não passa pelo meu filtro"**.
 
 ---
 
@@ -20,15 +41,17 @@ Por que a IA "inventa" respostas e como usar sem colocar você nem a Mallory em 
 
 | Você entra com | O que acontece | Você sai com |
 |---|---|---|
-| Prompts já rodando (M2 e M3) e uma pergunta justa: "até onde posso confiar?" | Você vê a IA inventar ao vivo, aprende por que acontece e treina o protocolo que pega o erro | A lista do que nunca enviar + o protocolo de validação em 3 passos, testados por você |
+| Prompts já rodando (M2 e M3) e uma pergunta justa: "até onde posso confiar?" | Você vê a IA inventar ao vivo, aprende por que acontece e treina o filtro de 2 metades | O **Semáforo de Uso IA** com suas 3-5 tarefas da semana classificadas + o protocolo em 3 passos memorizado |
 
 ---
 
 ## Por que isso importa aqui dentro
 
-O Supervisor de Qualidade registra uma não-conformidade de lote. O texto vai para o sistema e pode ser lido em auditoria ISO 9001. Se a IA "completar" o registro com uma causa que ninguém apurou, o problema deixou de ser o lote — virou o registro. É este o território do módulo: o que acontece quando o texto fluido da IA encontra documento que vale alguma coisa.
+**O caso-âncora deste módulo é universal:** o e-mail formal que sai assinado por você. Pode ser pro chefe, pro cliente, pro fornecedor, pro auditor. Todo mundo tem esse e-mail. Todo mundo já mandou um. E o dia em que ele sair com um número errado ou um dado que não deveria ter saído, o nome no rodapé é o seu.
 
-A Mallory está atenta a isso. Circulou pesquisa interna perguntando quem usa IA e que dados compartilha — governança de dados já é assunto de casa, não teoria de treinamento. O que você aprende aqui alinha o seu uso com essa preocupação.
+Na Mallory, esse e-mail vira coisa maior: o Supervisor de Qualidade registra uma não-conformidade de lote — texto vai pro sistema, pode ser lido em auditoria ISO 9001. Se a IA "completar" o registro com uma causa que ninguém apurou, o problema deixou de ser o lote — virou o registro.
+
+A Mallory está atenta a isso: circulou pesquisa interna perguntando quem usa IA e que dados compartilha — governança de dados já é assunto de casa, não teoria de treinamento. O que você aprende aqui alinha o seu uso com essa preocupação.
 
 E tem a LGPD: a lei brasileira que protege dado pessoal. Nome, CPF, salário, avaliação, atestado — nada disso pode ir para ferramenta externa sem controle. Quem envia responde, e a empresa junto.
 
@@ -38,7 +61,7 @@ E tem a LGPD: a lei brasileira que protege dado pessoal. Nome, CPF, salário, av
 
 ### 1. A IA erra com a mesma cara com que acerta
 
-Ela foi treinada para escrever texto fluido e confiante — não para dizer "não sei". Quando falta informação, ela completa com o que parece plausível. O texto vem bonito, seguro, bem escrito. Confiança da máquina não é evidência de nada. Isso tem nome: alucinação.
+Lembra da prova de múltipla escolha? Chutar dava 25% de chance; deixar em branco, zero. A IA foi treinada assim — recompensada quando acerta, penalizada quando fica em branco. Aprendeu a chutar com confiança em vez de dizer "não sei". O chute vem bem escrito, com tom seguro, no formato certo. Fluência não é evidência de nada. Isso tem nome: **alucinação**.
 
 ### 2. LGPD em 30 segundos
 
@@ -51,6 +74,8 @@ As três de cabeça: **gente** (qualquer dado de funcionário), **produto** (esp
 ### 4. Protocolo de validação em 3 passos — 30 segundos por resposta
 
 **Fonte:** cada fato da resposta veio do que eu enviei, ou apareceu do nada? **Número:** todo número, data, norma ou nome citado — confere na origem antes de repassar. **Consistência:** bate com o que eu sei do meu setor? Estranhou, checou. Três passos, meio minuto — mais rápido que refazer um registro errado em auditoria.
+
+**O rigor é proporcional ao risco.** Rascunho de e-mail interno? Passada rápida. Número que sobe pra diretoria, cláusula de contrato, dado que vira registro em auditoria? 30 segundos de protocolo não é excesso — é seguro. Regra prática: **quanto mais irreversível a decisão, mais devagar você lê**.
 
 ### 5. Se você não pode conferir, não use
 
@@ -69,74 +94,109 @@ A regra que fecha todas as outras. A IA sugeriu um prazo de norma que você não
 
 ---
 
-## Prompt-âncora do módulo
+## Prompt-âncora do módulo · gera o seu **Semáforo de Uso IA**
 
-Registro de não-conformidade — a demonstração de como usar IA em documento sério **sem expor dado real**. Os dados abaixo são fictícios de propósito:
+O M2 te deu o método formal (PCTFL + Critério de Sucesso). Este prompt aplica o método a **um exercício de duas metades**:
+
+1. **Meio A** — rascunhar um comunicado difícil (o "e-mail que sai assinado por você") com dado **desidentificado** — o Claude escreve o texto, você aplica o protocolo de 3 passos ao vivo.
+2. **Meio B** — no mesmo chat, o Claude **gera um Artifact HTML** "Semáforo de Uso IA" com as **suas 3-5 tarefas** da próxima semana, ranqueadas em 🟢 / 🟡 / 🔴.
 
 ```text
 # PAPEL
-Você é um inspetor de qualidade experiente em fábrica certificada ISO 9001.
+Você é um consultor de uso responsável de IA em ambiente industrial, treinado no
+protocolo do treinamento IA na Prática · Mallory · Trilha Supervisão. Trabalha em
+duas fases dentro deste mesmo chat.
 
 # CONTEXTO
-Preciso registrar uma não-conformidade. Dados FICTÍCIOS para este treino:
-- Produto: lote 4812-B de liquidificadores, 240 unidades
-- Detecção: inspeção final, 14/07, turno da manhã
-- Problema: 18 unidades com folga na trava do copo, fora do padrão de montagem
-- Ação imediata: lote segregado, linha avisada, reinspeção de 100% do lote
+Sou [seu cargo] em Mallory, área [sua área]. Vou treinar o filtro do M4 num
+comunicado difícil que preciso escrever esta semana e depois quero ranquear
+as próximas 5 tarefas em que penso usar IA.
 
-# TAREFA
-Escreva a descrição da não-conformidade para o registro do sistema de qualidade:
-o que foi detectado, onde, extensão e ação de contenção tomada.
+# TAREFA — FASE 1: Rascunho com desidentificação
+Vou colar abaixo o rascunho do comunicado (dados FICTÍCIOS para este treino).
+Você:
+1. Sinaliza cada item do rascunho como 🟢 pode ficar / 🟡 desidentifica / 🔴 tira antes de enviar.
+2. Reescreve o comunicado com os itens 🟡 desidentificados e os 🔴 removidos.
+3. No fim, aplica o protocolo em 3 passos (fonte · número · consistência) ao SEU
+   próprio rascunho, apontando o que precisa conferir antes de mandar.
 
-# FORMATO
-Texto corrido de até 10 linhas, objetivo, sem opinião — descrição factual
-no padrão de registro de auditoria.
+Rascunho:
+[cole aqui 5-8 linhas do comunicado com pelo menos 2 dados sensíveis fictícios —
+nome de operador, número de folha, cláusula de contrato — para o Claude praticar]
+
+# TAREFA — FASE 2: Semáforo de Uso IA (Artifact HTML)
+Depois da FASE 1, gere um Artifact HTML self-contained chamado
+"Semáforo de Uso IA · [meu cargo]" com a estrutura:
+
+- Tabela com 5 linhas em branco pra eu preencher — colunas:
+  · Tarefa em que penso usar IA
+  · Dado envolvido (dropdown: nenhum · público · interno · restrito)
+  · Risco de invenção (dropdown: baixo · médio · alto)
+  · Modo recomendado (dropdown: Autopiloto · Colaboração · Manual)
+  · Semáforo (calculado automaticamente 🟢 🟡 🔴 pela lógica abaixo)
+  · Ação sugerida (texto curto autogerado)
+- Botão "Copiar prompt de desidentificação" em cada linha 🟡 — copia um
+  prompt PCTFL prontinho pra rodar naquele caso
+- Rodapé fixo com os 3 "nunca" (gente · produto · contrato) e o protocolo
+  em 3 passos (fonte · número · consistência)
+- Salva estado em localStorage com chave "m4-semaforo-t1"
+- Botão "Imprimir A4 paisagem" + @media print otimizado
+- Paleta Slate Mallory: fundo escuro #262A35, azul #4AA6D7, amarelo #F7AC19,
+  verde #65A941, vermelho #D72C35, tipografia Archivo (títulos) + Inter (corpo)
+
+Lógica do semáforo (calcule sozinho):
+- 🟢 se Dado ∈ {nenhum, público} E Risco = baixo
+- 🟡 se Dado = interno OU Risco = médio
+- 🔴 se Dado = restrito OU Risco = alto
+
+# FORMATO DE ENTREGA
+1. Análise textual FASE 1 (rascunho reescrito + protocolo aplicado)
+2. Artifact HTML FASE 2 (código completo, self-contained, testado)
 
 # LIMITAÇÕES
-Se faltar informação, pergunte. Não invente.
-NÃO escreva causa-raiz nem ação corretiva — isso sai da análise do time, não do registro inicial.
+- Se qualquer campo do rascunho ficar ambíguo, pergunte antes de assumir.
+- NÃO invente nenhum dado da Mallory que não esteja no rascunho colado.
+- NÃO gere Artifact que dependa de bibliotecas externas — HTML/CSS/JS vanilla only.
+- NÃO substitua julgamento humano — o Semáforo orienta, o supervisor decide.
 ```
 
-Repare no que o prompt faz: entrega todos os fatos, proíbe a causa-raiz e trava a invenção. No uso real, você troca os dados fictícios pelos seus — e o registro continua sendo assinado por você.
+**Como o aluno usa em sala:** cola um rascunho de comunicado que ele mesmo escreveria, roda o prompt, vê o Claude fazer o protocolo ao vivo (Fase 1), e recebe o Artifact (Fase 2) pra preencher com 5 tarefas próprias — leva pra segunda.
 
 ---
 
-## Exercício
+## Exercício · Hands-on 40 minutos
 
-### Camada 1 — Básico (todos · 10-15 min)
+### Camada 1 — Rode o prompt-âncora (todos · 25 min)
 
-**Objetivo:** treinar o semáforo (pode / não pode) e o protocolo de 3 passos.
-
-**Passo a passo:**
-1. Classifique as 8 situações abaixo em 🟢 pode ou 🔴 não pode — 30 segundos cada, no papel:
-   1. Colar suas anotações de parada de linha para virar relatório
-   2. Colar a escala do time com nomes para a IA "otimizar"
-   3. Pedir a estrutura de um checklist de inspeção
-   4. Colar o parâmetro de injeção do molde novo para "documentar"
-   5. Pedir para reescrever um comunicado seu com tom mais claro
-   6. Perguntar o prazo legal de guarda de um documento e usar direto
-   7. Resumir um procedimento interno sem dados de pessoas
-   8. Colar o contrato do fornecedor para a IA "achar o problema"
-2. Confira em dupla. Gabarito: 🟢 1, 3, 5, 7 · 🔴 2, 4, 6, 8.
-3. Rode o prompt-âncora no celular. Aplique o protocolo: fonte · número · consistência.
-
-**Resultado esperado:** 8 classificações conferidas + 1 registro fictício gerado e validado.
-
-**Como avaliar:** errou alguma do semáforo? Volte na lista dos 3 "nunca" (gente, produto, contrato) e refaça o raciocínio — o item 6 é o mais traiçoeiro: o problema não é perguntar, é usar sem conferir.
-
-### Camada 2 — Desafio (para quem terminou · +10-15 min)
-
-**Objetivo:** flagrar uma alucinação com os próprios olhos.
+**Objetivo:** viver as duas fases do filtro — desidentificar dado real (Fase 1) e sair com o Semáforo preenchido (Fase 2).
 
 **Passo a passo:**
-1. Pergunte à IA algo específico da Mallory que ela não tem como saber: "Qual o procedimento de segregação de lote da Mallory Eletroportáteis?"
+1. Abra Claude, cole o Prompt-âncora do módulo.
+2. Substitua `[cole aqui...]` por 5-8 linhas de um comunicado real que você precisa escrever esta semana — troque nome de gente por "Operador A/B/C", número de folha por "XXXX", cláusula específica por "Cláusula Y". **Não cole nada real ainda** — este é treino.
+3. Rode. Observe a Fase 1: o Claude sinaliza 🟢/🟡/🔴 e reescreve. Faz o protocolo em 3 passos.
+4. Peça a Fase 2 no mesmo chat: "gere o Artifact". Ele volta com o Semáforo em HTML.
+5. Preencha o Semáforo com 3-5 tarefas em que você pensa em usar IA na próxima semana. Deixe o cálculo rodar.
+6. Baixe / imprima em A4 paisagem. Leva pra segunda.
+
+**Resultado esperado:** comunicado reescrito com dado tratado + Semáforo salvo com 3-5 linhas ranqueadas.
+
+**Como avaliar:** conte quantas linhas do seu Semáforo ficaram 🟢. Se são todas, você foi otimista — releia a coluna "Dado envolvido". Se são todas 🔴, você foi paranoico — releia "Risco de invenção" (algumas tarefas de fato têm risco baixo).
+
+### Camada 2 — Flagrar alucinação com os próprios olhos (para quem terminou · +15 min)
+
+**Objetivo:** ver a IA inventar ao vivo, com o texto seguro e bonito.
+
+**Passo a passo:**
+1. Pergunte à IA algo específico da Mallory que ela não tem como saber: *"Qual o procedimento de segregação de lote da Mallory Eletroportáteis, versão 2025?"*
 2. Observe a resposta. Ela disse "não tenho essa informação" — ou descreveu um procedimento plausível e confiante?
-3. Agora peça um número: "Qual NR trata de trabalho em prensas e qual o item exato sobre proteção?" Anote a resposta e marque o que precisaria conferir na fonte.
+3. Agora peça um número: *"Qual NR trata de trabalho em prensas e qual o item exato sobre proteção de operação?"* Anote a resposta e marque o que precisaria conferir na fonte.
 4. Escreva em 2 linhas: como essa resposta enganaria alguém com pressa?
 
 **Resultado esperado:** pelo menos 1 resposta confiante que você não aceitaria sem verificação — vista ao vivo.
 
-**Como avaliar:** se você consegue apontar na resposta o trecho que parece fato mas não tem fonte, o módulo cumpriu a promessa.
+**Como avaliar:** se você consegue apontar na resposta o trecho que **parece fato mas não tem fonte**, o módulo cumpriu a promessa. Esse trecho é o padrão que você vai reconhecer daqui pra frente.
+
+> 💡 **Arquivo pra experimentar depois:** peça pro RH da sua área um formulário de avaliação de desempenho **em branco** (sem nome), cole no Claude, peça pra "resumir os principais critérios". Depois pergunte à IA um critério que **não está** no formulário. Se ela responder com confiança inventando, você acabou de flagrar o padrão de alucinação em documento estruturado — mesmo com fonte no chat. Este é o teste que dobra o rigor do seu protocolo.
 
 ---
 
@@ -152,7 +212,7 @@ Repare no que o prompt faz: entrega todos os fatos, proíbe a causa-raiz e trava
 
 > ⚠️ **Anti-alucinação — o protocolo completo (leve esta página)**
 >
-> **Por que existe:** em *Mata v. Avianca* (2023), advogados entregaram à Justiça americana uma petição com 6 decisões judiciais que o ChatGPT inventou — nomes de casos, números de processo, citações, tudo plausível e tudo falso. Foram multados e viraram o exemplo mundial do erro. Não foi má-fé: foi confiar sem verificar. Mesmo ferramentas que leem seus documentos erram — estudos de Stanford (2025) mediram 17–33% de erro em sistemas desse tipo.
+> **Dois lados da mesma moeda:** em *Mata v. Avianca* (2023, EUA), advogados entregaram à Justiça 6 decisões que o ChatGPT inventou — nomes de casos, números de processo, citações — tudo plausível, tudo falso. Foram multados e viraram exemplo mundial. Em *Moffatt v. Air Canada* (2024, Canadá), o chatbot da própria companhia inventou uma tarifa de luto que não existia — a Air Canada foi condenada a indenizar o passageiro. A defesa "o chatbot é uma entidade separada" foi rejeitada pelo tribunal. **Lição dupla:** você responde pelo que assina, *e* a empresa responde pelo que a IA dela responde. Mesmo ferramentas que leem seus documentos erram — Stanford (2025) mediu 17–33% de erro em sistemas desse tipo.
 >
 > **Nunca envie para a IA:**
 > - Dados de **funcionários** — nome, CPF, salário, atestado, avaliação, escala com nomes
@@ -167,12 +227,14 @@ Repare no que o prompt faz: entrega todos os fatos, proíbe a causa-raiz e trava
 > 3. **Consistência** — bate com o que você sabe do seu setor? Estranhou, checou
 >
 > **A regra que fecha tudo:** se você não pode conferir, não use. E se a IA respondeu com confiança algo que você não sabia — desconfie em dobro.
+>
+> **Você é o Dono do Critério, não só o dono da tarefa** — a IA rascunha, você chancela. Se não pode chancelar, não sobe.
 
 ---
 
 > 🟣 **Marco: o que você leva para a Mallory na 2ª feira**
-> Até sexta-feira, aplique o protocolo de 3 passos em 1 resposta de IA que você usou de verdade — e apresente a lista dos 3 "nunca" (gente, produto, contrato) para o seu time em 5 minutos, no DDS ou na passagem de turno.
-> Como saber que aconteceu: o time ouviu a lista, e você sabe dizer o que conferiu no protocolo.
+> Até sexta-feira, tenha o **Semáforo de Uso IA** preenchido com 3-5 tarefas suas e apresente a lista dos 3 "nunca" (gente, produto, contrato) para o seu time em 5 minutos, no DDS (Diálogo Diário de Segurança) ou na passagem de turno.
+> Como saber que aconteceu: o time ouviu a lista, o Semáforo está salvo/impresso, e você aplicou o protocolo de 3 passos em pelo menos 1 resposta que virou documento.
 
 ---
 
