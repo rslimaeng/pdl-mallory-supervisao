@@ -3586,3 +3586,33 @@ body.modal-open { overflow: hidden; }
 .erro-block.corrige { margin-top: auto; background: rgba(101,169,65,.07); border-left: 2px solid var(--accent-green); color: var(--text-primary); }
 .erro-block.corrige .erro-block-label { color: var(--accent-green); }
 .erro-block strong { color: var(--text-primary); font-weight: 600; }
+
+/* ============================================================
+   goal-18-bis · §5 accordion "O conceito em 5 pontos" (.acc-*)
+   (a onda 18 segurou o §5; CSS entra agora com os 5 pontos)
+   ============================================================ */
+.acc-item { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+.acc-item[open] { border-color: rgba(74,166,215,.4); }
+.acc-item.t2[open] { border-color: rgba(138,58,137,.4); }
+.acc-summary { display: flex; align-items: center; gap: 14px; padding: 16px 20px; cursor: pointer; list-style: none; font-family: var(--font-title); }
+.acc-summary::-webkit-details-marker { display: none; }
+.acc-num { font-size: 20px; font-weight: 700; color: var(--text-dim); min-width: 32px; }
+.acc-title { font-size: 16px; color: var(--text-primary); flex: 1; line-height: 1.35; }
+.acc-marker { width: 14px; height: 14px; border: 2px solid var(--text-dim); border-radius: 3px; flex-shrink: 0; transition: transform .2s; }
+.acc-item[open] .acc-marker { transform: rotate(45deg); background: rgba(74,166,215,.20); border-color: var(--accent-blue); }
+.acc-item.t2[open] .acc-marker { background: rgba(138,58,137,.20); border-color: var(--accent-purple); }
+.acc-body { padding: 4px 22px 22px; }
+.acc-ideia { padding: 14px 18px; background: rgba(74,166,215,.06); border-left: 3px solid var(--accent-blue); border-radius: 6px; margin-bottom: 14px; font-family: var(--font-title); font-size: 15.5px; color: var(--text-primary); line-height: 1.5; }
+.acc-ideia .acc-ideia-label { display: block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.3px; text-transform: uppercase; color: var(--accent-blue); margin-bottom: 5px; font-weight: 500; }
+.acc-item.t2 .acc-ideia { background: rgba(138,58,137,.08); border-left-color: var(--accent-purple); }
+.acc-item.t2 .acc-ideia .acc-ideia-label { color: var(--purple-text); }
+.acc-exemplo { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+@media (max-width: 780px) { .acc-exemplo { grid-template-columns: 1fr; } }
+.acc-ex-col { padding: 12px 14px; background: rgba(0,0,0,.14); border-radius: 6px; font-size: 13.5px; color: var(--text-secondary); line-height: 1.55; }
+.acc-ex-col strong { color: var(--text-primary); }
+.acc-ex-label { display: block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px; }
+.acc-ex-col.macro { border-left: 2px solid var(--text-dim); }
+.acc-ex-col.mallory { border-left: 2px solid var(--accent-green); }
+.acc-ex-col.mallory .acc-ex-label { color: var(--accent-green); }
+.acc-check { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: rgba(255,255,255,.03); border-radius: 6px; font-size: 13px; color: var(--text-secondary); cursor: pointer; }
+.acc-check input { width: 16px; height: 16px; }
