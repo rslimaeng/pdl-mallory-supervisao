@@ -3616,3 +3616,28 @@ body.modal-open { overflow: hidden; }
 .acc-ex-col.mallory .acc-ex-label { color: var(--accent-green); }
 .acc-check { display: flex; align-items: center; gap: 8px; padding: 10px 14px; background: rgba(255,255,255,.03); border-radius: 6px; font-size: 13px; color: var(--text-secondary); cursor: pointer; }
 .acc-check input { width: 16px; height: 16px; }
+
+/* ============================================================
+   M4 (goal 19): dor-card número circular + badge "gera Artifact"
+   Reusa .dor-card / .dores-grid (M3) — só o que faltava.
+   ============================================================ */
+.dor-card__num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.75rem; height: 1.75rem;
+  background: color-mix(in oklab, var(--accent-yellow) 20%, transparent);
+  color: var(--accent-yellow);
+  border-radius: 50%;
+  font-family: var(--font-mono); font-weight: 700; font-size: .9rem;
+  margin-bottom: .5rem;
+}
+.dor-card h3 {
+  font-family: var(--font-title); font-size: 1rem; font-weight: 600;
+  margin: 0 0 .4rem; color: var(--text-primary); line-height: 1.35;
+}
+.badge--artifact {
+  background-color: color-mix(in oklab, var(--accent-yellow) 22%, transparent);
+  color: var(--accent-yellow);
+  border: 1px solid color-mix(in oklab, var(--accent-yellow) 45%, transparent);
+  vertical-align: middle;
+  margin-left: .5rem;
+}
