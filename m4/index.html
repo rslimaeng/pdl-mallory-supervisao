@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M4 · Usando IA com Segurança · Mallory PDL 2026</title>
+  <title>M4 · Validar antes de usar: o filtro que salva sua assinatura · Mallory PDL 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
   <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+
+<div class="ambient-blob ambient-blob-blue" aria-hidden="true"></div>
+<div class="ambient-blob ambient-blob-purple" aria-hidden="true"></div>
 
 <header class="site-header">
   <div class="container">
@@ -38,27 +41,376 @@
   <div class="container">
 
     <section class="hero">
-      <span class="eyebrow">Trilha 1 · Módulo 4 de 6 · em construção</span>
-      <h1>M4 · Usando IA com Segurança: LGPD, Dados e Alucinações</h1>
+      <h1>M4 · Validar antes de usar: o filtro que salva sua assinatura</h1>
       <div class="page-meta">
-        <span class="badge">1h</span>
-        <span class="badge badge-em-breve">em construção</span>
+        <span class="badge">Trilha 1</span>
+        <span class="badge">Módulo 4 de 6</span>
       </div>
-      <p class="lead">Ensinar o participante a usar IA de forma responsável dentro do ambiente da Mallory.</p>
+      <p class="lead">A habilidade universal deste módulo: <strong>antes de mandar prompt e antes de aceitar resposta, passar por dois filtros de 30 segundos</strong> — (1) posso enviar esse dado? e (2) posso confiar nessa resposta? No fim, um Semáforo com <strong>suas próprias tarefas da semana</strong> classificadas em 🟢 usa / 🟡 desidentifica / 🔴 não usa.</p>
     </section>
 
     <section class="section">
-      <h2>O que este módulo vai cobrir</h2>
-      <p>Este material está em construção. O conteúdo detalhado será publicado até 13/07/2026. Enquanto isso, os pontos abaixo são exatamente o que a ementa oficial do PDL prevê:</p>
-      <ul>
-        <li>O que são alucinações de IA e por que a ferramenta &quot;inventa&quot; respostas</li>
-        <li>Protocolo de validação: quando confiar e quando checar</li>
-        <li>LGPD na prática: o que são dados pessoais e como protegê-los</li>
-        <li>Exemplos do que não deve ser inserido em ferramentas de IA (dados de clientes, especificações de produto, dados de funcionários)</li>
-        <li>Diretrizes básicas de uso responsável no ambiente de trabalho</li>
-      </ul>
-      <p><strong>Resultado esperado:</strong> O participante sabe o que pode e o que não pode fazer com IA no trabalho, com critério.</p>
+      <h2>Três dores que este módulo cura</h2>
+      <p class="secao-lead">Você já viveu (ou vai viver) pelo menos uma das três:</p>
+      <div class="dores-grid">
+        <article class="dor-card">
+          <div class="dor-card__num">1</div>
+          <h3>"Mandei o e-mail e o número estava errado."</h3>
+          <p class="dor-card__texto">Só descobriu quando o cliente respondeu perguntando. A IA tinha completado o número com algo que parecia certo — e você não conferiu.</p>
+        </article>
+        <article class="dor-card">
+          <div class="dor-card__num">2</div>
+          <h3>"Colei a escala pra IA otimizar; só depois lembrei que tinha CPF."</h3>
+          <p class="dor-card__texto">A ferramenta é externa. O dado saiu do controle da empresa. Ninguém foi mal-intencionado — foi hábito.</p>
+        </article>
+        <article class="dor-card">
+          <div class="dor-card__num">3</div>
+          <h3>"Meu chefe perguntou de onde saiu esse dado e eu não soube dizer."</h3>
+          <p class="dor-card__texto">A IA respondeu bonito, você usou. Na hora da pergunta, o texto assinado era seu — a fonte, não.</p>
+        </article>
+      </div>
+      <p>Este módulo entrega <strong>um filtro só, com duas metades</strong> — antes de mandar e antes de aceitar. 30 segundos por vez. Cura as três dores acima.</p>
+      <p>As três dores têm um mesmo antídoto: você para de ser só o <strong>dono da tarefa</strong> (quem executa) e passa a ser o <strong>dono do critério</strong> (quem decide o que vale). A IA rascunha; você chancela. O nome no documento é seu — e agora é seu por escolha, não por descuido.</p>
     </section>
+
+    <section class="section">
+      <h2>As 3 habilidades deste módulo</h2>
+      <p class="secao-lead">Três habilidades você sai fazendo. A coluna <strong>Com o Claude + o filtro</strong> diz o método concreto que você treina. <strong>Onde pratica</strong> diz o documento em que aquilo entra. <strong>Nível</strong> se refere às 7 camadas da IA vistas no M1 (legenda abaixo).</p>
+      <div class="table-wrap">
+        <table class="hab-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Habilidade</th>
+              <th>Hoje (sem IA ou sem método)</th>
+              <th>Com o Claude + o filtro</th>
+              <th>Onde você pratica</th>
+              <th>Nível</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="hab-num-cell">1</td>
+              <td class="hab-name-cell">Filtrar o dado <strong>antes</strong> de colar</td>
+              <td class="hab-why-cell">Cola por hábito, torce pra não vazar</td>
+              <td class="hab-how-cell">Aplica o mnemônico dos 3 "nunca" (gente · produto · contrato) em 5 segundos</td>
+              <td class="hab-onde-cell">
+                <span class="produto">Registro de sistema · e-mail formal · comunicado ao time</span>
+              </td>
+              <td>
+                <div class="nivel-badge">
+                  <span class="n-code">N2</span>
+                  <span class="n-label">Prompter consciente</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="hab-num-cell">2</td>
+              <td class="hab-name-cell">Validar a resposta em 30 segundos</td>
+              <td class="hab-why-cell">Aceita se veio bonito, rejeita se estranhou</td>
+              <td class="hab-how-cell">Protocolo em 3 passos: <strong>fonte</strong> · <strong>número</strong> · <strong>consistência</strong></td>
+              <td class="hab-onde-cell">
+                <span class="produto">Todo documento que sai da sua mesa</span>
+              </td>
+              <td>
+                <div class="nivel-badge">
+                  <span class="n-code">N3</span>
+                  <span class="n-label">Operador com contexto</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="hab-num-cell">3</td>
+              <td class="hab-name-cell">Reconhecer alucinação com confiança</td>
+              <td class="hab-why-cell">Passa batido no texto fluido — "veio tão certinho"</td>
+              <td class="hab-how-cell">Vê o padrão "confiança sem fonte" e desconfia em dobro</td>
+              <td class="hab-onde-cell">
+                <span class="produto">Qualquer resposta com dado, prazo, número, norma</span>
+              </td>
+              <td>
+                <div class="nivel-badge">
+                  <span class="n-code">N3</span>
+                  <span class="n-label">Operador com contexto</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="legend-nivel">
+        <strong>Legenda dos níveis</strong> (referência aos 7 níveis de uso da IA vistos no M1):
+        <br>
+        <span class="lg-item"><code>N2</code> Prompter consciente — dá contexto e formato, não só pergunta solta.</span>
+        <span class="lg-item"><code>N3</code> Operador com contexto — junta seu contexto real e valida a saída com critério.</span>
+      </div>
+      <p class="secao-lead">A sensação certa ao terminar o módulo: <strong>"agora eu sei o que passa e o que não passa pelo meu filtro"</strong>.</p>
+    </section>
+
+    <section class="section">
+      <h2>Você entra com → O que acontece → Você sai com</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Você entra com</th>
+              <th>O que acontece</th>
+              <th>Você sai com</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Prompts já rodando (M2 e M3) e uma pergunta justa: "até onde posso confiar?"</td>
+              <td>Você vê a IA inventar ao vivo, aprende por que acontece e treina o filtro de 2 metades</td>
+              <td>O <strong>Semáforo de Uso IA</strong> com suas 3-5 tarefas da semana classificadas + o protocolo em 3 passos memorizado</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Por que isso importa aqui dentro</h2>
+      <p><strong>O caso-âncora deste módulo é universal:</strong> o e-mail formal que sai assinado por você. Pode ser pro chefe, pro cliente, pro fornecedor, pro auditor. Todo mundo tem esse e-mail. Todo mundo já mandou um. E o dia em que ele sair com um número errado ou um dado que não deveria ter saído, o nome no rodapé é o seu.</p>
+      <p>Na Mallory, esse e-mail vira coisa maior: o Supervisor de Qualidade registra uma não-conformidade de lote — texto vai pro sistema, pode ser lido em auditoria ISO 9001. Se a IA "completar" o registro com uma causa que ninguém apurou, o problema deixou de ser o lote — virou o registro.</p>
+      <p>A Mallory está atenta a isso: circulou pesquisa interna perguntando quem usa IA e que dados compartilha — governança de dados já é assunto de casa, não teoria de treinamento. O que você aprende aqui alinha o seu uso com essa preocupação.</p>
+      <p>E tem a LGPD: a lei brasileira que protege dado pessoal. Nome, CPF, salário, avaliação, atestado — nada disso pode ir para ferramenta externa sem controle. Quem envia responde, e a empresa junto.</p>
+    </section>
+
+    <section class="section">
+      <h2>O conceito em 5 pontos</h2>
+
+      <h3>1. A IA erra com a mesma cara com que acerta</h3>
+      <p>Lembra da prova de múltipla escolha? Chutar dava 25% de chance; deixar em branco, zero. A IA foi treinada assim — recompensada quando acerta, penalizada quando fica em branco. Aprendeu a chutar com confiança em vez de dizer "não sei". O chute vem bem escrito, com tom seguro, no formato certo. Fluência não é evidência de nada. Isso tem nome: <strong>alucinação</strong>.</p>
+
+      <h3>2. LGPD em 30 segundos</h3>
+      <p>Dado pessoal é qualquer informação que identifica alguém: nome, CPF, telefone, salário, atestado, avaliação. A LGPD diz que a empresa responde pelo que faz com esses dados — inclusive pelo que os funcionários colam em ferramenta externa. Enviar ficha de operador para a IA não é atalho: é incidente.</p>
+
+      <h3>3. A lista do que nunca entra — memorize 3, consulte o resto</h3>
+      <p>As três de cabeça: <strong>gente</strong> (qualquer dado de funcionário), <strong>produto</strong> (especificação, parâmetro de molde, desenho), <strong>contrato</strong> (fornecedor, preço, condição comercial). A lista completa está no callout amarelo desta página. Na dúvida, vale a regra do grupo de WhatsApp: se não postaria num grupo aberto, não cola na IA.</p>
+
+      <h3>4. Protocolo de validação em 3 passos — 30 segundos por resposta</h3>
+      <p><strong>Fonte:</strong> cada fato da resposta veio do que eu enviei, ou apareceu do nada? <strong>Número:</strong> todo número, data, norma ou nome citado — confere na origem antes de repassar. <strong>Consistência:</strong> bate com o que eu sei do meu setor? Estranhou, checou. Três passos, meio minuto — mais rápido que refazer um registro errado em auditoria.</p>
+      <p><strong>O rigor é proporcional ao risco.</strong> Rascunho de e-mail interno? Passada rápida. Número que sobe pra diretoria, cláusula de contrato, dado que vira registro em auditoria? 30 segundos de protocolo não é excesso — é seguro. Regra prática: <strong>quanto mais irreversível a decisão, mais devagar você lê</strong>.</p>
+
+      <h3>5. Se você não pode conferir, não use</h3>
+      <p>A regra que fecha todas as outras. A IA sugeriu um prazo de norma que você não tem como verificar? Não entra no documento. Para rascunho, ideia e estrutura, use à vontade — o risco é zero porque você revisa. Para fato que você não domina, a IA não é fonte. Fonte é a norma, o sistema, o registro.</p>
+    </section>
+
+    <section class="section">
+      <h2>Quando aplicar / Quando NÃO aplicar</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>🟢 Uso seguro</th>
+              <th>🔴 Uso arriscado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rascunhar registro de não-conformidade com dados que você confere</td>
+              <td>Deixar a IA "completar" a causa-raiz que ninguém apurou</td>
+            </tr>
+            <tr>
+              <td>Organizar texto de ocorrência a partir das suas anotações</td>
+              <td>Colar ficha, atestado ou avaliação de funcionário no prompt</td>
+            </tr>
+            <tr>
+              <td>Pedir estrutura de checklist e preencher você mesmo os critérios</td>
+              <td>Usar norma, prazo ou parâmetro citado pela IA sem conferir na fonte</td>
+            </tr>
+            <tr>
+              <td>Treinar com dado fictício antes de usar no processo real</td>
+              <td>Enviar especificação de produto ou desenho de molde para ferramenta externa</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section prompt-ancora">
+      <span class="eyebrow">Prompt-âncora do módulo</span>
+      <h2>Gera o seu Semáforo de Uso IA <span class="badge badge--artifact">Gera Artifact HTML</span></h2>
+      <p class="secao-lead">O M2 te deu o método formal (PCTFL + Critério de Sucesso). Este prompt aplica o método a <strong>um exercício de duas metades</strong>: rascunhar um comunicado difícil com dado desidentificado (Fase 1) e, no mesmo chat, gerar um Artifact HTML com as suas 3-5 tarefas ranqueadas em 🟢 / 🟡 / 🔴 (Fase 2).</p>
+
+      <ol class="prompt-fases">
+        <li class="prompt-fase"><span class="prompt-fase__num">Fase 1</span><h3>Rascunho com desidentificação</h3><p>O "e-mail que sai assinado por você" com dado fictício — o Claude sinaliza 🟢/🟡/🔴, reescreve, e aplica o protocolo de 3 passos ao vivo.</p></li>
+        <li class="prompt-fase"><span class="prompt-fase__num">Fase 2</span><h3>Semáforo de Uso IA (Artifact HTML)</h3><p>No mesmo chat, o Claude gera o Artifact interativo com 5 linhas pra você preencher — dado, risco, modo, semáforo calculado. Salva, imprime, leva pra segunda.</p></li>
+      </ol>
+
+      <div class="prompt-copiar">
+        <div class="prompt-copiar__header">
+          <span class="mono">PROMPT COMPLETO · COLE NO CLAUDE PRO</span>
+          <div class="prompt-copiar__actions">
+            <button class="btn-secondary btn-toggle-prompt" type="button" aria-expanded="false" aria-controls="prompt-ancora-m4-details">Ver prompt (~55 linhas)</button>
+            <button class="btn-copiar" type="button" data-copy-target="#prompt-ancora-m4">Copiar prompt</button>
+          </div>
+        </div>
+        <details class="prompt-copiar__details" id="prompt-ancora-m4-details">
+          <summary class="visually-hidden">Prompt completo (colapsado)</summary>
+        <pre id="prompt-ancora-m4"># PAPEL
+Você é um consultor de uso responsável de IA em ambiente industrial, treinado no
+protocolo do treinamento IA na Prática · Mallory · Trilha Supervisão. Trabalha em
+duas fases dentro deste mesmo chat.
+
+# CONTEXTO
+Sou [seu cargo] em Mallory, área [sua área]. Vou treinar o filtro do M4 num
+comunicado difícil que preciso escrever esta semana e depois quero ranquear
+as próximas 5 tarefas em que penso usar IA.
+
+# TAREFA — FASE 1: Rascunho com desidentificação
+Vou colar abaixo o rascunho do comunicado (dados FICTÍCIOS para este treino).
+Você:
+1. Sinaliza cada item do rascunho como 🟢 pode ficar / 🟡 desidentifica / 🔴 tira antes de enviar.
+2. Reescreve o comunicado com os itens 🟡 desidentificados e os 🔴 removidos.
+3. No fim, aplica o protocolo em 3 passos (fonte · número · consistência) ao SEU
+   próprio rascunho, apontando o que precisa conferir antes de mandar.
+
+Rascunho:
+[cole aqui 5-8 linhas do comunicado com pelo menos 2 dados sensíveis fictícios —
+nome de operador, número de folha, cláusula de contrato — para o Claude praticar]
+
+# TAREFA — FASE 2: Semáforo de Uso IA (Artifact HTML)
+Depois da FASE 1, gere um Artifact HTML self-contained chamado
+"Semáforo de Uso IA · [meu cargo]" com a estrutura:
+
+- Tabela com 5 linhas em branco pra eu preencher — colunas:
+  · Tarefa em que penso usar IA
+  · Dado envolvido (dropdown: nenhum · público · interno · restrito)
+  · Risco de invenção (dropdown: baixo · médio · alto)
+  · Modo recomendado (dropdown: Autopiloto · Colaboração · Manual)
+  · Semáforo (calculado automaticamente 🟢 🟡 🔴 pela lógica abaixo)
+  · Ação sugerida (texto curto autogerado)
+- Botão "Copiar prompt de desidentificação" em cada linha 🟡 — copia um
+  prompt PCTFL prontinho pra rodar naquele caso
+- Rodapé fixo com os 3 "nunca" (gente · produto · contrato) e o protocolo
+  em 3 passos (fonte · número · consistência)
+- Salva estado em localStorage com chave "m4-semaforo-t1"
+- Botão "Imprimir A4 paisagem" + @media print otimizado
+- Paleta Slate Mallory: fundo escuro #262A35, azul #4AA6D7, amarelo #F7AC19,
+  verde #65A941, vermelho #D72C35, tipografia Archivo (títulos) + Inter (corpo)
+
+Lógica do semáforo (calcule sozinho):
+- 🟢 se Dado ∈ {nenhum, público} E Risco = baixo
+- 🟡 se Dado = interno OU Risco = médio
+- 🔴 se Dado = restrito OU Risco = alto
+
+# FORMATO DE ENTREGA
+1. Análise textual FASE 1 (rascunho reescrito + protocolo aplicado)
+2. Artifact HTML FASE 2 (código completo, self-contained, testado)
+
+# LIMITAÇÕES
+- Se qualquer campo do rascunho ficar ambíguo, pergunte antes de assumir.
+- NÃO invente nenhum dado da Mallory que não esteja no rascunho colado.
+- NÃO gere Artifact que dependa de bibliotecas externas — HTML/CSS/JS vanilla only.
+- NÃO substitua julgamento humano — o Semáforo orienta, o supervisor decide.</pre>
+        </details>
+      </div>
+      <div class="callout callout-info">
+        <p><strong>Como o aluno usa em sala:</strong> cola um rascunho de comunicado que ele mesmo escreveria, roda o prompt, vê o Claude fazer o protocolo ao vivo (Fase 1), e recebe o Artifact (Fase 2) pra preencher com 5 tarefas próprias — leva pra segunda.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Exercício · Hands-on 40 minutos</h2>
+
+      <h3>Camada 1 — Rode o prompt-âncora (todos · 25 min)</h3>
+      <p><strong>Objetivo:</strong> viver as duas fases do filtro — desidentificar dado real (Fase 1) e sair com o Semáforo preenchido (Fase 2).</p>
+      <p><strong>Passo a passo:</strong></p>
+      <ol>
+        <li>Abra Claude, cole o Prompt-âncora do módulo.</li>
+        <li>Substitua <code>[cole aqui...]</code> por 5-8 linhas de um comunicado real que você precisa escrever esta semana — troque nome de gente por "Operador A/B/C", número de folha por "XXXX", cláusula específica por "Cláusula Y". <strong>Não cole nada real ainda</strong> — este é treino.</li>
+        <li>Rode. Observe a Fase 1: o Claude sinaliza 🟢/🟡/🔴 e reescreve. Faz o protocolo em 3 passos.</li>
+        <li>Peça a Fase 2 no mesmo chat: "gere o Artifact". Ele volta com o Semáforo em HTML.</li>
+        <li>Preencha o Semáforo com 3-5 tarefas em que você pensa em usar IA na próxima semana. Deixe o cálculo rodar.</li>
+        <li>Baixe / imprima em A4 paisagem. Leva pra segunda.</li>
+      </ol>
+      <p><strong>Resultado esperado:</strong> comunicado reescrito com dado tratado + Semáforo salvo com 3-5 linhas ranqueadas.</p>
+      <p><strong>Como avaliar:</strong> conte quantas linhas do seu Semáforo ficaram 🟢. Se são todas, você foi otimista — releia a coluna "Dado envolvido". Se são todas 🔴, você foi paranoico — releia "Risco de invenção" (algumas tarefas de fato têm risco baixo).</p>
+
+      <h3>Camada 2 — Flagrar alucinação com os próprios olhos (para quem terminou · +15 min)</h3>
+      <p><strong>Objetivo:</strong> ver a IA inventar ao vivo, com o texto seguro e bonito.</p>
+      <p><strong>Passo a passo:</strong></p>
+      <ol>
+        <li>Pergunte à IA algo específico da Mallory que ela não tem como saber: <em>"Qual o procedimento de segregação de lote da Mallory Eletroportáteis, versão 2025?"</em></li>
+        <li>Observe a resposta. Ela disse "não tenho essa informação" — ou descreveu um procedimento plausível e confiante?</li>
+        <li>Agora peça um número: <em>"Qual NR trata de trabalho em prensas e qual o item exato sobre proteção de operação?"</em> Anote a resposta e marque o que precisaria conferir na fonte.</li>
+        <li>Escreva em 2 linhas: como essa resposta enganaria alguém com pressa?</li>
+      </ol>
+      <p><strong>Resultado esperado:</strong> pelo menos 1 resposta confiante que você não aceitaria sem verificação — vista ao vivo.</p>
+      <p><strong>Como avaliar:</strong> se você consegue apontar na resposta o trecho que <strong>parece fato mas não tem fonte</strong>, o módulo cumpriu a promessa. Esse trecho é o padrão que você vai reconhecer daqui pra frente.</p>
+
+      <div class="callout callout-info callout-dica">
+        <p><strong>💡 Arquivo pra experimentar depois:</strong> peça pro RH da sua área um formulário de avaliação de desempenho <strong>em branco</strong> (sem nome), cole no Claude, peça pra "resumir os principais critérios". Depois pergunte à IA um critério que <strong>não está</strong> no formulário. Se ela responder com confiança inventando, você acabou de flagrar o padrão de alucinação em documento estruturado — mesmo com fonte no chat. Este é o teste que dobra o rigor do seu protocolo.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Os 3 erros mais comuns</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Erro</th>
+              <th>Sintoma</th>
+              <th>Causa</th>
+              <th>Como corrigir</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Confiar no texto bem escrito</td>
+              <td>"Veio tão certinho que nem li direito" — e o erro passou</td>
+              <td>Fluência parece competência; a IA é sempre fluente</td>
+              <td>Protocolo de 3 passos em toda resposta que vira documento</td>
+            </tr>
+            <tr>
+              <td>"É só desta vez" com dado real</td>
+              <td>Colou o nome, a especificação, o contrato — porque tinha pressa</td>
+              <td>Exceção de hoje vira hábito de amanhã</td>
+              <td>Os 3 "nunca" não têm exceção. Desidentifique ou não use</td>
+            </tr>
+            <tr>
+              <td>Terceirizar a culpa</td>
+              <td>"Foi a IA que errou" no registro que você assinou</td>
+              <td>Esquecer que a IA rascunha e você responde</td>
+              <td>O nome no documento é o seu. Revisar não é opcional</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="callout callout-alucinacao">
+      <p class="callout-title">⚠️ Anti-alucinação — o protocolo completo (leve esta página)</p>
+      <p><strong>Dois lados da mesma moeda:</strong> em <em>Mata v. Avianca</em> (2023, EUA), advogados entregaram à Justiça 6 decisões que o ChatGPT inventou — nomes de casos, números de processo, citações — tudo plausível, tudo falso. Foram multados e viraram exemplo mundial. Em <em>Moffatt v. Air Canada</em> (2024, Canadá), o chatbot da própria companhia inventou uma tarifa de luto que não existia — a Air Canada foi condenada a indenizar o passageiro. A defesa "o chatbot é uma entidade separada" foi rejeitada pelo tribunal. <strong>Lição dupla:</strong> você responde pelo que assina, <em>e</em> a empresa responde pelo que a IA dela responde. Mesmo ferramentas que leem seus documentos erram — Stanford (2025) mediu 17–33% de erro em sistemas desse tipo.</p>
+      <p><strong>Nunca envie para a IA:</strong></p>
+      <ul>
+        <li>Dados de <strong>funcionários</strong> — nome, CPF, salário, atestado, avaliação, escala com nomes</li>
+        <li><strong>Especificações de produto</strong> — parâmetro de molde e injetora, desenho técnico, fórmula, dado de processo</li>
+        <li><strong>Contratos e comercial</strong> — contrato de fornecedor, preço, condição, proposta</li>
+        <li>Dados de <strong>clientes</strong> — cadastro, reclamação com identificação, histórico</li>
+        <li>Qualquer documento marcado como confidencial ou de circulação restrita</li>
+      </ul>
+      <p><strong>Sempre valide antes de usar (3 passos · 30 segundos):</strong></p>
+      <ol>
+        <li><strong>Fonte</strong> — cada fato veio do que você enviou, ou apareceu do nada?</li>
+        <li><strong>Número</strong> — todo número, data, norma e nome, conferido na origem</li>
+        <li><strong>Consistência</strong> — bate com o que você sabe do seu setor? Estranhou, checou</li>
+      </ol>
+      <p><strong>A regra que fecha tudo:</strong> se você não pode conferir, não use. E se a IA respondeu com confiança algo que você não sabia — desconfie em dobro.</p>
+      <p><strong>Você é o Dono do Critério, não só o dono da tarefa</strong> — a IA rascunha, você chancela. Se não pode chancelar, não sobe.</p>
+    </div>
+
+    <div class="callout callout-marco">
+      <p class="callout-title">🟣 Marco: o que você leva para a Mallory na 2ª feira</p>
+      <p>Até sexta-feira, tenha o <strong>Semáforo de Uso IA</strong> preenchido com 3-5 tarefas suas e apresente a lista dos 3 "nunca" (gente, produto, contrato) para o seu time em 5 minutos, no DDS (Diálogo Diário de Segurança) ou na passagem de turno.</p>
+      <p>Como saber que aconteceu: o time ouviu a lista, o Semáforo está salvo/impresso, e você aplicou o protocolo de 3 passos em pelo menos 1 resposta que virou documento.</p>
+      <label class="action-check" data-key="m4-marco-t1">
+        <input type="checkbox">
+        <span>Compromisso feito</span>
+      </label>
+    </div>
 
     <nav class="module-nav" aria-label="Navegação entre módulos">
       <a class="nav-prev" href="../m3/">
@@ -70,6 +422,11 @@
         <span class="nav-title">M5 · IA para Comunicação, Documentação e Análise</span>
       </a>
     </nav>
+
+    <div class="module-nav-secondary">
+      <a href="../banco-de-prompts/">Banco de Prompts</a>
+      <a href="../artefatos/">Artefatos</a>
+    </div>
 
   </div>
 </main>
@@ -88,5 +445,57 @@
 </footer>
 
 <script src="../assets/script.js" defer></script>
+<script>
+/* M4 (goal 19): copiar prompt-âncora (data-copy-target) + toggle do bloco colapsável.
+   Inline no módulo — não toca o script.js compartilhado (byte-idêntico entre trilhas). */
+(function () {
+  'use strict';
+
+  // Botão "Copiar prompt" (data-copy-target aponta pro bloco do prompt-âncora)
+  document.querySelectorAll('.btn-copiar').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = document.querySelector(btn.getAttribute('data-copy-target'));
+      if (!target) return;
+      var texto = target.textContent;
+      function done() {
+        var original = btn.textContent;
+        btn.textContent = 'Copiado ✓';
+        btn.classList.add('is-success');
+        setTimeout(function () { btn.textContent = original; btn.classList.remove('is-success'); }, 2000);
+      }
+      function fallback() {
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = texto; ta.style.position = 'fixed'; ta.style.opacity = '0';
+          document.body.appendChild(ta); ta.focus(); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta); done();
+        } catch (e) { btn.textContent = 'Erro — selecione manual'; }
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(texto).then(done, fallback);
+      } else {
+        fallback();
+      }
+    });
+  });
+
+  // Accordion do prompt-âncora: botão externo abre/fecha o bloco colapsável; print A4 abre tudo
+  document.querySelectorAll('.btn-toggle-prompt').forEach(function (btn) {
+    var target = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!target) return;
+    var labelAberto = 'Ocultar prompt';
+    var labelFechado = btn.textContent.trim();
+    function sync() {
+      btn.setAttribute('aria-expanded', String(target.open));
+      btn.textContent = target.open ? labelAberto : labelFechado;
+    }
+    btn.addEventListener('click', function () { target.open = !target.open; sync(); });
+    target.addEventListener('toggle', sync);
+  });
+  window.addEventListener('beforeprint', function () {
+    document.querySelectorAll('.prompt-copiar__details').forEach(function (d) { d.open = true; });
+  });
+})();
+</script>
 </body>
 </html>
