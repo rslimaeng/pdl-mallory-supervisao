@@ -1,0 +1,871 @@
+#,Data,Categoria,Descrição,Status,Prioridade,Responsável,Prazo,Observação
+1,17-05-2026,PM,Reposição de estoque de equipamento,aberta,A,Marcos T.,,
+2,2026-06-04,meta,Pendente aprovação da diretoria sobre auditoria,Encerrado,,,25/08,não faz sentido no contexto atual
+3,02/05/26,Equipe,Reunião com fornecedor de relatório,Fechado,crítica,Eduarda Santos,25/06/2026,aparentemente resolvido mas não tem evidência
+4,23/04/26,Time,Ajuste no cronograma semanal,A fazer,Média,todos,,envolve 2 áreas — precisa alinhar
+5,12-05-2026,gente,Alinhamento com liderança sobre reunião,andamento,Baixa,Bruno Alves,07-09-2026,TI ainda não liberou
+6,04/07/26,QA,Treinamento de qualidade pra equipe,Encerrado,Alta,Gabi Ferreira,2026-07-08,não faz sentido no contexto atual
+7,2026-07-13,Pessoas,Ajuste no cronograma semanal,TODO,M,,,3 vezes que aparece esse mesmo problema
+8,26-06-2026,PROD,Atualizar checklist de inspeção,Em andamento,A,Eduarda Santos,,não faz sentido no contexto atual
+9,24/06/26,Qualidade,Revisar procedimento de processo conforme reunião,Novo,B,Paula V.,03/08,
+10,29/06/2026,Target,Reagendar reunião de follow-up,Concluído,B,Vanessa L.,13/07/2026,impacto direto no OEE do turno
+11,27/04/2026,SST,Reposição de estoque de crachá,Encerrado,Baixa,Vanessa L.,,
+12,06-06-2026,MTN,Auditoria interna de reunião,Novo,urgente,time,2026-08-05,
+13,25-04-2026,SST,Análise da NC #884,OK,urgente,Karen L.,10/07/2026,movi pra próxima semana
+14,16/06/2026,proc.,Aguardando retorno de fornecedor sobre documento,TODO,A,Ricardo N.,08/08/2026,3 vezes que aparece esse mesmo problema
+15,20/05/2026,Instrução Trabalho,Preparar apresentação sobre relatório,Aberto,Média,João P.,2026-06-20,
+16,27-06-2026,Processo,Análise da NC #875,TODO,A,a definir,,urgente segundo o gerente
+17,2026-06-08,KPI,Documentar procedimento de inspeção,Fechado,A,a definir,,
+18,30-05-2026,Procedimento,Renovar contrato de documento,concluido,Baixa,?,2026-07-07,não faz sentido no contexto atual
+19,2026-07-11,produtividade,Padronizar registro de segurança,WIP,Média,Henrique M.,17/08,urgente segundo o gerente
+20,2026-04-30,Produção,Padronizar registro de planilha,aberta,Média,Leo Batista,17-08-2026,revisar após mudança de escala
+21,28/04/2026,Objetivo,Comunicar mudança de manutenção pro time,Encerrado,,Felipe Costa,2026-08-10,conversamos na daily de segunda
+22,24-06-2026,PM,Aguardando retorno de fornecedor sobre licença,Fechado,Baixa,Tiago Alves,11/09/2026,
+23,02/07/26,Pessoas,Precisa validação técnica de contrato,aberta,crítica,,03/07/2026,pode ser reunião de 15min
+24,05/06/2026,Qualidade,Consolidar dados de comunicado,Feito,alta,todos,07/08,cliente reclamou disso semana passada
+25,10-06-2026,RH/Gestão,Escalar problema de processo pro gerente,andamento,B,time,11-09-2026,duplicado com outra linha?
+26,2026-07-15,QA,Preparar apresentação sobre auditoria,Aberto,urgente,todos,12/09/2026,"só depende de mim, sem justificativa"
+27,22-05-2026,PM,Treinamento de plano de ação pra equipe,Fechado,B,Marcos T.,16/08/2026,auditoria externa pergunta sobre isso
+28,17/06/26,Procedimento,Reagendar reunião de plano de ação,Encerrado,,,26/07,aparentemente resolvido mas não tem evidência
+29,08-06-2026,EPI,Comunicar mudança de follow-up pro time,Feito,ALTA,Paula V.,2026-06-30,cliente reclamou disso semana passada
+30,2026-04-22,OEE,Consolidar dados de treinamento,Em andamento,ALTA,Nubia Costa,22-08-2026,3 vezes que aparece esse mesmo problema
+31,2026-06-29,Processo,Ficou de trazer qualidade na próxima reunião,Feito,crítica,Gabi Ferreira,2026-08-26,envolve 2 áreas — precisa alinhar
+32,23/04/2026,Target,Reunião com fornecedor de ferramenta,andamento,alta,?,,envolve 2 áreas — precisa alinhar
+33,24/06/2026,Corretiva,Feedback pra equipe sobre inspeção,TODO,A,João P.,09-08-2026,não faz sentido no contexto atual
+34,23/06/2026,Segurança,Investigação de desvio em briefing,Em andamento,alta,Ricardo N.,15-07-2026,TI ainda não liberou
+35,2026-06-27,Seg,Padronizar registro de apresentação,concluido,M,time,21-07-2026,não faz sentido no contexto atual
+36,09/06/2026,Qualidade,Aguardando retorno de fornecedor sobre certificado,Aberto,urgente,time,2026-08-04,TI ainda não liberou
+37,11-05-2026,produtividade,Follow-up com gerente sobre processo,Fechado,Baixa,?,2026-08-25,aparentemente resolvido mas não tem evidência
+38,19/04/26,MTC,Fechamento de auditoria do mês anterior,aberta,crítica,Felipe Costa,04/07/2026,"só depende de mim, sem justificativa"
+39,27/06/26,Prod,Verificar histórico de briefing,A fazer,alta,?,19/06/2026,vinculado à pendência anterior
+40,07-05-2026,KPI,Follow-up com gerente sobre follow-up,Aberto,,todos,,aparentemente resolvido mas não tem evidência
+41,05/06/2026,OEE,Follow-up com coordenador sobre relatório,aberta,Média,Isabel R.,30/08,esperando ok da diretoria
+42,23/04/2026,MTC,Ficou de trazer checklist na próxima reunião,Aberto,Média,Gabi Ferreira,01/09,revisar após mudança de escala
+43,01/07/26,KPI,Precisa validação técnica de suporte técnico,Em andamento,crítica,,08/08/2026,3 vezes que aparece esse mesmo problema
+44,22/04/26,SST,Reagendar reunião de comunicado,OK,urgente,Nubia Costa,2026-08-23,aparentemente resolvido mas não tem evidência
+45,06-07-2026,OEE,Ficou de trazer reunião na próxima reunião,WIP,Baixa,João P.,11-09-2026,cliente reclamou disso semana passada
+46,11-05-2026,Target,Renovar contrato de crachá,Concluído,,a definir,,aparentemente resolvido mas não tem evidência
+47,17-07-2026,Preventiva,Reagendar reunião de treinamento,Concluído,Baixa,Marcos T.,,impacto direto no OEE do turno
+48,17-05-2026,MTC,Ver com RH status de auditoria,Concluído,crítica,Felipe Costa,,duplicado com outra linha?
+49,27/06/2026,KPI,Reunião com fornecedor de equipamento,concluido,alta,Ana Silva,22/08,pode ser reunião de 15min
+50,05/07/2026,Indicador,Verificar histórico de checklist,progresso,Baixa,a definir,2026-08-13,urgente segundo o gerente
+51,18/07/26,Instrução Trabalho,Ficou de trazer apresentação na próxima reunião,WIP,Baixa,Ana Silva,14/09/2026,"só depende de mim, sem justificativa"
+52,27/05/2026,Produção,Definir responsável pela follow-up,Fechado,urgente,todos,2026-07-18,vinculado à pendência anterior
+53,2026-04-22,Instrução Trabalho,Alinhamento com liderança sobre produção,A fazer,M,Osmar D.,,cliente reclamou disso semana passada
+54,19-05-2026,Instrução Trabalho,Ficou de trazer meta na próxima reunião,TODO,Alta,Tiago Alves,27-06-2026,risco de multa se não fechar
+55,07-05-2026,SOP,Revisar procedimento de meta conforme reunião,aberta,Baixa,Karen L.,27-06-2026,3 vezes que aparece esse mesmo problema
+56,2026-04-22,Indicador,Follow-up com engenharia sobre segurança,concluido,urgente,todos,08/09,
+57,24-06-2026,Gestão de pessoas,Análise da NC #199,aberta,Média,João P.,2026-08-25,conversamos na daily de segunda
+58,2026-06-28,Target,Feedback pra equipe sobre auditoria,Aberto,urgente,Eduarda Santos,15/07,3 vezes que aparece esse mesmo problema
+59,24/06/26,gente,Atualizar checklist de comunicado,andamento,crítica,Paula V.,2026-07-02,envolve 2 áreas — precisa alinhar
+60,19/06/2026,QLD,Trocar relatório vencido na área,Novo,alta,Leo Batista,,esperando resposta do RH
+61,28/06/26,EPI,Aguardando retorno de fornecedor sobre ferramenta,aberta,M,,,
+62,27/05/26,RH,Reagendar reunião de apresentação,WIP,Média,Isabel R.,,esperando ok da diretoria
+63,05/06/2026,Metas,Reagendar reunião de produção,aberta,Baixa,Henrique M.,19/06/2026,aparentemente resolvido mas não tem evidência
+64,2026-05-06,Gestão de pessoas,Verificar histórico de inspeção,Done,M,Osmar D.,,movi pra próxima semana
+65,13-07-2026,produtividade,Atualizar checklist de reunião,progresso,M,Henrique M.,25/08,risco de multa se não fechar
+66,12/06/26,QLD,Feedback pra equipe sobre inspeção,A fazer,A,time,10/07,risco de multa se não fechar
+67,2026-07-11,gente,Fechamento de briefing do mês anterior,Aberto,ALTA,Sabrina T.,,cliente reclamou disso semana passada
+68,16/05/26,produtividade,Pendente aprovação da diretoria sobre relatório,Done,ALTA,Felipe Costa,,3 vezes que aparece esse mesmo problema
+69,26-04-2026,manut.,Melhoria no fluxo de treinamento,andamento,urgente,Marcos T.,24-06-2026,revisar após mudança de escala
+70,2026-06-01,Time,Padronizar registro de checklist,OK,M,Isabel R.,17-08-2026,conversamos na daily de segunda
+71,29-06-2026,Qualidade,Padronizar registro de manutenção,Concluído,crítica,João P.,21/07/2026,
+72,08/05/26,Objetivo,Feedback pra equipe sobre auditoria,OK,A,Isabel R.,30-06-2026,vinculado à pendência anterior
+73,2026-06-08,RH/Gestão,Follow-up com diretoria sobre relatório,Encerrado,crítica,Nubia Costa,19-06-2026,"só depende de mim, sem justificativa"
+74,30/06/26,Produção,Ver com fornecedor status de meta,Novo,ALTA,Gabi Ferreira,30/08/2026,esperando ok da diretoria
+75,21-06-2026,SEG. TRABALHO,Feedback pra equipe sobre comunicado,Aberto,B,Gabi Ferreira,06-08-2026,pode ser reunião de 15min
+76,29-04-2026,Objetivo,Reposição de estoque de crachá,Done,,Sabrina T.,15/08,
+77,26-04-2026,Objetivo,Melhoria no fluxo de plano de ação,OK,Alta,Nubia Costa,,impacto direto no OEE do turno
+78,2026-07-08,Manutenção,Padronizar registro de plano de ação,A fazer,A,Diego Lima,25/08/2026,movi pra próxima semana
+79,2026-07-01,OEE,Auditoria interna de briefing,Encerrado,Alta,Bruno Alves,2026-07-09,não faz sentido no contexto atual
+80,13-05-2026,Processo,Escalar problema de relatório pro gerente,Feito,Média,todos,,
+81,2026-06-05,gente,Escalar problema de briefing pro gerente,Aberto,urgente,Gabi Ferreira,18/06,não faz sentido no contexto atual
+82,15/05/2026,Corretiva,Consolidar dados de qualidade,Em andamento,A,João P.,2026-09-08,
+83,20-04-2026,RH,,WIP,Média,Bruno Alves,05/09/2026,vinculado à pendência anterior
+84,09-05-2026,produtividade,Reagendar reunião de produção,andamento,ALTA,,27/06/2026,
+85,15/06/26,SEG. TRABALHO,Trocar crachá vencido na área,Em andamento,Alta,a definir,,"só depende de mim, sem justificativa"
+86,27/06/2026,Seguranca,Preparar apresentação sobre follow-up,TODO,ALTA,Nubia Costa,31/07,"só depende de mim, sem justificativa"
+87,05/05/2026,Instrução Trabalho,Renovar contrato de licença,andamento,ALTA,Sabrina T.,06/07/2026,movi pra próxima semana
+88,02/07/26,manut.,Fechamento de meta do mês anterior,aberta,Alta,Osmar D.,2026-07-08,
+89,28/06/26,Preventiva,Verificar histórico de briefing,OK,M,Osmar D.,2026-08-10,risco de multa se não fechar
+90,17-06-2026,Seg,Revisar procedimento de follow-up conforme reunião,Encerrado,,Eduarda Santos,28/06/2026,3 vezes que aparece esse mesmo problema
+91,2026-06-15,meta,Alinhamento com liderança sobre manutenção,Encerrado,urgente,Gabi Ferreira,26/07/2026,revisar após mudança de escala
+92,2026-05-21,Objetivo,Comunicar mudança de processo pro time,andamento,Média,Bruno Alves,2026-06-30,auditoria externa pergunta sobre isso
+93,01/06/26,produtividade,Trocar licença vencido na área,OK,ALTA,Tiago Alves,2026-08-16,não faz sentido no contexto atual
+94,30/04/2026,,Reposição de estoque de ferramenta,progresso,urgente,Felipe Costa,06/09,
+95,09/06/2026,IT,Consolidar dados de produção,WIP,ALTA,Vanessa L.,30/06/2026,cliente reclamou disso semana passada
+96,2026-05-16,Procedimento,Reposição de estoque de contrato,A fazer,B,Gabi Ferreira,,não faz sentido no contexto atual
+97,2026-05-20,SST,Ver com gerente status de checklist,Done,ALTA,Felipe Costa,2026-07-03,cliente reclamou disso semana passada
+98,21-04-2026,RH,Análise da NC #933,Em andamento,alta,Marcos T.,12-08-2026,aparentemente resolvido mas não tem evidência
+99,29/04/2026,SOP,Auditoria interna de apresentação,WIP,ALTA,time,,
+100,2026-05-07,MTN,Ficou de trazer qualidade na próxima reunião,aberta,urgente,Carla Souza,2026-06-30,esperando ok da diretoria
+101,2026-07-13,Seguranca,Atualizar checklist de segurança,progresso,urgente,time,2026-08-22,TI ainda não liberou
+102,2026-05-30,KPI,Feedback pra equipe sobre planilha,aberta,ALTA,a definir,22-07-2026,impacto direto no OEE do turno
+103,23/05/26,QLD,Treinamento de auditoria pra equipe,A fazer,crítica,Eduarda Santos,24/06,duplicado com outra linha?
+104,24/06/2026,Corretiva,Preparar apresentação sobre inspeção,Fechado,B,Isabel R.,07/09/2026,TI ainda não liberou
+105,10/07/2026,Produção,Documentar procedimento de segurança,Done,M,Carla Souza,01/08,envolve 2 áreas — precisa alinhar
+106,10/07/2026,KPI,Fechamento de manutenção do mês anterior,Feito,Alta,Ana Silva,2026-08-16,revisar após mudança de escala
+107,2026-07-13,manut.,Análise da NC #850,Aberto,B,?,31-08-2026,cliente reclamou disso semana passada
+108,09/05/2026,Processo,Precisa validação técnica de equipamento,WIP,Baixa,Isabel R.,2026-07-15,não faz sentido no contexto atual
+109,2026-05-24,SEG. TRABALHO,Consolidar dados de apresentação,Concluído,M,Osmar D.,23-06-2026,pode ser reunião de 15min
+110,26/05/2026,Prod,Trocar planilha vencido na área,Em andamento,crítica,a definir,06-09-2026,esperando resposta do RH
+111,26/06/2026,manut.,Padronizar registro de qualidade,aberta,urgente,,23-06-2026,esperando resposta do RH
+112,01/07/2026,Qualidade,Documentar procedimento de briefing,WIP,M,Osmar D.,13/07,auditoria externa pergunta sobre isso
+113,2026-06-13,Qualidade,Análise da NC #655,progresso,,Isabel R.,07/08/2026,pode ser reunião de 15min
+114,11-06-2026,RH,,Novo,B,Sabrina T.,2026-06-18,pode ser reunião de 15min
+115,09/07/26,Produção,Precisa validação técnica de EPI,Feito,Baixa,Sabrina T.,2026-08-17,3 vezes que aparece esse mesmo problema
+116,2026-06-27,Gestão de pessoas,Reposição de estoque de lista,Concluído,M,todos,,impacto direto no OEE do turno
+117,2026-05-05,gente,Documentar procedimento de segurança,concluido,crítica,João P.,,não faz sentido no contexto atual
+118,07/05/2026,SOP,Treinamento de inspeção pra equipe,WIP,M,Marcos T.,,pode ser reunião de 15min
+119,10/07/26,MTC,Precisa validação técnica de ferramenta,progresso,B,Karen L.,14/09,conversamos na daily de segunda
+120,02/05/2026,,Análise da NC #565,andamento,Média,Eduarda Santos,30/06,
+121,09/07/26,QLD,Ajuste no cronograma semanal,Fechado,,Bruno Alves,15/09/2026,esperando resposta do RH
+122,2026-07-17,IT,Ver com fornecedor status de processo,Concluído,,Bruno Alves,07/09/2026,duplicado com outra linha?
+123,02/06/26,QLD,Follow-up com RH sobre processo,Concluído,A,Isabel R.,06/07/2026,auditoria externa pergunta sobre isso
+124,31/05/2026,Pessoas,Atualizar checklist de treinamento,Em andamento,B,Bruno Alves,28-07-2026,conversamos na daily de segunda
+125,,,,,,,,
+126,2026-04-24,Metas,Fechamento de plano de ação do mês anterior,Feito,urgente,time,2026-06-29,envolve 2 áreas — precisa alinhar
+127,10/07/2026,seg.,Revisar procedimento de comunicado conforme reunião,WIP,Média,Karen L.,27/06/2026,vinculado à pendência anterior
+128,29-05-2026,Equipe,Renovar contrato de relatório,progresso,Média,Marcos T.,18/08,TI ainda não liberou
+129,13/07/2026,Equipe,Documentar procedimento de treinamento,Em andamento,M,Karen L.,06/09/2026,
+130,27/04/2026,Corretiva,Reunião com fornecedor de material,Encerrado,crítica,Ricardo N.,13-09-2026,impacto direto no OEE do turno
+131,26-05-2026,SOP,Alinhamento com liderança sobre briefing,Feito,A,Marcos T.,2026-07-12,esperando resposta do RH
+132,22-06-2026,Produtividade,Ficou de trazer produção na próxima reunião,Aberto,Alta,Felipe Costa,2026-08-10,cliente reclamou disso semana passada
+133,19-05-2026,seg.,Renovar contrato de suporte técnico,progresso,M,Vanessa L.,24-06-2026,impacto direto no OEE do turno
+134,06/05/26,MTC,Reunião com fornecedor de documento,Concluído,M,a definir,23-07-2026,urgente segundo o gerente
+135,25/05/2026,Produtividade,Trocar licença vencido na área,OK,Baixa,Sabrina T.,09-08-2026,esperando ok da diretoria
+136,2026-06-26,PM,Comunicar mudança de comunicado pro time,Feito,B,Diego Lima,15/07/2026,impacto direto no OEE do turno
+137,2026-05-02,proc.,Atualizar checklist de follow-up,Em andamento,crítica,Tiago Alves,2026-07-14,impacto direto no OEE do turno
+138,07/06/2026,SOP,Auditoria interna de briefing,A fazer,crítica,,22/07,esperando ok da diretoria
+139,2026-06-25,IT,Verificar histórico de documento,Aberto,urgente,Bruno Alves,30-08-2026,TI ainda não liberou
+140,27/04/26,,Renovar contrato de ferramenta,progresso,urgente,Ana Silva,28/08,TI ainda não liberou
+141,21-05-2026,RH,Consolidar dados de treinamento,A fazer,,Tiago Alves,28/07/2026,cliente reclamou disso semana passada
+142,01/05/26,seg.,Precisa validação técnica de ferramenta,Done,ALTA,Marcos T.,12/08,conversamos na daily de segunda
+143,24/05/26,seg.,Precisa validação técnica de ferramenta,Encerrado,Baixa,Carla Souza,,impacto direto no OEE do turno
+144,24/05/2026,PM,Verificar histórico de follow-up,Feito,alta,Ana Silva,05/08,esperando ok da diretoria
+145,11/05/2026,Produtividade,Follow-up com RH sobre processo,progresso,Média,Marcos T.,09-08-2026,duplicado com outra linha?
+146,08-05-2026,proc.,Alinhamento com liderança sobre qualidade,Aberto,Média,Marcos T.,03-09-2026,duplicado com outra linha?
+147,01/07/26,manut.,Ajuste no cronograma semanal,Em andamento,B,Sabrina T.,30/06/2026,esperando ok da diretoria
+148,,,,,,,,
+149,13/05/26,,Alinhamento com liderança sobre follow-up,Concluído,,Isabel R.,16-08-2026,esperando ok da diretoria
+150,14/05/26,Objetivo,Precisa validação técnica de material,Novo,urgente,Tiago Alves,10/09/2026,3 vezes que aparece esse mesmo problema
+151,13-05-2026,RH/Gestão,Atualizar checklist de apresentação,Fechado,A,Ana Silva,28/08,impacto direto no OEE do turno
+152,06-05-2026,Manutenção,Documentar procedimento de processo,andamento,Baixa,,04/08/2026,auditoria externa pergunta sobre isso
+153,2026-06-01,Gestão de pessoas,Auditoria interna de relatório,Feito,Alta,Diego Lima,27/06,esperando ok da diretoria
+154,22/06/2026,proc.,Comunicar mudança de qualidade pro time,Em andamento,M,Ricardo N.,22/07/2026,não faz sentido no contexto atual
+155,04/05/26,PM,Renovar contrato de EPI,A fazer,Média,Carla Souza,03/09,urgente segundo o gerente
+156,19/05/2026,seg.,Melhoria no fluxo de segurança,Feito,A,Eduarda Santos,07/07/2026,3 vezes que aparece esse mesmo problema
+157,12-07-2026,Preventiva,Trocar licença vencido na área,Em andamento,,time,26/07,esperando resposta do RH
+158,04/05/26,Procedimento,Ver com gerente status de apresentação,A fazer,M,todos,18-06-2026,risco de multa se não fechar
+159,09-05-2026,Produção,Precisa validação técnica de EPI,aberta,M,Paula V.,2026-07-23,3 vezes que aparece esse mesmo problema
+160,2026-05-25,RH/Gestão,Auditoria interna de reunião,Em andamento,Média,a definir,2026-09-07,auditoria externa pergunta sobre isso
+161,,,,,,,,
+162,2026-06-06,MTN,Comunicar mudança de relatório pro time,Fechado,Alta,Diego Lima,21/06,conversamos na daily de segunda
+163,01/06/2026,Preventiva,Verificar histórico de documento,aberta,crítica,Ana Silva,17/08/2026,
+164,2026-07-05,Equipe,Consolidar dados de qualidade,progresso,,Bruno Alves,28/08/2026,cliente reclamou disso semana passada
+165,20/04/26,MTC,Comunicar mudança de comunicado pro time,Feito,ALTA,João P.,11-08-2026,esperando resposta do RH
+166,10/06/2026,RH/Gestão,Alinhamento com liderança sobre follow-up,Novo,Média,Osmar D.,,duplicado com outra linha?
+167,,,,,,,,
+168,24/04/2026,qual.,Melhoria no fluxo de apresentação,concluido,M,Vanessa L.,26/07/2026,urgente segundo o gerente
+169,13-05-2026,Time,Renovar contrato de equipamento,Novo,A,Diego Lima,03/09,auditoria externa pergunta sobre isso
+170,30/06/2026,,Preparar apresentação sobre produção,aberta,Média,,21/06,esperando resposta do RH
+171,21/06/2026,Qualidade,Trocar EPI vencido na área,andamento,B,Tiago Alves,17/08,
+172,2026-06-10,,Follow-up com engenharia sobre planilha,Novo,alta,Eduarda Santos,09/08/2026,duplicado com outra linha?
+173,2026-05-24,IT,Aguardando retorno de fornecedor sobre lista,Novo,A,Felipe Costa,2026-08-25,revisar após mudança de escala
+174,07/05/26,manut.,Melhoria no fluxo de plano de ação,Novo,B,,2026-08-06,auditoria externa pergunta sobre isso
+175,15-06-2026,Gestão de pessoas,Definir responsável pela manutenção,Feito,crítica,Bruno Alves,22-06-2026,não faz sentido no contexto atual
+176,01/05/2026,produtividade,Precisa validação técnica de crachá,concluido,B,Osmar D.,05-08-2026,movi pra próxima semana
+177,14/05/2026,Indicador,Fechamento de planilha do mês anterior,aberta,,Carla Souza,10-08-2026,conversamos na daily de segunda
+178,06/07/26,qual.,Treinamento de comunicado pra equipe,concluido,ALTA,Sabrina T.,09/08,urgente segundo o gerente
+179,21-06-2026,meta,Aguardando retorno de fornecedor sobre certificado,Done,M,Ricardo N.,07/09/2026,
+180,2026-05-25,Qualidade,Preparar apresentação sobre comunicado,progresso,A,Diego Lima,2026-08-19,revisar após mudança de escala
+181,2026-04-26,Processo,Investigação de desvio em meta,TODO,urgente,Ana Silva,01/07,não faz sentido no contexto atual
+182,2026-05-08,QLD,,Em andamento,M,João P.,19/07,esperando ok da diretoria
+183,11/07/26,gente,Auditoria interna de segurança,Fechado,A,Isabel R.,,auditoria externa pergunta sobre isso
+184,03/06/26,Segurança,Padronizar registro de comunicado,aberta,Baixa,Leo Batista,2026-06-30,esperando resposta do RH
+185,05/06/2026,meta,Preparar apresentação sobre meta,aberta,alta,?,2026-06-25,urgente segundo o gerente
+186,09/07/2026,Produtividade,Alinhamento com liderança sobre meta,Novo,urgente,todos,21/07/2026,
+187,05/05/2026,EPI,Auditoria interna de reunião,Done,B,Ana Silva,19-06-2026,TI ainda não liberou
+188,10/06/26,PROD,Comunicar mudança de meta pro time,Fechado,crítica,Eduarda Santos,26-07-2026,
+189,04/05/2026,Preventiva,Reunião com fornecedor de ferramenta,Feito,ALTA,Nubia Costa,2026-08-13,auditoria externa pergunta sobre isso
+190,23/05/26,Metas,Investigação de desvio em qualidade,WIP,urgente,Sabrina T.,24/06,risco de multa se não fechar
+191,08/05/26,Controle Qualidade,Treinamento de segurança pra equipe,Fechado,Alta,a definir,12/09,não faz sentido no contexto atual
+192,30/06/2026,Objetivo,Escalar problema de comunicado pro gerente,Encerrado,Alta,?,,cliente reclamou disso semana passada
+193,23/05/26,CQ,Investigação de desvio em plano de ação,progresso,ALTA,Paula V.,25-08-2026,urgente segundo o gerente
+194,15-07-2026,SEG. TRABALHO,Revisar procedimento de briefing conforme reunião,Aberto,Média,Leo Batista,06-09-2026,
+195,23/04/2026,EPI,Trocar suporte técnico vencido na área,Encerrado,urgente,Leo Batista,20/07/2026,impacto direto no OEE do turno
+196,01/05/2026,Objetivo,Verificar histórico de qualidade,Aberto,,Leo Batista,2026-07-17,movi pra próxima semana
+197,30-06-2026,Metas,Ajuste no cronograma semanal,Novo,urgente,João P.,29/07,risco de multa se não fechar
+198,2026-06-22,produtividade,Feedback pra equipe sobre apresentação,Aberto,,Sabrina T.,2026-08-20,
+199,08-07-2026,EPI,Comunicar mudança de inspeção pro time,Em andamento,crítica,Bruno Alves,,TI ainda não liberou
+200,2026-06-04,Instrução Trabalho,Documentar procedimento de manutenção,Novo,B,Ana Silva,,cliente reclamou disso semana passada
+201,02/06/26,produtividade,Comunicar mudança de planilha pro time,aberta,crítica,Eduarda Santos,30/08,duplicado com outra linha?
+202,15-07-2026,Produção,Ficou de trazer checklist na próxima reunião,aberta,ALTA,todos,2026-08-30,impacto direto no OEE do turno
+203,2026-04-19,Indicador,Comunicar mudança de planilha pro time,Aberto,Média,time,23/06/2026,não faz sentido no contexto atual
+204,25/06/26,MTN,Follow-up com diretoria sobre reunião,Feito,B,Ana Silva,2026-08-27,não faz sentido no contexto atual
+205,31-05-2026,Metas,Follow-up com diretoria sobre processo,concluido,ALTA,Ana Silva,2026-07-18,"só depende de mim, sem justificativa"
+206,2026-06-30,Manutenção,Follow-up com fornecedor sobre comunicado,Novo,,Ana Silva,02/09/2026,urgente segundo o gerente
+207,10/06/2026,Seg,Pendente aprovação da diretoria sobre follow-up,Done,Baixa,Bruno Alves,25/07/2026,
+208,2026-04-23,Manutenção,Padronizar registro de inspeção,WIP,B,Tiago Alves,2026-07-27,revisar após mudança de escala
+209,08/06/26,seg.,Ajuste no cronograma semanal,WIP,crítica,Tiago Alves,02-07-2026,
+210,04/05/2026,meta,Análise da NC #286,A fazer,crítica,Osmar D.,,"só depende de mim, sem justificativa"
+211,01/06/26,Preventiva,Revisar procedimento de plano de ação conforme reunião,A fazer,urgente,Osmar D.,05/09,revisar após mudança de escala
+212,2026-04-25,Qualidade,Revisar procedimento de follow-up conforme reunião,OK,B,Felipe Costa,15/08,
+213,09-07-2026,RH,Pendente aprovação da diretoria sobre treinamento,OK,B,time,10/07,envolve 2 áreas — precisa alinhar
+214,06/06/26,Preventiva,Reagendar reunião de apresentação,OK,A,Carla Souza,05/07/2026,auditoria externa pergunta sobre isso
+215,2026-05-30,proc.,Comunicar mudança de planilha pro time,Novo,A,Vanessa L.,05/07/2026,impacto direto no OEE do turno
+216,26/05/26,Qualidade,Escalar problema de relatório pro gerente,Novo,ALTA,Eduarda Santos,06-07-2026,envolve 2 áreas — precisa alinhar
+217,20-04-2026,MTC,Pendente aprovação da diretoria sobre relatório,Aberto,B,Diego Lima,,TI ainda não liberou
+218,25-04-2026,Produção,Pendente aprovação da diretoria sobre auditoria,Concluído,A,Vanessa L.,2026-08-12,movi pra próxima semana
+219,2026-07-07,meta,Análise da NC #442,Feito,ALTA,João P.,04-07-2026,conversamos na daily de segunda
+220,2026-05-01,manut.,Alinhamento com liderança sobre processo,aberta,M,Osmar D.,06/09/2026,pode ser reunião de 15min
+221,13/06/2026,Processo,Ajuste no cronograma semanal,Encerrado,alta,todos,14-08-2026,impacto direto no OEE do turno
+222,23/06/2026,Manutenção,Feedback pra equipe sobre plano de ação,Feito,crítica,Henrique M.,12/07,auditoria externa pergunta sobre isso
+223,24-06-2026,Produção,Pendente aprovação da diretoria sobre meta,A fazer,urgente,time,03/09/2026,
+224,17-07-2026,SOP,Comunicar mudança de checklist pro time,concluido,Alta,Nubia Costa,13/09/2026,movi pra próxima semana
+225,09-06-2026,EPI,Pendente aprovação da diretoria sobre auditoria,Em andamento,alta,Felipe Costa,11-07-2026,
+226,2026-06-01,Qualidade,Fechamento de processo do mês anterior,Aberto,urgente,Tiago Alves,21/08/2026,
+227,11/06/26,Corretiva,Escalar problema de comunicado pro gerente,Em andamento,urgente,Osmar D.,,movi pra próxima semana
+228,29/04/2026,CQ,Alinhamento com liderança sobre plano de ação,Em andamento,A,Sabrina T.,23-07-2026,esperando resposta do RH
+229,16/06/2026,Processo,Feedback pra equipe sobre processo,andamento,ALTA,Gabi Ferreira,05/08,esperando resposta do RH
+230,2026-06-02,Seg,Auditoria interna de inspeção,TODO,ALTA,Leo Batista,30/06,envolve 2 áreas — precisa alinhar
+231,18/07/26,Objetivo,Reunião com fornecedor de suporte técnico,Aberto,alta,Bruno Alves,,risco de multa se não fechar
+232,25/04/2026,Indicador,Pendente aprovação da diretoria sobre comunicado,concluido,Média,Ricardo N.,,conversamos na daily de segunda
+233,18-07-2026,OEE,Reunião com fornecedor de EPI,Aberto,Alta,Sabrina T.,,esperando ok da diretoria
+234,29/06/26,PROD,Investigação de desvio em checklist,Novo,Média,time,10/08,impacto direto no OEE do turno
+235,23/05/2026,Target,Aguardando retorno de fornecedor sobre planilha,Novo,Baixa,Paula V.,2026-08-17,"só depende de mim, sem justificativa"
+236,2026-06-15,Preventiva,Trocar documento vencido na área,Em andamento,Baixa,Ricardo N.,03/07,TI ainda não liberou
+237,2026-05-28,QLD,Fechamento de checklist do mês anterior,concluido,urgente,Felipe Costa,26/08,risco de multa se não fechar
+238,,,,,,,,
+239,21/05/26,SOP,Comunicar mudança de follow-up pro time,Fechado,ALTA,Leo Batista,30/07/2026,
+240,12/05/2026,Gestão de pessoas,Documentar procedimento de checklist,aberta,alta,Marcos T.,19/08,
+241,30/04/26,Instrução Trabalho,Revisar procedimento de reunião conforme reunião,Concluído,B,Leo Batista,14/08,aparentemente resolvido mas não tem evidência
+242,13/06/2026,Seguranca,Análise da NC #896,A fazer,B,,,vinculado à pendência anterior
+243,16/05/2026,PROD,Consolidar dados de meta,TODO,A,João P.,21/08/2026,cliente reclamou disso semana passada
+244,2026-05-02,SOP,Preparar apresentação sobre auditoria,Fechado,crítica,Leo Batista,04-09-2026,duplicado com outra linha?
+245,24/06/2026,Qualidade,Escalar problema de processo pro gerente,TODO,urgente,Isabel R.,2026-08-17,esperando ok da diretoria
+246,13/07/2026,Manutenção,Reposição de estoque de contrato,Done,ALTA,Henrique M.,30/08/2026,não faz sentido no contexto atual
+247,,,,,,,,
+248,15-06-2026,Corretiva,Auditoria interna de auditoria,Em andamento,,Carla Souza,11-08-2026,aparentemente resolvido mas não tem evidência
+249,19/06/26,QLD,Fechamento de manutenção do mês anterior,OK,Alta,,2026-07-26,aparentemente resolvido mas não tem evidência
+250,25-04-2026,Target,Comunicar mudança de qualidade pro time,Fechado,alta,,07/09/2026,cliente reclamou disso semana passada
+251,08/05/26,Segurança,Padronizar registro de checklist,Aberto,Baixa,?,2026-07-09,vinculado à pendência anterior
+252,2026-07-15,Qualidade,Padronizar registro de inspeção,OK,,Leo Batista,06-09-2026,movi pra próxima semana
+253,01/07/26,gente,Reagendar reunião de meta,progresso,Média,Ricardo N.,02/07,TI ainda não liberou
+254,09-05-2026,Segurança,Consolidar dados de documento,OK,A,a definir,23/08,risco de multa se não fechar
+255,01/06/26,Target,Fechamento de processo do mês anterior,TODO,Alta,Diego Lima,14/09,revisar após mudança de escala
+256,2026-05-18,qual.,Treinamento de meta pra equipe,A fazer,urgente,Marcos T.,11/07/2026,revisar após mudança de escala
+257,2026-05-25,IT,Atualizar checklist de qualidade,Done,Alta,Osmar D.,24-06-2026,auditoria externa pergunta sobre isso
+258,25/05/2026,Pessoas,Definir responsável pela briefing,TODO,Baixa,todos,06/09,esperando ok da diretoria
+259,29/06/2026,Metas,Análise da NC #740,WIP,Baixa,Paula V.,,envolve 2 áreas — precisa alinhar
+260,,,,,,,,
+261,2026-05-23,Time,Follow-up com RH sobre plano de ação,progresso,Alta,time,2026-08-10,3 vezes que aparece esse mesmo problema
+262,14-06-2026,Gestão de pessoas,Melhoria no fluxo de qualidade,concluido,urgente,Nubia Costa,24/06/2026,impacto direto no OEE do turno
+263,2026-05-11,MTC,Ficou de trazer planilha na próxima reunião,Done,Alta,João P.,13/09/2026,urgente segundo o gerente
+264,27/05/2026,Gestão de pessoas,Auditoria interna de relatório,progresso,crítica,Sabrina T.,22/08/2026,cliente reclamou disso semana passada
+265,27/05/2026,Gestão de pessoas,Consolidar dados de meta,OK,M,Henrique M.,,3 vezes que aparece esse mesmo problema
+266,06-07-2026,PM,Reagendar reunião de processo,Feito,Alta,Diego Lima,22/06,revisar após mudança de escala
+267,22/06/2026,IT,Auditoria interna de documento,Novo,Baixa,Gabi Ferreira,20-08-2026,vinculado à pendência anterior
+268,04/07/2026,Preventiva,Reposição de estoque de relatório,aberta,ALTA,Osmar D.,10-09-2026,revisar após mudança de escala
+269,28-06-2026,,Definir responsável pela follow-up,Fechado,urgente,Sabrina T.,16-08-2026,revisar após mudança de escala
+270,2026-05-21,,Trocar documento vencido na área,Done,alta,Sabrina T.,15/08/2026,duplicado com outra linha?
+271,27/04/26,Processo,Treinamento de segurança pra equipe,Encerrado,A,Nubia Costa,19-06-2026,
+272,04/06/26,MTN,Renovar contrato de equipamento,aberta,Baixa,Paula V.,19/08/2026,TI ainda não liberou
+273,15/06/2026,RH,Reposição de estoque de equipamento,Fechado,ALTA,,12/07,aparentemente resolvido mas não tem evidência
+274,2026-07-07,gente,,A fazer,crítica,Tiago Alves,2026-08-29,esperando ok da diretoria
+275,27/06/26,Indicador,Análise da NC #120,WIP,Baixa,Osmar D.,01/07/2026,"só depende de mim, sem justificativa"
+276,2026-05-23,PROD,Precisa validação técnica de EPI,TODO,Média,todos,09-07-2026,esperando resposta do RH
+277,30-04-2026,seg.,Alinhamento com liderança sobre segurança,aberta,,Karen L.,2026-06-28,vinculado à pendência anterior
+278,20/05/2026,Procedimento,Investigação de desvio em checklist,andamento,Alta,Osmar D.,13/09/2026,"só depende de mim, sem justificativa"
+279,2026-06-24,seg.,Definir responsável pela auditoria,Fechado,Média,time,01-09-2026,urgente segundo o gerente
+280,25-05-2026,Instrução Trabalho,Fechamento de reunião do mês anterior,Done,Média,Sabrina T.,28-06-2026,esperando ok da diretoria
+281,2026-06-17,Controle Qualidade,Verificar histórico de briefing,TODO,B,Paula V.,15/08/2026,
+282,26/06/26,SEG. TRABALHO,Verificar histórico de briefing,Fechado,alta,Osmar D.,,aparentemente resolvido mas não tem evidência
+283,2026-06-18,Preventiva,Aguardando retorno de fornecedor sobre planilha,Aberto,ALTA,Gabi Ferreira,15/09,movi pra próxima semana
+284,10-06-2026,Indicador,Reposição de estoque de certificado,Fechado,A,Tiago Alves,2026-08-27,revisar após mudança de escala
+285,2026-05-21,PM,Treinamento de checklist pra equipe,OK,,?,07/08/2026,aparentemente resolvido mas não tem evidência
+286,2026-06-21,Preventiva,Análise da NC #183,Em andamento,Média,Eduarda Santos,2026-08-14,duplicado com outra linha?
+287,06/06/2026,Prod,Alinhamento com liderança sobre meta,aberta,B,,,pode ser reunião de 15min
+288,06-06-2026,seg.,Comunicar mudança de planilha pro time,Encerrado,alta,Henrique M.,21/08/2026,pode ser reunião de 15min
+289,02/07/2026,Segurança,Revisar procedimento de plano de ação conforme reunião,Fechado,Média,João P.,2026-07-28,esperando resposta do RH
+290,06-05-2026,EPI,Pendente aprovação da diretoria sobre segurança,OK,crítica,,05/08,envolve 2 áreas — precisa alinhar
+291,2026-04-28,qual.,Definir responsável pela treinamento,TODO,Média,time,31/07,esperando ok da diretoria
+292,14/05/26,PM,Reunião com fornecedor de certificado,Encerrado,Média,,2026-06-25,cliente reclamou disso semana passada
+293,08/05/2026,proc.,Melhoria no fluxo de qualidade,Novo,Baixa,Henrique M.,04/08,conversamos na daily de segunda
+294,10/06/2026,Equipe,,Concluído,B,Paula V.,09-08-2026,cliente reclamou disso semana passada
+295,19/05/2026,Produção,Aguardando retorno de fornecedor sobre documento,Encerrado,A,Nubia Costa,04/08,esperando ok da diretoria
+296,21/05/26,,Treinamento de treinamento pra equipe,andamento,crítica,todos,27/07,esperando resposta do RH
+297,08/07/2026,SST,Reagendar reunião de inspeção,andamento,crítica,Ana Silva,22/06,auditoria externa pergunta sobre isso
+298,26-05-2026,SEG. TRABALHO,,Encerrado,A,,22-07-2026,risco de multa se não fechar
+299,17-05-2026,SOP,Follow-up com coordenador sobre documento,progresso,alta,time,09/07,aparentemente resolvido mas não tem evidência
+300,15/05/26,produtividade,Precisa validação técnica de relatório,Concluído,crítica,Osmar D.,03/09,cliente reclamou disso semana passada
+301,18/05/26,manut.,Ver com fornecedor status de follow-up,Concluído,alta,Henrique M.,2026-07-08,não faz sentido no contexto atual
+302,07-07-2026,qual.,Aguardando retorno de fornecedor sobre planilha,TODO,alta,Eduarda Santos,11-07-2026,envolve 2 áreas — precisa alinhar
+303,23/04/2026,gente,Consolidar dados de qualidade,concluido,alta,Carla Souza,21/06/2026,vinculado à pendência anterior
+304,26/06/26,Produtividade,Precisa validação técnica de ferramenta,Novo,Alta,Paula V.,,movi pra próxima semana
+305,29-06-2026,Manutenção,Definir responsável pela comunicado,progresso,urgente,Ricardo N.,,esperando resposta do RH
+306,18-05-2026,IT,Treinamento de segurança pra equipe,Concluído,Média,Eduarda Santos,12/07/2026,conversamos na daily de segunda
+307,2026-06-30,PROD,Aguardando retorno de fornecedor sobre EPI,TODO,B,Ricardo N.,,
+308,05/07/26,Target,,andamento,Média,Carla Souza,,conversamos na daily de segunda
+309,2026-06-16,,Treinamento de planilha pra equipe,OK,,?,13/07,esperando ok da diretoria
+310,2026-04-26,qual.,Análise da NC #246,OK,,Nubia Costa,03-08-2026,não faz sentido no contexto atual
+311,2026-04-28,Objetivo,Renovar contrato de material,Encerrado,urgente,Carla Souza,11/09/2026,esperando ok da diretoria
+312,26-06-2026,Manutenção,Preparar apresentação sobre checklist,Feito,Alta,Ricardo N.,06/07/2026,revisar após mudança de escala
+313,13-07-2026,CQ,Auditoria interna de treinamento,Encerrado,alta,,,conversamos na daily de segunda
+314,2026-06-16,Instrução Trabalho,Reposição de estoque de EPI,Novo,A,Nubia Costa,2026-07-13,
+315,30/05/2026,CQ,Ver com gerente status de auditoria,TODO,ALTA,Osmar D.,31/07/2026,3 vezes que aparece esse mesmo problema
+316,08/07/26,Metas,Alinhamento com liderança sobre treinamento,Concluído,B,Leo Batista,11/07,3 vezes que aparece esse mesmo problema
+317,30-06-2026,Corretiva,Treinamento de comunicado pra equipe,Novo,ALTA,,27/07,não faz sentido no contexto atual
+318,,,,,,,,
+319,22/05/26,EPI,Auditoria interna de treinamento,aberta,M,Nubia Costa,10-08-2026,movi pra próxima semana
+320,09/05/26,KPI,Escalar problema de planilha pro gerente,TODO,Média,Diego Lima,06/08,movi pra próxima semana
+321,07-06-2026,produtividade,Alinhamento com liderança sobre treinamento,Aberto,Média,,,movi pra próxima semana
+322,18/05/26,QLD,Fechamento de briefing do mês anterior,Done,urgente,a definir,2026-07-03,
+323,21/06/2026,Seg,Definir responsável pela follow-up,Encerrado,urgente,Marcos T.,18/06,impacto direto no OEE do turno
+324,24/05/2026,RH/Gestão,Atualizar checklist de documento,concluido,alta,Gabi Ferreira,26/08/2026,
+325,05/07/2026,Manutenção,Documentar procedimento de treinamento,Done,alta,Sabrina T.,06/08,urgente segundo o gerente
+326,29/06/26,Pessoas,Ajuste no cronograma semanal,OK,urgente,Ricardo N.,24/06,urgente segundo o gerente
+327,16/07/26,Target,Investigação de desvio em auditoria,A fazer,B,Marcos T.,12/08,TI ainda não liberou
+328,19/05/26,Procedimento,Reagendar reunião de follow-up,Fechado,Baixa,Gabi Ferreira,08-07-2026,duplicado com outra linha?
+329,15/05/2026,Time,Melhoria no fluxo de briefing,Concluído,urgente,,24/06,TI ainda não liberou
+330,13/07/2026,Equipe,Fechamento de plano de ação do mês anterior,aberta,M,Diego Lima,28/07/2026,3 vezes que aparece esse mesmo problema
+331,04/06/2026,KPI,Preparar apresentação sobre relatório,A fazer,crítica,Diego Lima,2026-08-17,conversamos na daily de segunda
+332,22-04-2026,MTN,Alinhamento com liderança sobre produção,Em andamento,A,,12/09,envolve 2 áreas — precisa alinhar
+333,11/06/26,PM,Aguardando retorno de fornecedor sobre equipamento,Fechado,A,Ricardo N.,2026-07-21,movi pra próxima semana
+334,29/06/26,Saúde e Seguranca,Ajuste no cronograma semanal,concluido,Média,Diego Lima,2026-09-15,impacto direto no OEE do turno
+335,16/07/2026,Gestão de pessoas,Pendente aprovação da diretoria sobre segurança,Fechado,Alta,,23/07,auditoria externa pergunta sobre isso
+336,21/04/26,SEG. TRABALHO,Fechamento de meta do mês anterior,Done,alta,Felipe Costa,,envolve 2 áreas — precisa alinhar
+337,30/05/26,Produtividade,Precisa validação técnica de planilha,andamento,A,Marcos T.,18-06-2026,risco de multa se não fechar
+338,22/04/26,Manutenção,Preparar apresentação sobre reunião,progresso,urgente,?,19-07-2026,revisar após mudança de escala
+339,13/07/2026,Controle Qualidade,Ver com gerente status de processo,A fazer,A,Vanessa L.,2026-08-15,impacto direto no OEE do turno
+340,2026-07-03,MTN,Fechamento de qualidade do mês anterior,Feito,urgente,Paula V.,24-06-2026,auditoria externa pergunta sobre isso
+341,22/06/26,SEG. TRABALHO,Verificar histórico de produção,Done,crítica,Sabrina T.,2026-09-08,conversamos na daily de segunda
+342,09/07/2026,produtividade,Consolidar dados de produção,TODO,Baixa,,13-07-2026,envolve 2 áreas — precisa alinhar
+343,23-05-2026,CQ,Ver com diretoria status de apresentação,Done,ALTA,Eduarda Santos,23-08-2026,
+344,01-06-2026,CQ,Ajuste no cronograma semanal,Aberto,crítica,Eduarda Santos,2026-07-15,auditoria externa pergunta sobre isso
+345,2026-04-29,Controle Qualidade,Revisar procedimento de reunião conforme reunião,Aberto,ALTA,time,,pode ser reunião de 15min
+346,21/06/26,Processo,Trocar crachá vencido na área,aberta,Média,,16/09,
+347,23/06/26,PROD,Consolidar dados de briefing,OK,A,Gabi Ferreira,,
+348,,,,,,,,
+349,28/05/26,Qualidade,Comunicar mudança de treinamento pro time,Feito,,Karen L.,25-07-2026,não faz sentido no contexto atual
+350,08/07/26,Corretiva,Reunião com fornecedor de crachá,aberta,Baixa,Eduarda Santos,,3 vezes que aparece esse mesmo problema
+351,2026-07-09,IT,Comunicar mudança de checklist pro time,OK,ALTA,time,09/07,3 vezes que aparece esse mesmo problema
+352,22/05/2026,PM,Fechamento de treinamento do mês anterior,Em andamento,M,,14/07/2026,esperando resposta do RH
+353,07-06-2026,Segurança,Padronizar registro de follow-up,WIP,Alta,Paula V.,2026-09-09,vinculado à pendência anterior
+354,13/05/26,Corretiva,Preparar apresentação sobre reunião,Em andamento,urgente,time,31/07/2026,impacto direto no OEE do turno
+355,04-07-2026,Seg,,progresso,Média,Gabi Ferreira,07/07,esperando resposta do RH
+356,14/07/2026,Preventiva,Reposição de estoque de ferramenta,Feito,,Sabrina T.,,auditoria externa pergunta sobre isso
+357,18/07/2026,Instrução Trabalho,Melhoria no fluxo de auditoria,Novo,,Leo Batista,,vinculado à pendência anterior
+358,07/07/2026,QA,Verificar histórico de apresentação,Done,A,João P.,30/06/2026,urgente segundo o gerente
+359,24-04-2026,Qualidade,Follow-up com gerente sobre relatório,Done,,Paula V.,04-09-2026,vinculado à pendência anterior
+360,2026-06-10,meta,Revisar procedimento de auditoria conforme reunião,Novo,alta,?,06-09-2026,TI ainda não liberou
+361,15-07-2026,KPI,Precisa validação técnica de EPI,Concluído,Alta,Leo Batista,02/08/2026,risco de multa se não fechar
+362,19/06/2026,Controle Qualidade,Análise da NC #401,WIP,M,,08/09/2026,auditoria externa pergunta sobre isso
+363,2026-07-13,proc.,Fechamento de plano de ação do mês anterior,Encerrado,urgente,Felipe Costa,23-07-2026,conversamos na daily de segunda
+364,04/05/26,qual.,Follow-up com gerente sobre inspeção,WIP,B,Karen L.,2026-07-22,esperando resposta do RH
+365,10/06/2026,Instrução Trabalho,Aguardando retorno de fornecedor sobre relatório,Em andamento,,Bruno Alves,28-06-2026,pode ser reunião de 15min
+366,09/07/26,PM,Escalar problema de qualidade pro gerente,concluido,B,Osmar D.,,movi pra próxima semana
+367,05/05/26,Seguranca,Feedback pra equipe sobre produção,Novo,alta,Gabi Ferreira,2026-08-28,auditoria externa pergunta sobre isso
+368,,,,,,,,
+369,2026-04-21,KPI,Ver com gerente status de inspeção,A fazer,Alta,Felipe Costa,13/08/2026,revisar após mudança de escala
+370,18-07-2026,Indicador,Pendente aprovação da diretoria sobre reunião,Aberto,crítica,,27-07-2026,esperando resposta do RH
+371,09-07-2026,gente,Pendente aprovação da diretoria sobre inspeção,Fechado,Alta,Henrique M.,26/06,risco de multa se não fechar
+372,29/05/2026,Preventiva,Aguardando retorno de fornecedor sobre insumo,TODO,Alta,Paula V.,17-07-2026,
+373,07-07-2026,MTC,Análise da NC #297,Encerrado,,Ana Silva,06/07,cliente reclamou disso semana passada
+374,13-06-2026,Processo,Aguardando retorno de fornecedor sobre relatório,Em andamento,B,Eduarda Santos,2026-07-26,envolve 2 áreas — precisa alinhar
+375,26/05/2026,Qualidade,Pendente aprovação da diretoria sobre segurança,Fechado,crítica,Bruno Alves,21/07,impacto direto no OEE do turno
+376,2026-06-26,IT,Revisar procedimento de planilha conforme reunião,A fazer,,Eduarda Santos,,
+377,22/04/2026,Seguranca,Ficou de trazer processo na próxima reunião,andamento,ALTA,Leo Batista,19-06-2026,conversamos na daily de segunda
+378,2026-06-21,RH,Ver com gerente status de checklist,Em andamento,urgente,Carla Souza,29-06-2026,vinculado à pendência anterior
+379,22-05-2026,seg.,Trocar lista vencido na área,andamento,B,,22/07/2026,
+380,30/05/26,RH/Gestão,Investigação de desvio em processo,WIP,,Sabrina T.,11/09/2026,movi pra próxima semana
+381,10/07/26,PROD,Melhoria no fluxo de briefing,Concluído,Média,Felipe Costa,21/06,conversamos na daily de segunda
+382,2026-04-28,Objetivo,Precisa validação técnica de EPI,Feito,alta,Osmar D.,,duplicado com outra linha?
+383,2026-06-17,SST,Documentar procedimento de plano de ação,progresso,urgente,Gabi Ferreira,03-08-2026,envolve 2 áreas — precisa alinhar
+384,02/07/26,,Aguardando retorno de fornecedor sobre lista,A fazer,B,,19/06,"só depende de mim, sem justificativa"
+385,10-05-2026,MTN,Fechamento de meta do mês anterior,aberta,Alta,time,07-09-2026,impacto direto no OEE do turno
+386,30/05/2026,qual.,Reagendar reunião de comunicado,OK,B,time,23/07,impacto direto no OEE do turno
+387,14/06/2026,Gestão de pessoas,Feedback pra equipe sobre segurança,concluido,M,Leo Batista,2026-08-23,urgente segundo o gerente
+388,30/06/2026,KPI,Revisar procedimento de documento conforme reunião,A fazer,alta,Ricardo N.,18-08-2026,"só depende de mim, sem justificativa"
+389,17/07/26,seg.,Atualizar checklist de plano de ação,progresso,urgente,Marcos T.,2026-07-18,movi pra próxima semana
+390,29/06/2026,Produtividade,Reagendar reunião de checklist,Fechado,ALTA,Tiago Alves,2026-07-27,envolve 2 áreas — precisa alinhar
+391,2026-05-17,meta,Escalar problema de auditoria pro gerente,concluido,ALTA,Sabrina T.,10/09/2026,envolve 2 áreas — precisa alinhar
+392,09/06/26,SST,Ficou de trazer treinamento na próxima reunião,aberta,ALTA,Vanessa L.,,urgente segundo o gerente
+393,2026-04-27,Equipe,Padronizar registro de meta,progresso,Alta,a definir,30-06-2026,aparentemente resolvido mas não tem evidência
+394,2026-05-15,produtividade,Ficou de trazer processo na próxima reunião,Novo,A,Carla Souza,10/08/2026,movi pra próxima semana
+395,12/06/26,manut.,Follow-up com gerente sobre follow-up,concluido,alta,?,30/06,urgente segundo o gerente
+396,08-05-2026,Target,Revisar procedimento de documento conforme reunião,OK,M,Diego Lima,23-08-2026,pode ser reunião de 15min
+397,27/04/2026,SEG. TRABALHO,Ajuste no cronograma semanal,Done,alta,,04-08-2026,
+398,16/05/26,Manutenção,Investigação de desvio em follow-up,WIP,urgente,,2026-08-30,
+399,17-05-2026,Saúde e Seguranca,Feedback pra equipe sobre comunicado,Encerrado,ALTA,todos,20-08-2026,3 vezes que aparece esse mesmo problema
+400,2026-05-16,QLD,Aguardando retorno de fornecedor sobre material,WIP,Baixa,Ricardo N.,11/09/2026,impacto direto no OEE do turno
+401,02/06/2026,Instrução Trabalho,Atualizar checklist de processo,progresso,,João P.,19/08,
+402,23/04/2026,Instrução Trabalho,Treinamento de produção pra equipe,Em andamento,Média,Tiago Alves,23-08-2026,conversamos na daily de segunda
+403,21/04/26,Qualidade,Ver com fornecedor status de relatório,concluido,A,,23/06,conversamos na daily de segunda
+404,30/04/2026,OEE,Definir responsável pela auditoria,Em andamento,alta,,11-07-2026,revisar após mudança de escala
+405,12-06-2026,Objetivo,Atualizar checklist de qualidade,WIP,alta,Leo Batista,09/07,aparentemente resolvido mas não tem evidência
+406,14/05/26,Seg,Reunião com fornecedor de documento,progresso,M,Paula V.,2026-08-16,não faz sentido no contexto atual
+407,04/05/26,Saúde e Seguranca,Verificar histórico de documento,Aberto,alta,Paula V.,20/08,conversamos na daily de segunda
+408,30/05/26,Pessoas,Melhoria no fluxo de apresentação,Concluído,A,Marcos T.,05/09/2026,revisar após mudança de escala
+409,17-07-2026,Preventiva,Alinhamento com liderança sobre checklist,TODO,Média,Nubia Costa,13/07,revisar após mudança de escala
+410,20/06/2026,PROD,Follow-up com engenharia sobre processo,concluido,Média,Ana Silva,2026-08-27,
+411,2026-06-08,KPI,Treinamento de inspeção pra equipe,concluido,,Osmar D.,15/09/2026,pode ser reunião de 15min
+412,27-04-2026,Gestão de pessoas,Follow-up com coordenador sobre briefing,A fazer,M,Gabi Ferreira,25/08/2026,duplicado com outra linha?
+413,2026-05-25,RH/Gestão,Ver com diretoria status de processo,Done,crítica,Vanessa L.,13-08-2026,impacto direto no OEE do turno
+414,10-05-2026,RH,Fechamento de planilha do mês anterior,WIP,alta,,16-08-2026,esperando ok da diretoria
+415,25/04/2026,Processo,Atualizar checklist de inspeção,OK,urgente,Diego Lima,2026-08-13,movi pra próxima semana
+416,24/06/26,meta,Follow-up com coordenador sobre manutenção,aberta,,,01/07,conversamos na daily de segunda
+417,30-05-2026,Metas,Preparar apresentação sobre comunicado,Novo,Baixa,Karen L.,07/08/2026,aparentemente resolvido mas não tem evidência
+418,08-06-2026,MTC,Preparar apresentação sobre follow-up,Em andamento,Alta,a definir,,pode ser reunião de 15min
+419,21/06/26,manut.,Follow-up com RH sobre inspeção,Em andamento,Alta,Marcos T.,29/06/2026,
+420,2026-06-20,qual.,Pendente aprovação da diretoria sobre produção,Aberto,,Ana Silva,2026-09-13,esperando resposta do RH
+421,15/05/26,Procedimento,Revisar procedimento de plano de ação conforme reunião,aberta,M,Isabel R.,01/08/2026,
+422,21/05/2026,OEE,Reunião com fornecedor de licença,Fechado,Baixa,Diego Lima,28/08/2026,não faz sentido no contexto atual
+423,05/07/2026,Corretiva,Escalar problema de planilha pro gerente,aberta,A,João P.,03-07-2026,pode ser reunião de 15min
+424,02/05/2026,Instrução Trabalho,Feedback pra equipe sobre checklist,Done,crítica,Felipe Costa,16/07,não faz sentido no contexto atual
+425,21-05-2026,Saúde e Seguranca,Reposição de estoque de contrato,concluido,urgente,,,esperando resposta do RH
+426,26/05/26,Target,Preparar apresentação sobre follow-up,WIP,ALTA,João P.,,não faz sentido no contexto atual
+427,2026-07-09,PROD,Reposição de estoque de contrato,WIP,M,Diego Lima,,
+428,19-06-2026,PM,Reagendar reunião de segurança,Feito,A,Tiago Alves,2026-07-07,vinculado à pendência anterior
+429,05/07/26,Gestão de pessoas,Definir responsável pela checklist,concluido,M,a definir,07-08-2026,aparentemente resolvido mas não tem evidência
+430,24/05/2026,RH/Gestão,Melhoria no fluxo de documento,Encerrado,Baixa,Osmar D.,09/07/2026,urgente segundo o gerente
+431,2026-05-22,Preventiva,Fechamento de reunião do mês anterior,Novo,crítica,Isabel R.,01/09,esperando ok da diretoria
+432,25/04/2026,Produtividade,Treinamento de meta pra equipe,progresso,alta,a definir,,não faz sentido no contexto atual
+433,,,,,,,,
+434,05-07-2026,seg.,Investigação de desvio em segurança,Encerrado,crítica,Nubia Costa,16/09/2026,impacto direto no OEE do turno
+435,21/04/26,Produção,Padronizar registro de apresentação,Concluído,Baixa,Gabi Ferreira,2026-07-08,esperando resposta do RH
+436,10-07-2026,Qualidade,Escalar problema de planilha pro gerente,WIP,ALTA,a definir,23/07/2026,conversamos na daily de segunda
+437,2026-07-02,Saúde e Seguranca,Ver com RH status de follow-up,Fechado,crítica,?,2026-08-31,urgente segundo o gerente
+438,2026-07-16,Equipe,Feedback pra equipe sobre planilha,OK,alta,Diego Lima,,urgente segundo o gerente
+439,07/07/26,Produção,Padronizar registro de meta,progresso,,Marcos T.,08/07/2026,risco de multa se não fechar
+440,2026-07-14,RH/Gestão,Renovar contrato de contrato,Aberto,alta,Osmar D.,25-07-2026,3 vezes que aparece esse mesmo problema
+441,25/06/2026,Metas,Comunicar mudança de produção pro time,WIP,A,Osmar D.,16/08/2026,
+442,06-07-2026,PROD,Melhoria no fluxo de plano de ação,aberta,B,a definir,30-07-2026,envolve 2 áreas — precisa alinhar
+443,2026-07-04,CQ,Auditoria interna de relatório,progresso,B,Marcos T.,21/06/2026,TI ainda não liberou
+444,14/05/26,Time,Pendente aprovação da diretoria sobre qualidade,Aberto,alta,Paula V.,23-06-2026,movi pra próxima semana
+445,07/05/2026,Seguranca,Padronizar registro de auditoria,Em andamento,B,Marcos T.,21/07,auditoria externa pergunta sobre isso
+446,13/07/2026,Qualidade,Follow-up com coordenador sobre treinamento,Feito,urgente,João P.,19/06,urgente segundo o gerente
+447,2026-07-17,PROD,Feedback pra equipe sobre reunião,concluido,Baixa,Ricardo N.,15-08-2026,3 vezes que aparece esse mesmo problema
+448,26/06/2026,meta,Precisa validação técnica de lista,A fazer,urgente,Ana Silva,05-08-2026,movi pra próxima semana
+449,23-05-2026,Processo,Aguardando retorno de fornecedor sobre relatório,WIP,Baixa,João P.,10/08/2026,conversamos na daily de segunda
+450,,,,,,,,
+451,2026-07-11,Pessoas,Investigação de desvio em auditoria,A fazer,B,Karen L.,10/09,impacto direto no OEE do turno
+452,22-05-2026,Qualidade,Renovar contrato de lista,WIP,B,Marcos T.,10/07/2026,movi pra próxima semana
+453,05/07/26,,Fechamento de relatório do mês anterior,Encerrado,crítica,?,28-06-2026,esperando ok da diretoria
+454,07-06-2026,Pessoas,Feedback pra equipe sobre comunicado,A fazer,ALTA,time,,esperando ok da diretoria
+455,17-07-2026,PM,Atualizar checklist de reunião,Fechado,,?,25-08-2026,cliente reclamou disso semana passada
+456,29/04/2026,Processo,Trocar contrato vencido na área,Encerrado,B,Diego Lima,28/08,esperando resposta do RH
+457,2026-05-01,RH,Auditoria interna de auditoria,Feito,Baixa,Felipe Costa,12/09,revisar após mudança de escala
+458,02/05/26,proc.,Follow-up com diretoria sobre relatório,Novo,B,Felipe Costa,,
+459,31/05/2026,Indicador,,A fazer,Baixa,Gabi Ferreira,,impacto direto no OEE do turno
+460,04-05-2026,qual.,Reunião com fornecedor de relatório,concluido,B,todos,04/07,
+461,2026-05-03,MTC,Preparar apresentação sobre inspeção,TODO,A,Ricardo N.,2026-07-25,duplicado com outra linha?
+462,12/06/2026,Qualidade,Trocar equipamento vencido na área,aberta,crítica,Eduarda Santos,02/09/2026,esperando ok da diretoria
+463,15-06-2026,Corretiva,Ficou de trazer comunicado na próxima reunião,progresso,Média,Gabi Ferreira,2026-08-07,cliente reclamou disso semana passada
+464,07-06-2026,Seg,Reposição de estoque de relatório,Concluído,Alta,Marcos T.,12/08,risco de multa se não fechar
+465,19/06/26,SOP,Reposição de estoque de material,andamento,alta,Henrique M.,07/08,revisar após mudança de escala
+466,07/06/2026,Produtividade,Análise da NC #485,Novo,,Ana Silva,08-07-2026,risco de multa se não fechar
+467,03/05/26,,Ajuste no cronograma semanal,Feito,urgente,Osmar D.,,TI ainda não liberou
+468,2026-06-24,OEE,Trocar EPI vencido na área,OK,urgente,todos,28/07/2026,movi pra próxima semana
+469,2026-06-07,qual.,Follow-up com gerente sobre documento,WIP,urgente,Diego Lima,15/09,vinculado à pendência anterior
+470,04/07/2026,proc.,Ver com RH status de briefing,Feito,,,02-07-2026,
+471,29/06/26,SEG. TRABALHO,Revisar procedimento de manutenção conforme reunião,Em andamento,A,Leo Batista,,duplicado com outra linha?
+472,09-05-2026,EPI,Follow-up com engenharia sobre segurança,A fazer,,Gabi Ferreira,04/07,
+473,06/05/26,Preventiva,Revisar procedimento de processo conforme reunião,Em andamento,A,,2026-07-25,cliente reclamou disso semana passada
+474,20/04/26,IT,Verificar histórico de treinamento,Concluído,M,time,01-08-2026,envolve 2 áreas — precisa alinhar
+475,10/06/2026,Pessoas,Reunião com fornecedor de licença,A fazer,Alta,Isabel R.,02-07-2026,vinculado à pendência anterior
+476,2026-05-07,OEE,Reagendar reunião de produção,Done,A,time,2026-09-14,urgente segundo o gerente
+477,2026-06-06,Seguranca,Reunião com fornecedor de documento,aberta,alta,Henrique M.,10/09,movi pra próxima semana
+478,17-05-2026,Objetivo,Auditoria interna de treinamento,Done,ALTA,Carla Souza,14-08-2026,pode ser reunião de 15min
+479,2026-07-10,meta,Treinamento de reunião pra equipe,progresso,Baixa,Leo Batista,11-08-2026,duplicado com outra linha?
+480,20/04/2026,PROD,Treinamento de manutenção pra equipe,Done,M,Tiago Alves,25/08,movi pra próxima semana
+481,2026-06-22,Manutenção,Reposição de estoque de contrato,concluido,crítica,Ana Silva,19/08/2026,esperando ok da diretoria
+482,04-07-2026,Instrução Trabalho,Padronizar registro de checklist,A fazer,alta,Bruno Alves,2026-08-09,3 vezes que aparece esse mesmo problema
+483,2026-05-05,KPI,Ajuste no cronograma semanal,Feito,Média,Tiago Alves,,esperando ok da diretoria
+484,18/05/2026,Gestão de pessoas,Reagendar reunião de comunicado,Concluído,alta,João P.,13-08-2026,urgente segundo o gerente
+485,2026-05-26,Objetivo,Treinamento de reunião pra equipe,Encerrado,alta,time,24/07,
+486,24/04/2026,SOP,Atualizar checklist de meta,Aberto,crítica,todos,25-08-2026,revisar após mudança de escala
+487,03/05/26,,Aguardando retorno de fornecedor sobre ferramenta,OK,crítica,?,17/07/2026,risco de multa se não fechar
+488,26/05/26,Target,Feedback pra equipe sobre relatório,TODO,Baixa,Ricardo N.,2026-08-02,revisar após mudança de escala
+489,29-05-2026,,Ficou de trazer inspeção na próxima reunião,A fazer,Baixa,Vanessa L.,04-07-2026,
+490,10-06-2026,QLD,Ajuste no cronograma semanal,progresso,,Carla Souza,14/09/2026,esperando ok da diretoria
+491,29/05/2026,Manutenção,Escalar problema de treinamento pro gerente,Aberto,Baixa,Tiago Alves,27-06-2026,esperando ok da diretoria
+492,29/04/2026,Pessoas,Ver com fornecedor status de follow-up,Novo,Alta,Tiago Alves,2026-07-07,
+493,12/05/26,Time,Verificar histórico de qualidade,concluido,Média,Eduarda Santos,27/06,duplicado com outra linha?
+494,2026-04-23,EPI,Verificar histórico de auditoria,concluido,alta,Sabrina T.,2026-09-01,pode ser reunião de 15min
+495,16/06/2026,Qualidade,Trocar contrato vencido na área,Encerrado,B,Diego Lima,,aparentemente resolvido mas não tem evidência
+496,11/07/2026,Corretiva,Fechamento de relatório do mês anterior,WIP,alta,todos,21-07-2026,vinculado à pendência anterior
+497,2026-06-02,OEE,Alinhamento com liderança sobre manutenção,andamento,urgente,Henrique M.,23/08,TI ainda não liberou
+498,13/07/26,Metas,Treinamento de briefing pra equipe,A fazer,alta,,2026-08-23,esperando resposta do RH
+499,2026-05-27,Gestão de pessoas,Ficou de trazer processo na próxima reunião,Feito,A,Vanessa L.,14/08,cliente reclamou disso semana passada
+500,11-05-2026,produtividade,Auditoria interna de relatório,progresso,alta,,08-09-2026,auditoria externa pergunta sobre isso
+501,2026-05-09,Qualidade,Comunicar mudança de follow-up pro time,progresso,A,Leo Batista,16/09/2026,
+502,24/05/26,Instrução Trabalho,Atualizar checklist de qualidade,TODO,crítica,,25-06-2026,esperando resposta do RH
+503,02-07-2026,,Comunicar mudança de meta pro time,WIP,,Henrique M.,13/09/2026,TI ainda não liberou
+504,2026-07-18,IT,Documentar procedimento de treinamento,Done,M,todos,22/08/2026,cliente reclamou disso semana passada
+505,29/04/26,OEE,Follow-up com coordenador sobre follow-up,Concluído,crítica,Felipe Costa,2026-08-16,auditoria externa pergunta sobre isso
+506,2026-07-14,manut.,Investigação de desvio em produção,Novo,A,?,2026-08-25,aparentemente resolvido mas não tem evidência
+507,15/06/2026,Qualidade,Auditoria interna de produção,Fechado,A,Henrique M.,25/08/2026,
+508,25/06/26,Time,Follow-up com diretoria sobre comunicado,Done,Média,todos,11/08/2026,3 vezes que aparece esse mesmo problema
+509,29/05/26,Corretiva,,Concluído,B,Eduarda Santos,2026-07-27,impacto direto no OEE do turno
+510,2026-05-08,Produtividade,Escalar problema de checklist pro gerente,progresso,crítica,Gabi Ferreira,18-06-2026,auditoria externa pergunta sobre isso
+511,27/04/2026,CQ,Consolidar dados de apresentação,Fechado,Média,?,2026-06-23,auditoria externa pergunta sobre isso
+512,2026-06-09,Produtividade,Ajuste no cronograma semanal,Feito,B,a definir,20-06-2026,risco de multa se não fechar
+513,18/05/26,manut.,,Novo,crítica,Ricardo N.,2026-08-24,3 vezes que aparece esse mesmo problema
+514,24-05-2026,OEE,Escalar problema de documento pro gerente,Fechado,Baixa,Paula V.,2026-06-28,
+515,31/05/26,Metas,Aguardando retorno de fornecedor sobre suporte técnico,TODO,urgente,Marcos T.,29-08-2026,3 vezes que aparece esse mesmo problema
+516,23/06/26,,Atualizar checklist de apresentação,andamento,Baixa,Gabi Ferreira,03-09-2026,impacto direto no OEE do turno
+517,12/06/26,QA,Ver com engenharia status de documento,WIP,M,?,2026-08-30,revisar após mudança de escala
+518,10-06-2026,proc.,Atualizar checklist de qualidade,concluido,urgente,,,conversamos na daily de segunda
+519,10-07-2026,Controle Qualidade,Auditoria interna de plano de ação,Encerrado,M,Ana Silva,2026-09-16,duplicado com outra linha?
+520,08/06/26,gente,Alinhamento com liderança sobre briefing,Em andamento,,,2026-09-11,duplicado com outra linha?
+521,06-05-2026,Seg,Documentar procedimento de meta,Done,,Paula V.,25/06/2026,envolve 2 áreas — precisa alinhar
+522,29/05/26,proc.,Revisar procedimento de meta conforme reunião,concluido,ALTA,Diego Lima,17/08/2026,risco de multa se não fechar
+523,18-05-2026,IT,Feedback pra equipe sobre briefing,Feito,B,Felipe Costa,13-09-2026,pode ser reunião de 15min
+524,10/07/26,PM,Melhoria no fluxo de checklist,A fazer,crítica,Leo Batista,23/08/2026,movi pra próxima semana
+525,28-06-2026,QA,Comunicar mudança de planilha pro time,Fechado,crítica,a definir,10-08-2026,TI ainda não liberou
+526,24-04-2026,Produtividade,Reunião com fornecedor de EPI,OK,ALTA,Diego Lima,30/07/2026,3 vezes que aparece esse mesmo problema
+527,2026-07-03,CQ,Verificar histórico de reunião,andamento,crítica,Eduarda Santos,27/08/2026,duplicado com outra linha?
+528,10-06-2026,Objetivo,Alinhamento com liderança sobre produção,Fechado,Alta,Isabel R.,26/07,duplicado com outra linha?
+529,20/06/2026,Target,Renovar contrato de material,Encerrado,,Diego Lima,23-07-2026,TI ainda não liberou
+530,14-06-2026,Saúde e Seguranca,Ver com gerente status de checklist,Novo,B,João P.,,
+531,26-06-2026,Instrução Trabalho,Renovar contrato de licença,Novo,alta,Ana Silva,22/08,impacto direto no OEE do turno
+532,20-06-2026,Gestão de pessoas,Auditoria interna de comunicado,Novo,Média,Leo Batista,2026-08-15,urgente segundo o gerente
+533,24/05/2026,seg.,Reunião com fornecedor de documento,Done,Média,Henrique M.,30/06/2026,TI ainda não liberou
+534,02-07-2026,Metas,Treinamento de produção pra equipe,TODO,M,Vanessa L.,2026-07-24,envolve 2 áreas — precisa alinhar
+535,25/05/2026,Processo,,Aberto,M,Henrique M.,26/08/2026,impacto direto no OEE do turno
+536,20/06/2026,Preventiva,Follow-up com RH sobre relatório,Encerrado,crítica,?,,"só depende de mim, sem justificativa"
+537,2026-06-23,meta,Verificar histórico de meta,Feito,urgente,Ricardo N.,18/07,TI ainda não liberou
+538,18/07/26,Instrução Trabalho,Ficou de trazer checklist na próxima reunião,Feito,ALTA,João P.,19/08/2026,esperando resposta do RH
+539,13/06/2026,Manutenção,Verificar histórico de auditoria,WIP,M,Gabi Ferreira,2026-09-08,
+540,2026-05-14,Instrução Trabalho,Melhoria no fluxo de treinamento,concluido,alta,Paula V.,24/07,3 vezes que aparece esse mesmo problema
+541,10-06-2026,EPI,,Novo,M,time,2026-08-01,TI ainda não liberou
+542,02/07/2026,proc.,Precisa validação técnica de equipamento,Novo,,Diego Lima,,esperando resposta do RH
+543,2026-07-01,QA,Consolidar dados de manutenção,Aberto,ALTA,Ana Silva,19/07/2026,
+544,07/05/2026,,Alinhamento com liderança sobre qualidade,OK,ALTA,Karen L.,2026-07-17,aparentemente resolvido mas não tem evidência
+545,2026-06-08,Target,Trocar lista vencido na área,aberta,urgente,Ricardo N.,10-08-2026,auditoria externa pergunta sobre isso
+546,20-06-2026,Target,Auditoria interna de meta,concluido,alta,Eduarda Santos,19-06-2026,não faz sentido no contexto atual
+547,2026-06-24,Produtividade,Investigação de desvio em reunião,Em andamento,A,Ana Silva,2026-09-15,cliente reclamou disso semana passada
+548,21/04/2026,SST,Ficou de trazer checklist na próxima reunião,concluido,,,2026-08-30,auditoria externa pergunta sobre isso
+549,18/06/26,OEE,Análise da NC #486,TODO,,Felipe Costa,31/07/2026,impacto direto no OEE do turno
+550,25-06-2026,Qualidade,Definir responsável pela auditoria,WIP,urgente,Felipe Costa,2026-07-17,envolve 2 áreas — precisa alinhar
+551,24/05/26,gente,Precisa validação técnica de EPI,progresso,,Sabrina T.,09/09/2026,"só depende de mim, sem justificativa"
+552,05/05/2026,gente,Comunicar mudança de relatório pro time,Encerrado,ALTA,Gabi Ferreira,12-08-2026,
+553,2026-05-24,Gestão de pessoas,Auditoria interna de documento,Encerrado,Média,todos,08/07,
+554,11-05-2026,,Alinhamento com liderança sobre reunião,OK,M,Gabi Ferreira,,
+555,2026-06-17,CQ,Atualizar checklist de treinamento,concluido,ALTA,Henrique M.,10/08,movi pra próxima semana
+556,20-05-2026,Indicador,Fechamento de apresentação do mês anterior,WIP,alta,Henrique M.,2026-09-12,3 vezes que aparece esse mesmo problema
+557,2026-04-21,Seguranca,Alinhamento com liderança sobre reunião,Em andamento,ALTA,todos,2026-09-16,envolve 2 áreas — precisa alinhar
+558,2026-05-28,,Revisar procedimento de documento conforme reunião,Novo,M,time,2026-08-10,esperando ok da diretoria
+559,2026-07-18,SOP,Investigação de desvio em segurança,OK,alta,Osmar D.,23/08,risco de multa se não fechar
+560,08/06/26,IT,Alinhamento com liderança sobre reunião,A fazer,Média,Tiago Alves,2026-07-11,esperando resposta do RH
+561,09-06-2026,QA,Análise da NC #779,concluido,Baixa,,29/06,esperando ok da diretoria
+562,2026-05-27,produtividade,Investigação de desvio em documento,WIP,Média,Eduarda Santos,2026-06-25,auditoria externa pergunta sobre isso
+563,2026-05-06,SEG. TRABALHO,Treinamento de relatório pra equipe,Encerrado,Baixa,Bruno Alves,10-09-2026,TI ainda não liberou
+564,23/05/26,Preventiva,Ficou de trazer processo na próxima reunião,andamento,crítica,João P.,28/07/2026,vinculado à pendência anterior
+565,01/05/26,,Auditoria interna de planilha,Em andamento,B,Sabrina T.,,envolve 2 áreas — precisa alinhar
+566,2026-06-15,Produtividade,Pendente aprovação da diretoria sobre reunião,Em andamento,Alta,Gabi Ferreira,,"só depende de mim, sem justificativa"
+567,2026-05-04,KPI,Pendente aprovação da diretoria sobre processo,TODO,Alta,Bruno Alves,06/09/2026,impacto direto no OEE do turno
+568,01/06/26,Controle Qualidade,Pendente aprovação da diretoria sobre documento,Done,Alta,Henrique M.,,auditoria externa pergunta sobre isso
+569,16/05/26,seg.,Análise da NC #744,concluido,crítica,todos,,movi pra próxima semana
+570,,,,,,,,
+571,2026-06-11,Qualidade,Comunicar mudança de relatório pro time,Encerrado,Média,?,,aparentemente resolvido mas não tem evidência
+572,02/05/26,Time,Treinamento de reunião pra equipe,Fechado,B,Carla Souza,06/09,impacto direto no OEE do turno
+573,21/05/26,PROD,Renovar contrato de relatório,TODO,,Osmar D.,10/08,vinculado à pendência anterior
+574,2026-04-29,Time,Treinamento de briefing pra equipe,aberta,ALTA,Ricardo N.,12/09,risco de multa se não fechar
+575,04/06/26,manut.,Atualizar checklist de segurança,Encerrado,Baixa,Felipe Costa,22/06/2026,"só depende de mim, sem justificativa"
+576,08/07/2026,Prod,Renovar contrato de crachá,andamento,A,Sabrina T.,2026-08-13,3 vezes que aparece esse mesmo problema
+577,14/05/26,MTN,Reposição de estoque de material,A fazer,,Eduarda Santos,,cliente reclamou disso semana passada
+578,04-07-2026,Metas,Análise da NC #395,andamento,alta,Carla Souza,,auditoria externa pergunta sobre isso
+579,2026-06-08,,Treinamento de follow-up pra equipe,A fazer,Média,Isabel R.,,movi pra próxima semana
+580,20-05-2026,MTC,Comunicar mudança de inspeção pro time,A fazer,Alta,Paula V.,31/08/2026,revisar após mudança de escala
+581,27/04/26,KPI,Treinamento de produção pra equipe,A fazer,alta,Tiago Alves,15-08-2026,esperando ok da diretoria
+582,13-06-2026,proc.,Alinhamento com liderança sobre manutenção,Em andamento,Baixa,Carla Souza,28/07/2026,aparentemente resolvido mas não tem evidência
+583,04-05-2026,PM,Ajuste no cronograma semanal,TODO,M,a definir,01/07,conversamos na daily de segunda
+584,2026-06-27,Target,Ajuste no cronograma semanal,aberta,crítica,Carla Souza,30/06/2026,revisar após mudança de escala
+585,09-07-2026,Processo,Preparar apresentação sobre segurança,Em andamento,M,Diego Lima,2026-08-05,conversamos na daily de segunda
+586,2026-04-22,manut.,Melhoria no fluxo de processo,Em andamento,ALTA,todos,2026-08-24,urgente segundo o gerente
+587,29/04/2026,Corretiva,Alinhamento com liderança sobre manutenção,A fazer,B,Bruno Alves,28/08/2026,envolve 2 áreas — precisa alinhar
+588,12/07/2026,Instrução Trabalho,Aguardando retorno de fornecedor sobre relatório,Fechado,A,todos,,esperando resposta do RH
+589,14-06-2026,Instrução Trabalho,Consolidar dados de checklist,progresso,A,Gabi Ferreira,07-09-2026,revisar após mudança de escala
+590,06/06/26,Qualidade,Comunicar mudança de checklist pro time,WIP,ALTA,Bruno Alves,,não faz sentido no contexto atual
+591,17/05/2026,RH/Gestão,Documentar procedimento de segurança,Aberto,crítica,Karen L.,18/07/2026,
+592,,,,,,,,
+593,01-07-2026,Metas,Aguardando retorno de fornecedor sobre planilha,WIP,ALTA,?,11/08,pode ser reunião de 15min
+594,27/06/2026,Objetivo,Investigação de desvio em planilha,Em andamento,Média,Marcos T.,2026-08-18,envolve 2 áreas — precisa alinhar
+595,28/05/26,Metas,Melhoria no fluxo de qualidade,WIP,ALTA,Carla Souza,24/06,
+596,2026-05-06,Seg,Definir responsável pela inspeção,progresso,Alta,Bruno Alves,19/08/2026,
+597,12-05-2026,Prod,Reposição de estoque de equipamento,Em andamento,urgente,Leo Batista,27/08,
+598,23/06/26,Indicador,Follow-up com coordenador sobre briefing,aberta,urgente,Osmar D.,,urgente segundo o gerente
+599,01-07-2026,MTN,Pendente aprovação da diretoria sobre qualidade,andamento,Média,,,conversamos na daily de segunda
+600,21/04/26,MTC,Preparar apresentação sobre planilha,Encerrado,ALTA,Leo Batista,,"só depende de mim, sem justificativa"
+601,09/05/2026,Processo,Auditoria interna de reunião,WIP,Alta,Osmar D.,02-08-2026,urgente segundo o gerente
+602,27/06/26,SEG. TRABALHO,Escalar problema de apresentação pro gerente,Done,crítica,Marcos T.,,"só depende de mim, sem justificativa"
+603,01/06/26,Produtividade,Padronizar registro de planilha,OK,ALTA,Isabel R.,13/09/2026,vinculado à pendência anterior
+604,05/07/2026,Controle Qualidade,Ajuste no cronograma semanal,andamento,ALTA,time,05-09-2026,cliente reclamou disso semana passada
+605,25/06/2026,MTC,Alinhamento com liderança sobre plano de ação,aberta,M,Leo Batista,27/06,envolve 2 áreas — precisa alinhar
+606,03-06-2026,Manutenção,Preparar apresentação sobre qualidade,Feito,M,Ana Silva,24/07,pode ser reunião de 15min
+607,19/05/2026,Seg,,WIP,,Isabel R.,,
+608,10/07/2026,manut.,Escalar problema de documento pro gerente,Novo,Baixa,Ricardo N.,,TI ainda não liberou
+609,13-05-2026,Qualidade,Ver com fornecedor status de meta,aberta,urgente,Sabrina T.,2026-07-24,revisar após mudança de escala
+610,11/06/26,Indicador,,Encerrado,Média,Diego Lima,30/08,cliente reclamou disso semana passada
+611,21/06/26,SOP,Feedback pra equipe sobre segurança,concluido,urgente,?,2026-06-23,urgente segundo o gerente
+612,24/06/2026,Time,,Aberto,M,Nubia Costa,08/09/2026,risco de multa se não fechar
+613,2026-07-08,qual.,Pendente aprovação da diretoria sobre meta,aberta,,Henrique M.,06-09-2026,"só depende de mim, sem justificativa"
+614,2026-05-11,produtividade,Consolidar dados de planilha,A fazer,A,Marcos T.,19/06/2026,esperando ok da diretoria
+615,12/07/26,meta,Preparar apresentação sobre checklist,A fazer,Média,Henrique M.,25/08/2026,duplicado com outra linha?
+616,02/06/26,meta,Definir responsável pela apresentação,Encerrado,M,,,conversamos na daily de segunda
+617,27/04/2026,QA,Investigação de desvio em documento,A fazer,Média,João P.,27/06,"só depende de mim, sem justificativa"
+618,2026-05-09,Produtividade,Preparar apresentação sobre apresentação,Novo,Baixa,?,19/08/2026,urgente segundo o gerente
+619,27-05-2026,IT,,TODO,Baixa,Osmar D.,2026-08-18,pode ser reunião de 15min
+620,25/04/2026,Produção,Revisar procedimento de produção conforme reunião,TODO,B,Eduarda Santos,15-08-2026,pode ser reunião de 15min
+621,2026-05-02,Pessoas,Follow-up com coordenador sobre checklist,TODO,crítica,time,16-09-2026,não faz sentido no contexto atual
+622,2026-06-01,Seg,Verificar histórico de apresentação,OK,Média,Vanessa L.,23/06,urgente segundo o gerente
+623,2026-04-27,Qualidade,Renovar contrato de documento,Encerrado,alta,Ricardo N.,31/07/2026,envolve 2 áreas — precisa alinhar
+624,05-06-2026,SST,Ajuste no cronograma semanal,aberta,ALTA,Vanessa L.,04/09,cliente reclamou disso semana passada
+625,04-06-2026,Objetivo,,Novo,A,Sabrina T.,2026-08-28,envolve 2 áreas — precisa alinhar
+626,20-04-2026,Objetivo,Verificar histórico de produção,Encerrado,,Ana Silva,2026-07-25,auditoria externa pergunta sobre isso
+627,29/06/2026,Pessoas,Fechamento de treinamento do mês anterior,Em andamento,Média,João P.,,
+628,2026-05-05,Instrução Trabalho,Trocar crachá vencido na área,Concluído,B,Carla Souza,04/09,revisar após mudança de escala
+629,22-04-2026,Seg,Padronizar registro de briefing,Fechado,A,Felipe Costa,04-07-2026,
+630,29/06/26,Instrução Trabalho,Reagendar reunião de planilha,andamento,Média,João P.,,3 vezes que aparece esse mesmo problema
+631,23/06/26,Equipe,Consolidar dados de manutenção,progresso,crítica,,31-07-2026,cliente reclamou disso semana passada
+632,24/06/26,KPI,Reposição de estoque de contrato,Em andamento,ALTA,Tiago Alves,29/08,impacto direto no OEE do turno
+633,07-05-2026,Produção,Preparar apresentação sobre processo,Concluído,,Paula V.,07-08-2026,urgente segundo o gerente
+634,2026-05-29,Qualidade,Feedback pra equipe sobre treinamento,Fechado,alta,Ricardo N.,04-09-2026,3 vezes que aparece esse mesmo problema
+635,07/05/26,Seguranca,Definir responsável pela comunicado,WIP,Alta,Isabel R.,09/09,risco de multa se não fechar
+636,2026-05-19,Segurança,Preparar apresentação sobre qualidade,progresso,Alta,,05-08-2026,TI ainda não liberou
+637,12/05/2026,IT,Renovar contrato de certificado,Done,Baixa,Eduarda Santos,,duplicado com outra linha?
+638,2026-05-10,Saúde e Seguranca,Auditoria interna de planilha,WIP,urgente,João P.,02/07/2026,auditoria externa pergunta sobre isso
+639,15/05/2026,MTC,Documentar procedimento de meta,andamento,B,todos,,urgente segundo o gerente
+640,19-04-2026,SST,Reposição de estoque de insumo,andamento,Alta,Osmar D.,2026-08-21,
+641,29/05/26,Target,Ficou de trazer auditoria na próxima reunião,Feito,M,,2026-09-12,esperando resposta do RH
+642,30/05/2026,Target,Revisar procedimento de processo conforme reunião,Novo,Alta,Henrique M.,24/07,esperando ok da diretoria
+643,11/06/26,Prod,Fechamento de reunião do mês anterior,OK,ALTA,Felipe Costa,04/09,envolve 2 áreas — precisa alinhar
+644,16/07/2026,CQ,Ver com diretoria status de auditoria,Feito,ALTA,João P.,19/07/2026,
+645,18/06/26,SEG. TRABALHO,Feedback pra equipe sobre meta,concluido,Média,,,impacto direto no OEE do turno
+646,22-06-2026,meta,Ficou de trazer reunião na próxima reunião,aberta,alta,Diego Lima,30/06/2026,pode ser reunião de 15min
+647,10/06/2026,Procedimento,Trocar certificado vencido na área,Aberto,Média,time,05-08-2026,cliente reclamou disso semana passada
+648,10-05-2026,SOP,Ajuste no cronograma semanal,Encerrado,Média,,2026-07-13,urgente segundo o gerente
+649,27/04/26,QLD,Revisar procedimento de treinamento conforme reunião,Aberto,Média,,05/07/2026,cliente reclamou disso semana passada
+650,2026-05-01,PROD,Ajuste no cronograma semanal,concluido,B,todos,10/08/2026,
+651,29/05/26,SOP,Documentar procedimento de manutenção,Em andamento,Alta,,28/06/2026,cliente reclamou disso semana passada
+652,07/07/26,QA,Pendente aprovação da diretoria sobre meta,Fechado,A,Henrique M.,2026-07-21,auditoria externa pergunta sobre isso
+653,18-05-2026,CQ,Ver com engenharia status de manutenção,progresso,crítica,todos,31/07,vinculado à pendência anterior
+654,27/06/26,proc.,Fechamento de comunicado do mês anterior,Aberto,crítica,Paula V.,,TI ainda não liberou
+655,,,,,,,,
+656,04/06/2026,PROD,Fechamento de segurança do mês anterior,Concluído,Alta,Marcos T.,,não faz sentido no contexto atual
+657,02-07-2026,SOP,Aguardando retorno de fornecedor sobre licença,Fechado,,Diego Lima,08-08-2026,aparentemente resolvido mas não tem evidência
+658,09-07-2026,EPI,Melhoria no fluxo de documento,OK,ALTA,Marcos T.,,envolve 2 áreas — precisa alinhar
+659,22-06-2026,SEG. TRABALHO,Follow-up com RH sobre auditoria,concluido,Alta,Nubia Costa,,"só depende de mim, sem justificativa"
+660,2026-04-26,SOP,Melhoria no fluxo de documento,Concluído,M,,23-07-2026,envolve 2 áreas — precisa alinhar
+661,30/04/2026,qual.,Follow-up com fornecedor sobre follow-up,Done,A,Osmar D.,03/07/2026,envolve 2 áreas — precisa alinhar
+662,29/06/2026,qual.,Definir responsável pela inspeção,Encerrado,urgente,Felipe Costa,2026-07-06,"só depende de mim, sem justificativa"
+663,23/04/26,Instrução Trabalho,Reunião com fornecedor de relatório,Aberto,alta,a definir,,não faz sentido no contexto atual
+664,25/06/26,Controle Qualidade,Consolidar dados de reunião,TODO,B,Leo Batista,17-08-2026,esperando resposta do RH
+665,10/06/2026,SEG. TRABALHO,Feedback pra equipe sobre reunião,andamento,alta,João P.,,esperando ok da diretoria
+666,06/05/26,QLD,Ajuste no cronograma semanal,TODO,ALTA,,,vinculado à pendência anterior
+667,30/05/2026,Target,Pendente aprovação da diretoria sobre reunião,OK,B,Felipe Costa,,
+668,2026-05-01,Equipe,Escalar problema de follow-up pro gerente,Feito,ALTA,Felipe Costa,11/08,duplicado com outra linha?
+669,2026-06-16,produtividade,Ver com coordenador status de planilha,Em andamento,Alta,Osmar D.,2026-08-08,vinculado à pendência anterior
+670,26/04/26,Manutenção,Consolidar dados de briefing,WIP,alta,Ana Silva,2026-09-07,risco de multa se não fechar
+671,01/07/26,Qualidade,Consolidar dados de processo,progresso,crítica,Tiago Alves,02/08/2026,TI ainda não liberou
+672,05/05/26,Gestão de pessoas,Auditoria interna de relatório,concluido,urgente,Osmar D.,2026-08-20,auditoria externa pergunta sobre isso
+673,2026-05-11,PM,Atualizar checklist de produção,Novo,M,Bruno Alves,18/08,conversamos na daily de segunda
+674,26/05/26,meta,Trocar licença vencido na área,TODO,crítica,?,21-08-2026,
+675,15-07-2026,SOP,Comunicar mudança de checklist pro time,andamento,B,Tiago Alves,2026-07-28,movi pra próxima semana
+676,10/06/26,Qualidade,Reunião com fornecedor de planilha,andamento,Média,Karen L.,30-07-2026,pode ser reunião de 15min
+677,18-07-2026,Objetivo,Melhoria no fluxo de follow-up,Done,crítica,Ricardo N.,,não faz sentido no contexto atual
+678,15/06/2026,Segurança,Alinhamento com liderança sobre checklist,aberta,,,,não faz sentido no contexto atual
+679,22/04/2026,Prod,Fechamento de relatório do mês anterior,Done,ALTA,Paula V.,2026-07-04,"só depende de mim, sem justificativa"
+680,29/04/26,manut.,Investigação de desvio em inspeção,concluido,alta,Carla Souza,07-09-2026,não faz sentido no contexto atual
+681,03/06/26,SST,Alinhamento com liderança sobre meta,progresso,A,Eduarda Santos,26/08/2026,movi pra próxima semana
+682,31-05-2026,Qualidade,Definir responsável pela comunicado,Novo,Alta,Isabel R.,13-07-2026,vinculado à pendência anterior
+683,2026-07-17,Indicador,Comunicar mudança de auditoria pro time,Done,B,Sabrina T.,,
+684,31/05/26,,Pendente aprovação da diretoria sobre produção,WIP,M,,2026-06-29,movi pra próxima semana
+685,25-06-2026,Procedimento,Renovar contrato de certificado,andamento,alta,Felipe Costa,,
+686,25/06/2026,MTN,Auditoria interna de qualidade,Novo,Baixa,Eduarda Santos,14-08-2026,envolve 2 áreas — precisa alinhar
+687,2026-06-25,SST,Consolidar dados de documento,Em andamento,urgente,a definir,28/07/2026,3 vezes que aparece esse mesmo problema
+688,05-07-2026,Target,Fechamento de processo do mês anterior,Fechado,B,Osmar D.,31/08/2026,cliente reclamou disso semana passada
+689,06-07-2026,Metas,Investigação de desvio em auditoria,Done,Baixa,,,vinculado à pendência anterior
+690,21/05/2026,Target,Análise da NC #718,andamento,A,Karen L.,17/08/2026,auditoria externa pergunta sobre isso
+691,22-04-2026,SOP,Verificar histórico de produção,Done,A,Karen L.,24/07,auditoria externa pergunta sobre isso
+692,18/06/2026,Preventiva,Atualizar checklist de relatório,Novo,Baixa,Paula V.,10/09,
+693,2026-06-15,Indicador,Preparar apresentação sobre produção,andamento,A,Bruno Alves,2026-06-26,3 vezes que aparece esse mesmo problema
+694,2026-05-27,Equipe,Padronizar registro de plano de ação,Done,ALTA,Tiago Alves,22-06-2026,impacto direto no OEE do turno
+695,20/06/2026,Produção,Documentar procedimento de manutenção,WIP,M,,19/08/2026,"só depende de mim, sem justificativa"
+696,07/07/26,Qualidade,Alinhamento com liderança sobre meta,Done,Média,,21-07-2026,
+697,15/06/2026,CQ,Reagendar reunião de relatório,Done,Alta,Sabrina T.,2026-08-13,movi pra próxima semana
+698,01/06/26,proc.,Trocar crachá vencido na área,Feito,A,todos,2026-09-03,duplicado com outra linha?
+699,2026-06-04,KPI,Precisa validação técnica de crachá,Novo,Alta,time,04-09-2026,urgente segundo o gerente
+700,19/04/26,RH/Gestão,Reunião com fornecedor de planilha,OK,alta,time,20/07/2026,TI ainda não liberou
+701,28-05-2026,Saúde e Seguranca,Investigação de desvio em documento,OK,A,Isabel R.,,auditoria externa pergunta sobre isso
+702,15-05-2026,Corretiva,Aguardando retorno de fornecedor sobre licença,Em andamento,alta,Ana Silva,01-07-2026,envolve 2 áreas — precisa alinhar
+703,2026-05-09,MTC,Padronizar registro de inspeção,OK,Média,Henrique M.,04/09/2026,esperando ok da diretoria
+704,04/07/26,QLD,Definir responsável pela qualidade,concluido,alta,Diego Lima,,TI ainda não liberou
+705,29/05/26,Metas,Escalar problema de treinamento pro gerente,Em andamento,crítica,Isabel R.,,conversamos na daily de segunda
+706,04-07-2026,manut.,Padronizar registro de processo,Done,crítica,Marcos T.,,
+707,2026-05-28,produtividade,Fechamento de processo do mês anterior,Done,Média,Carla Souza,,movi pra próxima semana
+708,24/05/26,Objetivo,Precisa validação técnica de suporte técnico,Aberto,crítica,todos,21-06-2026,pode ser reunião de 15min
+709,01-05-2026,PM,Auditoria interna de comunicado,TODO,alta,Vanessa L.,,pode ser reunião de 15min
+710,23/05/26,Metas,Pendente aprovação da diretoria sobre reunião,A fazer,,Nubia Costa,07-09-2026,3 vezes que aparece esse mesmo problema
+711,18/05/26,Corretiva,Follow-up com engenharia sobre processo,Em andamento,alta,a definir,26-06-2026,impacto direto no OEE do turno
+712,06/06/26,Segurança,Atualizar checklist de processo,Aberto,crítica,,30/06/2026,risco de multa se não fechar
+713,03/05/26,PM,Documentar procedimento de processo,progresso,ALTA,Diego Lima,23/08,
+714,15/06/2026,SOP,Padronizar registro de apresentação,Em andamento,crítica,João P.,27/06,risco de multa se não fechar
+715,2026-06-23,MTN,Padronizar registro de planilha,Aberto,M,Felipe Costa,,vinculado à pendência anterior
+716,12/06/26,Qualidade,Auditoria interna de documento,Feito,M,Ana Silva,2026-08-10,envolve 2 áreas — precisa alinhar
+717,30/04/26,CQ,Renovar contrato de relatório,Novo,Baixa,Ricardo N.,31-07-2026,esperando resposta do RH
+718,13/06/2026,Target,Feedback pra equipe sobre planilha,Aberto,Média,Felipe Costa,04-07-2026,3 vezes que aparece esse mesmo problema
+719,18/05/26,Instrução Trabalho,Verificar histórico de treinamento,Fechado,alta,a definir,07/08/2026,envolve 2 áreas — precisa alinhar
+720,18-06-2026,gente,Definir responsável pela relatório,Encerrado,B,Karen L.,12-08-2026,pode ser reunião de 15min
+721,2026-06-02,PROD,Documentar procedimento de qualidade,Novo,Média,Tiago Alves,05/09,revisar após mudança de escala
+722,2026-04-19,Manutenção,Reagendar reunião de follow-up,Em andamento,A,Sabrina T.,,"só depende de mim, sem justificativa"
+723,21/05/26,QLD,Ficou de trazer produção na próxima reunião,Concluído,crítica,Carla Souza,20-06-2026,
+724,2026-05-02,,Alinhamento com liderança sobre manutenção,Done,B,a definir,26-06-2026,não faz sentido no contexto atual
+725,18/05/26,Qualidade,Ajuste no cronograma semanal,Fechado,ALTA,?,,"só depende de mim, sem justificativa"
+726,28/04/26,Indicador,Aguardando retorno de fornecedor sobre material,Concluído,alta,Sabrina T.,,risco de multa se não fechar
+727,24-04-2026,SEG. TRABALHO,Aguardando retorno de fornecedor sobre planilha,WIP,,,25/06,
+728,2026-07-17,qual.,Fechamento de treinamento do mês anterior,Novo,crítica,Ana Silva,02/07/2026,cliente reclamou disso semana passada
+729,18/06/2026,RH,Investigação de desvio em comunicado,Novo,urgente,Karen L.,26-06-2026,não faz sentido no contexto atual
+730,15/06/26,qual.,Preparar apresentação sobre plano de ação,Em andamento,Média,Isabel R.,,revisar após mudança de escala
+731,2026-05-18,,Padronizar registro de manutenção,concluido,A,Felipe Costa,03-07-2026,risco de multa se não fechar
+732,08/07/2026,Prod,Preparar apresentação sobre manutenção,Encerrado,B,Paula V.,,envolve 2 áreas — precisa alinhar
+733,13-07-2026,MTN,Reagendar reunião de follow-up,Aberto,crítica,Vanessa L.,,conversamos na daily de segunda
+734,19/05/26,produtividade,Follow-up com engenharia sobre relatório,Encerrado,,Tiago Alves,,
+735,2026-06-29,Indicador,Análise da NC #654,Fechado,A,Isabel R.,11-07-2026,
+736,15/07/2026,Corretiva,Treinamento de produção pra equipe,OK,M,Diego Lima,2026-08-22,urgente segundo o gerente
+737,05/05/26,RH,Documentar procedimento de planilha,progresso,B,Nubia Costa,25/06,risco de multa se não fechar
+738,2026-06-28,MTC,Renovar contrato de suporte técnico,Em andamento,Baixa,Nubia Costa,,3 vezes que aparece esse mesmo problema
+739,,,,,,,,
+740,24/04/26,,Reposição de estoque de lista,Feito,,?,24/08/2026,envolve 2 áreas — precisa alinhar
+741,27/04/2026,Prod,Consolidar dados de planilha,aberta,ALTA,time,,"só depende de mim, sem justificativa"
+742,26-04-2026,qual.,Renovar contrato de certificado,Fechado,A,Vanessa L.,15/09/2026,envolve 2 áreas — precisa alinhar
+743,05/06/2026,Prod,Definir responsável pela plano de ação,andamento,Baixa,?,2026-07-20,risco de multa se não fechar
+744,2026-05-25,Qualidade,Consolidar dados de relatório,Concluído,B,Carla Souza,03/09,3 vezes que aparece esse mesmo problema
+745,26/04/26,Seg,Ajuste no cronograma semanal,Concluído,M,Ana Silva,,movi pra próxima semana
+746,2026-05-06,Produção,Comunicar mudança de follow-up pro time,Concluído,urgente,Sabrina T.,29/06/2026,envolve 2 áreas — precisa alinhar
+747,2026-05-28,gente,Investigação de desvio em plano de ação,Em andamento,A,,05/08,duplicado com outra linha?
+748,24/06/26,Saúde e Seguranca,Documentar procedimento de plano de ação,Done,alta,Diego Lima,,risco de multa se não fechar
+749,11-06-2026,QLD,Consolidar dados de apresentação,Feito,B,Karen L.,01/09,aparentemente resolvido mas não tem evidência
+750,2026-04-30,Seg,Melhoria no fluxo de documento,Em andamento,Alta,Gabi Ferreira,2026-08-06,duplicado com outra linha?
+751,30/06/26,Time,Aguardando retorno de fornecedor sobre ferramenta,Novo,A,Ricardo N.,2026-08-03,urgente segundo o gerente
+752,17-05-2026,RH/Gestão,Precisa validação técnica de planilha,Done,urgente,Osmar D.,19-07-2026,duplicado com outra linha?
+753,15/07/2026,EPI,Padronizar registro de treinamento,OK,M,a definir,31/07,risco de multa se não fechar
+754,17-06-2026,SOP,Reposição de estoque de material,Aberto,ALTA,time,,esperando ok da diretoria
+755,08-07-2026,Instrução Trabalho,Trocar certificado vencido na área,aberta,B,Bruno Alves,,duplicado com outra linha?
+756,11/05/26,PM,Treinamento de checklist pra equipe,OK,crítica,Tiago Alves,29/07/2026,risco de multa se não fechar
+757,2026-07-16,Qualidade,Pendente aprovação da diretoria sobre comunicado,progresso,ALTA,Henrique M.,08/08/2026,TI ainda não liberou
+758,23/04/26,Procedimento,Análise da NC #371,Done,,Eduarda Santos,07/08/2026,"só depende de mim, sem justificativa"
+759,10/06/26,Pessoas,Investigação de desvio em relatório,A fazer,Alta,Bruno Alves,2026-06-25,
+760,22/05/26,Processo,Fechamento de produção do mês anterior,andamento,,Gabi Ferreira,08/07/2026,não faz sentido no contexto atual
+761,16/05/26,MTC,Treinamento de reunião pra equipe,Concluído,ALTA,Henrique M.,09/09,esperando resposta do RH
+762,06/05/2026,Produtividade,Follow-up com diretoria sobre segurança,concluido,Baixa,,15-09-2026,movi pra próxima semana
+763,,,,,,,,
+764,04/07/26,PROD,Fechamento de meta do mês anterior,andamento,,Leo Batista,25-06-2026,cliente reclamou disso semana passada
+765,2026-05-15,Processo,Revisar procedimento de follow-up conforme reunião,Em andamento,urgente,Felipe Costa,15-08-2026,impacto direto no OEE do turno
+766,2026-06-24,Seguranca,Padronizar registro de follow-up,Novo,M,time,,aparentemente resolvido mas não tem evidência
+767,2026-07-09,Seg,Alinhamento com liderança sobre reunião,Novo,,Paula V.,2026-08-24,
+768,27-05-2026,RH/Gestão,Treinamento de processo pra equipe,Done,crítica,time,21/06,"só depende de mim, sem justificativa"
+769,11/06/2026,Seguranca,Ver com coordenador status de checklist,concluido,Baixa,,2026-08-10,
+770,2026-04-20,Controle Qualidade,Renovar contrato de contrato,TODO,Média,Felipe Costa,,esperando resposta do RH
+771,2026-07-05,Preventiva,Padronizar registro de manutenção,Concluído,urgente,Ricardo N.,,não faz sentido no contexto atual
+772,2026-06-26,manut.,Consolidar dados de inspeção,andamento,ALTA,Gabi Ferreira,,envolve 2 áreas — precisa alinhar
+773,2026-05-18,Indicador,Trocar suporte técnico vencido na área,Encerrado,Alta,Carla Souza,30-06-2026,impacto direto no OEE do turno
+774,16/05/26,RH/Gestão,Alinhamento com liderança sobre apresentação,A fazer,crítica,,,
+775,13/05/26,seg.,Trocar planilha vencido na área,WIP,A,Paula V.,,vinculado à pendência anterior
+776,18-05-2026,QLD,Preparar apresentação sobre follow-up,progresso,M,Carla Souza,,"só depende de mim, sem justificativa"
+777,2026-06-23,Metas,Alinhamento com liderança sobre qualidade,andamento,crítica,Nubia Costa,15/07/2026,envolve 2 áreas — precisa alinhar
+778,07-07-2026,manut.,Pendente aprovação da diretoria sobre treinamento,A fazer,A,time,03-07-2026,TI ainda não liberou
+779,24-06-2026,produtividade,Ver com coordenador status de auditoria,OK,Alta,Ricardo N.,05/07/2026,3 vezes que aparece esse mesmo problema
+780,15-06-2026,Indicador,Ficou de trazer briefing na próxima reunião,WIP,Alta,Ana Silva,2026-06-29,conversamos na daily de segunda
+781,05/05/26,Produção,Fechamento de comunicado do mês anterior,Aberto,Baixa,?,,
+782,30/05/2026,Time,Escalar problema de relatório pro gerente,Encerrado,Alta,Ana Silva,18/08/2026,vinculado à pendência anterior
+783,2026-07-17,Prod,Padronizar registro de relatório,Fechado,Média,Henrique M.,11-09-2026,revisar após mudança de escala
+784,20/06/2026,SST,Fechamento de produção do mês anterior,Encerrado,A,Paula V.,02-07-2026,
+785,05/07/2026,Gestão de pessoas,Comunicar mudança de follow-up pro time,Feito,B,Paula V.,,revisar após mudança de escala
+786,24/06/2026,Gestão de pessoas,Documentar procedimento de checklist,Novo,crítica,Tiago Alves,11/07,risco de multa se não fechar
+787,19/06/2026,KPI,Definir responsável pela segurança,OK,M,Paula V.,12-08-2026,pode ser reunião de 15min
+788,,,,,,,,
+789,15-07-2026,QA,Reposição de estoque de contrato,progresso,Baixa,a definir,08/08/2026,
+790,2026-06-15,Pessoas,Documentar procedimento de plano de ação,Concluído,ALTA,Bruno Alves,2026-08-11,urgente segundo o gerente
+791,2026-04-23,KPI,Análise da NC #370,Feito,urgente,Leo Batista,,esperando resposta do RH
+792,24/04/26,,Renovar contrato de lista,TODO,Baixa,?,01-09-2026,pode ser reunião de 15min
+793,08-07-2026,RH/Gestão,Investigação de desvio em follow-up,TODO,ALTA,Sabrina T.,27-07-2026,duplicado com outra linha?
+794,04/07/2026,Instrução Trabalho,Pendente aprovação da diretoria sobre processo,Done,urgente,Marcos T.,,conversamos na daily de segunda
+795,22-04-2026,Procedimento,Definir responsável pela treinamento,aberta,B,Tiago Alves,23-06-2026,conversamos na daily de segunda
+796,2026-06-04,QA,Melhoria no fluxo de processo,Feito,A,Marcos T.,14/07,conversamos na daily de segunda
+797,2026-06-09,Gestão de pessoas,Reagendar reunião de meta,progresso,,Marcos T.,2026-08-04,auditoria externa pergunta sobre isso
+798,03/05/2026,Pessoas,Ver com engenharia status de segurança,Fechado,,,01/07/2026,
+799,09/07/2026,Prod,Auditoria interna de segurança,concluido,M,Felipe Costa,2026-08-25,3 vezes que aparece esse mesmo problema
+800,31-05-2026,Equipe,Precisa validação técnica de equipamento,Done,,time,23/08/2026,
+801,21/05/26,OEE,Pendente aprovação da diretoria sobre briefing,Done,B,Leo Batista,,3 vezes que aparece esse mesmo problema
+802,20/05/26,SEG. TRABALHO,Escalar problema de meta pro gerente,Done,Alta,Isabel R.,28/07,"só depende de mim, sem justificativa"
+803,23/05/26,Indicador,Ver com RH status de produção,Encerrado,alta,Karen L.,2026-09-15,conversamos na daily de segunda
+804,27-04-2026,PROD,Trocar lista vencido na área,WIP,ALTA,Paula V.,,esperando ok da diretoria
+805,2026-05-26,Processo,Documentar procedimento de produção,Aberto,ALTA,,,aparentemente resolvido mas não tem evidência
+806,04/07/26,Qualidade,Ficou de trazer documento na próxima reunião,concluido,ALTA,a definir,,
+807,21-06-2026,Metas,Documentar procedimento de processo,Concluído,urgente,time,03/07/2026,movi pra próxima semana
+808,07/07/26,Pessoas,Atualizar checklist de planilha,OK,urgente,Carla Souza,24/07/2026,envolve 2 áreas — precisa alinhar
+809,2026-07-06,seg.,Consolidar dados de documento,Done,M,todos,29/08,auditoria externa pergunta sobre isso
+810,,,,,,,,
+811,08-07-2026,Procedimento,Preparar apresentação sobre auditoria,progresso,ALTA,Vanessa L.,2026-08-06,impacto direto no OEE do turno
+812,14-06-2026,Manutenção,Pendente aprovação da diretoria sobre relatório,Feito,,time,02/08,impacto direto no OEE do turno
+813,20/06/2026,PM,Documentar procedimento de inspeção,concluido,,Gabi Ferreira,30/07,conversamos na daily de segunda
+814,2026-06-13,Instrução Trabalho,,concluido,,Paula V.,,duplicado com outra linha?
+815,2026-07-08,IT,Renovar contrato de material,Em andamento,Média,Diego Lima,02-08-2026,movi pra próxima semana
+816,21/04/26,Pessoas,Documentar procedimento de manutenção,Done,urgente,Marcos T.,,
+817,15/05/26,Qualidade,Follow-up com coordenador sobre qualidade,Em andamento,Baixa,Vanessa L.,,esperando ok da diretoria
+818,18/05/26,Gestão de pessoas,Ficou de trazer reunião na próxima reunião,Fechado,Média,Leo Batista,08-09-2026,envolve 2 áreas — precisa alinhar
+819,2026-06-18,Gestão de pessoas,Follow-up com RH sobre checklist,Encerrado,Alta,todos,05-09-2026,pode ser reunião de 15min
+820,02/06/2026,Manutenção,Treinamento de apresentação pra equipe,Em andamento,M,Bruno Alves,,revisar após mudança de escala
+821,07-07-2026,KPI,,andamento,M,Paula V.,04/07,envolve 2 áreas — precisa alinhar
+822,2026-05-21,Instrução Trabalho,Ficou de trazer inspeção na próxima reunião,Concluído,Média,,2026-07-05,cliente reclamou disso semana passada
+823,16/06/26,IT,Definir responsável pela qualidade,progresso,Média,Diego Lima,02/08/2026,
+824,2026-05-09,proc.,Ajuste no cronograma semanal,Em andamento,B,Ricardo N.,20/08/2026,esperando resposta do RH
+825,17/06/2026,Procedimento,Melhoria no fluxo de documento,Done,B,time,2026-07-08,
+826,18/05/26,Qualidade,Reunião com fornecedor de ferramenta,WIP,M,Eduarda Santos,02/07/2026,
+827,2026-07-09,Segurança,Padronizar registro de briefing,TODO,ALTA,Sabrina T.,24/07,3 vezes que aparece esse mesmo problema
+828,03-07-2026,MTC,Padronizar registro de plano de ação,Concluído,alta,Henrique M.,2026-09-05,
+829,2026-06-29,proc.,Consolidar dados de produção,WIP,Média,João P.,04-09-2026,impacto direto no OEE do turno
+830,2026-07-16,CQ,Follow-up com coordenador sobre segurança,progresso,Alta,Osmar D.,10-09-2026,urgente segundo o gerente
+831,20-04-2026,,Pendente aprovação da diretoria sobre briefing,Concluído,alta,Eduarda Santos,25/06,urgente segundo o gerente
+832,30/06/26,KPI,Escalar problema de reunião pro gerente,concluido,M,Ricardo N.,2026-07-19,aparentemente resolvido mas não tem evidência
+833,19/05/2026,Equipe,Análise da NC #169,Em andamento,,,21/08/2026,movi pra próxima semana
+834,23/05/2026,Target,Pendente aprovação da diretoria sobre treinamento,Feito,,?,01-09-2026,urgente segundo o gerente
+835,10/07/2026,proc.,Consolidar dados de planilha,concluido,Média,Tiago Alves,10-07-2026,movi pra próxima semana
+836,04-05-2026,Qualidade,Treinamento de relatório pra equipe,TODO,crítica,Leo Batista,,
+837,18/06/2026,Corretiva,Verificar histórico de produção,WIP,M,,07/09/2026,
+838,22-04-2026,Time,Renovar contrato de ferramenta,Concluído,Baixa,Osmar D.,10/09,pode ser reunião de 15min
+839,02/07/26,KPI,Documentar procedimento de comunicado,TODO,A,Tiago Alves,02/08/2026,esperando ok da diretoria
+840,2026-05-01,Segurança,Feedback pra equipe sobre follow-up,Em andamento,,Paula V.,19-08-2026,pode ser reunião de 15min
+841,01/05/2026,Produtividade,Documentar procedimento de auditoria,TODO,M,Marcos T.,2026-09-04,esperando ok da diretoria
+842,25-05-2026,produtividade,Trocar equipamento vencido na área,Done,urgente,Karen L.,,movi pra próxima semana
+843,04-05-2026,SOP,Ver com gerente status de manutenção,Fechado,M,Isabel R.,12/09,esperando ok da diretoria
+844,09/06/2026,QA,Reunião com fornecedor de lista,Feito,ALTA,Leo Batista,03/08/2026,risco de multa se não fechar
+845,12/07/26,Qualidade,Precisa validação técnica de equipamento,OK,alta,Carla Souza,12/07,risco de multa se não fechar
+846,2026-06-29,Qualidade,Pendente aprovação da diretoria sobre produção,progresso,alta,Diego Lima,13/09/2026,cliente reclamou disso semana passada
+847,25/06/26,,Treinamento de apresentação pra equipe,Concluído,alta,Marcos T.,24/07,não faz sentido no contexto atual
+848,29/04/26,KPI,Documentar procedimento de auditoria,aberta,Média,Leo Batista,2026-09-01,cliente reclamou disso semana passada
+849,20/04/26,KPI,Aguardando retorno de fornecedor sobre licença,Feito,,,05/08,não faz sentido no contexto atual
+850,10/06/26,CQ,Verificar histórico de meta,Feito,Média,Ana Silva,09/09,urgente segundo o gerente
+851,02/07/26,Procedimento,Treinamento de planilha pra equipe,aberta,Média,Bruno Alves,03/09,risco de multa se não fechar
+852,,,,,,,,
+853,17/06/26,Preventiva,Análise da NC #382,progresso,alta,Eduarda Santos,27-06-2026,auditoria externa pergunta sobre isso
+854,16/07/2026,Metas,Reagendar reunião de briefing,Feito,,Isabel R.,10/09/2026,envolve 2 áreas — precisa alinhar
+855,09/07/2026,Pessoas,Revisar procedimento de qualidade conforme reunião,Concluído,alta,,2026-07-01,revisar após mudança de escala
+856,10-07-2026,SST,Ver com gerente status de auditoria,Feito,B,Ricardo N.,13/08/2026,cliente reclamou disso semana passada
+857,2026-06-20,Pessoas,Aguardando retorno de fornecedor sobre material,Concluído,ALTA,time,06/07,3 vezes que aparece esse mesmo problema
+858,05/05/2026,Seg,Padronizar registro de auditoria,progresso,crítica,Leo Batista,21/08/2026,urgente segundo o gerente
+859,2026-06-10,SST,Aguardando retorno de fornecedor sobre certificado,Encerrado,M,Tiago Alves,31/08,esperando resposta do RH
+860,19-06-2026,Saúde e Seguranca,Revisar procedimento de meta conforme reunião,andamento,Baixa,Nubia Costa,24-08-2026,envolve 2 áreas — precisa alinhar
+861,10/05/26,Preventiva,Investigação de desvio em planilha,TODO,Alta,Bruno Alves,2026-08-20,esperando resposta do RH
+862,14/07/26,Saúde e Seguranca,Alinhamento com liderança sobre segurança,Em andamento,M,Leo Batista,02/09/2026,esperando resposta do RH
+863,02-07-2026,Processo,Follow-up com gerente sobre follow-up,TODO,urgente,Eduarda Santos,,esperando ok da diretoria
+864,23-04-2026,Pessoas,Consolidar dados de processo,OK,,Paula V.,04/07,não faz sentido no contexto atual
+865,22/06/26,meta,Alinhamento com liderança sobre checklist,Em andamento,Baixa,Bruno Alves,06/09,pode ser reunião de 15min
+866,2026-04-21,MTC,Definir responsável pela meta,andamento,Alta,,23/08/2026,movi pra próxima semana
+867,07/06/2026,RH/Gestão,Comunicar mudança de documento pro time,Feito,ALTA,Ricardo N.,2026-07-29,envolve 2 áreas — precisa alinhar
+868,18/05/2026,Qualidade,Preparar apresentação sobre plano de ação,progresso,A,Sabrina T.,04/08/2026,impacto direto no OEE do turno
+869,02-05-2026,PM,Definir responsável pela produção,Done,crítica,Marcos T.,01/09/2026,vinculado à pendência anterior
+870,30/06/26,proc.,Reunião com fornecedor de documento,A fazer,urgente,Marcos T.,25-06-2026,movi pra próxima semana
