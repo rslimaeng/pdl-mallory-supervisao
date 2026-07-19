@@ -3785,3 +3785,48 @@ body.modal-open { overflow: hidden; }
   .prompt-copiar__details { display: block !important; }
   .callout-demo-ao-vivo, .followup-card, .vld-score, .vld-item { break-inside: avoid; }
 }
+
+/* ============================================================
+ * ONDA 23 · Respiro tipográfico (M5 · M6)
+ * Referência: claude.com/resources/use-cases (p mb ~24px, lh 1.6)
+ * Alvo: reduzir sensação de "parede de texto" nos hab-card
+ * empilhados do M5, sem tocar .md.
+ * ============================================================ */
+
+/* §3.1a · Corpo do .hab-card — subir fonte (14.5→16) e respiro (10→14) */
+.hab-card > p,
+.hab-card > ul li,
+.hab-card > ol li {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hab-card > p + p,
+.hab-card > * + p,
+.hab-card > p + ul,
+.hab-card > p + ol,
+.hab-card > ul + p,
+.hab-card > ol + p,
+.hab-card > p + pre,
+.hab-card > pre + p {
+  margin-top: 14px;
+}
+
+/* §3.1b · A tabela do hab-card vive dentro de .table-wrap (não é <table> filha
+   direta); então o respiro é aplicado no wrapper real (era margin 12px 0) */
+.hab-card > .table-wrap {
+  margin: 14px 0;
+}
+
+/* §3.1c · Padding vertical um clique maior (22 → 24) pra acomodar o respiro */
+.hab-card {
+  padding: 24px 24px;
+}
+
+/* §3.3 · Callouts com 2+ parágrafos — respirar entre eles */
+.callout > p + p,
+.callout-info > p + p,
+.callout-info--dado > p + p,
+.callout-alucinacao > p + p {
+  margin-top: 12px;
+}
