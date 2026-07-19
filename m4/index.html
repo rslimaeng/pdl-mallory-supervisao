@@ -41,6 +41,7 @@
   <div class="container">
 
     <section class="hero">
+      <span class="eyebrow__ementa">Módulo 4 · Usando IA com Segurança: LGPD, Dados e Alucinações</span>
       <h1>M4 · Validar antes de usar: o filtro que salva sua assinatura</h1>
       <div class="page-meta">
         <span class="badge">Trilha 1</span>
@@ -148,23 +149,19 @@
 
     <section class="section">
       <h2>Você entra com → O que acontece → Você sai com</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Você entra com</th>
-              <th>O que acontece</th>
-              <th>Você sai com</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Prompts já rodando (M2 e M3) e uma pergunta justa: "até onde posso confiar?"</td>
-              <td>Você vê a IA inventar ao vivo, aprende por que acontece e treina o filtro de 2 metades</td>
-              <td>O <strong>Semáforo de Uso IA</strong> com suas 3-5 tarefas da semana classificadas + o protocolo em 3 passos memorizado</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="ipo-caixas">
+        <article class="ipo-caixa ipo-caixa--entra">
+          <span class="ipo-caixa__label">Você entra com</span>
+          <p>Prompts já rodando (M2 e M3) e uma pergunta justa: "até onde posso confiar?"</p>
+        </article>
+        <article class="ipo-caixa ipo-caixa--processa">
+          <span class="ipo-caixa__label">O que acontece</span>
+          <p>Você vê a IA inventar ao vivo, aprende por que acontece e treina o filtro de 2 metades</p>
+        </article>
+        <article class="ipo-caixa ipo-caixa--sai">
+          <span class="ipo-caixa__label">Você sai com</span>
+          <p>O <strong>Semáforo de Uso IA</strong> com suas 3-5 tarefas da semana classificadas + o protocolo em 3 passos memorizado</p>
+        </article>
       </div>
     </section>
 
@@ -178,53 +175,63 @@
 
     <section class="section">
       <h2>O conceito em 5 pontos</h2>
-
-      <h3>1. A IA erra com a mesma cara com que acerta</h3>
-      <p>Lembra da prova de múltipla escolha? Chutar dava 25% de chance; deixar em branco, zero. A IA foi treinada assim — recompensada quando acerta, penalizada quando fica em branco. Aprendeu a chutar com confiança em vez de dizer "não sei". O chute vem bem escrito, com tom seguro, no formato certo. Fluência não é evidência de nada. Isso tem nome: <strong>alucinação</strong>.</p>
-
-      <h3>2. LGPD em 30 segundos</h3>
-      <p>Dado pessoal é qualquer informação que identifica alguém: nome, CPF, telefone, salário, atestado, avaliação. A LGPD diz que a empresa responde pelo que faz com esses dados — inclusive pelo que os funcionários colam em ferramenta externa. Enviar ficha de operador para a IA não é atalho: é incidente.</p>
-
-      <h3>3. A lista do que nunca entra — memorize 3, consulte o resto</h3>
-      <p>As três de cabeça: <strong>gente</strong> (qualquer dado de funcionário), <strong>produto</strong> (especificação, parâmetro de molde, desenho), <strong>contrato</strong> (fornecedor, preço, condição comercial). A lista completa está no callout amarelo desta página. Na dúvida, vale a regra do grupo de WhatsApp: se não postaria num grupo aberto, não cola na IA.</p>
-
-      <h3>4. Protocolo de validação em 3 passos — 30 segundos por resposta</h3>
-      <p><strong>Fonte:</strong> cada fato da resposta veio do que eu enviei, ou apareceu do nada? <strong>Número:</strong> todo número, data, norma ou nome citado — confere na origem antes de repassar. <strong>Consistência:</strong> bate com o que eu sei do meu setor? Estranhou, checou. Três passos, meio minuto — mais rápido que refazer um registro errado em auditoria.</p>
-      <p><strong>O rigor é proporcional ao risco.</strong> Rascunho de e-mail interno? Passada rápida. Número que sobe pra diretoria, cláusula de contrato, dado que vira registro em auditoria? 30 segundos de protocolo não é excesso — é seguro. Regra prática: <strong>quanto mais irreversível a decisão, mais devagar você lê</strong>.</p>
-
-      <h3>5. Se você não pode conferir, não use</h3>
-      <p>A regra que fecha todas as outras. A IA sugeriu um prazo de norma que você não tem como verificar? Não entra no documento. Para rascunho, ideia e estrutura, use à vontade — o risco é zero porque você revisa. Para fato que você não domina, a IA não é fonte. Fonte é a norma, o sistema, o registro.</p>
+      <div class="hab-grid">
+        <div class="hab-card t1">
+          <div class="hab-card-head">
+            <div class="hab-card-num">01</div>
+            <div class="hab-card-title">A IA erra com a mesma cara com que acerta</div>
+          </div>
+          <p>Lembra da prova de múltipla escolha? Chutar dava 25% de chance; deixar em branco, zero. A IA foi treinada assim — recompensada quando acerta, penalizada quando fica em branco. Aprendeu a chutar com confiança em vez de dizer "não sei". O chute vem bem escrito, com tom seguro, no formato certo. Fluência não é evidência de nada. Isso tem nome: <strong>alucinação</strong>.</p>
+        </div>
+        <div class="hab-card t1">
+          <div class="hab-card-head">
+            <div class="hab-card-num">02</div>
+            <div class="hab-card-title">LGPD em 30 segundos</div>
+          </div>
+          <p>Dado pessoal é qualquer informação que identifica alguém: nome, CPF, telefone, salário, atestado, avaliação. A LGPD diz que a empresa responde pelo que faz com esses dados — inclusive pelo que os funcionários colam em ferramenta externa. Enviar ficha de operador para a IA não é atalho: é incidente.</p>
+        </div>
+        <div class="hab-card t1">
+          <div class="hab-card-head">
+            <div class="hab-card-num">03</div>
+            <div class="hab-card-title">A lista do que nunca entra — memorize 3, consulte o resto</div>
+          </div>
+          <p>As três de cabeça: <strong>gente</strong> (qualquer dado de funcionário), <strong>produto</strong> (especificação, parâmetro de molde, desenho), <strong>contrato</strong> (fornecedor, preço, condição comercial). A lista completa está no callout amarelo desta página. Na dúvida, vale a regra do grupo de WhatsApp: se não postaria num grupo aberto, não cola na IA.</p>
+        </div>
+        <div class="hab-card t1">
+          <div class="hab-card-head">
+            <div class="hab-card-num">04</div>
+            <div class="hab-card-title">Protocolo de validação em 3 passos — 30 segundos por resposta</div>
+          </div>
+          <p><strong>Fonte:</strong> cada fato da resposta veio do que eu enviei, ou apareceu do nada? <strong>Número:</strong> todo número, data, norma ou nome citado — confere na origem antes de repassar. <strong>Consistência:</strong> bate com o que eu sei do meu setor? Estranhou, checou. Três passos, meio minuto — mais rápido que refazer um registro errado em auditoria.</p>
+          <p><strong>O rigor é proporcional ao risco.</strong> Rascunho de e-mail interno? Passada rápida. Número que sobe pra diretoria, cláusula de contrato, dado que vira registro em auditoria? 30 segundos de protocolo não é excesso — é seguro. Regra prática: <strong>quanto mais irreversível a decisão, mais devagar você lê</strong>.</p>
+        </div>
+        <div class="hab-card t1">
+          <div class="hab-card-head">
+            <div class="hab-card-num">05</div>
+            <div class="hab-card-title">Se você não pode conferir, não use</div>
+          </div>
+          <p>A regra que fecha todas as outras. A IA sugeriu um prazo de norma que você não tem como verificar? Não entra no documento. Para rascunho, ideia e estrutura, use à vontade — o risco é zero porque você revisa. Para fato que você não domina, a IA não é fonte. Fonte é a norma, o sistema, o registro.</p>
+        </div>
+      </div>
     </section>
 
     <section class="section">
       <h2>Quando aplicar / Quando NÃO aplicar</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>🟢 Uso seguro</th>
-              <th>🔴 Uso arriscado</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Rascunhar registro de não-conformidade com dados que você confere</td>
-              <td>Deixar a IA "completar" a causa-raiz que ninguém apurou</td>
-            </tr>
-            <tr>
-              <td>Organizar texto de ocorrência a partir das suas anotações</td>
-              <td>Colar ficha, atestado ou avaliação de funcionário no prompt</td>
-            </tr>
-            <tr>
-              <td>Pedir estrutura de checklist e preencher você mesmo os critérios</td>
-              <td>Usar norma, prazo ou parâmetro citado pela IA sem conferir na fonte</td>
-            </tr>
-            <tr>
-              <td>Treinar com dado fictício antes de usar no processo real</td>
-              <td>Enviar especificação de produto ou desenho de molde para ferramenta externa</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="gat-quando-grid">
+        <div class="gat-quando-col">
+          <h3 class="gat-quando-head">🟢 Uso seguro</h3>
+          <article class="gat gat--verde"><p class="gat-frase">Rascunhar registro de não-conformidade com dados que você confere</p></article>
+          <article class="gat gat--verde"><p class="gat-frase">Organizar texto de ocorrência a partir das suas anotações</p></article>
+          <article class="gat gat--verde"><p class="gat-frase">Pedir estrutura de checklist e preencher você mesmo os critérios</p></article>
+          <article class="gat gat--verde"><p class="gat-frase">Treinar com dado fictício antes de usar no processo real</p></article>
+        </div>
+        <div class="gat-quando-col">
+          <h3 class="gat-quando-head">🔴 Uso arriscado</h3>
+          <article class="gat gat--vermelho"><p class="gat-frase">Deixar a IA "completar" a causa-raiz que ninguém apurou</p></article>
+          <article class="gat gat--vermelho"><p class="gat-frase">Colar ficha, atestado ou avaliação de funcionário no prompt</p></article>
+          <article class="gat gat--vermelho"><p class="gat-frase">Usar norma, prazo ou parâmetro citado pela IA sem conferir na fonte</p></article>
+          <article class="gat gat--vermelho"><p class="gat-frase">Enviar especificação de produto ou desenho de molde para ferramenta externa</p></article>
+        </div>
       </div>
     </section>
 
@@ -314,31 +321,48 @@ Lógica do semáforo (calcule sozinho):
     <section class="section">
       <h2>Exercício · Hands-on 40 minutos</h2>
 
-      <h3>Camada 1 — Rode o prompt-âncora (todos · 25 min)</h3>
-      <p><strong>Objetivo:</strong> viver as duas fases do filtro — desidentificar dado real (Fase 1) e sair com o Semáforo preenchido (Fase 2).</p>
-      <p><strong>Passo a passo:</strong></p>
-      <ol>
-        <li>Abra Claude, cole o Prompt-âncora do módulo.</li>
-        <li>Substitua <code>[cole aqui...]</code> por 5-8 linhas de um comunicado real que você precisa escrever esta semana — troque nome de gente por "Operador A/B/C", número de folha por "XXXX", cláusula específica por "Cláusula Y". <strong>Não cole nada real ainda</strong> — este é treino.</li>
-        <li>Rode. Observe a Fase 1: o Claude sinaliza 🟢/🟡/🔴 e reescreve. Faz o protocolo em 3 passos.</li>
-        <li>Peça a Fase 2 no mesmo chat: "gere o Artifact". Ele volta com o Semáforo em HTML.</li>
-        <li>Preencha o Semáforo com 3-5 tarefas em que você pensa em usar IA na próxima semana. Deixe o cálculo rodar.</li>
-        <li>Baixe / imprima em A4 paisagem. Leva pra segunda.</li>
-      </ol>
-      <p><strong>Resultado esperado:</strong> comunicado reescrito com dado tratado + Semáforo salvo com 3-5 linhas ranqueadas.</p>
-      <p><strong>Como avaliar:</strong> conte quantas linhas do seu Semáforo ficaram 🟢. Se são todas, você foi otimista — releia a coluna "Dado envolvido". Se são todas 🔴, você foi paranoico — releia "Risco de invenção" (algumas tarefas de fato têm risco baixo).</p>
+      <div class="ho-hero">
+        <div class="ho-hero-eyebrow">O que você faz agora</div>
+        <h3>Duas camadas: rode o filtro nas suas tarefas, depois flagre a alucinação ao vivo.</h3>
+        <p class="ho-hero-lead"><strong>Camada 1 (todos · 25 min):</strong> viver as duas fases do filtro — desidentificar dado real (Fase 1) e sair com o Semáforo preenchido (Fase 2). <strong>Camada 2 (para quem terminou · +15 min):</strong> ver a IA inventar ao vivo, com o texto seguro e bonito.</p>
+      </div>
 
-      <h3>Camada 2 — Flagrar alucinação com os próprios olhos (para quem terminou · +15 min)</h3>
-      <p><strong>Objetivo:</strong> ver a IA inventar ao vivo, com o texto seguro e bonito.</p>
-      <p><strong>Passo a passo:</strong></p>
-      <ol>
-        <li>Pergunte à IA algo específico da Mallory que ela não tem como saber: <em>"Qual o procedimento de segregação de lote da Mallory Eletroportáteis, versão 2025?"</em></li>
-        <li>Observe a resposta. Ela disse "não tenho essa informação" — ou descreveu um procedimento plausível e confiante?</li>
-        <li>Agora peça um número: <em>"Qual NR trata de trabalho em prensas e qual o item exato sobre proteção de operação?"</em> Anote a resposta e marque o que precisaria conferir na fonte.</li>
-        <li>Escreva em 2 linhas: como essa resposta enganaria alguém com pressa?</li>
-      </ol>
-      <p><strong>Resultado esperado:</strong> pelo menos 1 resposta confiante que você não aceitaria sem verificação — vista ao vivo.</p>
-      <p><strong>Como avaliar:</strong> se você consegue apontar na resposta o trecho que <strong>parece fato mas não tem fonte</strong>, o módulo cumpriu a promessa. Esse trecho é o padrão que você vai reconhecer daqui pra frente.</p>
+      <div class="ho-timeline">
+        <div class="ho-etapa">
+          <div class="ho-etapa-side"><div class="ho-etapa-num">01</div></div>
+          <div class="ho-etapa-body">
+            <span class="ho-etapa-tempo grp">Todos · 25 min</span>
+            <h4 class="ho-etapa-titulo">Rode o prompt-âncora</h4>
+            <p class="ho-etapa-desc"><strong>Objetivo:</strong> viver as duas fases do filtro — desidentificar dado real (Fase 1) e sair com o Semáforo preenchido (Fase 2).</p>
+            <div class="ho-subpassos">
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">01</div><div class="ho-subpasso-txt">Abra Claude, cole o Prompt-âncora do módulo.</div></div>
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">02</div><div class="ho-subpasso-txt">Substitua <code>[cole aqui...]</code> por 5-8 linhas de um comunicado real que você precisa escrever esta semana — troque nome de gente por "Operador A/B/C", número de folha por "XXXX", cláusula específica por "Cláusula Y". <strong>Não cole nada real ainda</strong> — este é treino.</div></div>
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">03</div><div class="ho-subpasso-txt">Rode. Observe a Fase 1: o Claude sinaliza 🟢/🟡/🔴 e reescreve. Faz o protocolo em 3 passos.</div></div>
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">04</div><div class="ho-subpasso-txt">Peça a Fase 2 no mesmo chat: "gere o Artifact". Ele volta com o Semáforo em HTML.</div></div>
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">05</div><div class="ho-subpasso-txt">Preencha o Semáforo com 3-5 tarefas em que você pensa em usar IA na próxima semana. Deixe o cálculo rodar.</div></div>
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">06</div><div class="ho-subpasso-txt">Baixe / imprima em A4 paisagem. Leva pra segunda.</div></div>
+            </div>
+            <div class="ho-saida"><span class="ho-saida-label">Resultado esperado</span>comunicado reescrito com dado tratado + Semáforo salvo com 3-5 linhas ranqueadas.</div>
+            <div class="ho-marco-eval"><strong>Como avaliar:</strong> conte quantas linhas do seu Semáforo ficaram 🟢. Se são todas, você foi otimista — releia a coluna "Dado envolvido". Se são todas 🔴, você foi paranoico — releia "Risco de invenção" (algumas tarefas de fato têm risco baixo).</div>
+          </div>
+        </div>
+        <div class="ho-etapa">
+          <div class="ho-etapa-side"><div class="ho-etapa-num">02</div></div>
+          <div class="ho-etapa-body">
+            <span class="ho-etapa-tempo ind">Para quem terminou · +15 min</span>
+            <h4 class="ho-etapa-titulo">Flagrar alucinação com os próprios olhos</h4>
+            <p class="ho-etapa-desc"><strong>Objetivo:</strong> ver a IA inventar ao vivo, com o texto seguro e bonito.</p>
+            <div class="ho-subpassos">
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">01</div><div class="ho-subpasso-txt">Pergunte à IA algo específico da Mallory que ela não tem como saber: <em>"Qual o procedimento de segregação de lote da Mallory Eletroportáteis, versão 2025?"</em></div></div>
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">02</div><div class="ho-subpasso-txt">Observe a resposta. Ela disse "não tenho essa informação" — ou descreveu um procedimento plausível e confiante?</div></div>
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">03</div><div class="ho-subpasso-txt">Agora peça um número: <em>"Qual NR trata de trabalho em prensas e qual o item exato sobre proteção de operação?"</em> Anote a resposta e marque o que precisaria conferir na fonte.</div></div>
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">04</div><div class="ho-subpasso-txt">Escreva em 2 linhas: como essa resposta enganaria alguém com pressa?</div></div>
+            </div>
+            <div class="ho-saida"><span class="ho-saida-label">Resultado esperado</span>pelo menos 1 resposta confiante que você não aceitaria sem verificação — vista ao vivo.</div>
+            <div class="ho-marco-eval"><strong>Como avaliar:</strong> se você consegue apontar na resposta o trecho que <strong>parece fato mas não tem fonte</strong>, o módulo cumpriu a promessa. Esse trecho é o padrão que você vai reconhecer daqui pra frente.</div>
+          </div>
+        </div>
+      </div>
 
       <div class="callout callout-info callout-dica">
         <p><strong>💡 Arquivo pra experimentar depois:</strong> peça pro RH da sua área um formulário de avaliação de desempenho <strong>em branco</strong> (sem nome), cole no Claude, peça pra "resumir os principais critérios". Depois pergunte à IA um critério que <strong>não está</strong> no formulário. Se ela responder com confiança inventando, você acabou de flagrar o padrão de alucinação em documento estruturado — mesmo com fonte no chat. Este é o teste que dobra o rigor do seu protocolo.</p>
@@ -347,37 +371,34 @@ Lógica do semáforo (calcule sozinho):
 
     <section class="section">
       <h2>Os 3 erros mais comuns</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Erro</th>
-              <th>Sintoma</th>
-              <th>Causa</th>
-              <th>Como corrigir</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Confiar no texto bem escrito</td>
-              <td>"Veio tão certinho que nem li direito" — e o erro passou</td>
-              <td>Fluência parece competência; a IA é sempre fluente</td>
-              <td>Protocolo de 3 passos em toda resposta que vira documento</td>
-            </tr>
-            <tr>
-              <td>"É só desta vez" com dado real</td>
-              <td>Colou o nome, a especificação, o contrato — porque tinha pressa</td>
-              <td>Exceção de hoje vira hábito de amanhã</td>
-              <td>Os 3 "nunca" não têm exceção. Desidentifique ou não use</td>
-            </tr>
-            <tr>
-              <td>Terceirizar a culpa</td>
-              <td>"Foi a IA que errou" no registro que você assinou</td>
-              <td>Esquecer que a IA rascunha e você responde</td>
-              <td>O nome no documento é o seu. Revisar não é opcional</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="erros-grid">
+        <div class="erro-card">
+          <div class="erro-head">
+            <div class="erro-num">01</div>
+            <div class="erro-nome">Confiar no texto bem escrito</div>
+          </div>
+          <div class="erro-block sintoma"><span class="erro-block-label">Sintoma</span>"Veio tão certinho que nem li direito" — e o erro passou</div>
+          <div class="erro-block causa"><span class="erro-block-label">Causa</span>Fluência parece competência; a IA é sempre fluente</div>
+          <div class="erro-block corrige"><span class="erro-block-label">Como corrigir</span>Protocolo de 3 passos em toda resposta que vira documento</div>
+        </div>
+        <div class="erro-card">
+          <div class="erro-head">
+            <div class="erro-num">02</div>
+            <div class="erro-nome">"É só desta vez" com dado real</div>
+          </div>
+          <div class="erro-block sintoma"><span class="erro-block-label">Sintoma</span>Colou o nome, a especificação, o contrato — porque tinha pressa</div>
+          <div class="erro-block causa"><span class="erro-block-label">Causa</span>Exceção de hoje vira hábito de amanhã</div>
+          <div class="erro-block corrige"><span class="erro-block-label">Como corrigir</span>Os 3 "nunca" não têm exceção. Desidentifique ou não use</div>
+        </div>
+        <div class="erro-card">
+          <div class="erro-head">
+            <div class="erro-num">03</div>
+            <div class="erro-nome">Terceirizar a culpa</div>
+          </div>
+          <div class="erro-block sintoma"><span class="erro-block-label">Sintoma</span>"Foi a IA que errou" no registro que você assinou</div>
+          <div class="erro-block causa"><span class="erro-block-label">Causa</span>Esquecer que a IA rascunha e você responde</div>
+          <div class="erro-block corrige"><span class="erro-block-label">Como corrigir</span>O nome no documento é o seu. Revisar não é opcional</div>
+        </div>
       </div>
     </section>
 

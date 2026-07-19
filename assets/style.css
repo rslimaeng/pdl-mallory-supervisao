@@ -3641,3 +3641,37 @@ body.modal-open { overflow: hidden; }
   vertical-align: middle;
   margin-left: .5rem;
 }
+
+/* =========================================================
+   M4 · onda 20 — porte HTML premium (reusa componentes M3)
+   Herdados sem CSS novo: .ipo-caixas/.ipo-caixa, .hab-card/.hab-card-head,
+   .ho-hero/.ho-timeline/.ho-etapa/.ho-subpasso/.ho-saida/.ho-marco-eval,
+   .erro-card/.erro-block. Novo só o abaixo — tokens/color-mix, zero hex.
+   ========================================================= */
+
+/* §1 · kicker da ementa oficial no hero (T1: accent-blue) */
+.eyebrow__ementa {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: var(--text-secondary);
+  margin: 0 0 14px;
+  border-left: 2px solid var(--accent-blue);
+  padding-left: 10px;
+}
+
+/* §4 · corpo do ponto dentro do .hab-card (o .md é parágrafo corrido, não why/how) */
+.hab-card > p { margin: 0; color: var(--text-secondary); font-size: 14.5px; line-height: 1.65; }
+.hab-card > p strong { color: var(--text-primary); }
+.hab-card > p + p { margin-top: 10px; }
+
+/* §5 · Quando aplicar — cards verde/vermelho (variante minimalista do .gat) */
+.gat-quando-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 720px) { .gat-quando-grid { grid-template-columns: 1fr; } }
+.gat-quando-col { display: flex; flex-direction: column; gap: 12px; }
+.gat-quando-head { font-family: var(--font-title); font-size: 17px; color: var(--text-primary); margin: 0 0 2px; }
+.gat--verde { border-left: 3px solid var(--accent-green); background: color-mix(in oklab, var(--accent-green) 7%, var(--bg-card)); padding: 15px 18px; }
+.gat--vermelho { border-left: 3px solid var(--accent-red); background: color-mix(in oklab, var(--accent-red) 7%, var(--bg-card)); padding: 15px 18px; }
+.gat-frase { color: var(--text-primary); font-size: 14px; line-height: 1.55; margin: 0; }
