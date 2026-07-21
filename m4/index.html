@@ -237,12 +237,25 @@
     <section class="section prompt-ancora">
       <span class="eyebrow">Prompt-âncora do módulo</span>
       <h2>Gera o seu Semáforo de Uso IA <span class="badge badge--artifact">Gera Artifact HTML</span></h2>
-      <p class="secao-lead">O M2 te deu o método formal (PCTFL + Critério de Sucesso). Este prompt aplica o método a <strong>um exercício de duas metades</strong>: rascunhar um comunicado difícil com dado desidentificado (Fase 1) e, no mesmo chat, gerar um Artifact HTML com as suas 3-5 tarefas ranqueadas em 🟢 / 🟡 / 🔴 (Fase 2).</p>
+      <p class="secao-lead">O M2 te deu o método formal (PCTFL + Critério de Sucesso). Este prompt aplica o método a <strong>um exercício de duas metades</strong>: revisar um comunicado que <strong>você mesmo já anonimizou</strong> (Fase 1) e, no mesmo chat, gerar um Artifact HTML com as suas 3-5 tarefas ranqueadas em 🟢 / 🟡 / 🔴 (Fase 2).</p>
 
       <ol class="prompt-fases">
-        <li class="prompt-fase"><span class="prompt-fase__num">Fase 1</span><h3>Rascunho com desidentificação</h3><p>O "e-mail que sai assinado por você" com dado fictício — o Claude sinaliza 🟢/🟡/🔴, reescreve, e aplica o protocolo de 3 passos ao vivo.</p></li>
+        <li class="prompt-fase"><span class="prompt-fase__num">Fase 1</span><h3>Revisão de comunicado já anonimizado</h3><p>Você anonimiza o rascunho no checklist e cola o texto <strong>já limpo</strong> — o Claude confere se sobrou algum identificador (rede de segurança), melhora a clareza e aplica o protocolo de 3 passos ao vivo.</p></li>
         <li class="prompt-fase"><span class="prompt-fase__num">Fase 2</span><h3>Semáforo de Uso IA (Artifact HTML)</h3><p>No mesmo chat, o Claude gera o Artifact interativo com 5 linhas pra você preencher — dado, risco, modo, semáforo calculado. Salva, imprime, leva pra segunda.</p></li>
       </ol>
+
+      <div class="callout callout-info callout-checklist">
+        <p class="callout-title">✅ Checklist de anonimização — rode você mesmo, antes de colar qualquer coisa na IA</p>
+        <p>A IA <strong>não é quem limpa o dado — você limpa antes</strong>. Quando o texto chega na IA, já tem que estar sem identificação. Passe o rascunho por estes 6 pontos antes de rodar o prompt:</p>
+        <ul>
+          <li>Troquei <strong>nome de pessoa</strong> por "Operador A / Colaborador B"?</li>
+          <li>Mascarei <strong>matrícula, folha, CPF, RG</strong> (viram "XXXX")?</li>
+          <li>Tirei <strong>número e cláusula de contrato, preço, condição comercial</strong>?</li>
+          <li>Removi <strong>parâmetro de produto ou processo</strong> (molde, injetora, fórmula)?</li>
+          <li>Tirei <strong>nome ou dado de cliente</strong>?</li>
+          <li>Sobrou algo que identifica <strong>gente · produto · contrato</strong>? Então <strong>não mando</strong> — ou mascaro primeiro.</li>
+        </ul>
+      </div>
 
       <div class="prompt-copiar">
         <div class="prompt-copiar__header">
@@ -264,17 +277,22 @@ Sou [seu cargo] em Mallory, área [sua área]. Vou treinar o filtro do M4 num
 comunicado difícil que preciso escrever esta semana e depois quero ranquear
 as próximas 5 tarefas em que penso usar IA.
 
-# TAREFA — FASE 1: Rascunho com desidentificação
-Vou colar abaixo o rascunho do comunicado (dados FICTÍCIOS para este treino).
+# TAREFA — FASE 1: Revisão de comunicado já anonimizado
+Vou colar abaixo um comunicado que EU JÁ ANONIMIZEI (rodei o checklist antes: nomes
+viraram "Operador A/B/C", números viraram "XXXX", cláusulas viraram "Cláusula Y").
 Você:
-1. Sinaliza cada item do rascunho como 🟢 pode ficar / 🟡 desidentifica / 🔴 tira antes de enviar.
-2. Reescreve o comunicado com os itens 🟡 desidentificados e os 🔴 removidos.
-3. No fim, aplica o protocolo em 3 passos (fonte · número · consistência) ao SEU
-   próprio rascunho, apontando o que precisa conferir antes de mandar.
+1. Rede de segurança: reveja o texto e aponte se AINDA sobrou algo que identifica
+   pessoa, produto ou contrato — eu removo antes de usar. Você não é quem limpa; você
+   confere o que eu já limpei.
+2. Melhore a clareza do comunicado (tom, ordem das ideias, objetividade) SEM inventar
+   nenhum dado que não esteja no texto.
+3. Aplique o protocolo em 3 passos (fonte · número · consistência) ao texto,
+   apontando o que eu preciso conferir na fonte antes de mandar.
 
-Rascunho:
-[cole aqui 5-8 linhas do comunicado com pelo menos 2 dados sensíveis fictícios —
-nome de operador, número de folha, cláusula de contrato — para o Claude praticar]
+Comunicado (já anonimizado):
+[cole aqui 5-8 linhas do seu comunicado com os identificadores já substituídos —
+"Operador A/B/C", "XXXX", "Cláusula Y". Se você ainda não anonimizou, volte ao
+checklist: nada entra na IA antes de passar por ele.]
 
 # TAREFA — FASE 2: Semáforo de Uso IA (Artifact HTML)
 Depois da FASE 1, gere um Artifact HTML self-contained chamado
@@ -302,7 +320,7 @@ Lógica do semáforo (calcule sozinho):
 - 🔴 se Dado = restrito OU Risco = alto
 
 # FORMATO DE ENTREGA
-1. Análise textual FASE 1 (rascunho reescrito + protocolo aplicado)
+1. Análise textual FASE 1 (checagem de identificadores + comunicado com clareza melhorada + protocolo aplicado)
 2. Artifact HTML FASE 2 (código completo, self-contained, testado)
 
 # LIMITAÇÕES
@@ -313,7 +331,7 @@ Lógica do semáforo (calcule sozinho):
         </details>
       </div>
       <div class="callout callout-info">
-        <p><strong>Como o aluno usa em sala:</strong> cola um rascunho de comunicado que ele mesmo escreveria, roda o prompt, vê o Claude fazer o protocolo ao vivo (Fase 1), e recebe o Artifact (Fase 2) pra preencher com 5 tarefas próprias — leva pra segunda.</p>
+        <p><strong>Como o aluno usa em sala:</strong> pega um rascunho de comunicado que ele mesmo escreveria, <strong>roda o checklist de anonimização</strong>, cola o texto já limpo, vê o Claude conferir e fazer o protocolo ao vivo (Fase 1), e recebe o Artifact (Fase 2) pra preencher com 5 tarefas próprias — leva pra segunda.</p>
       </div>
     </section>
 
@@ -323,7 +341,7 @@ Lógica do semáforo (calcule sozinho):
       <div class="ho-hero">
         <div class="ho-hero-eyebrow">O que você faz agora</div>
         <h3>Duas camadas: rode o filtro nas suas tarefas, depois flagre a alucinação ao vivo.</h3>
-        <p class="ho-hero-lead"><strong>Camada 1 (todos · 25 min):</strong> viver as duas fases do filtro — desidentificar dado real (Fase 1) e sair com o Semáforo preenchido (Fase 2). <strong>Camada 2 (para quem terminou · +15 min):</strong> ver a IA inventar ao vivo, com o texto seguro e bonito.</p>
+        <p class="ho-hero-lead"><strong>Camada 1 (todos · 25 min):</strong> viver as duas fases do filtro — anonimizar o rascunho você mesmo e revisar com a IA (Fase 1) e sair com o Semáforo preenchido (Fase 2). <strong>Camada 2 (para quem terminou · +15 min):</strong> ver a IA inventar ao vivo, com o texto seguro e bonito.</p>
       </div>
 
       <div class="ho-timeline">
@@ -332,16 +350,16 @@ Lógica do semáforo (calcule sozinho):
           <div class="ho-etapa-body">
             <span class="ho-etapa-tempo grp">Todos · 25 min</span>
             <h4 class="ho-etapa-titulo">Rode o prompt-âncora</h4>
-            <p class="ho-etapa-desc"><strong>Objetivo:</strong> viver as duas fases do filtro — desidentificar dado real (Fase 1) e sair com o Semáforo preenchido (Fase 2).</p>
+            <p class="ho-etapa-desc"><strong>Objetivo:</strong> viver as duas fases do filtro — anonimizar o rascunho você mesmo e revisar com a IA (Fase 1) e sair com o Semáforo preenchido (Fase 2).</p>
             <div class="ho-subpassos">
-              <div class="ho-subpasso"><div class="ho-subpasso-tempo">01</div><div class="ho-subpasso-txt">Abra Claude, cole o Prompt-âncora do módulo.</div></div>
-              <div class="ho-subpasso"><div class="ho-subpasso-tempo">02</div><div class="ho-subpasso-txt">Substitua <code>[cole aqui...]</code> por 5-8 linhas de um comunicado real que você precisa escrever esta semana — troque nome de gente por "Operador A/B/C", número de folha por "XXXX", cláusula específica por "Cláusula Y". <strong>Não cole nada real ainda</strong> — este é treino.</div></div>
-              <div class="ho-subpasso"><div class="ho-subpasso-tempo">03</div><div class="ho-subpasso-txt">Rode. Observe a Fase 1: o Claude sinaliza 🟢/🟡/🔴 e reescreve. Faz o protocolo em 3 passos.</div></div>
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">01</div><div class="ho-subpasso-txt">Pegue um comunicado real que você precisa escrever esta semana e <strong>rode o Checklist de anonimização nele</strong> — nome de gente vira "Operador A/B/C", número de folha vira "XXXX", cláusula específica vira "Cláusula Y". <strong>Nada entra na IA antes de passar pelo checklist.</strong></div></div>
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">02</div><div class="ho-subpasso-txt">Abra Claude, cole o Prompt-âncora e, no lugar de <code>[cole aqui...]</code>, cole o seu comunicado <strong>já anonimizado</strong>.</div></div>
+              <div class="ho-subpasso"><div class="ho-subpasso-tempo">03</div><div class="ho-subpasso-txt">Rode. Observe a Fase 1: o Claude confere se sobrou algum identificador (rede de segurança), melhora a clareza e faz o protocolo em 3 passos.</div></div>
               <div class="ho-subpasso"><div class="ho-subpasso-tempo">04</div><div class="ho-subpasso-txt">Peça a Fase 2 no mesmo chat: "gere o Artifact". Ele volta com o Semáforo em HTML.</div></div>
               <div class="ho-subpasso"><div class="ho-subpasso-tempo">05</div><div class="ho-subpasso-txt">Preencha o Semáforo com 3-5 tarefas em que você pensa em usar IA na próxima semana. Deixe o cálculo rodar.</div></div>
               <div class="ho-subpasso"><div class="ho-subpasso-tempo">06</div><div class="ho-subpasso-txt">Baixe / imprima em A4 paisagem. Leva pra segunda.</div></div>
             </div>
-            <div class="ho-saida"><span class="ho-saida-label">Resultado esperado</span>comunicado reescrito com dado tratado + Semáforo salvo com 3-5 linhas ranqueadas.</div>
+            <div class="ho-saida"><span class="ho-saida-label">Resultado esperado</span>comunicado já anonimizado por você e revisado pela IA + Semáforo salvo com 3-5 linhas ranqueadas.</div>
             <div class="ho-marco-eval"><strong>Como avaliar:</strong> conte quantas linhas do seu Semáforo ficaram 🟢. Se são todas, você foi otimista — releia a coluna "Dado envolvido". Se são todas 🔴, você foi paranoico — releia "Risco de invenção" (algumas tarefas de fato têm risco baixo).</div>
           </div>
         </div>
