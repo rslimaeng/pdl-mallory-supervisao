@@ -246,14 +246,14 @@
 
       <div class="callout callout-info callout-checklist">
         <p class="callout-title">✅ Checklist de anonimização — rode você mesmo, antes de colar qualquer coisa na IA</p>
-        <p>A IA <strong>não é quem limpa o dado — você limpa antes</strong>. Quando o texto chega na IA, já tem que estar sem identificação. Passe o rascunho por estes 6 pontos antes de rodar o prompt:</p>
-        <ul>
-          <li>Troquei <strong>nome de pessoa</strong> por "Operador A / Colaborador B"?</li>
-          <li>Mascarei <strong>matrícula, folha, CPF, RG</strong> (viram "XXXX")?</li>
-          <li>Tirei <strong>número e cláusula de contrato, preço, condição comercial</strong>?</li>
-          <li>Removi <strong>parâmetro de produto ou processo</strong> (molde, injetora, fórmula)?</li>
-          <li>Tirei <strong>nome ou dado de cliente</strong>?</li>
-          <li>Sobrou algo que identifica <strong>gente · produto · contrato</strong>? Então <strong>não mando</strong> — ou mascaro primeiro.</li>
+        <p>A IA <strong>não é quem limpa o dado — você limpa antes</strong>. Quando o texto chega na IA, já tem que estar sem identificação. <strong>Marque cada ponto</strong> conforme confere no seu rascunho:</p>
+        <ul class="entregavel-list" data-storage-key="m4-anon-checklist-t1">
+          <li><label><input type="checkbox" data-item="nome"><span>Troquei <strong>nome de pessoa</strong> por "Operador A / Colaborador B".</span></label></li>
+          <li><label><input type="checkbox" data-item="matricula"><span>Mascarei <strong>matrícula, folha, CPF, RG</strong> (viram "XXXX").</span></label></li>
+          <li><label><input type="checkbox" data-item="contrato"><span>Tirei <strong>número e cláusula de contrato, preço, condição comercial</strong>.</span></label></li>
+          <li><label><input type="checkbox" data-item="produto"><span>Removi <strong>parâmetro de produto ou processo</strong> (molde, injetora, fórmula).</span></label></li>
+          <li><label><input type="checkbox" data-item="cliente"><span>Tirei <strong>nome ou dado de cliente</strong>.</span></label></li>
+          <li><label><input type="checkbox" data-item="final"><span>Conferi: não sobrou nada que identifica <strong>gente · produto · contrato</strong> — se sobrou, <strong>não mando</strong> ou mascaro primeiro.</span></label></li>
         </ul>
       </div>
 
