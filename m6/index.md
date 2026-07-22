@@ -1,8 +1,10 @@
 # M6 · Canvas de Oportunidades de IA: Entregável Final
 
-**Trilha 1 · Módulo 6 de 6 · 1h30**
+**Trilha 1 · Módulo 6 de 6 · 1h30 · em grupo por área**
 
 Cada grupo fecha o dia com seu Canvas preenchido e apresenta em 3 minutos.
+
+> Esta página tem uma **ferramenta viva**: o Canvas Mallory (8 blocos editáveis, salva sozinho no navegador, imprime em A4), uma matriz de priorização e um gerador de compromisso. Este `.md` descreve tudo em texto — quem lê só aqui entende o módulo inteiro, perde só a interatividade.
 
 ---
 
@@ -34,44 +36,46 @@ E o compromisso é dito em voz alta, para a turma, de propósito. O que você fa
 
 ---
 
-## O conceito em 5 pontos
+## Como preencher o Canvas Mallory (8 blocos)
 
-### 1. O Canvas é uma matriz simples — de propósito
+Uma folha só. Você pega um problema real da área, desenha o fluxo de hoje e decide onde a IA entra e em que modo. É o mesmo Canvas das duas trilhas — *adaptado do AI Canvas (StartSe) pro vocabulário e contexto Mallory.* Na página, cada bloco é um campo editável que salva sozinho; aqui, o que preencher em cada um:
 
-Quatro colunas por oportunidade: qual **tarefa**, qual **impacto**, qual **facilidade**, como **começar**. Nada de slide, nada de projeto. Se não cabe numa tabela que o grupo preenche em 15 minutos, está grande demais — quebre.
+1. **Problema Mallory** — a dor real da sua área: quem sente, quando, com que frequência, e por que resolver isso importa esse ano. *Ex.: "toda segunda o DDS de 5 minutos repete o tema do mês passado e vira formalidade."*
+2. **Como resolvo hoje (sem IA)** — o passo a passo do jeito atual, sem invocar IA. Ver o processo cru é o que revela onde a IA vale.
+3. **Onde a IA entra + em que modo** — marque, por passo, se é **Autopiloto** (IA executa, você revisa), **Colaboração** (pensam juntos) ou **Manual** (você decide, IA só inspira). A regra de ouro: quanto maior o impacto/risco, mais manual o modo.
+4. **Para quem** — quem usa no dia a dia: área, nível, com que frequência.
+5. **Dados necessários (+ flag LGPD)** — que informação a IA precisa ver e de onde vem. Marque a flag se houver dado pessoal, financeiro ou sensível — e desidentifique antes (sem nome de operador).
+6. **Ecossistema Claude** — as ferramentas do M5 que você vai usar: Chat · Projects · Artifacts · Cowork · Skill · Connector · Plugin. Para o supervisor, quase sempre o Chat já resolve.
+7. **Checkpoint humano + risco** — onde você (humano) confere, decide e assina antes de soltar; e o risco se pular esse ponto (alucinação · LGPD · tom/voz · decisão irreversível · viés). A IA não substitui julgamento: o sinal físico e a fala do galpão são seus.
+8. **Como sei que deu certo** — indicadores concretos, antes → depois, com prazo pra medir. *Ex.: "repetição de tema no mês: 60% → menos de 15%, medir por 4 semanas."*
 
-### 2. As 4 dimensões, sem mistério
-
-**Área:** de quem é a oportunidade. **Tarefa:** a atividade concreta, na frase do M3 ("toda semana a gente..."). **Impacto (1–5):** quanto tempo ou dor de cabeça economiza, honestamente. **Facilidade (1–5):** dá para testar semana que vem com o que você tem? Nota alta é boa nas duas — e nota honesta vale mais que nota bonita.
-
-### 3. Quick win primeiro: fácil × alto impacto
-
-A oportunidade nota 4×4 vence a nota 5×1. O primeiro caso de IA da sua área precisa dar certo rápido — é ele que convence você, seu time e seu gestor de que vale continuar. O caso difícil e gigante fica para quando você tiver 3 vitórias no bolso.
-
-### 4. Um compromisso vale mais que cinco
-
-Cinco intenções dividem sua atenção e morrem juntas. Um compromisso único, pequeno e real acontece — e puxa o segundo. Escolha a tarefa que você tem certeza de conseguir fazer na semana. O objetivo não é impressionar: é começar.
-
-### 5. Compromisso sem evidência é opinião
-
-"Vou usar mais IA" não se cobra. "Vou gerar o relatório de turno de quinta com o prompt do M5 e enviar ao supervisor da tarde" — isso se cobra na sexta: o relatório existe ou não existe. Todo compromisso de hoje sai com verbo de ação e evidência verificável em 7 dias.
+**Exemplo pré-carregável (botão "Carregar exemplo · DDS de turno"):** um supervisor usa o Chat em Autopiloto para preparar o DDS — cola 3 temas antigos + o tema-alvo da semana e recebe 5 pontos de segurança específicos da linha; a fala e os exemplos do galpão ficam no Manual.
 
 ---
 
-## Quando aplicar / Quando NÃO aplicar
+## Peça 1 · Priorize com a Matriz Impacto × Facilidade
 
-| 🟢 Entra no Canvas | 🔴 Não entra no Canvas |
-|---|---|
-| Tarefa que se repete toda semana e você mesmo executa | "Implantar IA no setor" — grande demais, sem dono, sem prazo |
-| Oportunidade testada ou testável com conta gratuita | Ideia que depende de comprar sistema ou aprovar orçamento |
-| O que passou no teste do M3: entra → processa → sai | Tarefa cujo insumo é dado sensível sem versão desidentificada |
-| Compromisso que cabe na sua semana real, com evidência | Promessa para impressionar a turma que você sabe que não fará |
+O bloco 8 apontou o sucesso; agora priorize entre as tarefas que apareceram no grupo. Dê nota honesta de 1 a 5 em impacto e facilidade — **nota bonita não vale, nota honesta prioriza**. O **quick win** é a melhor combinação das duas: a oportunidade 4×4 vence a 5×1, porque o primeiro caso de IA precisa dar certo rápido pra convencer você, o time e o gestor.
 
----
+**Matriz de referência — os 5 casos vistos hoje (o botão "Carregar exemplo" preenche):**
 
-## Prompt-âncora do módulo
+| Área | Tarefa (toda semana a gente...) | Impacto (1-5) | Facilidade (1-5) | Como começar |
+|---|---|---|---|---|
+| Produção | ...fecha o relatório de passagem de turno na correria | 4 | 5 | Prompt-âncora do M5, quinta-feira, revisar e enviar |
+| PCP / Produção | ...comunica mudança de sequência da linha por gargalo no molde | 4 | 4 | Modo Colaboração: fatos no contexto, IA rascunha, você conduz |
+| Segurança | ...monta o DDS de segunda sem repetir o do mês passado | 3 | 5 | Prompt-âncora do M2 com o tema da semana |
+| Qualidade | ...registra não-conformidade correndo, e a auditoria cobra clareza | 4 | 4 | Prompt-âncora do M4 — fatos completos, sem causa-raiz inventada |
+| Manutenção | ...prioriza OS no olho, sem olhar o histórico de falhas | 5 | 3 | Desafio do M5: colar histórico fictício e validar o padrão |
 
-Aqui a IA ajuda a **priorizar** — o preenchimento é do grupo, o desempate é dela:
+**Template em branco — copie e leve:**
+
+| Área | Tarefa (toda semana a gente...) | Impacto (1-5) | Facilidade (1-5) | Como começar |
+|---|---|---|---|---|
+| | | | | |
+| | | | | |
+| | | | | |
+
+**A IA como desempate (não como quem decide):** se o grupo empacar entre notas, cole as oportunidades no chat e peça a estimativa — mas o martelo é do grupo.
 
 ```text
 # PAPEL
@@ -95,39 +99,17 @@ Se faltar informação, pergunte. Não invente.
 As notas são sugestão para discussão — o grupo decide as finais.
 ```
 
-A última linha do L é o espírito do módulo: a IA sugere, o grupo bate o martelo.
-
 ---
 
-## Exercício
+## Peça 2 · Compromisso individual em voz alta
 
-### Camada 1 — Básico (todos · 15 min · em grupo)
+Um compromisso vale mais que cinco: cinco intenções dividem a atenção e morrem juntas; um só, pequeno e real, acontece — e puxa o segundo. E compromisso sem evidência é opinião: "vou usar mais IA" não se cobra; "vou gerar o relatório de turno de quinta com o prompt do M5 e enviar ao supervisor da tarde" se cobra na sexta.
 
-**Objetivo:** preencher o Canvas da sua área.
+Na página, um formulário monta a frase; aqui está o modelo:
 
-**Passo a passo:**
-1. Recuperem as 2 oportunidades do M3 — incluindo o resultado do teste ao vivo.
-2. Adicionem mais 1 ou 2 que apareceram durante o M5 (aquele documento que todo mundo faz e ninguém aguenta).
-3. Preencham a tabela do Canvas: tarefa, impacto 1–5, facilidade 1–5, como começar. Notas por consenso rápido — sem reunião de 1 hora para decidir entre 3 e 4.
-4. Marquem o quick win do grupo: a melhor combinação de impacto × facilidade.
+> **Eu, [nome], vou [verbo de ação + tarefa] até [prazo]. Evidência: [o que existirá quando eu terminar].**
 
-**Resultado esperado:** Canvas com 3–4 linhas preenchidas e 1 quick win marcado.
-
-**Como avaliar:** teste de leitura — alguém de outra área entende o Canvas sem explicação de boca? A coluna "como começar" tem um primeiro passo que cabe em uma semana? Então está pronto para apresentar.
-
-### Camada 2 — Desafio (para quem terminou · +10-15 min)
-
-**Objetivo:** desempatar com a IA e preparar a apresentação de 3 minutos.
-
-**Passo a passo:**
-1. Rodem o prompt-âncora com as oportunidades do grupo. Comparem as notas da IA com as suas.
-2. Onde divergiu, discutam 2 minutos: quem tem razão — e por quê? Ajustem se o argumento convencer.
-3. Montem a fala de 3 minutos: quem somos → nosso quick win → por que ele → quem faz o quê na semana.
-4. Ensaiem uma vez, cronometrado. Cortem o que passar.
-
-**Resultado esperado:** Canvas final validado e apresentação de 3 minutos pronta.
-
-**Como avaliar:** se a apresentação responde "o que, por que e quem faz quando" dentro do tempo, o grupo está pronto.
+Diga isso **em voz alta para a turma** — não pra você, pros 22 colegas. Segunda-feira alguém vai perguntar "e aí, fez?".
 
 ---
 
@@ -141,33 +123,13 @@ A última linha do L é o espírito do módulo: a IA sugere, o grupo bate o mart
 
 ---
 
-> 🟣 **Marco: o que você leva para a Mallory na 2ª feira**
-> Diga em voz alta para a turma, agora: **"Até sexta-feira eu vou [tarefa real com IA] e a evidência será [documento enviado / registro no sistema / resultado mostrado a alguém]."**
-> Como saber que aconteceu: a evidência existe e um colega da turma consegue cobrar você por ela.
->
-> **Dica:** seu compromisso deste M6 pode ser um dos marcos que você já assumiu nos módulos anteriores (M2, M3, M4 ou M5). Não invente novos — escolha 1 dos que já existem, o que mais faz diferença na sua semana, e assuma em voz alta. É esse que vira o âncora; os outros crescem em cima.
->
-> Depois da rodada de compromissos, o dia fecha com perguntas abertas e os próximos passos: este site continua no ar — módulos, [Banco de Prompts](../banco-de-prompts/) e [Artefatos](../artefatos/) ficam disponíveis para a sua semana.
->
-> **Canvas de referência — exemplo preenchido (casos vistos hoje):**
->
-> | Área | Tarefa (toda semana a gente...) | Impacto (1-5) | Facilidade (1-5) | Como começar |
-> |---|---|---|---|---|
-> | Produção | ...fecha o relatório de passagem de turno na correria | 4 | 5 | Prompt-âncora do M5, quinta-feira, revisar e enviar |
-> | PCP / Produção | ...comunica mudança de sequência da linha por gargalo no molde | 4 | 4 | Modo Colaboração (M1): fatos no contexto, IA rascunha, você conduz — comunicado em 10 linhas |
-> | Segurança | ...monta o DDS de segunda sem repetir o do mês passado | 3 | 5 | Prompt-âncora do M2 com o tema da semana |
-> | Qualidade | ...registra não-conformidade correndo, e a auditoria cobra clareza | 4 | 4 | Prompt-âncora do M4 — fatos completos, sem causa-raiz inventada |
-> | Manutenção | ...prioriza OS no olho, sem olhar o histórico de falhas | 5 | 3 | Desafio do M5: colar histórico fictício e validar o padrão |
->
-> **Template em branco — copie e leve:**
->
-> | Área | Tarefa (toda semana a gente...) | Impacto (1-5) | Facilidade (1-5) | Como começar |
-> |---|---|---|---|---|
-> | | | | | |
-> | | | | | |
-> | | | | | |
->
-> **Compromisso individual:** Eu, [nome], vou [verbo de ação + tarefa] até [dia]. Evidência: [o que existirá].
+## O que você leva para a Mallory na 2ª feira
+
+Diga em voz alta para a turma, agora: **"Até sexta-feira eu vou [tarefa real com IA] e a evidência será [documento enviado / registro no sistema / resultado mostrado a alguém]."** Como saber que aconteceu: a evidência existe e um colega da turma consegue cobrar você por ela.
+
+Seu compromisso deste M6 pode ser um dos marcos que você já assumiu nos módulos anteriores (M2, M3, M4 ou M5). Não invente novos — escolha 1 dos que já existem, o que mais faz diferença na sua semana, e assuma em voz alta. É esse que vira o âncora; os outros crescem em cima.
+
+Depois da rodada de compromissos, o dia fecha com perguntas abertas e os próximos passos: este site continua no ar — módulos, [Banco de Prompts](../banco-de-prompts/) e [Artefatos](../artefatos/) ficam disponíveis para a sua semana.
 
 ---
 
